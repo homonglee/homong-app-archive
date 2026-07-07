@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>아이젠하워 매트릭스 우선순위 정렬기</title>
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --panel: rgba(255,255,255,.84);
+      --panel-strong: #fffaf2;
+      --ink: #211f1b;
+      --muted: #736b61;
+      --line: rgba(47, 40, 31, .12);
+      --shadow: 0 20px 70px rgba(65, 45, 20, .13);
+      --red: #ef5b4c;
+      --blue: #3e75f2;
+      --green: #18a57b;
+      --gray: #8f8a82;
+      --amber: #f0a333;
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(240, 163, 51, .30), transparent 34rem),
+        radial-gradient(circle at 90% 20%, rgba(62, 117, 242, .18), transparent 28rem),
+        linear-gradient(135deg, #fbf8f1 0%, var(--bg) 100%);
+    }
+
+    button, textarea, input { font: inherit; }
+    button { cursor: pointer; }
+
+    .app {
+      width: min(1420px, calc(100vw - 36px));
+      margin: 0 auto;
+      padding: 34px 0 48px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 22px;
+    }
+
+    .hero, .input-card, .matrix-card, .tips-card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .hero { padding: 32px; position: relative; overflow: hidden; }
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 220px; height: 220px;
+      right: -72px; top: -82px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(239,91,76,.18), rgba(62,117,242,.14));
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(33,31,27,.06);
+      color: #5a5147;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: -.01em;
+    }
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(34px, 5vw, 70px);
+      line-height: .95;
+      letter-spacing: -.07em;
+      max-width: 840px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0;
+    }
+
+    .input-card { padding: 22px; display: flex; flex-direction: column; gap: 14px; }
+    .input-card label {
+      font-weight: 900;
+      letter-spacing: -.03em;
+      font-size: 18px;
+    }
+    textarea {
+      min-height: 210px;
+      width: 100%;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--ink);
+      background: rgba(255,255,255,.78);
+      outline: none;
+      line-height: 1.55;
+    }
+    textarea:focus, input:focus { border-color: rgba(62,117,242,.55); box-shadow: 0 0 0 4px rgba(62,117,242,.11); }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 15px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      color: white;
+      background: #211f1b;
+      transition: transform .16s ease, box-shadow .16s ease, opacity .16s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(33,31,27,.16); }
+    .btn.secondary { background: rgba(33,31,27,.08); color: var(--ink); }
+    .btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.68);
+      border-radius: 999px;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .pill strong { color: var(--ink); }
+    .search {
+      display: flex; align-items: center; gap: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      border-radius: 999px;
+      padding: 9px 12px;
+    }
+    .search input { border: 0; outline: 0; background: transparent; min-width: 210px; }
+
+    .matrix-card { padding: 18px; }
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .quadrant {
+      min-height: 310px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 16px;
+      background: rgba(255,255,255,.58);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .q-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+    .q-title { display: flex; gap: 10px; align-items: center; }
+    .badge {
+      width: 38px; height: 38px; border-radius: 14px;
+      display: grid; place-items: center;
+      color: white; font-weight: 1000;
+      box-shadow: inset 0 -8px 18px rgba(0,0,0,.09);
+    }
+    .do .badge { background: var(--red); }
+    .schedule .badge { background: var(--blue); }
+    .delegate .badge { background: var(--amber); }
+    .delete .badge { background: var(--gray); }
+    .q-title h2 { margin: 0; font-size: 20px; letter-spacing: -.04em; }
+    .q-title span { color: var(--muted); font-size: 13px; font-weight: 800; }
+    .count { color: var(--muted); font-weight: 900; font-size: 13px; }
+    .list { display: flex; flex-direction: column; gap: 10px; }
+    .task {
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(47,40,31,.10);
+      border-radius: 17px;
+      padding: 12px;
+      display: grid;
+      gap: 9px;
+      animation: pop .22s ease both;
+    }
+    @keyframes pop { from { opacity: 0; transform: translateY(5px) scale(.99); } to { opacity: 1; transform: none; } }
+    .task-main { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+    .task-text { font-weight: 850; line-height: 1.45; letter-spacing: -.025em; }
+    .rank {
+      flex: 0 0 auto;
+      min-width: 36px; height: 30px;
+      border-radius: 999px;
+      display: grid; place-items: center;
+      background: rgba(33,31,27,.07);
+      color: var(--ink);
+      font-weight: 1000;
+      font-size: 13px;
+    }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; }
+    .chip {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--muted);
+      background: rgba(33,31,27,.055);
+      border-radius: 999px;
+      padding: 6px 8px;
+    }
+    .reason { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .empty {
+      flex: 1;
+      min-height: 120px;
+      display: grid; place-items: center;
+      color: rgba(115,107,97,.74);
+      text-align: center;
+      border: 1px dashed rgba(47,40,31,.16);
+      border-radius: 18px;
+      padding: 18px;
+      line-height: 1.5;
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .tips-card { padding: 18px; }
+    .tips-card h3 { margin: 0 0 12px; font-size: 19px; letter-spacing: -.04em; }
+    .tips-card ol, .tips-card ul { margin: 0; padding-left: 20px; color: var(--muted); line-height: 1.75; }
+    .tips-card strong { color: var(--ink); }
+    .priority-list { display: grid; gap: 10px; }
+    .priority-item { display:flex; justify-content:space-between; gap:12px; align-items:center; border:1px solid var(--line); border-radius:14px; padding:11px 12px; background:rgba(255,255,255,.72); }
+    .priority-item small { color: var(--muted); font-weight: 800; }
+
+    .toast {
+      position: fixed;
+      left: 50%; bottom: 24px;
+      transform: translateX(-50%) translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: .25s ease;
+      background: #211f1b;
+      color: white;
+      border-radius: 999px;
+      padding: 12px 16px;
+      font-weight: 850;
+      box-shadow: 0 16px 40px rgba(33,31,27,.22);
+      z-index: 10;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    @media (max-width: 980px) {
+      header, .bottom, .toolbar { grid-template-columns: 1fr; }
+      .matrix { grid-template-columns: 1fr; }
+      .hero { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <section class="hero">
+        <div class="eyebrow">⚡ AI 휴리스틱 · 중요도/긴급도 자동 판단</div>
+        <h1>오늘 할 일을 4분면으로 정리하세요.</h1>
+        <p>할 일을 줄바꿈으로 입력하면 문맥 단서, 마감 표현, 영향도 키워드를 분석해 아이젠하워 매트릭스에 자동 배치하고 실행 순서를 제안합니다.</p>
+      </section>
+
+      <section class="input-card">
+        <label for="taskInput">오늘 할 일 목록</label>
+        <textarea id="taskInput" placeholder="예시)
+오전 11시까지 고객사 제안서 최종본 보내기
+다음 분기 제품 전략 초안 작성
+팀 회고 일정 잡기
+책상 정리하기
+긴급 결제 오류 CS 답변하기"></textarea>
+        <div class="actions">
+          <button class="btn" id="analyzeBtn">자동 분류하기</button>
+          <button class="btn secondary" id="sampleBtn">샘플 넣기</button>
+          <button class="btn ghost" id="clearBtn">초기화</button>
+        </div>
+      </section>
+    </header>
+
+    <section class="toolbar">
+      <div class="summary" id="summary"></div>
+      <div class="search">🔎 <input id="searchInput" placeholder="결과에서 검색" /></div>
+    </section>
+
+    <section class="matrix-card">
+      <div class="matrix" id="matrix"></div>
+    </section>
+
+    <section class="bottom">
+      <article class="tips-card">
+        <h3>추천 실행 순서</h3>
+        <div class="priority-list" id="priorityList"></div>
+      </article>
+      <article class="tips-card">
+        <h3>분류 기준</h3>
+        <ul>
+          <li><strong>긴급도</strong>: 오늘, 지금, 마감, ASAP, 시간 표현, 장애/고객/결제 같은 즉시성 단서</li>
+          <li><strong>중요도</strong>: 전략, 매출, 고객, 건강, 목표, 리스크, 의사결정, 장기 영향 단서</li>
+          <li><strong>우선순위</strong>: 먼저 실행 → 일정 확보 → 위임/짧게 처리 → 제거/보류 순으로 제안</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">분류 완료</div>
+
+  <script>
+    const quadrants = [
+      { key: 'do', title: '1. 먼저 실행', subtitle: '중요하고 긴급함', icon: 'Do', hint: '타이머를 켜고 바로 처리하세요.' },
+      { key: 'schedule', title: '2. 일정 확보', subtitle: '중요하지만 긴급하지 않음', icon: 'Plan', hint: '캘린더에 시간을 블록하세요.' },
+      { key: 'delegate', title: '3. 위임/짧게 처리', subtitle: '긴급하지만 덜 중요함', icon: 'Ask', hint: '위임하거나 15분 제한으로 처리하세요.' },
+      { key: 'delete', title: '4. 제거/보류', subtitle: '덜 중요하고 덜 긴급함', icon: 'Drop', hint: '하지 않거나 나중 목록으로 보내세요.' }
+    ];
+
+    const sample = `오전 11시까지 고객사 제안서 최종본 보내기
+긴급 결제 오류 CS 답변하기
+다음 분기 제품 전략 초안 작성
+이번 주 운동 루틴 3회 예약하기
+팀 회고 일정 잡기
+슬랙 알림 정리하기
+책상 정리하기
+대표님 보고용 매출 리스크 메모 작성
+오늘 안에 세금계산서 발행 요청 확인
+읽고 싶었던 아티클 5개 보기`;
+
+    const urgentSignals = [
+      ['긴급', 4], ['오늘', 3], ['지금', 4], ['즉시', 4], ['asap', 4], ['마감', 3], ['까지', 2], ['오전', 2], ['오후', 2], ['분까지', 3], ['시간', 1], ['내일', 2], ['이번 주', 1], ['장애', 4], ['오류', 3], ['고객', 2], ['cs', 2], ['결제', 3], ['확인', 1], ['보내기', 1], ['답변', 2], ['요청', 2]
+    ];
+    const importantSignals = [
+      ['전략', 4], ['목표', 4], ['매출', 4], ['리스크', 4], ['고객사', 4], ['고객', 3], ['제안서', 3], ['대표', 3], ['보고', 3], ['제품', 3], ['건강', 4], ['운동', 3], ['학습', 2], ['채용', 3], ['계약', 4], ['의사결정', 4], ['초안', 2], ['분기', 3], ['계획', 3], ['세금계산서', 2], ['결제', 3], ['오류', 2], ['cs', 2], ['회고', 2], ['투자자', 4], ['미팅', 2], ['자료', 2], ['발표', 3]
+    ];
+    const lowValueSignals = [['알림', -2], ['아티클', -1], ['보기', -1], ['책상', -3], ['SNS', -3], ['인스타그램', -3], ['쇼핑', -2]];
+
+    let currentTasks = [];
+
+    const $ = (id) => document.getElementById(id);
+
+    function scoreTask(text) {
+      const normalized = text.toLowerCase();
+      let urgent = 0;
+      let important = 0;
+      const reasons = [];
+
+      for (const [word, weight] of urgentSignals) {
+        if (normalized.includes(word.toLowerCase())) {
+          urgent += weight;
+          if (reasons.length < 3) reasons.push(`긴급 단서: ${word}`);
+        }
+      }
+      for (const [word, weight] of importantSignals) {
+        if (normalized.includes(word.toLowerCase())) {
+          important += weight;
+          if (reasons.length < 5) reasons.push(`중요 단서: ${word}`);
+        }
+      }
+      for (const [word, weight] of lowValueSignals) {
+        if (normalized.includes(word.toLowerCase())) {
+          important += weight;
+          if (reasons.length < 5) reasons.push(`낮은 영향도 단서: ${word}`);
+        }
+      }
+
+      const timePattern = /(\d{1,2}\s?시|\d{1,2}:\d{2}|월요일|화요일|수요일|목요일|금요일|토요일|일요일|D-?\d+)/i;
+      if (timePattern.test(text)) {
+        urgent += 2;
+        reasons.push('구체적 시간/날짜 표현');
+      }
+      if (text.length > 28) important += 1;
+      if (/작성|준비|설계|기획|검토/.test(text)) important += 1;
+
+      urgent = Math.max(0, Math.min(10, urgent));
+      important = Math.max(0, Math.min(10, important));
+
+      const isUrgent = urgent >= 3;
+      const isImportant = important >= 3;
+      let quadrant = 'delete';
+      if (isUrgent && isImportant) quadrant = 'do';
+      else if (!isUrgent && isImportant) quadrant = 'schedule';
+      else if (isUrgent && !isImportant) quadrant = 'delegate';
+
+      const priorityBase = { do: 400, schedule: 300, delegate: 200, delete: 100 }[quadrant];
+      const priority = priorityBase + important * 7 + urgent * 5;
+
+      return {
+        text,
+        urgent,
+        important,
+        quadrant,
+        priority,
+        reason: reasons.length ? reasons.slice(0, 4).join(' · ') : '명확한 마감/영향도 단서가 적어 낮은 우선순위로 판단'
+      };
+    }
+
+    function analyze() {
+      const lines = $('taskInput').value.split('\n').map(x => x.trim()).filter(Boolean);
+      currentTasks = lines.map(scoreTask).sort((a, b) => b.priority - a.priority);
+      render();
+      toast(`${currentTasks.length}개 할 일을 분류했어요`);
+    }
+
+    function render() {
+      const query = $('searchInput').value.trim().toLowerCase();
+      const tasks = query ? currentTasks.filter(t => t.text.toLowerCase().includes(query)) : currentTasks;
+      renderSummary(tasks);
+      renderMatrix(tasks);
+      renderPriority(tasks);
+    }
+
+    function renderSummary(tasks) {
+      const counts = Object.fromEntries(quadrants.map(q => [q.key, tasks.filter(t => t.quadrant === q.key).length]));
+      const total = tasks.length;
+      $('summary').innerHTML = `
+        <span class="pill"><strong>${total}</strong>개 할 일</span>
+        <span class="pill">먼저 실행 <strong>${counts.do}</strong></span>
+        <span class="pill">일정 확보 <strong>${counts.schedule}</strong></span>
+        <span class="pill">위임/짧게 <strong>${counts.delegate}</strong></span>
+        <span class="pill">제거/보류 <strong>${counts.delete}</strong></span>`;
+    }
+
+    function renderMatrix(tasks) {
+      $('matrix').innerHTML = quadrants.map(q => {
+        const list = tasks.filter(t => t.quadrant === q.key).sort((a, b) => b.priority - a.priority);
+        return `<section class="quadrant ${q.key}">
+          <div class="q-head">
+            <div class="q-title"><div class="badge">${q.icon}</div><div><h2>${q.title}</h2><span>${q.subtitle}</span></div></div>
+            <div class="count">${list.length}개</div>
+          </div>
+          <div class="list">
+            ${list.length ? list.map((task, index) => taskCard(task, index + 1)).join('') : `<div class="empty">${q.hint}<br>이 영역의 항목이 없습니다.</div>`}
+          </div>
+        </section>`;
+      }).join('');
+    }
+
+    function taskCard(task, rank) {
+      return `<article class="task">
+        <div class="task-main"><div class="task-text">${escapeHtml(task.text)}</div><div class="rank">#${rank}</div></div>
+        <div class="meta"><span class="chip">중요도 ${task.important}/10</span><span class="chip">긴급도 ${task.urgent}/10</span></div>
+        <div class="reason">${escapeHtml(task.reason)}</div>
+      </article>`;
+    }
+
+    function renderPriority(tasks) {
+      const top = tasks.slice().sort((a, b) => b.priority - a.priority).slice(0, 7);
+      $('priorityList').innerHTML = top.length ? top.map((t, i) => {
+        const label = quadrants.find(q => q.key === t.quadrant).title.replace(/^\d\.\s*/, '');
+        return `<div class="priority-item"><div><strong>${i + 1}. ${escapeHtml(t.text)}</strong><br><small>${label} · 중요도 ${t.important}, 긴급도 ${t.urgent}</small></div><small>${recommendation(t.quadrant)}</small></div>`;
+      }).join('') : '<div class="empty">할 일을 입력하면 추천 실행 순서가 표시됩니다.</div>';
+    }
+
+    function recommendation(q) {
+      return { do: '바로 시작', schedule: '캘린더 블록', delegate: '위임/15분컷', delete: '보류/삭제' }[q];
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>'"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
+    }
+
+    let toastTimer;
+    function toast(msg) {
+      const el = $('toast');
+      el.textContent = msg;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 1900);
+    }
+
+    $('analyzeBtn').addEventListener('click', analyze);
+    $('sampleBtn').addEventListener('click', () => { $('taskInput').value = sample; analyze(); });
+    $('clearBtn').addEventListener('click', () => { $('taskInput').value = ''; currentTasks = []; render(); toast('초기화했어요'); });
+    $('searchInput').addEventListener('input', render);
+
+    $('taskInput').value = sample;
+    analyze();
+  </script>
+</body>
+</html>

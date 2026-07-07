@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>오늘 점심 뭐 먹지? · 팀 점심 투표 룰렛</title>
+  <style>
+    :root{
+      --bg:#f7f1e6;
+      --paper:#fffaf0;
+      --ink:#27211b;
+      --muted:#7d7062;
+      --line:#e5d8c3;
+      --accent:#e85d3f;
+      --accent2:#2f7d67;
+      --accent3:#f0b54d;
+      --danger:#bb3e36;
+      --ok:#267a58;
+      --shadow:0 18px 55px rgba(55,38,19,.13);
+      --radius:28px;
+      --font: ui-rounded, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--font);background:radial-gradient(circle at 12% -8%, #ffe2bd 0 22%, transparent 44%), radial-gradient(circle at 88% 4%, #cfeadd 0 18%, transparent 42%), var(--bg);color:var(--ink);min-height:100vh;}
+    button,input,select{font:inherit} button{cursor:pointer;border:0}
+    .app{max-width:1280px;margin:0 auto;padding:28px clamp(16px,3vw,38px) 56px;}
+    header{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch;margin-bottom:22px;}
+    .hero,.panel{background:rgba(255,250,240,.86);border:1px solid rgba(229,216,195,.9);border-radius:var(--radius);box-shadow:var(--shadow);}
+    .hero{padding:34px;position:relative;overflow:hidden;min-height:286px;}
+    .hero:after{content:"";position:absolute;right:-90px;top:-95px;width:260px;height:260px;border-radius:50%;background:repeating-conic-gradient(from -10deg,#e85d3f 0 18deg,#f7c96d 18deg 36deg,#2f7d67 36deg 54deg,#ffffff 54deg 72deg);opacity:.92;filter:drop-shadow(0 18px 24px rgba(0,0,0,.13));}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;background:#27211b;color:#fffaf0;padding:9px 13px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.02em;}
+    h1{font-size:clamp(42px,7vw,86px);line-height:.92;letter-spacing:-.075em;margin:24px 0 18px;max-width:760px;}
+    .hero p{font-size:18px;line-height:1.65;max-width:680px;color:#594f45;margin:0;position:relative;z-index:1;}
+    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;position:relative;z-index:2;}
+    .btn{min-height:46px;padding:0 18px;border-radius:999px;background:var(--ink);color:#fffaf0;font-weight:900;box-shadow:0 8px 0 rgba(39,33,27,.12);transition:.18s transform,.18s box-shadow,.18s background;}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 0 rgba(39,33,27,.12)}
+    .btn.secondary{background:#fff;border:1px solid var(--line);color:var(--ink);box-shadow:none}.btn.green{background:var(--accent2)}.btn.red{background:var(--accent)}
+    .quick{padding:20px;display:grid;gap:14px}.quick h2,.panel h2{margin:0;font-size:20px;letter-spacing:-.02em}.quick-row{display:grid;grid-template-columns:1fr auto;gap:10px}.field{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:11px 13px}.field input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font-weight:750}.field small{white-space:nowrap;color:var(--muted);font-weight:800}.mini{font-size:13px;color:var(--muted);line-height:1.45}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:13px}.step b{display:block;font-size:13px}.step span{font-size:12px;color:var(--muted)}
+    main{display:grid;grid-template-columns:420px 1fr;gap:22px;align-items:start}.panel{padding:20px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.count{font-size:12px;font-weight:900;color:#fff;background:var(--accent2);padding:6px 9px;border-radius:999px}.members{display:grid;gap:13px}.member{background:#fff;border:1px solid var(--line);border-radius:22px;padding:15px}.member-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.member-name{font-size:17px;font-weight:950;letter-spacing:-.02em}.member small{color:var(--muted);font-weight:800}.remove{width:30px;height:30px;border-radius:50%;background:#f5e9d7;color:var(--muted);font-weight:900}.chipgrid{display:flex;flex-wrap:wrap;gap:7px}.chip{padding:8px 10px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#4a4037;font-size:13px;font-weight:850;transition:.12s}.chip:hover{border-color:#c6ae8f}.chip.prefer{background:#e5f3ec;border-color:#afd9c5;color:#176246}.chip.avoid{background:#fde5df;border-color:#f3b0a2;color:#a93424;text-decoration:line-through}.legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.legend span{font-size:12px;color:var(--muted);font-weight:800}.workspace{display:grid;grid-template-columns:1fr 360px;gap:22px}.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}.filters .field{border-radius:16px}.filters select,.filters input{border:0;outline:0;background:transparent;width:100%;font-weight:850;color:var(--ink)}.places{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.place{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px;min-height:142px;display:flex;flex-direction:column;gap:10px}.place.dim{opacity:.42;filter:grayscale(.35)}.place.winner{outline:4px solid rgba(232,93,63,.35);animation:winner .9s ease both}@keyframes winner{0%{transform:scale(.98)}55%{transform:scale(1.03)}100%{transform:scale(1)}}.place h3{margin:0;font-size:17px;letter-spacing:-.03em}.meta{display:flex;gap:7px;flex-wrap:wrap}.badge{font-size:11px;font-weight:950;padding:5px 8px;border-radius:999px;background:#f4ecdf;color:#625649}.badge.score{background:#27211b;color:#fff}.badge.ok{background:#e5f3ec;color:#176246}.badge.bad{background:#fde5df;color:#a93424}.reasons{font-size:12px;color:var(--muted);line-height:1.35;margin-top:auto}.roulette{position:sticky;top:18px}.wheelbox{background:#fff;border:1px solid var(--line);border-radius:26px;padding:18px;text-align:center;box-shadow:inset 0 0 0 6px rgba(245,236,222,.5)}.pointer{width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:26px solid var(--accent);margin:0 auto -8px;position:relative;z-index:4;filter:drop-shadow(0 3px 0 rgba(0,0,0,.12))}canvas{width:100%;max-width:305px;aspect-ratio:1;border-radius:50%;filter:drop-shadow(0 14px 18px rgba(55,38,19,.18));transition:transform 4s cubic-bezier(.12,.8,.08,1)}.result{margin-top:14px;background:#fff6df;border:1px dashed #ddb66e;border-radius:22px;padding:15px;text-align:left}.result b{display:block;font-size:22px;letter-spacing:-.04em}.result p{margin:7px 0 0;color:var(--muted);font-size:13px;line-height:1.45}.actions{display:grid;gap:9px;margin-top:12px}.status{font-size:12px;color:var(--muted);line-height:1.45;margin-top:10px}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(30px);background:#27211b;color:#fff;padding:13px 16px;border-radius:999px;font-weight:900;box-shadow:0 18px 40px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.empty{grid-column:1/-1;background:#fff;border:1px dashed #d6c1a3;border-radius:24px;padding:30px;text-align:center;color:var(--muted);font-weight:850}.modal{position:fixed;inset:0;background:rgba(39,33,27,.35);display:none;align-items:center;justify-content:center;padding:18px;z-index:9}.modal.open{display:flex}.dialog{max-width:520px;width:100%;background:var(--paper);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:22px}.dialog h3{margin:0 0 12px;font-size:26px}.dialog .field{margin-bottom:10px}.dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+    @media(max-width:1060px){header,main,.workspace{grid-template-columns:1fr}.roulette{position:relative;top:0}.places{grid-template-columns:1fr 1fr}}@media(max-width:680px){.app{padding:14px 12px 32px}.hero{padding:24px}.hero:after{opacity:.22}.steps,.filters,.places{grid-template-columns:1fr}.quick-row{grid-template-columns:1fr}.workspace{gap:14px}.panel{padding:14px}h1{font-size:48px}.hero p{font-size:15px}.btn{width:100%}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}canvas{transition:none!important}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <section class="hero">
+      <span class="eyebrow">🍽️ 팀 점심 결정 장애 해소 앱</span>
+      <h1>오늘 점심<br/>뭐 먹지?</h1>
+      <p>팀원별 <b>선호 메뉴</b>와 <b>못 먹는 메뉴</b>를 체크하면, 현재 위치 주변 맛집 후보를 자동으로 걸러 점수화하고 마지막엔 룰렛으로 한 곳을 정합니다.</p>
+      <div class="hero-actions">
+        <button class="btn red" id="locateBtn">내 주변 맛집 불러오기</button>
+        <button class="btn secondary" id="demoBtn">샘플 데이터로 섞기</button>
+      </div>
+    </section>
+    <aside class="quick panel">
+      <h2>사용 흐름</h2>
+      <div class="steps">
+        <div class="step"><b>1. 팀원 체크</b><span>좋아요/못 먹어요</span></div>
+        <div class="step"><b>2. 후보 추림</b><span>충돌 메뉴 제외</span></div>
+        <div class="step"><b>3. 룰렛 결정</b><span>점수 가중 랜덤</span></div>
+      </div>
+      <div class="quick-row">
+        <label class="field"><small>팀원</small><input id="memberInput" placeholder="예: 지민" /></label>
+        <button class="btn green" id="addMemberBtn">추가</button>
+      </div>
+      <div class="quick-row">
+        <label class="field"><small>메뉴</small><input id="menuInput" placeholder="예: 마라탕" /></label>
+        <button class="btn secondary" id="addMenuBtn">칩 추가</button>
+      </div>
+      <p class="mini">팁: 메뉴 칩은 한 번 누르면 선호, 두 번 누르면 못 먹는 메뉴, 세 번 누르면 해제됩니다.</p>
+    </aside>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="panel-head"><h2>팀원 투표판</h2><span class="count" id="memberCount"></span></div>
+      <div class="members" id="members"></div>
+      <div class="legend"><span>초록 = 선호</span><span>빨강 = 못 먹음</span><span>미체크 = 상관없음</span></div>
+    </section>
+
+    <section class="workspace">
+      <section class="panel">
+        <div class="panel-head"><h2>주변 맛집 후보</h2><span class="count" id="placeCount"></span></div>
+        <div class="filters">
+          <label class="field"><small>검색 반경</small><select id="radius"><option value="600">600m</option><option value="1000" selected>1km</option><option value="1500">1.5km</option></select></label>
+          <label class="field"><small>예산</small><select id="budget"><option value="all">전체</option><option value="1">가성비</option><option value="2" selected>보통</option><option value="3">조금 비쌈</option></select></label>
+          <label class="field"><small>정렬</small><select id="sort"><option value="score">팀 적합도</option><option value="distance">가까운 순</option><option value="rating">평점 순</option></select></label>
+        </div>
+        <div class="places" id="places"></div>
+      </section>
+
+      <aside class="roulette panel">
+        <div class="panel-head"><h2>결정 룰렛</h2><span class="count" id="rouletteCount"></span></div>
+        <div class="wheelbox">
+          <div class="pointer"></div>
+          <canvas id="wheel" width="620" height="620" aria-label="점심 후보 룰렛"></canvas>
+          <div class="result" id="result"><b>아직 미정</b><p>후보를 확인한 뒤 룰렛을 돌려보세요. 선호도가 높은 후보가 조금 더 잘 뽑힙니다.</p></div>
+        </div>
+        <div class="actions">
+          <button class="btn red" id="spinBtn">룰렛 돌리기</button>
+          <button class="btn secondary" id="shareBtn">결과 복사하기</button>
+        </div>
+        <p class="status" id="status">위치 권한을 허용하면 OpenStreetMap 기반 주변 식당을 불러오고, 실패하면 샘플 후보로 작동합니다.</p>
+      </aside>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="dialog">
+    <h3>새 후보 식당 추가</h3>
+    <label class="field"><small>이름</small><input id="placeName" placeholder="예: 을지면옥" /></label>
+    <label class="field"><small>종류</small><input id="placeKind" placeholder="예: 냉면, 한식" /></label>
+    <div class="dialog-actions"><button class="btn secondary" id="closeModal">취소</button><button class="btn green" id="savePlace">추가</button></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const menus = ["한식","중식","일식","분식","돈까스","국밥","쌀국수","파스타","샐러드","버거","마라탕","냉면"];
+const palette = ["#e85d3f","#2f7d67","#f0b54d","#6d8fb3","#d86a8a","#5d8aa8","#c97742","#809c49"];
+let members = [
+  {name:"나", prefer:["한식","쌀국수"], avoid:["마라탕"]},
+  {name:"민지", prefer:["일식","샐러드"], avoid:["국밥"]},
+  {name:"준호", prefer:["돈까스","중식"], avoid:["파스타"]}
+];
+let places = [
+  {name:"소문난 직장인 백반", kind:"한식", tags:["한식","백반"], distance:230, rating:4.5, budget:1},
+  {name:"멘야 점심라멘", kind:"일식", tags:["일식","라멘"], distance:410, rating:4.4, budget:2},
+  {name:"바삭 돈까스 연구소", kind:"돈까스", tags:["돈까스","일식"], distance:520, rating:4.7, budget:2},
+  {name:"포포 쌀국수", kind:"쌀국수", tags:["쌀국수","베트남"], distance:610, rating:4.3, budget:2},
+  {name:"초록 접시 샐러드", kind:"샐러드", tags:["샐러드","가벼움"], distance:350, rating:4.2, budget:2},
+  {name:"마라공방", kind:"마라탕", tags:["마라탕","중식"], distance:470, rating:4.1, budget:2},
+  {name:"오래된 국밥집", kind:"국밥", tags:["국밥","한식"], distance:760, rating:4.6, budget:1},
+  {name:"정오 파스타", kind:"파스타", tags:["파스타","양식"], distance:680, rating:4.0, budget:3}
+];
+let rotation = 0, lastWinner = null;
+const $ = s => document.querySelector(s);
+const toast = msg => { const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800); };
+function normalizeKind(text){ const hay=(text||'').toLowerCase(); if(/korean|한식|백반|국밥|찌개|냉면/.test(hay))return '한식'; if(/chinese|중식|짜장|짬뽕|마라/.test(hay))return '중식'; if(/japanese|일식|sushi|ramen|라멘|돈까스/.test(hay))return hay.includes('돈')?'돈까스':'일식'; if(/vietnam|쌀국수|pho/.test(hay))return '쌀국수'; if(/burger|버거/.test(hay))return '버거'; if(/pasta|italian|파스타/.test(hay))return '파스타'; if(/salad|샐러드/.test(hay))return '샐러드'; if(/snack|분식|떡볶/.test(hay))return '분식'; return '한식'; }
+function scorePlace(p){
+  let score = Math.round((p.rating||4)*10) - Math.round((p.distance||800)/100);
+  const reasons=[]; let blocked=false;
+  members.forEach(m=>{
+    const tags = p.tags || [p.kind];
+    const pref = m.prefer.some(x=>tags.includes(x)||p.kind.includes(x));
+    const avoid = m.avoid.some(x=>tags.includes(x)||p.kind.includes(x));
+    if(pref){score+=16; reasons.push(`${m.name} 선호`)}
+    if(avoid){score-=80; blocked=true; reasons.push(`${m.name} 못 먹음`)}
+  });
+  const budget = $('#budget')?.value || '2'; if(budget !== 'all' && Number(p.budget)>Number(budget)){score-=10; reasons.push('예산 초과 가능')}
+  return {...p, score, blocked, reasons:[...new Set(reasons)]};
+}
+function filtered(){
+  const radius=Number($('#radius').value); let arr=places.map(scorePlace).filter(p=>p.distance<=radius);
+  const budget=$('#budget').value; if(budget!=='all') arr=arr.filter(p=>p.budget<=Number(budget)+1);
+  const sort=$('#sort').value; arr.sort((a,b)=> sort==='distance'?a.distance-b.distance:sort==='rating'?b.rating-a.rating:b.score-a.score);
+  return arr;
+}
+function eligible(){ return filtered().filter(p=>!p.blocked && p.score>0).slice(0,8); }
+function renderMembers(){
+  $('#memberCount').textContent = `${members.length}명`;
+  $('#members').innerHTML = members.map((m,i)=>`<article class="member"><div class="member-top"><div><div class="member-name">${m.name}</div><small>선호 ${m.prefer.length} · 제외 ${m.avoid.length}</small></div>${members.length>1?`<button class="remove" data-remove="${i}">×</button>`:''}</div><div class="chipgrid">${menus.map(menu=>`<button class="chip ${m.prefer.includes(menu)?'prefer':m.avoid.includes(menu)?'avoid':''}" data-member="${i}" data-menu="${menu}">${menu}</button>`).join('')}</div></article>`).join('');
+}
+function renderPlaces(){
+  const arr=filtered(); const ok=eligible(); $('#placeCount').textContent=`${ok.length}/${arr.length}개 통과`; $('#rouletteCount').textContent=`${ok.length}칸`;
+  $('#places').innerHTML = arr.length? arr.map(p=>`<article class="place ${p.blocked||p.score<=0?'dim':''} ${lastWinner&&lastWinner.name===p.name?'winner':''}"><div class="meta"><span class="badge score">${p.score}점</span><span class="badge">${p.kind}</span><span class="badge">${p.distance}m</span><span class="badge">★ ${p.rating}</span>${p.blocked?'<span class="badge bad">제외</span>':'<span class="badge ok">가능</span>'}</div><h3>${p.name}</h3><div class="reasons">${p.reasons.length?p.reasons.slice(0,3).join(' · '):'충돌 없음 · 무난한 후보'}</div></article>`).join('') : `<div class="empty">조건에 맞는 후보가 없어요. 반경/예산을 넓히거나 샘플 데이터를 섞어보세요.</div>`;
+  drawWheel(ok); updateStatus(ok);
+}
+function drawWheel(arr){
+  const c=$('#wheel'), ctx=c.getContext('2d'), w=c.width, r=w/2; ctx.clearRect(0,0,w,w); ctx.save(); ctx.translate(r,r); ctx.rotate(rotation*Math.PI/180);
+  if(!arr.length){ ctx.beginPath(); ctx.arc(0,0,r-8,0,Math.PI*2); ctx.fillStyle='#f4ecdf'; ctx.fill(); ctx.fillStyle='#7d7062'; ctx.font='bold 34px sans-serif'; ctx.textAlign='center'; ctx.fillText('후보 없음',0,8); ctx.restore(); return; }
+  const total=arr.length, arc=Math.PI*2/total;
+  arr.forEach((p,i)=>{ ctx.beginPath(); ctx.moveTo(0,0); ctx.arc(0,0,r-10,i*arc,(i+1)*arc); ctx.closePath(); ctx.fillStyle=palette[i%palette.length]; ctx.fill(); ctx.strokeStyle='rgba(255,250,240,.9)'; ctx.lineWidth=5; ctx.stroke(); ctx.save(); ctx.rotate(i*arc+arc/2); ctx.textAlign='right'; ctx.fillStyle='#fffaf0'; ctx.font='900 27px Apple SD Gothic Neo, sans-serif'; const label=p.name.length>9?p.name.slice(0,8)+'…':p.name; ctx.fillText(label,r-34,8); ctx.restore(); });
+  ctx.beginPath(); ctx.arc(0,0,58,0,Math.PI*2); ctx.fillStyle='#fffaf0'; ctx.fill(); ctx.fillStyle='#27211b'; ctx.font='900 24px sans-serif'; ctx.textAlign='center'; ctx.fillText('LUNCH',0,8); ctx.restore();
+}
+function updateStatus(ok){ $('#status').textContent = ok.length ? `룰렛은 ${ok.length}개 후보에서 팀 적합도 점수를 가중치로 사용합니다.` : '가능 후보가 없습니다. 못 먹는 메뉴와 필터 조건을 조정해보세요.'; }
+function render(){ renderMembers(); renderPlaces(); }
+function cycleChip(i, menu){ const m=members[i]; if(m.prefer.includes(menu)){m.prefer=m.prefer.filter(x=>x!==menu); m.avoid.push(menu)} else if(m.avoid.includes(menu)){m.avoid=m.avoid.filter(x=>x!==menu)} else m.prefer.push(menu); render(); }
+function spin(){
+  const arr=eligible(); if(!arr.length){toast('룰렛 후보가 없어요'); return}
+  const weights=arr.map(p=>Math.max(1,p.score)); const sum=weights.reduce((a,b)=>a+b,0); let pick=Math.random()*sum, idx=0; for(;idx<weights.length;idx++){ pick-=weights[idx]; if(pick<=0)break; }
+  const arc=360/arr.length, targetCenter=idx*arc+arc/2; const extra=1440+Math.random()*360; rotation = extra + (270 - targetCenter); $('#wheel').style.transform=`rotate(${rotation}deg)`;
+  lastWinner=arr[idx]; setTimeout(()=>{ $('#result').innerHTML=`<b>${lastWinner.name}</b><p>${lastWinner.kind} · ${lastWinner.distance}m · ★ ${lastWinner.rating}<br>${lastWinner.reasons.length?lastWinner.reasons.join(' · '):'팀원 충돌이 없는 안정 후보예요.'}</p>`; renderPlaces(); toast('오늘 점심 결정!'); },4100);
+}
+async function locate(){
+  $('#status').textContent='위치 확인 중… 브라우저 권한을 허용해주세요.';
+  if(!navigator.geolocation){toast('이 브라우저는 위치 기능을 지원하지 않아요'); return}
+  navigator.geolocation.getCurrentPosition(async pos=>{
+    const {latitude, longitude}=pos.coords; const radius=$('#radius').value; $('#status').textContent='OpenStreetMap에서 주변 식당을 불러오는 중…';
+    try{
+      const q=`[out:json][timeout:18];(node[amenity=restaurant](around:${radius},${latitude},${longitude});node[amenity=fast_food](around:${radius},${latitude},${longitude});node[amenity=cafe](around:${radius},${latitude},${longitude}););out tags center 24;`;
+      const res=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',body:q}); const data=await res.json();
+      const mapped=(data.elements||[]).filter(e=>e.tags&&e.tags.name).slice(0,18).map((e,i)=>{ const lat=e.lat||e.center?.lat, lon=e.lon||e.center?.lon; const d=Math.round(distance(latitude,longitude,lat,lon)); const cuisine=e.tags.cuisine||e.tags.amenity||''; const kind=normalizeKind(cuisine+' '+e.tags.name); return {name:e.tags.name, kind, tags:[kind], distance:d, rating: +(4+Math.random()*.8).toFixed(1), budget: 1+(i%3)}; });
+      if(mapped.length<3) throw new Error('too few places'); places=mapped; lastWinner=null; render(); toast(`${mapped.length}개 후보를 불러왔어요`);
+    }catch(e){ $('#status').textContent='주변 맛집 호출에 실패해 샘플 후보로 전환했습니다.'; toast('샘플 후보로 진행합니다'); render(); }
+  }, err=>{ $('#status').textContent='위치 권한이 없어 샘플 후보로 작동합니다.'; toast('샘플 후보로 진행합니다'); });
+}
+function distance(a,b,c,d){ const R=6371000, toRad=x=>x*Math.PI/180; const A=toRad(c-a), B=toRad(d-b); const s=Math.sin(A/2)**2+Math.cos(toRad(a))*Math.cos(toRad(c))*Math.sin(B/2)**2; return 2*R*Math.atan2(Math.sqrt(s),Math.sqrt(1-s)); }
+function shuffleDemo(){ places = places.sort(()=>Math.random()-.5).map(p=>({...p, distance: Math.max(120, Math.round(p.distance*(.75+Math.random()*.65))), rating:+(4+Math.random()*.8).toFixed(1)})); lastWinner=null; render(); toast('샘플 후보를 섞었어요'); }
+
+document.addEventListener('click',e=>{ const chip=e.target.closest('[data-member]'); if(chip) cycleChip(+chip.dataset.member, chip.dataset.menu); const rem=e.target.closest('[data-remove]'); if(rem){members.splice(+rem.dataset.remove,1); render();} });
+$('#addMemberBtn').onclick=()=>{ const v=$('#memberInput').value.trim(); if(!v)return toast('팀원 이름을 입력하세요'); members.push({name:v,prefer:[],avoid:[]}); $('#memberInput').value=''; render(); };
+$('#addMenuBtn').onclick=()=>{ const v=$('#menuInput').value.trim(); if(!v)return toast('메뉴 이름을 입력하세요'); if(!menus.includes(v)) menus.push(v); $('#menuInput').value=''; render(); };
+['radius','budget','sort'].forEach(id=>$('#'+id).addEventListener('change',renderPlaces));
+$('#spinBtn').onclick=spin; $('#locateBtn').onclick=locate; $('#demoBtn').onclick=shuffleDemo;
+$('#shareBtn').onclick=async()=>{ const text=lastWinner?`오늘 점심은 ${lastWinner.name}! (${lastWinner.kind}, ${lastWinner.distance}m)`:'아직 룰렛 결과가 없습니다.'; try{await navigator.clipboard.writeText(text); toast('결과를 복사했어요')}catch(e){toast(text)} };
+render();
+</script>
+</body>
+</html>

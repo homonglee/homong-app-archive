@@ -1,0 +1,57 @@
+{
+  "url-qr-shortener-onepage": {
+    "name": "Linkly One — URL 단축 & QR 생성기",
+    "url": "https://url-qr-shortener-onepage.vercel.app",
+    "github": "https://github.com/homonglee/linkly-one-url-qr",
+    "icon": "🔗",
+    "category": "마케팅/유틸"
+  },
+  "markdown-lite-editor": {
+    "name": "Live Markdown Studio",
+    "url": "https://markdown-lite-editor.vercel.app",
+    "github": "https://github.com/homonglee/markdown-lite-editor",
+    "icon": "✍️",
+    "category": "글쓰기/생산성"
+  },
+  "voice-memo-mindmap": {
+    "name": "보이스 메모 마인드맵",
+    "url": "https://voice-memo-mindmap.vercel.app",
+    "github": "https://github.com/homonglee/voice-memo-mindmap",
+    "icon": "🎙️",
+    "category": "음성/아이디어"
+  },
+  "subscription-dashboard": {
+    "name": "정기 구독 서비스 매니저",
+    "url": "https://subscription-dashboard-rho.vercel.app",
+    "github": "https://github.com/homonglee/subscription-dashboard",
+    "icon": "💳",
+    "category": "재무/대시보드"
+  },
+  "micro-mood-journal": {
+    "name": "3줄 마이크로 일기장",
+    "url": "https://micro-mood-journal-alpha.vercel.app",
+    "github": "https://github.com/homonglee/micro-mood-journal",
+    "icon": "🌙",
+    "category": "저널/감정"
+  },
+  "lunch-roulette": {
+    "name": "오늘 점심 뭐 먹지? 투표 룰렛",
+    "url": "/apps/lunch-roulette/",
+    "icon": "🍜",
+    "category": "팀/결정"
+  },
+  "ocr-translator-app": {
+    "name": "스크린샷 OCR 번역기",
+    "url": "https://ocr-translator-app-eight.vercel.app",
+    "github": "https://github.com/homonglee/ocr-translator-app",
+    "icon": "📸",
+    "category": "OCR/번역"
+  },
+  "mastermind-page": {
+    "name": "마스터마인드 인터랙티브 페이지",
+    "url": "https://mastermind-page.vercel.app",
+    "github": "https://github.com/homonglee/mastermind-page",
+    "icon": "🧠",
+    "category": "학습/콘텐츠"
+  }
+}

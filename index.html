@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homong's App Archive — 인터랙티브 앱 디렉토리</title>
+  <meta name="description" content="그동안 만든 Homong의 원페이지 앱들을 자동 수집해 아이콘, 이름, 설명, 실행 링크로 정리하는 인터랙티브 앱 아카이브." />
+  <style>
+    :root{
+      --bg:#070914; --panel:rgba(255,255,255,.08); --panel2:rgba(255,255,255,.12); --line:rgba(255,255,255,.16);
+      --text:#f7f8ff; --muted:#aab0c7; --brand:#8b5cf6; --brand2:#22d3ee; --good:#34d399; --warn:#fbbf24;
+      --shadow:0 30px 90px rgba(0,0,0,.38); --radius:26px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",Segoe UI,sans-serif;background:radial-gradient(circle at top left,rgba(139,92,246,.42),transparent 34rem),radial-gradient(circle at top right,rgba(34,211,238,.28),transparent 38rem),linear-gradient(180deg,#070914 0%,#0d1020 58%,#070914 100%);color:var(--text);min-height:100vh;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 78%);pointer-events:none;z-index:-1}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 34px));margin:0 auto}.nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);background:rgba(7,9,20,.64);border-bottom:1px solid var(--line)}.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em}.brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 12px 30px rgba(139,92,246,.35)}.nav-actions{display:flex;gap:8px;align-items:center}.pill,.btn{border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--text);border-radius:999px;padding:10px 14px;font-weight:800;cursor:pointer;transition:.2s ease}.btn:hover,.pill:hover{transform:translateY(-1px);background:rgba(255,255,255,.14)}.btn.primary{border:0;background:linear-gradient(135deg,var(--brand),var(--brand2));box-shadow:0 14px 35px rgba(34,211,238,.18)}
+    .hero{padding:74px 0 26px;display:block;text-align:left}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;color:#dbeafe;font-weight:800;font-size:13px}.hero h1{font-size:clamp(44px,7vw,86px);line-height:.94;margin:18px 0 18px;letter-spacing:-.075em;max-width:940px}.grad{background:linear-gradient(100deg,#fff,#c4b5fd 45%,#67e8f9 82%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;line-height:1.75;margin:0 0 24px;max-width:820px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-note{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.hero-note .note{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:20px;padding:16px;color:var(--muted);line-height:1.55}.hero-note b{display:block;color:var(--text);margin-bottom:6px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}.stat{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:20px;padding:18px}.stat b{display:block;font-size:30px;letter-spacing:-.05em}.stat span{color:var(--muted);font-weight:700;font-size:13px}.toolbar{position:sticky;top:67px;z-index:20;background:linear-gradient(180deg,rgba(7,9,20,.92),rgba(7,9,20,.75));backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:24px;padding:14px;margin:22px 0;display:grid;grid-template-columns:1fr auto auto;gap:10px;box-shadow:0 18px 50px rgba(0,0,0,.2)}.search{position:relative}.search input{width:100%;padding:15px 16px 15px 46px;border-radius:16px;border:1px solid var(--line);outline:0;background:rgba(255,255,255,.08);color:var(--text);font-size:15px}.search span{position:absolute;left:16px;top:13px;opacity:.78}.select{padding:0 14px;border-radius:16px;border:1px solid var(--line);background:#15182a;color:var(--text);font-weight:800}.toggle{display:flex;gap:6px;padding:5px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.06)}.toggle button{border:0;background:transparent;color:var(--muted);border-radius:12px;padding:9px 12px;font-weight:900;cursor:pointer}.toggle button.active{background:rgba(255,255,255,.14);color:white}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:34px 0 15px}.section-head h2{margin:0;font-size:30px;letter-spacing:-.04em}.section-head p{margin:4px 0 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:54px}.grid.list{grid-template-columns:1fr}.app-card{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.055));border-radius:26px;padding:18px;min-height:250px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.18);transition:.23s ease}.app-card:hover{transform:translateY(-5px);border-color:rgba(103,232,249,.45);box-shadow:0 28px 76px rgba(34,211,238,.13)}.app-card::after{content:"";position:absolute;inset:auto -40px -80px auto;width:170px;height:170px;background:radial-gradient(circle,rgba(139,92,246,.22),transparent 65%);pointer-events:none}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px}.icon-link{width:72px;height:72px;display:grid;place-items:center;border-radius:24px;background:linear-gradient(135deg,rgba(139,92,246,.42),rgba(34,211,238,.24));border:1px solid rgba(255,255,255,.22);font-size:36px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 16px 34px rgba(0,0,0,.22);transition:.2s}.icon-link:hover{transform:scale(1.06) rotate(-2deg)}.badge{font-size:12px;color:#dbeafe;border:1px solid var(--line);background:rgba(255,255,255,.08);padding:7px 10px;border-radius:999px;font-weight:900}.app-card h3{font-size:22px;line-height:1.2;letter-spacing:-.04em;margin:16px 0 9px}.app-card p{color:var(--muted);line-height:1.65;min-height:78px;margin:0}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.chip{font-size:12px;color:#cbd5e1;background:rgba(255,255,255,.075);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-weight:750}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.mini{border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:13px;padding:10px 12px;font-size:13px;font-weight:900}.mini.launch{background:linear-gradient(135deg,rgba(139,92,246,.9),rgba(34,211,238,.78));border:0}.list .app-card{min-height:auto;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}.list .app-card p{min-height:auto}.list .actions{margin:0;justify-content:end}.empty{display:none;text-align:center;padding:44px;border:1px dashed var(--line);border-radius:26px;color:var(--muted);background:rgba(255,255,255,.04)}
+    .auto-panel{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 70px}.panel{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:26px;padding:22px}.panel h3{margin:0 0 10px;letter-spacing:-.03em}.panel p,.panel li{color:var(--muted);line-height:1.7}.panel code{color:#cffafe;background:rgba(34,211,238,.1);padding:2px 6px;border-radius:7px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#101426;border:1px solid var(--line);border-radius:999px;padding:12px 16px;font-weight:900;box-shadow:var(--shadow);transition:.25s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.auto-panel{grid-template-columns:1fr}.hero-note{grid-template-columns:1fr}.list .app-card{grid-template-columns:1fr}.list .actions{justify-content:start}}@media(max-width:620px){.grid{grid-template-columns:1fr}.nav-actions .pill{display:none}.hero{padding-top:46px}.hero h1{font-size:44px}.stats{grid-template-columns:1fr 1fr}.stat b{font-size:24px}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><span class="brand-mark">⌘</span><span>Homong's App Archive</span></a>
+      <div class="nav-actions"><button id="refreshBtn" class="pill">↻ 새로 스캔</button><a class="btn primary" href="#apps">앱 실행하기</a></div>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">🗂️ 자동 수집형 원페이지 앱 디렉토리</span>
+        <h1>만든 앱들을<br><span class="grad">아이콘으로 실행</span>하는<br>아카이브</h1>
+        <p>그동안 작업했던 앱들을 한 화면에 모았습니다. 앱 카드는 로컬 프로젝트 폴더를 스캔해 자동으로 추가되고, 아이콘이나 실행 버튼을 누르면 배포 URL 또는 로컬 앱으로 바로 열립니다.</p>
+        <div class="hero-actions"><a class="btn primary" href="#apps">전체 앱 보기</a><button class="btn" id="randomBtn">🎲 랜덤 앱 실행</button><button class="btn" id="copyBtn">🔗 아카이브 URL 복사</button></div>
+        <div class="hero-note" aria-label="아카이브 핵심 기능">
+          <div class="note"><b>자동 디렉토리화</b>새 앱 폴더가 생기면 서버가 다시 스캔해 카드로 추가합니다.</div>
+          <div class="note"><b>아이콘으로 실행</b>각 앱의 아이콘과 실행 버튼이 실제 앱 URL로 연결됩니다.</div>
+          <div class="note"><b>한 화면 관리</b>검색, 필터, 정렬로 앱들을 빠르게 찾아 실행합니다.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-live="polite">
+      <div class="stat"><b id="statTotal">0</b><span>발견된 앱</span></div>
+      <div class="stat"><b id="statDeploy">0</b><span>외부 배포 링크</span></div>
+      <div class="stat"><b id="statLocal">0</b><span>로컬 실행 가능</span></div>
+      <div class="stat"><b id="statCats">0</b><span>카테고리</span></div>
+    </section>
+
+    <section id="apps" class="toolbar" aria-label="앱 검색 및 필터">
+      <label class="search"><span>⌕</span><input id="searchInput" placeholder="앱 이름, 설명, 카테고리, 폴더명으로 검색" autocomplete="off" /></label>
+      <select id="categorySelect" class="select" aria-label="카테고리 선택"><option value="all">전체 카테고리</option></select>
+      <div class="toggle" aria-label="보기 방식"><button id="gridBtn" class="active">그리드</button><button id="listBtn">리스트</button></div>
+    </section>
+
+    <div class="section-head"><div><h2>앱 디렉토리</h2><p id="resultLabel">스캔 중...</p></div><button id="sortBtn" class="btn">최신순</button></div>
+    <section id="appGrid" class="grid" aria-live="polite"></section>
+    <div id="empty" class="empty">검색 결과가 없습니다. 다른 키워드나 카테고리를 선택해보세요.</div>
+
+    <section class="auto-panel">
+      <div class="panel">
+        <h3>앞으로 만드는 앱도 자동 추가</h3>
+        <p>이 아카이브는 서버의 <code>/api/apps</code>가 <code>/Users/homong</code> 아래 프로젝트 폴더를 스캔합니다. 새 앱 폴더에 <code>index.html</code>, <code>public/index.html</code>, <code>package.json</code>, <code>.vercel/project.json</code> 중 하나가 있으면 자동으로 카드가 생깁니다.</p>
+      </div>
+      <div class="panel">
+        <h3>클릭하면 실행되는 구조</h3>
+        <ul>
+          <li>배포 URL이 등록된 앱은 Vercel 등 외부 주소로 바로 열립니다.</li>
+          <li>배포 URL이 없는 앱은 <code>/apps/폴더명/</code> 경로로 로컬 정적 파일을 실행합니다.</li>
+          <li><code>apps_registry.json</code>에 이름, 아이콘, 카테고리, URL을 덮어쓸 수 있습니다.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <div id="toast" class="toast">복사했습니다</div>
+
+  <script>
+    const state = { apps: [], filtered: [], category: 'all', query: '', list: false, newest: true };
+    const $ = sel => document.querySelector(sel);
+    const grid = $('#appGrid'), empty = $('#empty');
+    const fmtDate = ts => ts ? new Intl.DateTimeFormat('ko-KR', {month:'short', day:'numeric'}).format(new Date(ts*1000)) : '등록됨';
+    function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
+    function safeText(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+    function appUrl(app){ return app.url || app.localUrl || '#'; }
+    async function loadApps(){
+      $('#resultLabel').textContent = '로컬 앱 폴더를 스캔하는 중...';
+      const res = await fetch('/api/apps', {cache:'no-store'});
+      const data = await res.json();
+      state.apps = data.apps || [];
+      hydrateCategories(); renderStats(); applyFilters();
+    }
+    function hydrateCategories(){
+      const cats = [...new Set(state.apps.map(a=>a.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ko'));
+      $('#categorySelect').innerHTML = '<option value="all">전체 카테고리</option>' + cats.map(c=>`<option value="${safeText(c)}">${safeText(c)}</option>`).join('');
+    }
+    function renderStats(){
+      const cats = new Set(state.apps.map(a=>a.category).filter(Boolean));
+      $('#statTotal').textContent = state.apps.length;
+      $('#statDeploy').textContent = state.apps.filter(a=>/^https?:/.test(a.deploymentUrl||a.url||'')).length;
+      $('#statLocal').textContent = state.apps.filter(a=>a.hasLocalIndex).length;
+      $('#statCats').textContent = cats.size;
+    }
+    function applyFilters(){
+      const q = state.query.trim().toLowerCase();
+      state.filtered = state.apps.filter(a=>{
+        const hay = [a.name,a.description,a.category,a.slug,a.path].join(' ').toLowerCase();
+        const catOk = state.category === 'all' || a.category === state.category;
+        return catOk && (!q || hay.includes(q));
+      }).sort((a,b)=> state.newest ? (b.mtime-a.mtime) : (a.name||'').localeCompare(b.name||'', 'ko'));
+      renderApps();
+    }
+    function renderApps(){
+      grid.className = 'grid' + (state.list ? ' list' : '');
+      empty.style.display = state.filtered.length ? 'none' : 'block';
+      $('#resultLabel').textContent = `${state.filtered.length}개 앱 표시 · 전체 ${state.apps.length}개 자동 스캔`;
+      grid.innerHTML = state.filtered.map(a=>{
+        const url = appUrl(a); const deploy = /^https?:/.test(a.deploymentUrl||a.url||'');
+        return `<article class="app-card" data-slug="${safeText(a.slug)}">
+          <div class="topline"><a class="icon-link" href="${safeText(url)}" target="_blank" rel="noopener" title="${safeText(a.name)} 실행">${safeText(a.icon||'✨')}</a><span class="badge">${deploy?'외부 실행':'로컬 실행'}</span></div>
+          <div><h3>${safeText(a.name)}</h3><p>${safeText(a.description)}</p><div class="meta"><span class="chip">${safeText(a.category)}</span><span class="chip">${safeText(a.slug)}</span><span class="chip">${fmtDate(a.mtime)}</span></div></div>
+          <div class="actions"><a class="mini launch" href="${safeText(url)}" target="_blank" rel="noopener">앱 실행 ↗</a>${a.github?`<a class="mini" href="${safeText(a.github)}" target="_blank" rel="noopener">GitHub</a>`:''}<button class="mini copy-app" data-url="${safeText(new URL(url, location.href).href)}">링크 복사</button></div>
+        </article>`
+      }).join('');
+    }
+    $('#searchInput').addEventListener('input', e=>{ state.query=e.target.value; applyFilters(); });
+    $('#categorySelect').addEventListener('change', e=>{ state.category=e.target.value; applyFilters(); });
+    $('#gridBtn').addEventListener('click', ()=>{ state.list=false; $('#gridBtn').classList.add('active'); $('#listBtn').classList.remove('active'); renderApps(); });
+    $('#listBtn').addEventListener('click', ()=>{ state.list=true; $('#listBtn').classList.add('active'); $('#gridBtn').classList.remove('active'); renderApps(); });
+    $('#sortBtn').addEventListener('click', ()=>{ state.newest=!state.newest; $('#sortBtn').textContent=state.newest?'최신순':'이름순'; applyFilters(); });
+    $('#refreshBtn').addEventListener('click', ()=>loadApps().then(()=>toast('앱 목록을 다시 스캔했습니다')));
+    $('#randomBtn').addEventListener('click', ()=>{ const pool=state.filtered.length?state.filtered:state.apps; if(pool.length){ const a=pool[Math.floor(Math.random()*pool.length)]; window.open(appUrl(a), '_blank', 'noopener'); } });
+    $('#copyBtn').addEventListener('click', ()=> navigator.clipboard.writeText(location.href).then(()=>toast('아카이브 URL을 복사했습니다')));
+    document.addEventListener('click', e=>{ const b=e.target.closest('.copy-app'); if(b){ navigator.clipboard.writeText(b.dataset.url).then(()=>toast('앱 링크를 복사했습니다')); }});
+    loadApps().catch(err=>{ console.error(err); $('#resultLabel').textContent='앱 목록을 불러오지 못했습니다'; grid.innerHTML='<article class="app-card"><h3>스캔 오류</h3><p>서버 로그를 확인해주세요.</p></article>'; });
+  </script>
+</body>
+</html>

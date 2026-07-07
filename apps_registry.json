@@ -53,5 +53,13 @@
     "github": "https://github.com/homonglee/mastermind-page",
     "icon": "🧠",
     "category": "학습/콘텐츠"
+  },
+  "mood-playlist-linker": {
+    "name": "무드별 플레이리스트 링커",
+    "description": "현재 감정 상태와 날씨, 에너지, 듣는 상황을 조합해 어울리는 YouTube 음악 플레이리스트 링크를 큐레이션하는 원페이지 앱.",
+    "url": "https://mood-playlist-linker.vercel.app",
+    "github": "https://github.com/homonglee/mood-playlist-linker",
+    "icon": "🎧",
+    "category": "음악/무드"
   }
 }

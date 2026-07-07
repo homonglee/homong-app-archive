@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "mood-playlist-linker",
+      "name": "무드별 플레이리스트 링커",
+      "description": "현재 감정 상태와 날씨, 에너지, 듣는 상황을 조합해 어울리는 YouTube 음악 플레이리스트 링크를 큐레이션하는 원페이지 앱.",
+      "category": "음악/무드",
+      "icon": "🎧",
+      "url": "https://mood-playlist-linker.vercel.app",
+      "deploymentUrl": "https://mood-playlist-linker.vercel.app",
+      "localUrl": "/apps/mood-playlist-linker/",
+      "github": "https://github.com/homonglee/mood-playlist-linker",
+      "path": "mood-playlist-linker",
+      "mtime": 1783460926.9062192,
+      "hasLocalIndex": true,
+      "source": "registry+scan"
+    },
+    {
       "slug": "url-qr-shortener-onepage",
       "name": "Linkly One — URL 단축 & QR 생성기",
       "description": "긴 URL을 즉시 짧은 링크와 다운로드 가능한 QR코드로 변환하는 1페이지 인터랙티브 앱",

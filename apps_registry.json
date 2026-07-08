@@ -61,5 +61,13 @@
     "github": "https://github.com/homonglee/mood-playlist-linker",
     "icon": "🎧",
     "category": "음악/무드"
+  },
+  "meeting-secretary-app": {
+    "name": "원클릭 회의록 정리 비서",
+    "description": "대충 받아 적은 미팅 메모를 핵심 요약, 결정 사항, Todo List, 리스크/보류 항목으로 깔끔하게 구조화하는 원페이지 앱.",
+    "url": "https://meeting-secretary-app.vercel.app",
+    "github": "https://github.com/homonglee/meeting-secretary-app",
+    "icon": "📝",
+    "category": "회의/생산성"
   }
 }

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Homong's App Archive — 인터랙티브 앱 디렉토리</title>
-  <meta name="description" content="그동안 만든 Homong의 원페이지 앱들을 자동 수집해 아이콘, 이름, 설명, 실행 링크로 정리하는 인터랙티브 앱 아카이브." />
+  <meta name="description" content="그동안 만든 Homong의 원페이지 앱들을 검수 후 수동 등록해 아이콘, 이름, 설명, 실행 링크로 정리하는 인터랙티브 앱 아카이브." />
   <style>
     :root{
       --bg:#070914; --panel:rgba(255,255,255,.08); --panel2:rgba(255,255,255,.12); --line:rgba(255,255,255,.16);
@@ -25,19 +25,19 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top"><span class="brand-mark">⌘</span><span>Homong's App Archive</span></a>
-      <div class="nav-actions"><button id="refreshBtn" class="pill">↻ 새로 스캔</button><a class="btn primary" href="#apps">앱 실행하기</a></div>
+      <div class="nav-actions"><button id="refreshBtn" class="pill">↻ 목록 새로고침</button><a class="btn primary" href="#apps">앱 실행하기</a></div>
     </div>
   </header>
 
   <main id="top" class="wrap">
     <section class="hero">
       <div>
-        <span class="eyebrow">🗂️ 자동 수집형 원페이지 앱 디렉토리</span>
+        <span class="eyebrow">🗂️ 검수 후 등록형 원페이지 앱 디렉토리</span>
         <h1>만든 앱들을<br><span class="grad">아이콘으로 실행</span>하는<br>아카이브</h1>
-        <p>그동안 작업했던 앱들을 한 화면에 모았습니다. 앱 카드는 로컬 프로젝트 폴더를 스캔해 자동으로 추가되고, 아이콘이나 실행 버튼을 누르면 배포 URL 또는 로컬 앱으로 바로 열립니다.</p>
+        <p>그동안 작업했던 앱들을 한 화면에 모았습니다. 새 앱은 검수 후 apps_registry.json에 수동 등록해야 표시되며, 아이콘이나 실행 버튼을 누르면 배포 URL 또는 포함된 정적 앱으로 바로 열립니다.</p>
         <div class="hero-actions"><a class="btn primary" href="#apps">전체 앱 보기</a><button class="btn" id="randomBtn">🎲 랜덤 앱 실행</button><button class="btn" id="copyBtn">🔗 아카이브 URL 복사</button></div>
         <div class="hero-note" aria-label="아카이브 핵심 기능">
-          <div class="note"><b>자동 디렉토리화</b>새 앱 폴더가 생기면 서버가 다시 스캔해 카드로 추가합니다.</div>
+          <div class="note"><b>검수 후 등록</b>개별 앱 작업이 끝나도 자동 추가하지 않고, 검수 후 선택한 앱만 카드로 등록합니다.</div>
           <div class="note"><b>아이콘으로 실행</b>각 앱의 아이콘과 실행 버튼이 실제 앱 URL로 연결됩니다.</div>
           <div class="note"><b>한 화면 관리</b>검색, 필터, 정렬로 앱들을 빠르게 찾아 실행합니다.</div>
         </div>
@@ -45,7 +45,7 @@
     </section>
 
     <section class="stats" aria-live="polite">
-      <div class="stat"><b id="statTotal">0</b><span>발견된 앱</span></div>
+      <div class="stat"><b id="statTotal">0</b><span>등록된 앱</span></div>
       <div class="stat"><b id="statDeploy">0</b><span>외부 배포 링크</span></div>
       <div class="stat"><b id="statLocal">0</b><span>로컬 실행 가능</span></div>
       <div class="stat"><b id="statCats">0</b><span>카테고리</span></div>
@@ -63,15 +63,15 @@
 
     <section class="auto-panel">
       <div class="panel">
-        <h3>앞으로 만드는 앱도 자동 추가</h3>
-        <p>이 아카이브는 서버의 <code>/api/apps</code>가 <code>/Users/homong</code> 아래 프로젝트 폴더를 스캔합니다. 새 앱 폴더에 <code>index.html</code>, <code>public/index.html</code>, <code>package.json</code>, <code>.vercel/project.json</code> 중 하나가 있으면 자동으로 카드가 생깁니다.</p>
+        <h3>검수 후 선택한 앱만 추가</h3>
+        <p>개별 앱 작업이 끝나도 아카이브에는 자동으로 들어가지 않습니다. 사용자가 검수한 뒤 “아카이브에 추가”를 요청한 앱만 <code>apps_registry.json</code>에 등록되어 카드로 표시됩니다.</p>
       </div>
       <div class="panel">
         <h3>클릭하면 실행되는 구조</h3>
         <ul>
           <li>배포 URL이 등록된 앱은 Vercel 등 외부 주소로 바로 열립니다.</li>
           <li>배포 URL이 없는 앱은 <code>/apps/폴더명/</code> 경로로 로컬 정적 파일을 실행합니다.</li>
-          <li><code>apps_registry.json</code>에 이름, 아이콘, 카테고리, URL을 덮어쓸 수 있습니다.</li>
+          <li><code>apps_registry.json</code>이 아카이브의 단일 등록 목록이며, 여기에 없는 앱은 표시하지 않습니다.</li>
         </ul>
       </div>
     </section>
@@ -87,7 +87,7 @@
     function safeText(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
     function appUrl(app){ return app.url || app.localUrl || '#'; }
     async function loadApps(){
-      $('#resultLabel').textContent = '로컬 앱 폴더를 스캔하는 중...';
+      $('#resultLabel').textContent = '등록된 앱 목록을 불러오는 중...';
       const res = await fetch('/api/apps', {cache:'no-store'});
       const data = await res.json();
       state.apps = data.apps || [];
@@ -116,7 +116,7 @@
     function renderApps(){
       grid.className = 'grid' + (state.list ? ' list' : '');
       empty.style.display = state.filtered.length ? 'none' : 'block';
-      $('#resultLabel').textContent = `${state.filtered.length}개 앱 표시 · 전체 ${state.apps.length}개 자동 스캔`;
+      $('#resultLabel').textContent = `${state.filtered.length}개 앱 표시 · 전체 ${state.apps.length}개 수동 등록`;
       grid.innerHTML = state.filtered.map(a=>{
         const url = appUrl(a); const deploy = /^https?:/.test(a.deploymentUrl||a.url||'');
         return `<article class="app-card" data-slug="${safeText(a.slug)}">
@@ -131,7 +131,7 @@
     $('#gridBtn').addEventListener('click', ()=>{ state.list=false; $('#gridBtn').classList.add('active'); $('#listBtn').classList.remove('active'); renderApps(); });
     $('#listBtn').addEventListener('click', ()=>{ state.list=true; $('#listBtn').classList.add('active'); $('#gridBtn').classList.remove('active'); renderApps(); });
     $('#sortBtn').addEventListener('click', ()=>{ state.newest=!state.newest; $('#sortBtn').textContent=state.newest?'최신순':'이름순'; applyFilters(); });
-    $('#refreshBtn').addEventListener('click', ()=>loadApps().then(()=>toast('앱 목록을 다시 스캔했습니다')));
+    $('#refreshBtn').addEventListener('click', ()=>loadApps().then(()=>toast('등록된 앱 목록을 새로고침했습니다')));
     $('#randomBtn').addEventListener('click', ()=>{ const pool=state.filtered.length?state.filtered:state.apps; if(pool.length){ const a=pool[Math.floor(Math.random()*pool.length)]; window.open(appUrl(a), '_blank', 'noopener'); } });
     $('#copyBtn').addEventListener('click', ()=> navigator.clipboard.writeText(location.href).then(()=>toast('아카이브 URL을 복사했습니다')));
     document.addEventListener('click', e=>{ const b=e.target.closest('.copy-app'); if(b){ navigator.clipboard.writeText(b.dataset.url).then(()=>toast('앱 링크를 복사했습니다')); }});

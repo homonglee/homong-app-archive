@@ -69,5 +69,34 @@
     "github": "https://github.com/homonglee/meeting-secretary-app",
     "icon": "📝",
     "category": "회의/생산성"
+  },
+  "receipt-expense-scanner": {
+    "name": "지출결의서 영수증 스캐너",
+    "description": "영수증 사진을 OCR로 읽어 일자, 금액, 가맹점명을 추출하고 지출결의서 초안과 XLSX 저장을 지원하는 원페이지 앱.",
+    "url": "https://receipt-expense-scanner.vercel.app/",
+    "github": "https://github.com/homonglee/receipt-expense-scanner",
+    "icon": "🧾",
+    "category": "회계/지출"
+  },
+  "namecard-memo-indexer": {
+    "name": "명함 메모 인덱서 — 촬영·편집·삭제 가능한 인맥 관리 앱",
+    "description": "명함 사진 촬영, 연락처 추출, 만남 메모 저장, 편집/삭제가 가능한 1페이지 인터랙티브 프로토타입",
+    "url": "/apps/namecard-memo-indexer/",
+    "icon": "🪪",
+    "category": "인맥/CRM"
+  },
+  "eisenhower-prioritizer": {
+    "name": "아이젠하워 매트릭스 우선순위 정렬기",
+    "description": "할 일을 긴급도와 중요도 기준으로 분류해 우선순위를 정리하는 매트릭스 앱.",
+    "url": "/apps/eisenhower-prioritizer/",
+    "icon": "🧭",
+    "category": "우선순위/생산성"
+  },
+  "hermes-agent-interactive-page": {
+    "name": "Hermes Agent 소개 — Interactive One Page",
+    "description": "터미널, 데스크톱, 메신저, IDE에서 실제 작업을 수행하는 오픈소스 AI 에이전트 Hermes Agent 소개 페이지",
+    "url": "/apps/hermes-agent-interactive-page/",
+    "icon": "🤖",
+    "category": "AI/소개"
   }
 }

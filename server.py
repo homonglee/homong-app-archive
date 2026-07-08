@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Homong App Archive local preview server.
 
-Scans /Users/homong for one-page app projects and serves an interactive archive.
-Future apps are auto-added when they live as top-level project folders containing
-index.html, public/index.html, package.json, or .vercel/project.json.
+Serves Homong's reviewed app archive. Apps are listed only after the user
+approves them and an explicit apps_registry.json entry is added.
 """
 from __future__ import annotations
 
@@ -145,34 +144,49 @@ def app_entry(app_dir: Path, registry: dict) -> dict | None:
     }
 
 
+def manual_registry_entry(slug: str, overrides: dict) -> dict:
+    """Build one archive card from apps_registry.json only.
+
+    New app folders under /Users/homong are intentionally NOT auto-added.
+    The user reviews each app first, then we add an explicit registry entry.
+    """
+    app_dir = HOME / slug
+    title = desc = ''
+    mtime = 0
+    has_local = False
+    github = overrides.get('github', '')
+    if app_dir.is_dir():
+        title, desc = read_title_and_desc(app_dir)
+        try:
+            mtime = app_dir.stat().st_mtime
+        except OSError:
+            mtime = 0
+        has_local = (app_dir / 'index.html').exists() or (app_dir / 'public' / 'index.html').exists()
+        if not github:
+            github = git_remote(app_dir)
+    url = overrides.get('url') or (f'/apps/{urllib.parse.quote(slug)}/' if has_local else '#')
+    deployment = url if url.startswith('http://') or url.startswith('https://') else ''
+    return {
+        'slug': slug,
+        'name': overrides.get('name') or title or slug.replace('-', ' ').title(),
+        'description': overrides.get('description') or desc or FALLBACK_DESC.get(slug, '검수 후 수동 등록된 앱입니다.'),
+        'category': overrides.get('category') or CATEGORY_BY_SLUG.get(slug, '수동 등록'),
+        'icon': overrides.get('icon') or EMOJI_BY_SLUG.get(slug, '✨'),
+        'url': url,
+        'deploymentUrl': deployment,
+        'localUrl': f'/apps/{urllib.parse.quote(slug)}/' if has_local else '',
+        'github': github,
+        'path': slug if app_dir.is_dir() else '',
+        'mtime': mtime,
+        'hasLocalIndex': has_local,
+        'source': 'manual-registry'
+    }
+
+
 def scan_apps() -> list[dict]:
     registry = load_registry()
-    apps = []
-    for child in HOME.iterdir():
-        if child.is_dir():
-            entry = app_entry(child, registry)
-            if entry:
-                apps.append(entry)
-    # Include registry-only entries if their folder is missing.
-    seen = {a['slug'] for a in apps}
-    for slug, overrides in registry.items():
-        if slug not in seen:
-            apps.append({
-                'slug': slug,
-                'name': overrides.get('name', slug),
-                'description': overrides.get('description',''),
-                'category': overrides.get('category','수동 등록'),
-                'icon': overrides.get('icon','✨'),
-                'url': overrides.get('url','#'),
-                'deploymentUrl': overrides.get('url',''),
-                'localUrl': '',
-                'github': overrides.get('github',''),
-                'path': '',
-                'mtime': 0,
-                'hasLocalIndex': False,
-                'source': 'registry-only'
-            })
-    apps.sort(key=lambda x: x.get('mtime',0), reverse=True)
+    apps = [manual_registry_entry(slug, overrides) for slug, overrides in registry.items()]
+    apps.sort(key=lambda x: x.get('mtime', 0), reverse=True)
     return apps
 
 

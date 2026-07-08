@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "receipt-expense-scanner",
+      "name": "지출결의서 영수증 스캐너",
+      "description": "영수증 사진을 OCR로 읽어 일자, 금액, 가맹점명을 추출하고 지출결의서 초안과 XLSX 저장을 지원하는 원페이지 앱.",
+      "category": "회계/지출",
+      "icon": "🧾",
+      "url": "https://receipt-expense-scanner.vercel.app/",
+      "deploymentUrl": "https://receipt-expense-scanner.vercel.app/",
+      "localUrl": "/apps/receipt-expense-scanner/",
+      "github": "https://github.com/homonglee/receipt-expense-scanner",
+      "path": "receipt-expense-scanner",
+      "mtime": 1783543301.2652338,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "meeting-secretary-app",
       "name": "원클릭 회의록 정리 비서",
       "description": "대충 받아 적은 미팅 메모를 핵심 요약, 결정 사항, Todo List, 리스크/보류 항목으로 깔끔하게 구조화하는 원페이지 앱.",
@@ -13,22 +28,7 @@
       "path": "meeting-secretary-app",
       "mtime": 1783520754.4340136,
       "hasLocalIndex": true,
-      "source": "registry+scan"
-    },
-    {
-      "slug": "camping-car-map",
-      "name": "캠핑 차박 스팟 — 핵심 필터 지도",
-      "description": "전국 캠핑/차박 후보지를 지도와 핵심 필터로 탐색하는 1페이지 인터랙티브 앱 콘셉트",
-      "category": "자동 발견",
-      "icon": "✨",
-      "url": "/apps/camping-car-map/",
-      "deploymentUrl": "",
-      "localUrl": "/apps/camping-car-map/",
-      "github": "",
-      "path": "camping-car-map",
-      "mtime": 1783519769.392985,
-      "hasLocalIndex": true,
-      "source": "auto-scan"
+      "source": "manual-registry"
     },
     {
       "slug": "mood-playlist-linker",
@@ -43,7 +43,7 @@
       "path": "mood-playlist-linker",
       "mtime": 1783460926.9062192,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "url-qr-shortener-onepage",
@@ -58,7 +58,7 @@
       "path": "url-qr-shortener-onepage",
       "mtime": 1783458078.6536965,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "markdown-lite-editor",
@@ -73,7 +73,7 @@
       "path": "markdown-lite-editor",
       "mtime": 1783438380.0708084,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "voice-memo-mindmap",
@@ -88,7 +88,7 @@
       "path": "voice-memo-mindmap",
       "mtime": 1783434849.5263782,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "subscription-dashboard",
@@ -103,7 +103,7 @@
       "path": "subscription-dashboard",
       "mtime": 1783425520.3674626,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "micro-mood-journal",
@@ -118,7 +118,7 @@
       "path": "micro-mood-journal",
       "mtime": 1783422474.7816103,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "lunch-roulette",
@@ -127,13 +127,13 @@
       "category": "팀/결정",
       "icon": "🍜",
       "url": "/apps/lunch-roulette/",
-      "deploymentUrl": "/apps/lunch-roulette/",
+      "deploymentUrl": "",
       "localUrl": "/apps/lunch-roulette/",
       "github": "",
       "path": "lunch-roulette",
       "mtime": 1783376853.205225,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "ocr-translator-app",
@@ -148,7 +148,7 @@
       "path": "ocr-translator-app",
       "mtime": 1783375796.9602847,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "mastermind-page",
@@ -163,7 +163,7 @@
       "path": "mastermind-page",
       "mtime": 1783375187.0294108,
       "hasLocalIndex": true,
-      "source": "registry+scan"
+      "source": "manual-registry"
     },
     {
       "slug": "namecard-memo-indexer",
@@ -178,7 +178,7 @@
       "path": "namecard-memo-indexer",
       "mtime": 1783372658.614792,
       "hasLocalIndex": true,
-      "source": "auto-scan"
+      "source": "manual-registry"
     },
     {
       "slug": "eisenhower-prioritizer",
@@ -193,7 +193,7 @@
       "path": "eisenhower-prioritizer",
       "mtime": 1783349143.6975791,
       "hasLocalIndex": true,
-      "source": "auto-scan"
+      "source": "manual-registry"
     },
     {
       "slug": "hermes-agent-interactive-page",
@@ -208,7 +208,7 @@
       "path": "hermes-agent-interactive-page",
       "mtime": 1783318401.8034267,
       "hasLocalIndex": true,
-      "source": "auto-scan"
+      "source": "manual-registry"
     }
   ]
 }

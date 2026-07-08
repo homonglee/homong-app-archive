@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "messenger-summary-tool",
+      "name": "메신저 내용 정리",
+      "description": "메신저 텍스트를 붙여넣거나 업로드해 참여자, 핵심 요약, 할 일, 결정사항을 보기 좋은 문서로 정리하고 TXT, MD, DOCX 파일로 저장하는 원페이지 툴.",
+      "category": "문서/정리",
+      "icon": "💬",
+      "url": "https://messenger-summary-tool.vercel.app/",
+      "deploymentUrl": "https://messenger-summary-tool.vercel.app/",
+      "localUrl": "/apps/messenger-summary-tool/",
+      "github": "https://github.com/homonglee/messenger-summary-tool",
+      "path": "messenger-summary-tool",
+      "mtime": 1783545675.3639505,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "receipt-expense-scanner",
       "name": "지출결의서 영수증 스캐너",
       "description": "영수증 사진을 OCR로 읽어 일자, 금액, 가맹점명을 추출하고 지출결의서 초안과 XLSX 저장을 지원하는 원페이지 앱.",

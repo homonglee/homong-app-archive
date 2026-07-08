@@ -98,5 +98,13 @@
     "url": "/apps/hermes-agent-interactive-page/",
     "icon": "🤖",
     "category": "AI/소개"
+  },
+  "messenger-summary-tool": {
+    "name": "메신저 내용 정리",
+    "description": "메신저 텍스트를 붙여넣거나 업로드해 참여자, 핵심 요약, 할 일, 결정사항을 보기 좋은 문서로 정리하고 TXT, MD, DOCX 파일로 저장하는 원페이지 툴.",
+    "url": "https://messenger-summary-tool.vercel.app/",
+    "github": "https://github.com/homonglee/messenger-summary-tool",
+    "icon": "💬",
+    "category": "문서/정리"
   }
 }

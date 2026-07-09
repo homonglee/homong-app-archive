@@ -106,5 +106,13 @@
     "github": "https://github.com/homonglee/messenger-summary-tool",
     "icon": "💬",
     "category": "문서/정리"
+  },
+  "batch-renamer-dropzone": {
+    "name": "파일명 일괄 변경기",
+    "description": "수십 개의 파일을 드롭존에 넣고 날짜, 프로젝트명, 일련번호 규칙으로 새 파일명을 미리보기한 뒤 CSV 변경 계획으로 내보내는 원페이지 Batch Renamer 앱.",
+    "url": "https://batch-renamer-dropzone.vercel.app",
+    "github": "https://github.com/homonglee/batch-renamer-dropzone",
+    "icon": "🗂️",
+    "category": "파일/생산성"
   }
 }

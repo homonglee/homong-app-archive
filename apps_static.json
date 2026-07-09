@@ -1,6 +1,36 @@
 {
   "apps": [
     {
+      "slug": "batch-renamer-dropzone",
+      "name": "파일명 일괄 변경기",
+      "description": "수십 개의 파일을 드롭존에 넣고 날짜, 프로젝트명, 일련번호 규칙으로 새 파일명을 미리보기한 뒤 CSV 변경 계획으로 내보내는 원페이지 Batch Renamer 앱.",
+      "category": "파일/생산성",
+      "icon": "🗂️",
+      "url": "https://batch-renamer-dropzone.vercel.app",
+      "deploymentUrl": "https://batch-renamer-dropzone.vercel.app",
+      "localUrl": "/apps/batch-renamer-dropzone/",
+      "github": "https://github.com/homonglee/batch-renamer-dropzone",
+      "path": "batch-renamer-dropzone",
+      "mtime": 1783633790.7158222,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
+      "slug": "ocr-translator-app",
+      "name": "스크린샷 OCR 번역기",
+      "description": "스크린샷을 업로드해 OCR로 텍스트를 추출하고 원하는 언어로 번역하는 앱.",
+      "category": "OCR/번역",
+      "icon": "📸",
+      "url": "https://ocr-translator-app-eight.vercel.app",
+      "deploymentUrl": "https://ocr-translator-app-eight.vercel.app",
+      "localUrl": "/apps/ocr-translator-app/",
+      "github": "https://github.com/homonglee/ocr-translator-app",
+      "path": "ocr-translator-app",
+      "mtime": 1783562134.5004418,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "messenger-summary-tool",
       "name": "메신저 내용 정리",
       "description": "메신저 텍스트를 붙여넣거나 업로드해 참여자, 핵심 요약, 할 일, 결정사항을 보기 좋은 문서로 정리하고 TXT, MD, DOCX 파일로 저장하는 원페이지 툴.",
@@ -147,21 +177,6 @@
       "github": "",
       "path": "lunch-roulette",
       "mtime": 1783376853.205225,
-      "hasLocalIndex": true,
-      "source": "manual-registry"
-    },
-    {
-      "slug": "ocr-translator-app",
-      "name": "스크린샷 OCR 번역기",
-      "description": "스크린샷을 업로드해 OCR로 텍스트를 추출하고 원하는 언어로 번역하는 앱.",
-      "category": "OCR/번역",
-      "icon": "📸",
-      "url": "https://ocr-translator-app-eight.vercel.app",
-      "deploymentUrl": "https://ocr-translator-app-eight.vercel.app",
-      "localUrl": "/apps/ocr-translator-app/",
-      "github": "https://github.com/homonglee/ocr-translator-app",
-      "path": "ocr-translator-app",
-      "mtime": 1783375796.9602847,
       "hasLocalIndex": true,
       "source": "manual-registry"
     },

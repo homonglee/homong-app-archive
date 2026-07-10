@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "clipboard-pin-board",
+      "name": "클립보드 고정 보드",
+      "description": "자주 쓰는 메일 인사말, 사업자 번호, 회사 주소, 계좌 번호, 서명, 고객 응대 문구를 카드로 고정하고 원클릭 복사·검색·카테고리·최근 기록으로 관리하는 대시보드.",
+      "category": "업무/생산성",
+      "icon": "📌",
+      "url": "https://clipboard-pin-board.vercel.app",
+      "deploymentUrl": "https://clipboard-pin-board.vercel.app",
+      "localUrl": "/apps/clipboard-pin-board/",
+      "github": "https://github.com/homonglee/clipboard-pin-board",
+      "path": "clipboard-pin-board",
+      "mtime": 1783724663.4143465,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "batch-renamer-dropzone",
       "name": "파일명 일괄 변경기",
       "description": "수십 개의 파일을 드롭존에 넣고 날짜, 프로젝트명, 일련번호 규칙으로 새 파일명을 미리보기한 뒤 CSV 변경 계획으로 내보내는 원페이지 Batch Renamer 앱.",
@@ -11,7 +26,7 @@
       "localUrl": "/apps/batch-renamer-dropzone/",
       "github": "https://github.com/homonglee/batch-renamer-dropzone",
       "path": "batch-renamer-dropzone",
-      "mtime": 1783633790.7158222,
+      "mtime": 1783714679.5571456,
       "hasLocalIndex": true,
       "source": "manual-registry"
     },

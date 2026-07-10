@@ -114,5 +114,13 @@
     "github": "https://github.com/homonglee/batch-renamer-dropzone",
     "icon": "🗂️",
     "category": "파일/생산성"
+  },
+  "clipboard-pin-board": {
+    "name": "클립보드 고정 보드",
+    "description": "자주 쓰는 메일 인사말, 사업자 번호, 회사 주소, 계좌 번호, 서명, 고객 응대 문구를 카드로 고정하고 원클릭 복사·검색·카테고리·최근 기록으로 관리하는 대시보드.",
+    "url": "https://clipboard-pin-board.vercel.app",
+    "github": "https://github.com/homonglee/clipboard-pin-board",
+    "icon": "📌",
+    "category": "업무/생산성"
   }
 }

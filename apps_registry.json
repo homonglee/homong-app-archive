@@ -122,5 +122,13 @@
     "github": "https://github.com/homonglee/clipboard-pin-board",
     "icon": "📌",
     "category": "업무/생산성"
+  },
+  "60sec-speech-timer": {
+    "name": "60초 스피치 타이머 & 피치 제너레이터",
+    "description": "키워드와 상황을 입력하면 조찬 모임·미팅용 60초 발표 스크립트를 생성하고, 발표 속도에 맞춰 타이머와 문장 하이라이트로 연습할 수 있는 1페이지 피치 코치.",
+    "url": "https://60sec-speech-timer.vercel.app",
+    "github": "https://github.com/homonglee/60sec-speech-timer",
+    "icon": "⏱️",
+    "category": "발표/생산성"
   }
 }

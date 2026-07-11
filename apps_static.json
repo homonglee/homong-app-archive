@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "60sec-speech-timer",
+      "name": "60초 스피치 타이머 & 피치 제너레이터",
+      "description": "키워드와 상황을 입력하면 조찬 모임·미팅용 60초 발표 스크립트를 생성하고, 발표 속도에 맞춰 타이머와 문장 하이라이트로 연습할 수 있는 1페이지 피치 코치.",
+      "category": "발표/생산성",
+      "icon": "⏱️",
+      "url": "https://60sec-speech-timer.vercel.app",
+      "deploymentUrl": "https://60sec-speech-timer.vercel.app",
+      "localUrl": "/apps/60sec-speech-timer/",
+      "github": "https://github.com/homonglee/60sec-speech-timer",
+      "path": "60sec-speech-timer",
+      "mtime": 1783746203.5354693,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "clipboard-pin-board",
       "name": "클립보드 고정 보드",
       "description": "자주 쓰는 메일 인사말, 사업자 번호, 회사 주소, 계좌 번호, 서명, 고객 응대 문구를 카드로 고정하고 원클릭 복사·검색·카테고리·최근 기록으로 관리하는 대시보드.",

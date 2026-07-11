@@ -130,5 +130,13 @@
     "github": "https://github.com/homonglee/60sec-speech-timer",
     "icon": "⏱️",
     "category": "발표/생산성"
+  },
+  "coffee-chat-icebreaker": {
+    "name": "커피챗 아이스브레이킹 추천기",
+    "description": "상대방의 직무·산업군·경력감과 대화 목적을 선택하면 첫 5분을 자연스럽게 여는 질문, 꼬리질문, 대화 주제와 아젠다를 추천하는 커피챗 준비 도구.",
+    "url": "https://coffee-chat-icebreaker.vercel.app",
+    "github": "https://github.com/homonglee/coffee-chat-icebreaker",
+    "icon": "☕",
+    "category": "커뮤니케이션/네트워킹"
   }
 }

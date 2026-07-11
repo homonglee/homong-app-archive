@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "coffee-chat-icebreaker",
+      "name": "커피챗 아이스브레이킹 추천기",
+      "description": "상대방의 직무·산업군·경력감과 대화 목적을 선택하면 첫 5분을 자연스럽게 여는 질문, 꼬리질문, 대화 주제와 아젠다를 추천하는 커피챗 준비 도구.",
+      "category": "커뮤니케이션/네트워킹",
+      "icon": "☕",
+      "url": "https://coffee-chat-icebreaker.vercel.app",
+      "deploymentUrl": "https://coffee-chat-icebreaker.vercel.app",
+      "localUrl": "/apps/coffee-chat-icebreaker/",
+      "github": "https://github.com/homonglee/coffee-chat-icebreaker",
+      "path": "coffee-chat-icebreaker",
+      "mtime": 1783756664.3125238,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "60sec-speech-timer",
       "name": "60초 스피치 타이머 & 피치 제너레이터",
       "description": "키워드와 상황을 입력하면 조찬 모임·미팅용 60초 발표 스크립트를 생성하고, 발표 속도에 맞춰 타이머와 문장 하이라이트로 연습할 수 있는 1페이지 피치 코치.",

@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "schedule-share-link-generator",
+      "name": "스케줄 공유 링크 생성기",
+      "description": "Google Calendar OAuth 연결 흐름을 기반으로 가능한 시간대만 계산해 공유 텍스트와 공개 링크로 전달하는 일정 조율용 1페이지 앱. 설정 전에는 데모 후보로 흐름을 확인할 수 있습니다.",
+      "category": "일정/생산성",
+      "icon": "🗓️",
+      "url": "https://schedule-share-link-generator.vercel.app",
+      "deploymentUrl": "https://schedule-share-link-generator.vercel.app",
+      "localUrl": "/apps/schedule-share-link-generator/",
+      "github": "https://github.com/homonglee/schedule-share-link-generator",
+      "path": "schedule-share-link-generator",
+      "mtime": 1783766047.073567,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "coffee-chat-icebreaker",
       "name": "커피챗 아이스브레이킹 추천기",
       "description": "상대방의 직무·산업군·경력감과 대화 목적을 선택하면 첫 5분을 자연스럽게 여는 질문, 꼬리질문, 대화 주제와 아젠다를 추천하는 커피챗 준비 도구.",

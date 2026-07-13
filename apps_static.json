@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "got-interactive-light",
+      "name": "왕좌의 게임 인터랙티브 관계도",
+      "description": "왕좌의 게임 시즌 1~8의 주요 등장인물, 시즌별 핵심 줄거리, 가문/동맹/적대 관계를 라이트 모드의 인터랙티브 카드와 SVG 관계도 이미지로 탐색하는 시즌 가이드.",
+      "category": "드라마/콘텐츠",
+      "icon": "👑",
+      "url": "https://got-interactive-light.vercel.app",
+      "deploymentUrl": "https://got-interactive-light.vercel.app",
+      "localUrl": "/apps/got-interactive-light/",
+      "github": "https://github.com/homonglee/got-interactive-guide",
+      "path": "got-interactive-light",
+      "mtime": 1783771637.7345507,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "schedule-share-link-generator",
       "name": "스케줄 공유 링크 생성기",
       "description": "Google Calendar OAuth 연결 흐름을 기반으로 가능한 시간대만 계산해 공유 텍스트와 공개 링크로 전달하는 일정 조율용 1페이지 앱. 설정 전에는 데모 후보로 흐름을 확인할 수 있습니다.",

@@ -146,5 +146,13 @@
     "github": "https://github.com/homonglee/schedule-share-link-generator",
     "icon": "🗓️",
     "category": "일정/생산성"
+  },
+  "got-interactive-light": {
+    "name": "왕좌의 게임 인터랙티브 관계도",
+    "description": "왕좌의 게임 시즌 1~8의 주요 등장인물, 시즌별 핵심 줄거리, 가문/동맹/적대 관계를 라이트 모드의 인터랙티브 카드와 SVG 관계도 이미지로 탐색하는 시즌 가이드.",
+    "url": "https://got-interactive-light.vercel.app",
+    "github": "https://github.com/homonglee/got-interactive-guide",
+    "icon": "👑",
+    "category": "드라마/콘텐츠"
   }
 }

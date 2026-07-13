@@ -154,5 +154,13 @@
     "github": "https://github.com/homonglee/got-interactive-guide",
     "icon": "👑",
     "category": "드라마/콘텐츠"
+  },
+  "youtube-timeline-summarizer": {
+    "name": "유튜브 타임라인 요약기",
+    "description": "유튜브 링크를 입력하면 영상 내용을 몇 줄로 요약하고, 핵심 주제별 타임스탬프와 챕터를 자동 생성해 복사·Markdown 내보내기까지 지원하는 1페이지 요약 도구.",
+    "url": "https://youtube-timeline-summarizer.vercel.app",
+    "github": "https://github.com/homonglee/youtube-timeline-summarizer",
+    "icon": "▶️",
+    "category": "영상/요약"
   }
 }

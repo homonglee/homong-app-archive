@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "youtube-timeline-summarizer",
+      "name": "유튜브 타임라인 요약기",
+      "description": "유튜브 링크를 입력하면 영상 내용을 몇 줄로 요약하고, 핵심 주제별 타임스탬프와 챕터를 자동 생성해 복사·Markdown 내보내기까지 지원하는 1페이지 요약 도구.",
+      "category": "영상/요약",
+      "icon": "▶️",
+      "url": "https://youtube-timeline-summarizer.vercel.app",
+      "deploymentUrl": "https://youtube-timeline-summarizer.vercel.app",
+      "localUrl": "/apps/youtube-timeline-summarizer/",
+      "github": "https://github.com/homonglee/youtube-timeline-summarizer",
+      "path": "youtube-timeline-summarizer",
+      "mtime": 1783975558.608597,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "got-interactive-light",
       "name": "왕좌의 게임 인터랙티브 관계도",
       "description": "왕좌의 게임 시즌 1~8의 주요 등장인물, 시즌별 핵심 줄거리, 가문/동맹/적대 관계를 라이트 모드의 인터랙티브 카드와 SVG 관계도 이미지로 탐색하는 시즌 가이드.",

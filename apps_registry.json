@@ -162,5 +162,13 @@
     "github": "https://github.com/homonglee/youtube-timeline-summarizer",
     "icon": "▶️",
     "category": "영상/요약"
+  },
+  "font-preview-board": {
+    "name": "글자보기 — 무료 한글 폰트 비교 보드",
+    "description": "상업용 무료 한글 폰트 24종을 한 화면에서 비교하고, 미리보기 문구·크기·굵기·정렬을 조절해 즐겨찾기와 CSS 복사까지 지원하는 인터랙티브 폰트 보드.",
+    "url": "https://font-preview-board.vercel.app",
+    "github": "https://github.com/homonglee/font-preview-board",
+    "icon": "가",
+    "category": "디자인/폰트"
   }
 }

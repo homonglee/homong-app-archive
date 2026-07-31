@@ -19,7 +19,8 @@
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:34px 0 15px}.section-head h2{margin:0;font-size:30px;letter-spacing:-.04em}.section-head p{margin:4px 0 0;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:54px}.grid.list{grid-template-columns:1fr}.app-card{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.055));border-radius:26px;padding:18px;min-height:250px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.18);transition:.23s ease}.app-card:hover{transform:translateY(-5px);border-color:rgba(103,232,249,.45);box-shadow:0 28px 76px rgba(34,211,238,.13)}.app-card::after{content:"";position:absolute;inset:auto -40px -80px auto;width:170px;height:170px;background:radial-gradient(circle,rgba(139,92,246,.22),transparent 65%);pointer-events:none}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px}.icon-link{width:72px;height:72px;display:grid;place-items:center;border-radius:24px;background:linear-gradient(135deg,rgba(139,92,246,.42),rgba(34,211,238,.24));border:1px solid rgba(255,255,255,.22);font-size:36px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 16px 34px rgba(0,0,0,.22);transition:.2s}.icon-link:hover{transform:scale(1.06) rotate(-2deg)}.badge{font-size:12px;color:#dbeafe;border:1px solid var(--line);background:rgba(255,255,255,.08);padding:7px 10px;border-radius:999px;font-weight:900}.app-card h3{font-size:22px;line-height:1.2;letter-spacing:-.04em;margin:16px 0 9px}.app-card p{color:var(--muted);line-height:1.65;min-height:78px;margin:0}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.chip{font-size:12px;color:#cbd5e1;background:rgba(255,255,255,.075);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-weight:750}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.mini{border:1px solid var(--line);background:rgba(255,255,255,.08);border-radius:13px;padding:10px 12px;font-size:13px;font-weight:900}.mini.launch{background:linear-gradient(135deg,rgba(139,92,246,.9),rgba(34,211,238,.78));border:0}.list .app-card{min-height:auto;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}.list .app-card p{min-height:auto}.list .actions{margin:0;justify-content:end}.empty{display:none;text-align:center;padding:44px;border:1px dashed var(--line);border-radius:26px;color:var(--muted);background:rgba(255,255,255,.04)}
     .auto-panel{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 70px}.panel{border:1px solid var(--line);background:rgba(255,255,255,.07);border-radius:26px;padding:22px}.panel h3{margin:0 0 10px;letter-spacing:-.03em}.panel p,.panel li{color:var(--muted);line-height:1.7}.panel code{color:#cffafe;background:rgba(34,211,238,.1);padding:2px 6px;border-radius:7px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#101426;border:1px solid var(--line);border-radius:999px;padding:12px 16px;font-weight:900;box-shadow:var(--shadow);transition:.25s;z-index:50}.toast.show{opacity:1;transform:translate(-50%,0)}
     .profile-section{margin:18px 0 54px;scroll-margin-top:150px}.profile-card{position:relative;display:grid;grid-template-columns:280px 1fr;gap:38px;align-items:center;overflow:hidden;border:1px solid var(--line);border-radius:32px;padding:34px;background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(255,255,255,.07) 48%,rgba(34,211,238,.12));box-shadow:var(--shadow)}.profile-card::before{content:"";position:absolute;width:340px;height:340px;right:-130px;top:-170px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.18),transparent 68%);pointer-events:none}.profile-photo-wrap{position:relative;margin:0}.profile-photo-wrap::after{content:"AI · CREATOR";position:absolute;right:-12px;bottom:18px;padding:8px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(7,9,20,.86);font-size:11px;font-weight:900;letter-spacing:.11em;color:#a5f3fc}.profile-photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;border-radius:26px;border:1px solid rgba(255,255,255,.2);box-shadow:0 24px 55px rgba(0,0,0,.32)}.profile-kicker{margin:0 0 10px;color:#a5f3fc;font-size:13px;font-weight:900;letter-spacing:.13em}.profile-copy h2{margin:0;font-size:clamp(32px,5vw,54px);letter-spacing:-.055em;line-height:1.05}.profile-role{margin:12px 0 16px;color:#ddd6fe;font-size:18px;font-weight:800}.profile-intro{max-width:690px;margin:0;color:var(--muted);font-size:16px;line-height:1.8}.profile-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.profile-tags span{padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.07);color:#e2e8f0;font-size:12px;font-weight:800}.profile-contact{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}.profile-email{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2));font-weight:900;box-shadow:0 14px 35px rgba(34,211,238,.17)}.profile-email:hover{transform:translateY(-2px)}.profile-contact small{color:var(--muted)}
-    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.auto-panel{grid-template-columns:1fr}.hero-note{grid-template-columns:1fr}.list .app-card{grid-template-columns:1fr}.list .actions{justify-content:start}.profile-card{grid-template-columns:220px 1fr;gap:26px;padding:26px}}@media(max-width:620px){.grid{grid-template-columns:1fr}.nav-actions .pill{display:none}.hero{padding-top:46px}.hero h1{font-size:44px}.stats{grid-template-columns:1fr 1fr}.stat b{font-size:24px}.profile-card{grid-template-columns:1fr;padding:20px}.profile-photo-wrap{max-width:230px}.profile-copy h2{font-size:38px}.profile-role{font-size:16px}}
+    .profile-details{position:relative;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}.profile-tabs{display:flex;gap:7px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:thin;scrollbar-color:rgba(103,232,249,.4) transparent}.profile-tab{flex:0 0 auto;border:1px solid var(--line);border-radius:13px;padding:10px 13px;background:rgba(255,255,255,.055);color:var(--muted);font:inherit;font-size:13px;font-weight:900;cursor:pointer;transition:.2s ease}.profile-tab:hover{color:var(--text);background:rgba(255,255,255,.11)}.profile-tab[aria-selected="true"]{border-color:rgba(103,232,249,.55);background:linear-gradient(135deg,rgba(139,92,246,.42),rgba(34,211,238,.25));color:#fff;box-shadow:0 10px 24px rgba(34,211,238,.1)}.profile-tab:focus-visible{outline:3px solid rgba(103,232,249,.5);outline-offset:2px}.profile-panel{display:none;min-height:168px;padding:14px 2px 0;animation:profileReveal .28s ease}.profile-panel.active{display:block}.profile-panel h3{margin:0 0 12px;font-size:18px;letter-spacing:-.025em}.profile-panel ul,.profile-panel ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0;padding:0;list-style:none}.profile-panel li{position:relative;padding:11px 12px 11px 36px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:rgba(255,255,255,.045);color:#d8deef;font-size:13px;line-height:1.45}.profile-panel li::before{content:"✓";position:absolute;left:12px;top:11px;color:#67e8f9;font-weight:900}.profile-panel .numbered{counter-reset:profile-topic}.profile-panel .numbered li{counter-increment:profile-topic}.profile-panel .numbered li::before{content:counter(profile-topic);width:18px;height:18px;display:grid;place-items:center;border-radius:6px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-size:10px;top:12px}.profile-panel .books li::before{content:"▣";color:#c4b5fd}.profile-panel .book-year{display:block;margin-top:3px;color:#8eeaff;font-size:11px;font-weight:900}.profile-hint{margin:10px 2px 0;color:var(--muted);font-size:11px}@keyframes profileReveal{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.auto-panel{grid-template-columns:1fr}.hero-note{grid-template-columns:1fr}.list .app-card{grid-template-columns:1fr}.list .actions{justify-content:start}.profile-card{grid-template-columns:220px 1fr;gap:26px;padding:26px}}@media(max-width:620px){.grid{grid-template-columns:1fr}.nav-actions .pill{display:none}.hero{padding-top:46px}.hero h1{font-size:44px}.stats{grid-template-columns:1fr 1fr}.stat b{font-size:24px}.profile-card{grid-template-columns:1fr;padding:20px}.profile-photo-wrap{max-width:230px}.profile-copy h2{font-size:38px}.profile-role{font-size:16px}.profile-panel{min-height:0}.profile-panel ul,.profile-panel ol{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -61,6 +62,39 @@
           <div class="profile-contact">
             <a class="profile-email" href="mailto:tigerlee@hovision.co.kr" aria-label="이용호에게 이메일 보내기">✉ tigerlee@hovision.co.kr</a>
             <small>강의 · 협업 · 앱 관련 문의</small>
+          </div>
+          <div class="profile-details">
+            <div class="profile-tabs" role="tablist" aria-label="이용호 강사 상세 프로필">
+              <button class="profile-tab" id="tab-about" role="tab" aria-selected="true" aria-controls="panel-about" tabindex="0">👤 강사소개</button>
+              <button class="profile-tab" id="tab-topics" role="tab" aria-selected="false" aria-controls="panel-topics" tabindex="-1">🎯 강의분야</button>
+              <button class="profile-tab" id="tab-clients" role="tab" aria-selected="false" aria-controls="panel-clients" tabindex="-1">🏛️ 주요강의기관</button>
+              <button class="profile-tab" id="tab-books" role="tab" aria-selected="false" aria-controls="panel-books" tabindex="-1">📚 저서</button>
+            </div>
+            <div class="profile-panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+              <h3>현재 활동</h3>
+              <ul>
+                <li>한국강사신문 대표강사</li><li>50플러스 오픈랩 수석가디언즈</li><li>브런치 스토리 작가</li><li>서울시 유튜브 인플루언서 크리에이티브 포스</li><li>‘손에 잡히는 인공지능’ 커뮤니티 운영</li>
+              </ul>
+            </div>
+            <div class="profile-panel" id="panel-topics" role="tabpanel" aria-labelledby="tab-topics" hidden>
+              <h3>대표 강의 분야</h3>
+              <ol class="numbered">
+                <li>손에 잡히는 인공지능</li><li>프롬프트 엔지니어링 황금키</li><li>생산성을 4000% 높여주는 AI 자동화</li>
+              </ol>
+            </div>
+            <div class="profile-panel" id="panel-clients" role="tabpanel" aria-labelledby="tab-clients" hidden>
+              <h3>강의·교육 진행 기관</h3>
+              <ul>
+                <li>산업교육연구소</li><li>삼성 시니어 디지털 아카데미</li><li>별사탕학교</li><li>50플러스 오픈랩</li><li>시흥시 노인복지관</li><li>서울경제진흥원</li><li>고양시 경제인협의회</li>
+              </ul>
+            </div>
+            <div class="profile-panel" id="panel-books" role="tabpanel" aria-labelledby="tab-books" hidden>
+              <h3>이용호 저서</h3>
+              <ul class="books">
+                <li>『프롬프트 엔지니어링 황금키』<span class="book-year">2025</span></li><li>『손에 잡히는 인공지능』<span class="book-year">2024</span></li><li>『나는 시니어 인플루언서다』<span class="book-year">2023</span></li>
+              </ul>
+            </div>
+            <p class="profile-hint">탭을 선택하거나 좌우 방향키로 내용을 탐색할 수 있습니다.</p>
           </div>
         </div>
       </div>
@@ -156,6 +190,27 @@
     $('#refreshBtn').addEventListener('click', ()=>loadApps().then(()=>toast('등록된 앱 목록을 새로고침했습니다')));
     $('#randomBtn').addEventListener('click', ()=>{ const pool=state.filtered.length?state.filtered:state.apps; if(pool.length){ const a=pool[Math.floor(Math.random()*pool.length)]; window.open(appUrl(a), '_blank', 'noopener'); } });
     $('#copyBtn').addEventListener('click', ()=> navigator.clipboard.writeText(location.href).then(()=>toast('아카이브 URL을 복사했습니다')));
+    const profileTabs = [...document.querySelectorAll('.profile-tab')];
+    function activateProfileTab(tab, focus = false){
+      profileTabs.forEach(item=>{
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+        const panel = document.getElementById(item.getAttribute('aria-controls'));
+        panel.hidden = !selected;
+        panel.classList.toggle('active', selected);
+      });
+      if(focus) tab.focus();
+    }
+    profileTabs.forEach((tab,index)=>{
+      tab.addEventListener('click', ()=>activateProfileTab(tab));
+      tab.addEventListener('keydown', event=>{
+        if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+        event.preventDefault();
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? profileTabs.length-1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + profileTabs.length) % profileTabs.length;
+        activateProfileTab(profileTabs[next], true);
+      });
+    });
     document.addEventListener('click', e=>{ const b=e.target.closest('.copy-app'); if(b){ navigator.clipboard.writeText(b.dataset.url).then(()=>toast('앱 링크를 복사했습니다')); }});
     loadApps().catch(err=>{ console.error(err); $('#resultLabel').textContent='앱 목록을 불러오지 못했습니다'; grid.innerHTML='<article class="app-card"><h3>스캔 오류</h3><p>서버 로그를 확인해주세요.</p></article>'; });
   </script>

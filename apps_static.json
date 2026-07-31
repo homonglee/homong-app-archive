@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "moa-ai-bookmark-manager",
+      "name": "모아 — AI 북마크 지식 보관소",
+      "description": "YouTube 링크를 저장하면 실제 제목·채널과 자막 또는 영상 메타데이터를 분석해 요약·태그·컬렉션으로 자동 정리하는 인터랙티브 AI 북마크 앱.",
+      "category": "AI/지식관리",
+      "icon": "🔖",
+      "url": "https://moa-ai-bookmark-manager.vercel.app",
+      "deploymentUrl": "https://moa-ai-bookmark-manager.vercel.app",
+      "localUrl": "/apps/moa-ai-bookmark-manager/",
+      "github": "https://github.com/homonglee/moa-ai-bookmark-manager",
+      "path": "moa-ai-bookmark-manager",
+      "mtime": 1785509458.0,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "font-preview-board",
       "name": "글자보기 — 무료 한글 폰트 비교 보드",
       "description": "상업용 무료 한글 폰트 24종을 한 화면에서 비교하고, 미리보기 문구·크기·굵기·정렬을 조절해 즐겨찾기와 CSS 복사까지 지원하는 인터랙티브 폰트 보드.",

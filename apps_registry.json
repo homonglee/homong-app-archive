@@ -170,5 +170,13 @@
     "github": "https://github.com/homonglee/font-preview-board",
     "icon": "가",
     "category": "디자인/폰트"
+  },
+  "moa-ai-bookmark-manager": {
+    "name": "모아 — AI 북마크 지식 보관소",
+    "description": "YouTube 링크를 저장하면 실제 제목·채널과 자막 또는 영상 메타데이터를 분석해 요약·태그·컬렉션으로 자동 정리하는 인터랙티브 AI 북마크 앱.",
+    "url": "https://moa-ai-bookmark-manager.vercel.app",
+    "github": "https://github.com/homonglee/moa-ai-bookmark-manager",
+    "icon": "🔖",
+    "category": "AI/지식관리"
   }
 }

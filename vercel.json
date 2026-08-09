@@ -349,7 +349,11 @@
     },
     {
       "source": "/moa-ai-bookmark-manager/",
-      "destination": "/app-shell.html?slug=moa-ai-bookmark-manager"
+      "destination": "https://moa-ai-bookmark-manager.vercel.app/"
+    },
+    {
+      "source": "/moa-ai-bookmark-manager/:path*",
+      "destination": "https://moa-ai-bookmark-manager.vercel.app/:path*"
     },
     {
       "source": "/downdoc/",

@@ -63,14 +63,33 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertIn("location.pathname", shell)
         self.assertNotIn("new URLSearchParams(location.search).get('slug')", shell)
 
-    def test_static_snapshot_never_exposes_vercel_as_launch_url(self):
-        apps = load_json("apps_static.json")["apps"]
+    def test_static_snapshot_never_exposes_internal_origins(self):
+        raw = (ROOT / "apps_static.json").read_text(encoding="utf-8")
+        apps = json.loads(raw)["apps"]
 
-        self.assertTrue(apps)
+        self.assertNotIn(".vercel.app", raw)
         for app in apps:
             with self.subTest(slug=app["slug"]):
                 self.assertEqual(app["url"], f"{PUBLIC_ORIGIN}/{app['slug']}")
-                self.assertNotIn(".vercel.app", app["url"])
+                self.assertNotIn("deploymentUrl", app)
+                self.assertNotIn("localUrl", app)
+
+    def test_archive_ui_does_not_reference_internal_deployment_fields(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+
+        self.assertNotIn("deploymentUrl", html)
+        self.assertNotIn("외부 배포 링크", html)
+        self.assertNotIn("외부 실행", html)
+
+    def test_moa_uses_direct_archive_rewrite_instead_of_embed_shell(self):
+        registry = load_json("apps_registry.json")
+        config = load_json("vercel.json")
+        rewrites = {item["source"]: item["destination"] for item in config["rewrites"]}
+        slug = "moa-ai-bookmark-manager"
+
+        self.assertNotEqual(registry[slug].get("routeMode"), "embed")
+        self.assertEqual(rewrites[f"/{slug}/"], registry[slug]["deploymentUrl"].rstrip("/") + "/")
+        self.assertEqual(rewrites[f"/{slug}/:path*"], registry[slug]["deploymentUrl"].rstrip("/") + "/:path*")
 
 
 if __name__ == "__main__":

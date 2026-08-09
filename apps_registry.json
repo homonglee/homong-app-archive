@@ -197,8 +197,7 @@
     "github": "https://github.com/homonglee/moa-ai-bookmark-manager",
     "icon": "🔖",
     "category": "AI/지식관리",
-    "deploymentUrl": "https://moa-ai-bookmark-manager.vercel.app",
-    "routeMode": "embed"
+    "deploymentUrl": "https://moa-ai-bookmark-manager.vercel.app"
   },
   "downdoc": {
     "name": "DownDoc — 다운로드 폴더 클리닉",

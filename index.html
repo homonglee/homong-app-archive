@@ -104,8 +104,8 @@
 
     <section class="stats" aria-live="polite">
       <div class="stat"><b id="statTotal">0</b><span>등록된 앱</span></div>
-      <div class="stat"><b id="statDeploy">0</b><span>외부 배포 링크</span></div>
-      <div class="stat"><b id="statLocal">0</b><span>로컬 실행 가능</span></div>
+      <div class="stat"><b id="statDeploy">0</b><span>동일 도메인 실행</span></div>
+      <div class="stat"><b id="statLocal">0</b><span>내부 정적 앱</span></div>
       <div class="stat"><b id="statCats">0</b><span>카테고리</span></div>
     </section>
 
@@ -132,7 +132,7 @@
     const fmtDate = ts => ts ? new Intl.DateTimeFormat('ko-KR', {month:'short', day:'numeric'}).format(new Date(ts*1000)) : '등록됨';
     function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
     function safeText(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-    function appUrl(app){ return app.url || app.localUrl || '#'; }
+    function appUrl(app){ return app.url || '#'; }
     async function loadApps(){
       $('#resultLabel').textContent = '등록된 앱 목록을 불러오는 중...';
       const res = await fetch('/api/apps', {cache:'no-store'});
@@ -147,14 +147,16 @@
     function renderStats(){
       const cats = new Set(state.apps.map(a=>a.category).filter(Boolean));
       $('#statTotal').textContent = state.apps.length;
-      $('#statDeploy').textContent = state.apps.filter(a=>/^https?:/.test(a.deploymentUrl||a.url||'')).length;
+      $('#statDeploy').textContent = state.apps.filter(a=>{
+        try { return new URL(a.url).host === location.host; } catch { return false; }
+      }).length;
       $('#statLocal').textContent = state.apps.filter(a=>a.hasLocalIndex).length;
       $('#statCats').textContent = cats.size;
     }
     function applyFilters(){
       const q = state.query.trim().toLowerCase();
       state.filtered = state.apps.filter(a=>{
-        const hay = [a.name,a.description,a.category,a.slug,a.path].join(' ').toLowerCase();
+        const hay = [a.name,a.description,a.category,a.slug].join(' ').toLowerCase();
         const catOk = state.category === 'all' || a.category === state.category;
         return catOk && (!q || hay.includes(q));
       }).sort((a,b)=> state.newest ? (b.mtime-a.mtime) : (a.name||'').localeCompare(b.name||'', 'ko'));
@@ -165,9 +167,9 @@
       empty.style.display = state.filtered.length ? 'none' : 'block';
       $('#resultLabel').textContent = `${state.filtered.length}개 앱 표시 · 전체 ${state.apps.length}개 수동 등록`;
       grid.innerHTML = state.filtered.map(a=>{
-        const url = appUrl(a); const deploy = /^https?:/.test(a.deploymentUrl||a.url||'');
+        const url = appUrl(a);
         return `<article class="app-card" data-slug="${safeText(a.slug)}">
-          <div class="topline"><a class="icon-link" href="${safeText(url)}" target="_blank" rel="noopener" title="${safeText(a.name)} 실행">${safeText(a.icon||'✨')}</a><span class="badge">${deploy?'외부 실행':'로컬 실행'}</span></div>
+          <div class="topline"><a class="icon-link" href="${safeText(url)}" target="_blank" rel="noopener" title="${safeText(a.name)} 실행">${safeText(a.icon||'✨')}</a><span class="badge">동일 도메인</span></div>
           <div><h3>${safeText(a.name)}</h3><p>${safeText(a.description)}</p><div class="meta"><span class="chip">${safeText(a.category)}</span><span class="chip">${safeText(a.slug)}</span><span class="chip">${fmtDate(a.mtime)}</span></div></div>
           <div class="actions"><a class="mini launch" href="${safeText(url)}" target="_blank" rel="noopener">앱 실행 ↗</a>${a.github?`<a class="mini" href="${safeText(a.github)}" target="_blank" rel="noopener">GitHub</a>`:''}<button class="mini copy-app" data-url="${safeText(new URL(url, location.href).href)}">링크 복사</button></div>
         </article>`

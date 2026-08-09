@@ -81,6 +81,14 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertNotIn("외부 배포 링크", html)
         self.assertNotIn("외부 실행", html)
 
+    def test_archive_cards_visibly_render_branded_urls(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn('class="archive-url"', html)
+        self.assertIn("new URL(url, location.href).href", html)
+        self.assertIn(".archive-url{", html)
+        self.assertIn("overflow-wrap:anywhere", html)
+
     def test_internal_registry_is_excluded_from_vercel_deployment(self):
         ignored = (ROOT / ".vercelignore").read_text(encoding="utf-8").splitlines()
 

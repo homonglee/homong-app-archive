@@ -57,6 +57,12 @@ class ArchiveRouteTests(unittest.TestCase):
                         f"/apps/{slug}/:path*",
                     )
 
+    def test_embed_shell_reads_slug_from_visible_archive_path(self):
+        shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
+
+        self.assertIn("location.pathname", shell)
+        self.assertNotIn("new URLSearchParams(location.search).get('slug')", shell)
+
     def test_static_snapshot_never_exposes_vercel_as_launch_url(self):
         apps = load_json("apps_static.json")["apps"]
 

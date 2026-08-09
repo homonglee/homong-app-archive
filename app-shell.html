@@ -16,7 +16,7 @@
   <div id="status">앱을 불러오는 중입니다…</div>
   <script>
     (async () => {
-      const slug = new URLSearchParams(location.search).get('slug');
+      const slug = location.pathname.split('/').filter(Boolean)[0];
       const status = document.getElementById('status');
       try {
         const response = await fetch('/api/apps', { cache: 'no-store' });

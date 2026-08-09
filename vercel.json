@@ -2,8 +2,18 @@
   "redirects": [
     {
       "source": "/downdoc",
-      "destination": "https://downdoc.vercel.app",
+      "destination": "/downdoc/",
       "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/downdoc/",
+      "destination": "https://downdoc.vercel.app/"
+    },
+    {
+      "source": "/downdoc/:path*",
+      "destination": "https://downdoc.vercel.app/:path*"
     }
   ]
 }

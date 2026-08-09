@@ -1,1 +1,9 @@
-{}
+{
+  "redirects": [
+    {
+      "source": "/downdoc",
+      "destination": "https://downdoc.vercel.app",
+      "permanent": false
+    }
+  ]
+}

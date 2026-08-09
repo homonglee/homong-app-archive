@@ -178,5 +178,13 @@
     "github": "https://github.com/homonglee/moa-ai-bookmark-manager",
     "icon": "🔖",
     "category": "AI/지식관리"
+  },
+  "downdoc": {
+    "name": "DownDoc — 다운로드 폴더 클리닉",
+    "description": "문서·이미지·설치 파일·스크린샷·중복 파일 분류와 이름 표준화, 정리 전후 미리보기를 체험하는 다운로드 폴더 정리 앱.",
+    "url": "https://homong-app.com/downdoc",
+    "github": "https://github.com/homonglee/downdoc",
+    "icon": "🩺",
+    "category": "파일/생산성"
   }
 }

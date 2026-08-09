@@ -1,6 +1,21 @@
 {
   "apps": [
     {
+      "slug": "downdoc",
+      "name": "DownDoc — 다운로드 폴더 클리닉",
+      "description": "문서·이미지·설치 파일·스크린샷·중복 파일 분류와 이름 표준화, 정리 전후 미리보기를 체험하는 다운로드 폴더 정리 앱.",
+      "category": "파일/생산성",
+      "icon": "🩺",
+      "url": "https://homong-app.com/downdoc",
+      "deploymentUrl": "https://downdoc.vercel.app",
+      "localUrl": "/downdoc",
+      "github": "https://github.com/homonglee/downdoc",
+      "path": "downdoc",
+      "mtime": 1786273162.0,
+      "hasLocalIndex": false,
+      "source": "manual-registry"
+    },
+    {
       "slug": "moa-ai-bookmark-manager",
       "name": "모아 — AI 북마크 지식 보관소",
       "description": "YouTube 링크를 저장하면 실제 제목·채널과 자막 또는 영상 메타데이터를 분석해 요약·태그·컬렉션으로 자동 정리하는 인터랙티브 AI 북마크 앱.",

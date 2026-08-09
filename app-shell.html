@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Homong App</title>
+  <style>
+    html, body, iframe { width: 100%; height: 100%; margin: 0; border: 0; }
+    body { overflow: hidden; background: #f7f7f4; }
+    iframe { display: block; }
+    #status { position: fixed; inset: 0; display: grid; place-items: center; font: 600 15px/1.5 system-ui, sans-serif; color: #3d3d39; }
+  </style>
+</head>
+<body>
+  <div id="status">앱을 불러오는 중입니다…</div>
+  <script>
+    (async () => {
+      const slug = new URLSearchParams(location.search).get('slug');
+      const status = document.getElementById('status');
+      try {
+        const response = await fetch('/api/apps', { cache: 'no-store' });
+        if (!response.ok) throw new Error('archive lookup failed');
+        const data = await response.json();
+        const app = (data.apps || []).find(item => item.slug === slug);
+        if (!app || !/^https:\/\//.test(app.deploymentUrl || '')) throw new Error('app unavailable');
+
+        document.title = app.name || 'Homong App';
+        const frame = document.createElement('iframe');
+        frame.title = app.name || 'Homong App';
+        frame.src = app.deploymentUrl;
+        frame.allow = 'clipboard-read; clipboard-write; camera; microphone';
+        frame.addEventListener('load', () => status.remove(), { once: true });
+        document.body.appendChild(frame);
+      } catch (error) {
+        status.textContent = '앱을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
+        console.error(error);
+      }
+    })();
+  </script>
+</body>
+</html>

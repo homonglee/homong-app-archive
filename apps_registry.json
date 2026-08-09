@@ -1,183 +1,204 @@
 {
   "url-qr-shortener-onepage": {
     "name": "Linkly One — URL 단축 & QR 생성기",
-    "url": "https://url-qr-shortener-onepage.vercel.app",
+    "url": "https://homong-app.com/url-qr-shortener-onepage",
     "github": "https://github.com/homonglee/linkly-one-url-qr",
     "icon": "🔗",
-    "category": "마케팅/유틸"
+    "category": "마케팅/유틸",
+    "deploymentUrl": "https://url-qr-shortener-onepage.vercel.app"
   },
   "markdown-lite-editor": {
     "name": "Live Markdown Studio",
-    "url": "https://markdown-lite-editor.vercel.app",
+    "url": "https://homong-app.com/markdown-lite-editor",
     "github": "https://github.com/homonglee/markdown-lite-editor",
     "icon": "✍️",
-    "category": "글쓰기/생산성"
+    "category": "글쓰기/생산성",
+    "deploymentUrl": "https://markdown-lite-editor.vercel.app"
   },
   "voice-memo-mindmap": {
     "name": "보이스 메모 마인드맵",
-    "url": "https://voice-memo-mindmap.vercel.app",
+    "url": "https://homong-app.com/voice-memo-mindmap",
     "github": "https://github.com/homonglee/voice-memo-mindmap",
     "icon": "🎙️",
-    "category": "음성/아이디어"
+    "category": "음성/아이디어",
+    "deploymentUrl": "https://voice-memo-mindmap.vercel.app"
   },
   "subscription-dashboard": {
     "name": "정기 구독 서비스 매니저",
-    "url": "https://subscription-dashboard-rho.vercel.app",
+    "url": "https://homong-app.com/subscription-dashboard",
     "github": "https://github.com/homonglee/subscription-dashboard",
     "icon": "💳",
-    "category": "재무/대시보드"
+    "category": "재무/대시보드",
+    "deploymentUrl": "https://subscription-dashboard-rho.vercel.app"
   },
   "micro-mood-journal": {
     "name": "3줄 마이크로 일기장",
-    "url": "https://micro-mood-journal-alpha.vercel.app",
+    "url": "https://homong-app.com/micro-mood-journal",
     "github": "https://github.com/homonglee/micro-mood-journal",
     "icon": "🌙",
-    "category": "저널/감정"
+    "category": "저널/감정",
+    "deploymentUrl": "https://micro-mood-journal-alpha.vercel.app"
   },
   "lunch-roulette": {
     "name": "오늘 점심 뭐 먹지? 투표 룰렛",
-    "url": "/apps/lunch-roulette/",
+    "url": "https://homong-app.com/lunch-roulette",
     "icon": "🍜",
     "category": "팀/결정"
   },
   "ocr-translator-app": {
     "name": "스크린샷 OCR 번역기",
-    "url": "https://ocr-translator-app-eight.vercel.app",
+    "url": "https://homong-app.com/ocr-translator-app",
     "github": "https://github.com/homonglee/ocr-translator-app",
     "icon": "📸",
-    "category": "OCR/번역"
+    "category": "OCR/번역",
+    "deploymentUrl": "https://ocr-translator-app-eight.vercel.app"
   },
   "mastermind-page": {
     "name": "마스터마인드 인터랙티브 페이지",
-    "url": "https://mastermind-page.vercel.app",
+    "url": "https://homong-app.com/mastermind-page",
     "github": "https://github.com/homonglee/mastermind-page",
     "icon": "🧠",
-    "category": "학습/콘텐츠"
+    "category": "학습/콘텐츠",
+    "deploymentUrl": "https://mastermind-page.vercel.app"
   },
   "mood-playlist-linker": {
     "name": "무드별 플레이리스트 링커",
     "description": "현재 감정 상태와 날씨, 에너지, 듣는 상황을 조합해 어울리는 YouTube 음악 플레이리스트 링크를 큐레이션하는 원페이지 앱.",
-    "url": "https://mood-playlist-linker.vercel.app",
+    "url": "https://homong-app.com/mood-playlist-linker",
     "github": "https://github.com/homonglee/mood-playlist-linker",
     "icon": "🎧",
-    "category": "음악/무드"
+    "category": "음악/무드",
+    "deploymentUrl": "https://mood-playlist-linker.vercel.app"
   },
   "meeting-secretary-app": {
     "name": "원클릭 회의록 정리 비서",
     "description": "대충 받아 적은 미팅 메모를 핵심 요약, 결정 사항, Todo List, 리스크/보류 항목으로 깔끔하게 구조화하는 원페이지 앱.",
-    "url": "https://meeting-secretary-app.vercel.app",
+    "url": "https://homong-app.com/meeting-secretary-app",
     "github": "https://github.com/homonglee/meeting-secretary-app",
     "icon": "📝",
-    "category": "회의/생산성"
+    "category": "회의/생산성",
+    "deploymentUrl": "https://meeting-secretary-app.vercel.app"
   },
   "receipt-expense-scanner": {
     "name": "지출결의서 영수증 스캐너",
     "description": "영수증 사진을 OCR로 읽어 일자, 금액, 가맹점명을 추출하고 지출결의서 초안과 XLSX 저장을 지원하는 원페이지 앱.",
-    "url": "https://receipt-expense-scanner.vercel.app/",
+    "url": "https://homong-app.com/receipt-expense-scanner",
     "github": "https://github.com/homonglee/receipt-expense-scanner",
     "icon": "🧾",
-    "category": "회계/지출"
+    "category": "회계/지출",
+    "deploymentUrl": "https://receipt-expense-scanner.vercel.app"
   },
   "namecard-memo-indexer": {
     "name": "명함 메모 인덱서 — 촬영·편집·삭제 가능한 인맥 관리 앱",
     "description": "명함 사진 촬영, 연락처 추출, 만남 메모 저장, 편집/삭제가 가능한 1페이지 인터랙티브 프로토타입",
-    "url": "/apps/namecard-memo-indexer/",
+    "url": "https://homong-app.com/namecard-memo-indexer",
     "icon": "🪪",
     "category": "인맥/CRM"
   },
   "eisenhower-prioritizer": {
     "name": "아이젠하워 매트릭스 우선순위 정렬기",
     "description": "할 일을 긴급도와 중요도 기준으로 분류해 우선순위를 정리하는 매트릭스 앱.",
-    "url": "/apps/eisenhower-prioritizer/",
+    "url": "https://homong-app.com/eisenhower-prioritizer",
     "icon": "🧭",
     "category": "우선순위/생산성"
   },
   "hermes-agent-interactive-page": {
     "name": "Hermes Agent 소개 — Interactive One Page",
     "description": "터미널, 데스크톱, 메신저, IDE에서 실제 작업을 수행하는 오픈소스 AI 에이전트 Hermes Agent 소개 페이지",
-    "url": "/apps/hermes-agent-interactive-page/",
+    "url": "https://homong-app.com/hermes-agent-interactive-page",
     "icon": "🤖",
     "category": "AI/소개"
   },
   "messenger-summary-tool": {
     "name": "메신저 내용 정리",
     "description": "메신저 텍스트를 붙여넣거나 업로드해 참여자, 핵심 요약, 할 일, 결정사항을 보기 좋은 문서로 정리하고 TXT, MD, DOCX 파일로 저장하는 원페이지 툴.",
-    "url": "https://messenger-summary-tool.vercel.app/",
+    "url": "https://homong-app.com/messenger-summary-tool",
     "github": "https://github.com/homonglee/messenger-summary-tool",
     "icon": "💬",
-    "category": "문서/정리"
+    "category": "문서/정리",
+    "deploymentUrl": "https://messenger-summary-tool.vercel.app"
   },
   "batch-renamer-dropzone": {
     "name": "파일명 일괄 변경기",
     "description": "수십 개의 파일을 드롭존에 넣고 날짜, 프로젝트명, 일련번호 규칙으로 새 파일명을 미리보기한 뒤 CSV 변경 계획으로 내보내는 원페이지 Batch Renamer 앱.",
-    "url": "https://batch-renamer-dropzone.vercel.app",
+    "url": "https://homong-app.com/batch-renamer-dropzone",
     "github": "https://github.com/homonglee/batch-renamer-dropzone",
     "icon": "🗂️",
-    "category": "파일/생산성"
+    "category": "파일/생산성",
+    "deploymentUrl": "https://batch-renamer-dropzone.vercel.app"
   },
   "clipboard-pin-board": {
     "name": "클립보드 고정 보드",
     "description": "자주 쓰는 메일 인사말, 사업자 번호, 회사 주소, 계좌 번호, 서명, 고객 응대 문구를 카드로 고정하고 원클릭 복사·검색·카테고리·최근 기록으로 관리하는 대시보드.",
-    "url": "https://clipboard-pin-board.vercel.app",
+    "url": "https://homong-app.com/clipboard-pin-board",
     "github": "https://github.com/homonglee/clipboard-pin-board",
     "icon": "📌",
-    "category": "업무/생산성"
+    "category": "업무/생산성",
+    "deploymentUrl": "https://clipboard-pin-board.vercel.app"
   },
   "60sec-speech-timer": {
     "name": "60초 스피치 타이머 & 피치 제너레이터",
     "description": "키워드와 상황을 입력하면 조찬 모임·미팅용 60초 발표 스크립트를 생성하고, 발표 속도에 맞춰 타이머와 문장 하이라이트로 연습할 수 있는 1페이지 피치 코치.",
-    "url": "https://60sec-speech-timer.vercel.app",
+    "url": "https://homong-app.com/60sec-speech-timer",
     "github": "https://github.com/homonglee/60sec-speech-timer",
     "icon": "⏱️",
-    "category": "발표/생산성"
+    "category": "발표/생산성",
+    "deploymentUrl": "https://60sec-speech-timer.vercel.app"
   },
   "coffee-chat-icebreaker": {
     "name": "커피챗 아이스브레이킹 추천기",
     "description": "상대방의 직무·산업군·경력감과 대화 목적을 선택하면 첫 5분을 자연스럽게 여는 질문, 꼬리질문, 대화 주제와 아젠다를 추천하는 커피챗 준비 도구.",
-    "url": "https://coffee-chat-icebreaker.vercel.app",
+    "url": "https://homong-app.com/coffee-chat-icebreaker",
     "github": "https://github.com/homonglee/coffee-chat-icebreaker",
     "icon": "☕",
-    "category": "커뮤니케이션/네트워킹"
+    "category": "커뮤니케이션/네트워킹",
+    "deploymentUrl": "https://coffee-chat-icebreaker.vercel.app"
   },
   "schedule-share-link-generator": {
     "name": "스케줄 공유 링크 생성기",
     "description": "Google Calendar OAuth 연결 흐름을 기반으로 가능한 시간대만 계산해 공유 텍스트와 공개 링크로 전달하는 일정 조율용 1페이지 앱. 설정 전에는 데모 후보로 흐름을 확인할 수 있습니다.",
-    "url": "https://schedule-share-link-generator.vercel.app",
+    "url": "https://homong-app.com/schedule-share-link-generator",
     "github": "https://github.com/homonglee/schedule-share-link-generator",
     "icon": "🗓️",
-    "category": "일정/생산성"
+    "category": "일정/생산성",
+    "deploymentUrl": "https://schedule-share-link-generator.vercel.app"
   },
   "got-interactive-light": {
     "name": "왕좌의 게임 인터랙티브 관계도",
     "description": "왕좌의 게임 시즌 1~8의 주요 등장인물, 시즌별 핵심 줄거리, 가문/동맹/적대 관계를 라이트 모드의 인터랙티브 카드와 SVG 관계도 이미지로 탐색하는 시즌 가이드.",
-    "url": "https://got-interactive-light.vercel.app",
+    "url": "https://homong-app.com/got-interactive-light",
     "github": "https://github.com/homonglee/got-interactive-guide",
     "icon": "👑",
-    "category": "드라마/콘텐츠"
+    "category": "드라마/콘텐츠",
+    "deploymentUrl": "https://got-interactive-light.vercel.app"
   },
   "youtube-timeline-summarizer": {
     "name": "유튜브 타임라인 요약기",
     "description": "유튜브 링크를 입력하면 영상 내용을 몇 줄로 요약하고, 핵심 주제별 타임스탬프와 챕터를 자동 생성해 복사·Markdown 내보내기까지 지원하는 1페이지 요약 도구.",
-    "url": "https://youtube-timeline-summarizer.vercel.app",
+    "url": "https://homong-app.com/youtube-timeline-summarizer",
     "github": "https://github.com/homonglee/youtube-timeline-summarizer",
     "icon": "▶️",
-    "category": "영상/요약"
+    "category": "영상/요약",
+    "deploymentUrl": "https://youtube-timeline-summarizer.vercel.app"
   },
   "font-preview-board": {
     "name": "글자보기 — 무료 한글 폰트 비교 보드",
     "description": "상업용 무료 한글 폰트 24종을 한 화면에서 비교하고, 미리보기 문구·크기·굵기·정렬을 조절해 즐겨찾기와 CSS 복사까지 지원하는 인터랙티브 폰트 보드.",
-    "url": "https://font-preview-board.vercel.app",
+    "url": "https://homong-app.com/font-preview-board",
     "github": "https://github.com/homonglee/font-preview-board",
     "icon": "가",
-    "category": "디자인/폰트"
+    "category": "디자인/폰트",
+    "deploymentUrl": "https://font-preview-board.vercel.app"
   },
   "moa-ai-bookmark-manager": {
     "name": "모아 — AI 북마크 지식 보관소",
     "description": "YouTube 링크를 저장하면 실제 제목·채널과 자막 또는 영상 메타데이터를 분석해 요약·태그·컬렉션으로 자동 정리하는 인터랙티브 AI 북마크 앱.",
-    "url": "https://moa-ai-bookmark-manager.vercel.app",
+    "url": "https://homong-app.com/moa-ai-bookmark-manager",
     "github": "https://github.com/homonglee/moa-ai-bookmark-manager",
     "icon": "🔖",
-    "category": "AI/지식관리"
+    "category": "AI/지식관리",
+    "deploymentUrl": "https://moa-ai-bookmark-manager.vercel.app",
+    "routeMode": "embed"
   },
   "downdoc": {
     "name": "DownDoc — 다운로드 폴더 클리닉",
@@ -185,6 +206,7 @@
     "url": "https://homong-app.com/downdoc",
     "github": "https://github.com/homonglee/downdoc",
     "icon": "🩺",
-    "category": "파일/생산성"
+    "category": "파일/생산성",
+    "deploymentUrl": "https://downdoc.vercel.app"
   }
 }

@@ -1,12 +1,356 @@
 {
   "redirects": [
     {
+      "source": "/url-qr-shortener-onepage",
+      "destination": "/url-qr-shortener-onepage/",
+      "permanent": false
+    },
+    {
+      "source": "/markdown-lite-editor",
+      "destination": "/markdown-lite-editor/",
+      "permanent": false
+    },
+    {
+      "source": "/voice-memo-mindmap",
+      "destination": "/voice-memo-mindmap/",
+      "permanent": false
+    },
+    {
+      "source": "/subscription-dashboard",
+      "destination": "/subscription-dashboard/",
+      "permanent": false
+    },
+    {
+      "source": "/micro-mood-journal",
+      "destination": "/micro-mood-journal/",
+      "permanent": false
+    },
+    {
+      "source": "/lunch-roulette",
+      "destination": "/lunch-roulette/",
+      "permanent": false
+    },
+    {
+      "source": "/ocr-translator-app",
+      "destination": "/ocr-translator-app/",
+      "permanent": false
+    },
+    {
+      "source": "/mastermind-page",
+      "destination": "/mastermind-page/",
+      "permanent": false
+    },
+    {
+      "source": "/mood-playlist-linker",
+      "destination": "/mood-playlist-linker/",
+      "permanent": false
+    },
+    {
+      "source": "/meeting-secretary-app",
+      "destination": "/meeting-secretary-app/",
+      "permanent": false
+    },
+    {
+      "source": "/receipt-expense-scanner",
+      "destination": "/receipt-expense-scanner/",
+      "permanent": false
+    },
+    {
+      "source": "/namecard-memo-indexer",
+      "destination": "/namecard-memo-indexer/",
+      "permanent": false
+    },
+    {
+      "source": "/eisenhower-prioritizer",
+      "destination": "/eisenhower-prioritizer/",
+      "permanent": false
+    },
+    {
+      "source": "/hermes-agent-interactive-page",
+      "destination": "/hermes-agent-interactive-page/",
+      "permanent": false
+    },
+    {
+      "source": "/messenger-summary-tool",
+      "destination": "/messenger-summary-tool/",
+      "permanent": false
+    },
+    {
+      "source": "/batch-renamer-dropzone",
+      "destination": "/batch-renamer-dropzone/",
+      "permanent": false
+    },
+    {
+      "source": "/clipboard-pin-board",
+      "destination": "/clipboard-pin-board/",
+      "permanent": false
+    },
+    {
+      "source": "/60sec-speech-timer",
+      "destination": "/60sec-speech-timer/",
+      "permanent": false
+    },
+    {
+      "source": "/coffee-chat-icebreaker",
+      "destination": "/coffee-chat-icebreaker/",
+      "permanent": false
+    },
+    {
+      "source": "/schedule-share-link-generator",
+      "destination": "/schedule-share-link-generator/",
+      "permanent": false
+    },
+    {
+      "source": "/got-interactive-light",
+      "destination": "/got-interactive-light/",
+      "permanent": false
+    },
+    {
+      "source": "/youtube-timeline-summarizer",
+      "destination": "/youtube-timeline-summarizer/",
+      "permanent": false
+    },
+    {
+      "source": "/font-preview-board",
+      "destination": "/font-preview-board/",
+      "permanent": false
+    },
+    {
+      "source": "/moa-ai-bookmark-manager",
+      "destination": "/moa-ai-bookmark-manager/",
+      "permanent": false
+    },
+    {
       "source": "/downdoc",
       "destination": "/downdoc/",
       "permanent": false
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/shorten",
+      "destination": "https://url-qr-shortener-onepage.vercel.app/api/shorten"
+    },
+    {
+      "source": "/api/translate",
+      "destination": "https://ocr-translator-app-eight.vercel.app/api/translate"
+    },
+    {
+      "source": "/app.js",
+      "destination": "https://ocr-translator-app-eight.vercel.app/app.js"
+    },
+    {
+      "source": "/styles.css",
+      "destination": "https://ocr-translator-app-eight.vercel.app/styles.css"
+    },
+    {
+      "source": "/api/analyze",
+      "destination": "https://youtube-timeline-summarizer.vercel.app/api/analyze"
+    },
+    {
+      "source": "/api/config",
+      "destination": "https://schedule-share-link-generator.vercel.app/api/config"
+    },
+    {
+      "source": "/api/google/:path*",
+      "destination": "https://schedule-share-link-generator.vercel.app/api/google/:path*"
+    },
+    {
+      "source": "/api/calendar/:path*",
+      "destination": "https://schedule-share-link-generator.vercel.app/api/calendar/:path*"
+    },
+    {
+      "source": "/api/share-link",
+      "destination": "https://schedule-share-link-generator.vercel.app/api/share-link"
+    },
+    {
+      "source": "/url-qr-shortener-onepage/",
+      "destination": "https://url-qr-shortener-onepage.vercel.app/"
+    },
+    {
+      "source": "/url-qr-shortener-onepage/:path*",
+      "destination": "https://url-qr-shortener-onepage.vercel.app/:path*"
+    },
+    {
+      "source": "/markdown-lite-editor/",
+      "destination": "https://markdown-lite-editor.vercel.app/"
+    },
+    {
+      "source": "/markdown-lite-editor/:path*",
+      "destination": "https://markdown-lite-editor.vercel.app/:path*"
+    },
+    {
+      "source": "/voice-memo-mindmap/",
+      "destination": "https://voice-memo-mindmap.vercel.app/"
+    },
+    {
+      "source": "/voice-memo-mindmap/:path*",
+      "destination": "https://voice-memo-mindmap.vercel.app/:path*"
+    },
+    {
+      "source": "/subscription-dashboard/",
+      "destination": "https://subscription-dashboard-rho.vercel.app/"
+    },
+    {
+      "source": "/subscription-dashboard/:path*",
+      "destination": "https://subscription-dashboard-rho.vercel.app/:path*"
+    },
+    {
+      "source": "/micro-mood-journal/",
+      "destination": "https://micro-mood-journal-alpha.vercel.app/"
+    },
+    {
+      "source": "/micro-mood-journal/:path*",
+      "destination": "https://micro-mood-journal-alpha.vercel.app/:path*"
+    },
+    {
+      "source": "/lunch-roulette/",
+      "destination": "/apps/lunch-roulette/index.html"
+    },
+    {
+      "source": "/lunch-roulette/:path*",
+      "destination": "/apps/lunch-roulette/:path*"
+    },
+    {
+      "source": "/ocr-translator-app/",
+      "destination": "https://ocr-translator-app-eight.vercel.app/"
+    },
+    {
+      "source": "/ocr-translator-app/:path*",
+      "destination": "https://ocr-translator-app-eight.vercel.app/:path*"
+    },
+    {
+      "source": "/mastermind-page/",
+      "destination": "https://mastermind-page.vercel.app/"
+    },
+    {
+      "source": "/mastermind-page/:path*",
+      "destination": "https://mastermind-page.vercel.app/:path*"
+    },
+    {
+      "source": "/mood-playlist-linker/",
+      "destination": "https://mood-playlist-linker.vercel.app/"
+    },
+    {
+      "source": "/mood-playlist-linker/:path*",
+      "destination": "https://mood-playlist-linker.vercel.app/:path*"
+    },
+    {
+      "source": "/meeting-secretary-app/",
+      "destination": "https://meeting-secretary-app.vercel.app/"
+    },
+    {
+      "source": "/meeting-secretary-app/:path*",
+      "destination": "https://meeting-secretary-app.vercel.app/:path*"
+    },
+    {
+      "source": "/receipt-expense-scanner/",
+      "destination": "https://receipt-expense-scanner.vercel.app/"
+    },
+    {
+      "source": "/receipt-expense-scanner/:path*",
+      "destination": "https://receipt-expense-scanner.vercel.app/:path*"
+    },
+    {
+      "source": "/namecard-memo-indexer/",
+      "destination": "/apps/namecard-memo-indexer/index.html"
+    },
+    {
+      "source": "/namecard-memo-indexer/:path*",
+      "destination": "/apps/namecard-memo-indexer/:path*"
+    },
+    {
+      "source": "/eisenhower-prioritizer/",
+      "destination": "/apps/eisenhower-prioritizer/index.html"
+    },
+    {
+      "source": "/eisenhower-prioritizer/:path*",
+      "destination": "/apps/eisenhower-prioritizer/:path*"
+    },
+    {
+      "source": "/hermes-agent-interactive-page/",
+      "destination": "/apps/hermes-agent-interactive-page/index.html"
+    },
+    {
+      "source": "/hermes-agent-interactive-page/:path*",
+      "destination": "/apps/hermes-agent-interactive-page/:path*"
+    },
+    {
+      "source": "/messenger-summary-tool/",
+      "destination": "https://messenger-summary-tool.vercel.app/"
+    },
+    {
+      "source": "/messenger-summary-tool/:path*",
+      "destination": "https://messenger-summary-tool.vercel.app/:path*"
+    },
+    {
+      "source": "/batch-renamer-dropzone/",
+      "destination": "https://batch-renamer-dropzone.vercel.app/"
+    },
+    {
+      "source": "/batch-renamer-dropzone/:path*",
+      "destination": "https://batch-renamer-dropzone.vercel.app/:path*"
+    },
+    {
+      "source": "/clipboard-pin-board/",
+      "destination": "https://clipboard-pin-board.vercel.app/"
+    },
+    {
+      "source": "/clipboard-pin-board/:path*",
+      "destination": "https://clipboard-pin-board.vercel.app/:path*"
+    },
+    {
+      "source": "/60sec-speech-timer/",
+      "destination": "https://60sec-speech-timer.vercel.app/"
+    },
+    {
+      "source": "/60sec-speech-timer/:path*",
+      "destination": "https://60sec-speech-timer.vercel.app/:path*"
+    },
+    {
+      "source": "/coffee-chat-icebreaker/",
+      "destination": "https://coffee-chat-icebreaker.vercel.app/"
+    },
+    {
+      "source": "/coffee-chat-icebreaker/:path*",
+      "destination": "https://coffee-chat-icebreaker.vercel.app/:path*"
+    },
+    {
+      "source": "/schedule-share-link-generator/",
+      "destination": "https://schedule-share-link-generator.vercel.app/"
+    },
+    {
+      "source": "/schedule-share-link-generator/:path*",
+      "destination": "https://schedule-share-link-generator.vercel.app/:path*"
+    },
+    {
+      "source": "/got-interactive-light/",
+      "destination": "https://got-interactive-light.vercel.app/"
+    },
+    {
+      "source": "/got-interactive-light/:path*",
+      "destination": "https://got-interactive-light.vercel.app/:path*"
+    },
+    {
+      "source": "/youtube-timeline-summarizer/",
+      "destination": "https://youtube-timeline-summarizer.vercel.app/"
+    },
+    {
+      "source": "/youtube-timeline-summarizer/:path*",
+      "destination": "https://youtube-timeline-summarizer.vercel.app/:path*"
+    },
+    {
+      "source": "/font-preview-board/",
+      "destination": "https://font-preview-board.vercel.app/"
+    },
+    {
+      "source": "/font-preview-board/:path*",
+      "destination": "https://font-preview-board.vercel.app/:path*"
+    },
+    {
+      "source": "/moa-ai-bookmark-manager/",
+      "destination": "/app-shell.html?slug=moa-ai-bookmark-manager"
+    },
     {
       "source": "/downdoc/",
       "destination": "https://downdoc.vercel.app/"

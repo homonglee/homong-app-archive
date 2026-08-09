@@ -165,7 +165,10 @@ def manual_registry_entry(slug: str, overrides: dict) -> dict:
         if not github:
             github = git_remote(app_dir)
     url = overrides.get('url') or (f'/apps/{urllib.parse.quote(slug)}/' if has_local else '#')
-    deployment = url if url.startswith('http://') or url.startswith('https://') else ''
+    deployment = overrides.get('deploymentUrl', '')
+    if not deployment and (url.startswith('http://') or url.startswith('https://')) and 'homong-app.com/' not in url:
+        # Backward compatibility for registry entries created before archive-domain routing.
+        deployment = url
     return {
         'slug': slug,
         'name': overrides.get('name') or title or slug.replace('-', ' ').title(),

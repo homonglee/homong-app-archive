@@ -81,6 +81,11 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertNotIn("외부 배포 링크", html)
         self.assertNotIn("외부 실행", html)
 
+    def test_internal_registry_is_excluded_from_vercel_deployment(self):
+        ignored = (ROOT / ".vercelignore").read_text(encoding="utf-8").splitlines()
+
+        self.assertIn("apps_registry.json", ignored)
+
     def test_moa_uses_direct_archive_rewrite_instead_of_embed_shell(self):
         registry = load_json("apps_registry.json")
         config = load_json("vercel.json")

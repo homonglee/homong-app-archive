@@ -1,0 +1,7 @@
+# Internal archive metadata and development-only files
+apps_registry.json
+app-shell.html
+server.py
+tests/
+scripts/
+README.md

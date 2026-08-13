@@ -36,21 +36,15 @@ def build_config(registry: dict) -> dict:
         })
 
         deployment = app.get("deploymentUrl", "").rstrip("/")
-        if app.get("routeMode") == "embed":
-            rewrites.append({
-                "source": f"/{slug}/",
-                "destination": f"/app-shell.html?slug={slug}",
-            })
-        elif deployment:
-            rewrites.extend([
-                {"source": f"/{slug}/", "destination": deployment + "/"},
-                {"source": f"/{slug}/:path*", "destination": deployment + "/:path*"},
-            ])
+        rewrites.append({
+            "source": f"/{slug}/",
+            "destination": f"/app-shell.html?slug={slug}",
+        })
+        # Nested static assets and API calls still use the original app target.
+        if deployment:
+            rewrites.append({"source": f"/{slug}/:path*", "destination": deployment + "/:path*"})
         else:
-            rewrites.extend([
-                {"source": f"/{slug}/", "destination": f"/apps/{slug}/index.html"},
-                {"source": f"/{slug}/:path*", "destination": f"/apps/{slug}/:path*"},
-            ])
+            rewrites.append({"source": f"/{slug}/:path*", "destination": f"/apps/{slug}/:path*"})
 
     return {"redirects": redirects, "rewrites": rewrites}
 

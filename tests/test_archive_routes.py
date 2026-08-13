@@ -32,26 +32,18 @@ class ArchiveRouteTests(unittest.TestCase):
                 self.assertEqual(redirects[f"/{slug}"]["destination"], f"/{slug}/")
                 self.assertIn(f"/{slug}/", rewrites)
 
+                self.assertEqual(
+                    rewrites[f"/{slug}/"]["destination"],
+                    f"/app-shell.html?slug={slug}",
+                )
+
                 deployment = app.get("deploymentUrl", "")
-                if app.get("routeMode") == "embed":
-                    self.assertEqual(
-                        rewrites[f"/{slug}/"]["destination"],
-                        f"/app-shell.html?slug={slug}",
-                    )
-                elif deployment:
-                    self.assertEqual(
-                        rewrites[f"/{slug}/"]["destination"],
-                        deployment.rstrip("/") + "/",
-                    )
+                if deployment:
                     self.assertEqual(
                         rewrites[f"/{slug}/:path*"]["destination"],
                         deployment.rstrip("/") + "/:path*",
                     )
                 else:
-                    self.assertEqual(
-                        rewrites[f"/{slug}/"]["destination"],
-                        f"/apps/{slug}/index.html",
-                    )
                     self.assertEqual(
                         rewrites[f"/{slug}/:path*"]["destination"],
                         f"/apps/{slug}/:path*",
@@ -108,15 +100,30 @@ class ArchiveRouteTests(unittest.TestCase):
 
         self.assertIn("apps_registry.json", ignored)
 
-    def test_moa_uses_direct_archive_rewrite_instead_of_embed_shell(self):
+    def test_all_apps_use_shell_with_manual_button(self):
         registry = load_json("apps_registry.json")
         config = load_json("vercel.json")
         rewrites = {item["source"]: item["destination"] for item in config["rewrites"]}
-        slug = "moa-ai-bookmark-manager"
+        shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
 
-        self.assertNotEqual(registry[slug].get("routeMode"), "embed")
-        self.assertEqual(rewrites[f"/{slug}/"], registry[slug]["deploymentUrl"].rstrip("/") + "/")
-        self.assertEqual(rewrites[f"/{slug}/:path*"], registry[slug]["deploymentUrl"].rstrip("/") + "/:path*")
+        for slug in registry:
+            with self.subTest(slug=slug):
+                self.assertEqual(rewrites[f"/{slug}/"], f"/app-shell.html?slug={slug}")
+        self.assertIn('id="manualLink"', shell)
+        self.assertIn('/manuals/${encodeURIComponent(slug)}.html', shell)
+        self.assertIn('📖 사용설명서', shell)
+        self.assertIn('geolocation', shell)
+
+    def test_app_targets_match_registry_without_public_api_exposure(self):
+        registry = load_json("apps_registry.json")
+        targets = load_json("app_targets.json")
+        public_api = (ROOT / "api" / "apps.py").read_text(encoding="utf-8")
+
+        self.assertEqual(set(targets), set(registry))
+        for slug, app in registry.items():
+            expected = app.get("deploymentUrl", "").rstrip("/") + "/" if app.get("deploymentUrl") else f"/apps/{slug}/index.html"
+            self.assertEqual(targets[slug], expected)
+        self.assertNotIn("deploymentUrl", public_api)
 
 
 if __name__ == "__main__":

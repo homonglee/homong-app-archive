@@ -89,6 +89,20 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertIn(".archive-url{", html)
         self.assertIn("overflow-wrap:anywhere", html)
 
+    def test_archive_ui_supports_persistent_manual_card_order(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn('id="reorderBtn"', html)
+        self.assertIn('id="resetOrderBtn"', html)
+        self.assertIn('draggable="${state.reordering}"', html)
+        self.assertIn("dragstart", html)
+        self.assertIn("dragover", html)
+        self.assertIn("homong-app-card-order-v1", html)
+        self.assertIn('/assets/archive-order.js', html)
+        self.assertIn('data-move="up"', html)
+        self.assertIn('data-move="down"', html)
+        self.assertIn("aria-label=\"앱 순서 편집\"", html)
+
     def test_internal_registry_is_excluded_from_vercel_deployment(self):
         ignored = (ROOT / ".vercelignore").read_text(encoding="utf-8").splitlines()
 

@@ -168,200 +168,100 @@
       "destination": "/app-shell.html?slug=url-qr-shortener-onepage"
     },
     {
-      "source": "/url-qr-shortener-onepage/:path*",
-      "destination": "https://url-qr-shortener-onepage.vercel.app/:path*"
-    },
-    {
       "source": "/markdown-lite-editor/",
       "destination": "/app-shell.html?slug=markdown-lite-editor"
-    },
-    {
-      "source": "/markdown-lite-editor/:path*",
-      "destination": "https://markdown-lite-editor.vercel.app/:path*"
     },
     {
       "source": "/voice-memo-mindmap/",
       "destination": "/app-shell.html?slug=voice-memo-mindmap"
     },
     {
-      "source": "/voice-memo-mindmap/:path*",
-      "destination": "https://voice-memo-mindmap.vercel.app/:path*"
-    },
-    {
       "source": "/subscription-dashboard/",
       "destination": "/app-shell.html?slug=subscription-dashboard"
-    },
-    {
-      "source": "/subscription-dashboard/:path*",
-      "destination": "https://subscription-dashboard-rho.vercel.app/:path*"
     },
     {
       "source": "/micro-mood-journal/",
       "destination": "/app-shell.html?slug=micro-mood-journal"
     },
     {
-      "source": "/micro-mood-journal/:path*",
-      "destination": "https://micro-mood-journal-alpha.vercel.app/:path*"
-    },
-    {
       "source": "/lunch-roulette/",
       "destination": "/app-shell.html?slug=lunch-roulette"
-    },
-    {
-      "source": "/lunch-roulette/:path*",
-      "destination": "/apps/lunch-roulette/:path*"
     },
     {
       "source": "/ocr-translator-app/",
       "destination": "/app-shell.html?slug=ocr-translator-app"
     },
     {
-      "source": "/ocr-translator-app/:path*",
-      "destination": "https://ocr-translator-app-eight.vercel.app/:path*"
-    },
-    {
       "source": "/mastermind-page/",
       "destination": "/app-shell.html?slug=mastermind-page"
-    },
-    {
-      "source": "/mastermind-page/:path*",
-      "destination": "https://mastermind-page.vercel.app/:path*"
     },
     {
       "source": "/mood-playlist-linker/",
       "destination": "/app-shell.html?slug=mood-playlist-linker"
     },
     {
-      "source": "/mood-playlist-linker/:path*",
-      "destination": "https://mood-playlist-linker.vercel.app/:path*"
-    },
-    {
       "source": "/meeting-secretary-app/",
       "destination": "/app-shell.html?slug=meeting-secretary-app"
-    },
-    {
-      "source": "/meeting-secretary-app/:path*",
-      "destination": "https://meeting-secretary-app.vercel.app/:path*"
     },
     {
       "source": "/receipt-expense-scanner/",
       "destination": "/app-shell.html?slug=receipt-expense-scanner"
     },
     {
-      "source": "/receipt-expense-scanner/:path*",
-      "destination": "https://receipt-expense-scanner.vercel.app/:path*"
-    },
-    {
       "source": "/namecard-memo-indexer/",
       "destination": "/app-shell.html?slug=namecard-memo-indexer"
-    },
-    {
-      "source": "/namecard-memo-indexer/:path*",
-      "destination": "/apps/namecard-memo-indexer/:path*"
     },
     {
       "source": "/eisenhower-prioritizer/",
       "destination": "/app-shell.html?slug=eisenhower-prioritizer"
     },
     {
-      "source": "/eisenhower-prioritizer/:path*",
-      "destination": "/apps/eisenhower-prioritizer/:path*"
-    },
-    {
       "source": "/hermes-agent-interactive-page/",
       "destination": "/app-shell.html?slug=hermes-agent-interactive-page"
-    },
-    {
-      "source": "/hermes-agent-interactive-page/:path*",
-      "destination": "/apps/hermes-agent-interactive-page/:path*"
     },
     {
       "source": "/messenger-summary-tool/",
       "destination": "/app-shell.html?slug=messenger-summary-tool"
     },
     {
-      "source": "/messenger-summary-tool/:path*",
-      "destination": "https://messenger-summary-tool.vercel.app/:path*"
-    },
-    {
       "source": "/batch-renamer-dropzone/",
       "destination": "/app-shell.html?slug=batch-renamer-dropzone"
-    },
-    {
-      "source": "/batch-renamer-dropzone/:path*",
-      "destination": "https://batch-renamer-dropzone.vercel.app/:path*"
     },
     {
       "source": "/clipboard-pin-board/",
       "destination": "/app-shell.html?slug=clipboard-pin-board"
     },
     {
-      "source": "/clipboard-pin-board/:path*",
-      "destination": "https://clipboard-pin-board.vercel.app/:path*"
-    },
-    {
       "source": "/60sec-speech-timer/",
       "destination": "/app-shell.html?slug=60sec-speech-timer"
-    },
-    {
-      "source": "/60sec-speech-timer/:path*",
-      "destination": "https://60sec-speech-timer.vercel.app/:path*"
     },
     {
       "source": "/coffee-chat-icebreaker/",
       "destination": "/app-shell.html?slug=coffee-chat-icebreaker"
     },
     {
-      "source": "/coffee-chat-icebreaker/:path*",
-      "destination": "https://coffee-chat-icebreaker.vercel.app/:path*"
-    },
-    {
       "source": "/schedule-share-link-generator/",
       "destination": "/app-shell.html?slug=schedule-share-link-generator"
-    },
-    {
-      "source": "/schedule-share-link-generator/:path*",
-      "destination": "https://schedule-share-link-generator.vercel.app/:path*"
     },
     {
       "source": "/got-interactive-light/",
       "destination": "/app-shell.html?slug=got-interactive-light"
     },
     {
-      "source": "/got-interactive-light/:path*",
-      "destination": "https://got-interactive-light.vercel.app/:path*"
-    },
-    {
       "source": "/youtube-timeline-summarizer/",
       "destination": "/app-shell.html?slug=youtube-timeline-summarizer"
-    },
-    {
-      "source": "/youtube-timeline-summarizer/:path*",
-      "destination": "https://youtube-timeline-summarizer.vercel.app/:path*"
     },
     {
       "source": "/font-preview-board/",
       "destination": "/app-shell.html?slug=font-preview-board"
     },
     {
-      "source": "/font-preview-board/:path*",
-      "destination": "https://font-preview-board.vercel.app/:path*"
-    },
-    {
       "source": "/moa-ai-bookmark-manager/",
       "destination": "/app-shell.html?slug=moa-ai-bookmark-manager"
     },
     {
-      "source": "/moa-ai-bookmark-manager/:path*",
-      "destination": "https://moa-ai-bookmark-manager.vercel.app/:path*"
-    },
-    {
       "source": "/downdoc/",
       "destination": "/app-shell.html?slug=downdoc"
-    },
-    {
-      "source": "/downdoc/:path*",
-      "destination": "https://downdoc.vercel.app/:path*"
     }
   ]
 }

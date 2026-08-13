@@ -40,11 +40,6 @@ def build_config(registry: dict) -> dict:
             "source": f"/{slug}/",
             "destination": f"/app-shell.html?slug={slug}",
         })
-        # Nested static assets and API calls still use the original app target.
-        if deployment:
-            rewrites.append({"source": f"/{slug}/:path*", "destination": deployment + "/:path*"})
-        else:
-            rewrites.append({"source": f"/{slug}/:path*", "destination": f"/apps/{slug}/:path*"})
 
     return {"redirects": redirects, "rewrites": rewrites}
 

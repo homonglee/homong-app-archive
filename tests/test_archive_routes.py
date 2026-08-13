@@ -37,17 +37,7 @@ class ArchiveRouteTests(unittest.TestCase):
                     f"/app-shell.html?slug={slug}",
                 )
 
-                deployment = app.get("deploymentUrl", "")
-                if deployment:
-                    self.assertEqual(
-                        rewrites[f"/{slug}/:path*"]["destination"],
-                        deployment.rstrip("/") + "/:path*",
-                    )
-                else:
-                    self.assertEqual(
-                        rewrites[f"/{slug}/:path*"]["destination"],
-                        f"/apps/{slug}/:path*",
-                    )
+                self.assertNotIn(f"/{slug}/:path*", rewrites)
 
     def test_embed_shell_reads_slug_from_visible_archive_path(self):
         shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")

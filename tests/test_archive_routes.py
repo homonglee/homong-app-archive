@@ -89,6 +89,7 @@ class ArchiveRouteTests(unittest.TestCase):
         ignored = (ROOT / ".vercelignore").read_text(encoding="utf-8").splitlines()
 
         self.assertIn("apps_registry.json", ignored)
+        self.assertNotIn("app-shell.html", ignored)
 
     def test_all_apps_use_shell_with_manual_button(self):
         registry = load_json("apps_registry.json")

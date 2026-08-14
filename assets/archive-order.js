@@ -31,8 +31,12 @@
   }
 
   function applySavedOrder(apps, order){
-    const ranks = new Map(order.map((slug, index) => [slug, index]));
-    return [...apps].sort((a, b) => (ranks.get(a.slug) ?? Number.MAX_SAFE_INTEGER) - (ranks.get(b.slug) ?? Number.MAX_SAFE_INTEGER));
+    const knownSlugs = new Set(apps.map(app => app.slug));
+    const savedSlugs = order.filter(slug => knownSlugs.has(slug));
+    const savedSet = new Set(savedSlugs);
+    const newApps = apps.filter(app => !savedSet.has(app.slug));
+    const appsBySlug = new Map(apps.map(app => [app.slug, app]));
+    return [...newApps, ...savedSlugs.map(slug => appsBySlug.get(slug))];
   }
 
   function mergeVisibleOrder(allApps, visibleApps){
@@ -52,5 +56,15 @@
     return result;
   }
 
-  return { safeReadOrder, safeWriteOrder, safeRemoveOrder, applySavedOrder, mergeVisibleOrder, moveBeforeOrAfter };
+  function moveToEdge(apps, slug, edge){
+    const from = apps.findIndex(app => app.slug === slug);
+    if(from < 0 || !['first', 'last'].includes(edge)) return [...apps];
+    const result = [...apps];
+    const [app] = result.splice(from, 1);
+    if(edge === 'first') result.unshift(app);
+    else result.push(app);
+    return result;
+  }
+
+  return { safeReadOrder, safeWriteOrder, safeRemoveOrder, applySavedOrder, mergeVisibleOrder, moveBeforeOrAfter, moveToEdge };
 });

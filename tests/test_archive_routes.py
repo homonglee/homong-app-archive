@@ -83,6 +83,10 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertIn('/assets/archive-order.js', html)
         self.assertIn('data-move="up"', html)
         self.assertIn('data-move="down"', html)
+        self.assertIn('data-move="first"', html)
+        self.assertIn('data-move="last"', html)
+        self.assertIn('맨 위로', html)
+        self.assertIn('맨 아래로', html)
         self.assertIn("aria-label=\"앱 순서 편집\"", html)
 
     def test_internal_registry_is_excluded_from_vercel_deployment(self):

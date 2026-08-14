@@ -207,5 +207,14 @@
     "icon": "🩺",
     "category": "파일/생산성",
     "deploymentUrl": "https://downdoc.vercel.app"
+  },
+  "newsletter-webzine": {
+    "name": "Letterly — 자동 뉴스레터 스튜디오",
+    "description": "원고와 여러 장의 이미지를 넣으면 제목·소개·본문을 자동 편집하고 이미지 레이아웃을 구성해 뉴스레터 발행과 공유 링크 생성을 지원하는 웹진 제작 앱.",
+    "url": "https://homong-app.com/newsletter-webzine",
+    "github": "https://github.com/homonglee/newsletter-webzine",
+    "icon": "📰",
+    "category": "글쓰기/생산성",
+    "deploymentUrl": "https://newsletter-webzine.vercel.app"
   }
 }

@@ -124,6 +124,11 @@
       "source": "/downdoc",
       "destination": "/downdoc/",
       "permanent": false
+    },
+    {
+      "source": "/newsletter-webzine",
+      "destination": "/newsletter-webzine/",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -262,6 +267,10 @@
     {
       "source": "/downdoc/",
       "destination": "/app-shell.html?slug=downdoc"
+    },
+    {
+      "source": "/newsletter-webzine/",
+      "destination": "/app-shell.html?slug=newsletter-webzine"
     }
   ]
 }

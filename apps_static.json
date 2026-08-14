@@ -1,6 +1,18 @@
 {
   "apps": [
     {
+      "slug": "newsletter-webzine",
+      "name": "Letterly — 자동 뉴스레터 스튜디오",
+      "description": "원고와 여러 장의 이미지를 넣으면 제목·소개·본문을 자동 편집하고 이미지 레이아웃을 구성해 뉴스레터 발행과 공유 링크 생성을 지원하는 웹진 제작 앱.",
+      "category": "글쓰기/생산성",
+      "icon": "📰",
+      "url": "https://homong-app.com/newsletter-webzine",
+      "github": "https://github.com/homonglee/newsletter-webzine",
+      "mtime": 1786666660.6803455,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "youtube-timeline-summarizer",
       "name": "유튜브 타임라인 요약기",
       "description": "유튜브 링크를 입력하면 영상 내용을 몇 줄로 요약하고, 핵심 주제별 타임스탬프와 챕터를 자동 생성해 복사·Markdown 내보내기까지 지원하는 1페이지 요약 도구.",

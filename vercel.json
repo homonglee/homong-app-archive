@@ -139,7 +139,11 @@
   "rewrites": [
     {
       "source": "/newsletter/s/:id",
-      "destination": "https://newsletter-webzine.vercel.app/reader.html?id=:id"
+      "destination": "https://newsletter-webzine.vercel.app/api/reader?id=:id"
+    },
+    {
+      "source": "/newsletter/og/:id",
+      "destination": "https://newsletter-webzine.vercel.app/api/image?id=:id"
     },
     {
       "source": "/newsletter/api/:path*",

@@ -105,6 +105,17 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertIn('📖 사용설명서', shell)
         self.assertIn('geolocation', shell)
 
+    def test_manual_button_uses_reserved_toolbar_instead_of_overlaying_app(self):
+        shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
+
+        self.assertIn('id="shellToolbar"', shell)
+        self.assertIn('body { overflow: hidden; background: #f7f7f4; display: flex; flex-direction: column; }', shell)
+        self.assertIn('#shellToolbar {', shell)
+        self.assertIn('flex: 0 0 58px', shell)
+        self.assertIn('iframe { display: block; flex: 1 1 auto; min-height: 0; height: auto;', shell)
+        manual_css = shell.split('#manualLink {', 1)[1].split('}', 1)[0]
+        self.assertNotIn('position: fixed', manual_css)
+
     def test_app_targets_match_registry_without_public_api_exposure(self):
         registry = load_json("apps_registry.json")
         targets = load_json("app_targets.json")

@@ -129,9 +129,30 @@
       "source": "/newsletter-webzine",
       "destination": "/newsletter-webzine/",
       "permanent": false
+    },
+    {
+      "source": "/newsletter",
+      "destination": "/newsletter/",
+      "permanent": false
     }
   ],
   "rewrites": [
+    {
+      "source": "/newsletter/s/:id",
+      "destination": "https://newsletter-webzine.vercel.app/reader.html?id=:id"
+    },
+    {
+      "source": "/newsletter/api/:path*",
+      "destination": "https://newsletter-webzine.vercel.app/api/:path*"
+    },
+    {
+      "source": "/newsletter/",
+      "destination": "https://newsletter-webzine.vercel.app/"
+    },
+    {
+      "source": "/newsletter/:path*",
+      "destination": "https://newsletter-webzine.vercel.app/:path*"
+    },
     {
       "source": "/api/shorten",
       "destination": "https://url-qr-shortener-onepage.vercel.app/api/shorten"

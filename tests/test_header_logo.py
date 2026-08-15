@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LOGO = ROOT / "assets" / "hoyeon-jijae-logo-bordered.png"
+LOGO = ROOT / "assets" / "hoyeon-jijae-logo-flat.png"
 
 
 class HeaderLogoTests(unittest.TestCase):
@@ -20,7 +20,8 @@ class HeaderLogoTests(unittest.TestCase):
     def test_header_uses_accessible_hoyeon_jijae_logo(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         self.assertIn('class="brand-logo"', html)
-        self.assertIn('src="/assets/hoyeon-jijae-logo-bordered.png"', html)
+        self.assertIn('src="/assets/hoyeon-jijae-logo-flat.png"', html)
+        self.assertNotIn('src="/assets/hoyeon-jijae-logo-bordered.png"', html)
         self.assertNotIn('src="/assets/hoyeon-jijae-logo.png"', html)
         self.assertIn('alt="호연지재 로고"', html)
         self.assertIn('width="40" height="40"', html)

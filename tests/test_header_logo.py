@@ -27,6 +27,13 @@ class HeaderLogoTests(unittest.TestCase):
         self.assertIn('.brand-logo{', html)
         self.assertNotIn('<span class="brand-mark">⌘</span>', html)
 
+    def test_header_title_font_is_one_and_a_half_times_larger(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<span class="brand-title">Homong\'s App Archive</span>', html)
+        self.assertIn('.brand-title{font-size:24px;', html)
+        self.assertIn('.brand-title{font-size:21px;max-width:160px;', html)
+        self.assertNotIn('.brand>span:last-child{font-size:14px}', html)
+
 
 if __name__ == "__main__":
     unittest.main()

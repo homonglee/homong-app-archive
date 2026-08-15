@@ -1,6 +1,19 @@
 {
   "apps": [
     {
+      "slug": "memory-companion",
+      "name": "Memory Companion — 놓친 약속까지 기억하는 AI",
+      "description": "평소 대화에서 사람·프로젝트·할 일·날짜를 구조화하고 실제 기록을 검색하며, 완료 기록이 없는 약속을 찾아 후속 확인하는 인터랙티브 기억 관리 앱과 Hermes 스킬.",
+      "category": "AI/생산성",
+      "icon": "🧠",
+      "url": "https://homong-app.com/memory-companion",
+      "github": "https://github.com/homonglee/memory-companion",
+      "downloadUrl": "https://homong-app.com/assets/downloads/memory-companion-skill.zip",
+      "mtime": 1786776541.0,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "newsletter-webzine",
       "name": "Letterly — 자동 뉴스레터 스튜디오",
       "description": "원고와 여러 장의 이미지를 넣으면 제목·소개·본문을 자동 편집하고 이미지 레이아웃을 구성해 뉴스레터 발행과 공유 링크 생성을 지원하는 웹진 제작 앱.",

@@ -173,6 +173,7 @@ def manual_registry_entry(slug: str, overrides: dict) -> dict:
         'icon': overrides.get('icon') or EMOJI_BY_SLUG.get(slug, '✨'),
         'url': url,
         'github': github,
+        'downloadUrl': overrides.get('downloadUrl', ''),
         'mtime': mtime,
         'hasLocalIndex': has_local,
         'source': 'manual-registry',

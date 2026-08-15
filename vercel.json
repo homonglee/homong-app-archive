@@ -131,6 +131,11 @@
       "permanent": false
     },
     {
+      "source": "/memory-companion",
+      "destination": "/memory-companion/",
+      "permanent": false
+    },
+    {
       "source": "/newsletter",
       "destination": "/newsletter/",
       "permanent": false
@@ -296,6 +301,10 @@
     {
       "source": "/newsletter-webzine/",
       "destination": "/app-shell.html?slug=newsletter-webzine"
+    },
+    {
+      "source": "/memory-companion/",
+      "destination": "/app-shell.html?slug=memory-companion"
     }
   ]
 }

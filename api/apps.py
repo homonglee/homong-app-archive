@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parent.parent
 STATIC = ROOT / 'apps_static.json'
 PUBLIC_FIELDS = {
     'slug', 'name', 'description', 'category', 'icon', 'url', 'github',
-    'mtime', 'hasLocalIndex', 'source',
+    'mtime', 'hasLocalIndex', 'source', 'downloadUrl',
 }
 
 

@@ -216,5 +216,15 @@
     "icon": "📰",
     "category": "글쓰기/생산성",
     "deploymentUrl": "https://newsletter-webzine.vercel.app"
+  },
+  "memory-companion": {
+    "name": "Memory Companion — 놓친 약속까지 기억하는 AI",
+    "description": "평소 대화에서 사람·프로젝트·할 일·날짜를 구조화하고 실제 기록을 검색하며, 완료 기록이 없는 약속을 찾아 후속 확인하는 인터랙티브 기억 관리 앱과 Hermes 스킬.",
+    "url": "https://homong-app.com/memory-companion",
+    "github": "https://github.com/homonglee/memory-companion",
+    "icon": "🧠",
+    "category": "AI/생산성",
+    "deploymentUrl": "https://memory-companion-three.vercel.app",
+    "downloadUrl": "https://homong-app.com/assets/downloads/memory-companion-skill.zip"
   }
 }

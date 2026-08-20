@@ -72,6 +72,16 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertIn('rel="noopener noreferrer"', html)
         self.assertIn('호연지재 홈페이지', html)
 
+    def test_social_share_preview_uses_branded_image(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        image_url = "https://homong-app.com/assets/homong-app-social-preview.jpg"
+
+        self.assertIn(f'<meta property="og:image" content="{image_url}"', html)
+        self.assertIn('<meta property="og:image:width" content="1280"', html)
+        self.assertIn('<meta property="og:image:height" content="720"', html)
+        self.assertIn(f'<meta name="twitter:image" content="{image_url}"', html)
+        self.assertTrue((ROOT / "assets" / "homong-app-social-preview.jpg").is_file())
+
     def test_archive_cards_visibly_render_branded_urls(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
 

@@ -82,6 +82,13 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertIn(f'<meta name="twitter:image" content="{image_url}"', html)
         self.assertTrue((ROOT / "assets" / "homong-app-social-preview-v2.jpg").is_file())
 
+    def test_homepage_hero_uses_new_social_banner(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn('src="/assets/homong-app-social-preview-v2.jpg"', html)
+        self.assertIn('width="1280" height="427"', html)
+        self.assertNotIn('/assets/archive-intro-banner.jpg', html)
+
     def test_archive_cards_visibly_render_branded_urls(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
 

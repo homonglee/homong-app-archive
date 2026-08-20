@@ -63,6 +63,15 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertNotIn("외부 배포 링크", html)
         self.assertNotIn("외부 실행", html)
 
+    def test_header_links_to_hoyeon_jijae_homepage(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn('class="btn nav-hovision"', html)
+        self.assertIn('href="https://hovision.co.kr"', html)
+        self.assertIn('target="_blank"', html)
+        self.assertIn('rel="noopener noreferrer"', html)
+        self.assertIn('호연지재 홈페이지', html)
+
     def test_archive_cards_visibly_render_branded_urls(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
 

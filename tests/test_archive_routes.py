@@ -128,6 +128,15 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertIn('📖 사용설명서', shell)
         self.assertIn('geolocation', shell)
 
+    def test_app_shell_links_use_social_share_preview(self):
+        shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
+        image_url = "https://homong-app.com/assets/homong-app-social-preview.jpg"
+
+        self.assertIn(f'<meta property="og:image" content="{image_url}"', shell)
+        self.assertIn('<meta property="og:image:width" content="1280"', shell)
+        self.assertIn('<meta property="og:image:height" content="720"', shell)
+        self.assertIn(f'<meta name="twitter:image" content="{image_url}"', shell)
+
     def test_manual_button_uses_reserved_toolbar_instead_of_overlaying_app(self):
         shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
 

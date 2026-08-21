@@ -74,13 +74,13 @@ class ArchiveRouteTests(unittest.TestCase):
 
     def test_social_share_preview_uses_branded_image(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        image_url = "https://homong-app.com/assets/homong-app-social-preview-v2.jpg"
+        image_url = "https://homong-app.com/assets/homong-app-social-preview-v3.jpg"
 
         self.assertIn(f'<meta property="og:image" content="{image_url}"', html)
         self.assertIn('<meta property="og:image:width" content="1280"', html)
-        self.assertIn('<meta property="og:image:height" content="427"', html)
+        self.assertIn('<meta property="og:image:height" content="640"', html)
         self.assertIn(f'<meta name="twitter:image" content="{image_url}"', html)
-        self.assertTrue((ROOT / "assets" / "homong-app-social-preview-v2.jpg").is_file())
+        self.assertTrue((ROOT / "assets" / "homong-app-social-preview-v3.jpg").is_file())
 
     def test_homepage_hero_uses_new_social_banner(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -137,11 +137,11 @@ class ArchiveRouteTests(unittest.TestCase):
 
     def test_app_shell_links_use_social_share_preview(self):
         shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
-        image_url = "https://homong-app.com/assets/homong-app-social-preview-v2.jpg"
+        image_url = "https://homong-app.com/assets/homong-app-social-preview-v3.jpg"
 
         self.assertIn(f'<meta property="og:image" content="{image_url}"', shell)
         self.assertIn('<meta property="og:image:width" content="1280"', shell)
-        self.assertIn('<meta property="og:image:height" content="427"', shell)
+        self.assertIn('<meta property="og:image:height" content="640"', shell)
         self.assertIn(f'<meta name="twitter:image" content="{image_url}"', shell)
 
     def test_manual_button_uses_reserved_toolbar_instead_of_overlaying_app(self):

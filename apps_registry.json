@@ -226,5 +226,14 @@
     "category": "AI/생산성",
     "deploymentUrl": "https://memory-companion-three.vercel.app",
     "downloadUrl": "https://homong-app.com/assets/downloads/memory-companion-skill.zip"
+  },
+  "gemini-notebook-video-style-picker": {
+    "name": "제미나이 노트북 동영상 스타일 고르기",
+    "description": "Gemini Notebook 동영상 제작에 사용할 20가지 맞춤 시각 스타일을 비교하고 시각 프롬프트와 한국어 AI 호스트 지시문을 바로 복사하는 앱.",
+    "url": "https://homong-app.com/gemini-notebook-video-style-picker",
+    "github": "https://github.com/homonglee/gemini-notebook-video-style-picker",
+    "icon": "🎬",
+    "category": "영상/프롬프트",
+    "deploymentUrl": "https://gemini-notebook-video-style-picker.vercel.app"
   }
 }

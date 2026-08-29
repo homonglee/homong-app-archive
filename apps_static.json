@@ -1,6 +1,18 @@
 {
   "apps": [
     {
+      "slug": "gemini-notebook-video-style-picker",
+      "name": "제미나이 노트북 동영상 스타일 고르기",
+      "description": "Gemini Notebook 동영상 제작에 사용할 20가지 맞춤 시각 스타일을 비교하고 시각 프롬프트와 한국어 AI 호스트 지시문을 바로 복사하는 앱.",
+      "category": "영상/프롬프트",
+      "icon": "🎬",
+      "url": "https://homong-app.com/gemini-notebook-video-style-picker",
+      "github": "https://github.com/homonglee/gemini-notebook-video-style-picker",
+      "mtime": 1787981154.0,
+      "hasLocalIndex": false,
+      "source": "manual-registry"
+    },
+    {
       "slug": "memory-companion",
       "name": "Memory Companion — 놓친 약속까지 기억하는 AI",
       "description": "평소 대화에서 사람·프로젝트·할 일·날짜를 구조화하고 실제 기록을 검색하며, 완료 기록이 없는 약속을 찾아 후속 확인하는 인터랙티브 기억 관리 앱과 Hermes 스킬.",

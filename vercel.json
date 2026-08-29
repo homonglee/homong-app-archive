@@ -136,6 +136,11 @@
       "permanent": false
     },
     {
+      "source": "/gemini-notebook-video-style-picker",
+      "destination": "/gemini-notebook-video-style-picker/",
+      "permanent": false
+    },
+    {
       "source": "/newsletter",
       "destination": "/newsletter/",
       "permanent": false
@@ -305,6 +310,10 @@
     {
       "source": "/memory-companion/",
       "destination": "/app-shell.html?slug=memory-companion"
+    },
+    {
+      "source": "/gemini-notebook-video-style-picker/",
+      "destination": "/app-shell.html?slug=gemini-notebook-video-style-picker"
     }
   ]
 }

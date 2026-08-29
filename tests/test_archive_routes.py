@@ -39,6 +39,18 @@ class ArchiveRouteTests(unittest.TestCase):
 
                 self.assertNotIn(f"/{slug}/:path*", rewrites)
 
+    def test_newsletter_alias_routes_survive_route_regeneration(self):
+        config = load_json("vercel.json")
+        redirects = {item["source"]: item["destination"] for item in config["redirects"]}
+        rewrites = {item["source"]: item["destination"] for item in config["rewrites"]}
+
+        self.assertEqual(redirects["/newsletter"], "/newsletter/")
+        self.assertEqual(rewrites["/newsletter/"], "https://newsletter-webzine.vercel.app/")
+        self.assertEqual(
+            rewrites["/newsletter/s/:id"],
+            "https://newsletter-webzine.vercel.app/api/reader?id=:id",
+        )
+
     def test_embed_shell_reads_slug_from_visible_archive_path(self):
         shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
 

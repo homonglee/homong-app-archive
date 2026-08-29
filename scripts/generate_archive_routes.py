@@ -9,6 +9,20 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "apps_registry.json"
 VERCEL_PATH = ROOT / "vercel.json"
 
+# Preserve the branded newsletter reader routes alongside registry-generated
+# app-shell routes. These aliases are public links and must survive regeneration.
+EXTRA_REDIRECTS = [
+    {"source": "/newsletter", "destination": "/newsletter/", "permanent": False},
+]
+
+PREFIX_REWRITES = [
+    {"source": "/newsletter/s/:id", "destination": "https://newsletter-webzine.vercel.app/api/reader?id=:id"},
+    {"source": "/newsletter/og/:id", "destination": "https://newsletter-webzine.vercel.app/api/image?id=:id"},
+    {"source": "/newsletter/api/:path*", "destination": "https://newsletter-webzine.vercel.app/api/:path*"},
+    {"source": "/newsletter/", "destination": "https://newsletter-webzine.vercel.app/"},
+    {"source": "/newsletter/:path*", "destination": "https://newsletter-webzine.vercel.app/:path*"},
+]
+
 # Some legacy apps call root-relative API/assets. Keep those calls on the
 # archive domain while forwarding them to the correct deployment.
 ROOT_REWRITES = [
@@ -26,7 +40,7 @@ ROOT_REWRITES = [
 
 def build_config(registry: dict) -> dict:
     redirects = []
-    rewrites = list(ROOT_REWRITES)
+    rewrites = list(PREFIX_REWRITES) + list(ROOT_REWRITES)
 
     for slug, app in registry.items():
         redirects.append({
@@ -41,6 +55,7 @@ def build_config(registry: dict) -> dict:
             "destination": f"/app-shell.html?slug={slug}",
         })
 
+    redirects.extend(EXTRA_REDIRECTS)
     return {"redirects": redirects, "rewrites": rewrites}
 
 

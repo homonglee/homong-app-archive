@@ -235,5 +235,13 @@
     "icon": "🎬",
     "category": "영상/프롬프트",
     "deploymentUrl": "https://gemini-notebook-video-style-picker.vercel.app"
+  },
+  "lotto-number-picker": {
+    "name": "행운 한 스푼 — 로또 번호 추첨기",
+    "description": "1부터 45까지의 숫자에서 중복 없는 6개 번호를 다섯 조합으로 안전하게 무작위 추천하는 반응형 로또 번호 추첨기.",
+    "url": "https://homong-app.com/lotto-number-picker",
+    "github": "https://github.com/homonglee/homong-app-archive",
+    "icon": "🍀",
+    "category": "게임/유틸"
   }
 }

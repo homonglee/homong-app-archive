@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8e8" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233eaa7d'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='34' fill='white'%3E7%3C/text%3E%3C/svg%3E" />
+  <title>행운 한 스푼 · 로또 번호 추첨기</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
+
+    :root {
+      --ink: #183153;
+      --muted: #6d7482;
+      --paper: #fffdf7;
+      --cream: #fff4d7;
+      --yellow: #ffc83d;
+      --orange: #ff8a3d;
+      --green: #3eaa7d;
+      --shadow: 0 24px 60px rgba(66, 45, 16, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 16%, rgba(255, 200, 61, .28) 0 2px, transparent 3px),
+        radial-gradient(circle at 88% 82%, rgba(62, 170, 125, .22) 0 3px, transparent 4px),
+        linear-gradient(135deg, #fff9e9 0%, #fff2d3 48%, #ffe8c7 100%);
+      font-family: "Gowun Dodum", system-ui, sans-serif;
+    }
+
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      width: 280px;
+      height: 280px;
+      border: 2px dashed rgba(24, 49, 83, .08);
+      border-radius: 44% 56% 63% 37%;
+      transform: rotate(18deg);
+    }
+    body::before { top: -100px; left: -80px; }
+    body::after { right: -100px; bottom: -100px; transform: rotate(-22deg); }
+
+    main {
+      width: min(92vw, 720px);
+      margin: 36px auto;
+    }
+
+    .ticket {
+      position: relative;
+      padding: clamp(28px, 6vw, 56px);
+      overflow: hidden;
+      text-align: center;
+      background: var(--paper);
+      border: 1px solid rgba(24, 49, 83, .08);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .ticket::before {
+      content: "LUCKY PICK • LUCKY PICK • LUCKY PICK •";
+      position: absolute;
+      inset: 17px auto auto -24px;
+      color: rgba(24, 49, 83, .07);
+      font: 18px/1 "Jua", sans-serif;
+      letter-spacing: 4px;
+      transform: rotate(-8deg);
+      white-space: nowrap;
+    }
+
+    .clover {
+      display: inline-grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 10px;
+      color: white;
+      font-size: 31px;
+      background: var(--green);
+      border-radius: 50% 45% 50% 42%;
+      box-shadow: 0 8px 0 #247b5a;
+      transform: rotate(-5deg);
+    }
+
+    .eyebrow {
+      margin: 12px 0 6px;
+      color: var(--orange);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Jua", sans-serif;
+      font-size: clamp(36px, 8vw, 62px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+    }
+
+    .intro {
+      margin: 10px auto 30px;
+      color: var(--muted);
+      font-size: clamp(14px, 3vw, 17px);
+      line-height: 1.7;
+    }
+
+    .machine {
+      position: relative;
+      padding: clamp(20px, 5vw, 34px) 14px;
+      background: #f7f3e9;
+      border: 2px solid rgba(24, 49, 83, .08);
+      border-radius: 22px;
+      box-shadow: inset 0 2px 8px rgba(24, 49, 83, .05);
+    }
+
+    .sets {
+      display: grid;
+      gap: 13px;
+      width: 100%;
+      max-width: 570px;
+      margin: 0 auto;
+    }
+
+    .number-set {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .set-label {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .balls {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: clamp(6px, 1.4vw, 12px);
+      width: 100%;
+    }
+
+    .ball {
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      font: clamp(15px, 3.3vw, 24px)/1 "Jua", sans-serif;
+      text-shadow: 0 2px 2px rgba(0,0,0,.18);
+      box-shadow: inset 0 -7px 0 rgba(0,0,0,.12), inset 0 5px 8px rgba(255,255,255,.28), 0 8px 14px rgba(24,49,83,.14);
+      transform: scale(1);
+      transition: transform .28s ease, filter .28s ease;
+    }
+    .ball.placeholder { background: #d8d5cc; color: rgba(255,255,255,.85); }
+    .ball.pop { animation: pop .46s cubic-bezier(.2,.9,.2,1.3) both; }
+    @keyframes pop {
+      0% { transform: translateY(-24px) rotate(-18deg) scale(.25); opacity: 0; }
+      70% { transform: translateY(3px) rotate(4deg) scale(1.08); opacity: 1; }
+      100% { transform: none; opacity: 1; }
+    }
+
+    .status {
+      min-height: 24px;
+      margin: 18px 0 15px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .draw-button {
+      min-width: min(100%, 290px);
+      min-height: 58px;
+      padding: 14px 30px;
+      border: 0;
+      border-radius: 18px;
+      color: #fff;
+      background: var(--ink);
+      box-shadow: 0 8px 0 #0d1d33, 0 13px 24px rgba(24,49,83,.2);
+      font: 22px/1 "Jua", sans-serif;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .draw-button:hover { background: #244b78; transform: translateY(-2px); }
+    .draw-button:active { transform: translateY(5px); box-shadow: 0 3px 0 #0d1d33; }
+    .draw-button:focus-visible { outline: 4px solid rgba(255, 138, 61, .35); outline-offset: 4px; }
+    .draw-button:disabled { cursor: wait; opacity: .8; }
+
+    .note {
+      margin: 22px 0 0;
+      color: #92959d;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .sparkle { position: absolute; color: var(--yellow); font-size: 24px; animation: float 2.2s ease-in-out infinite; }
+    .sparkle.one { top: 10%; right: 8%; }
+    .sparkle.two { bottom: 11%; left: 7%; animation-delay: -1s; }
+    @keyframes float { 50% { transform: translateY(-8px) rotate(12deg); } }
+
+    @media (max-width: 560px) {
+      main { width: min(94vw, 430px); margin: 18px auto; }
+      .ticket { padding: 28px 18px; border-radius: 24px; }
+      .sets { gap: 12px; }
+      .number-set { grid-template-columns: 42px 1fr; gap: 7px; }
+      .set-label { font-size: 12px; }
+      .balls { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 5px; }
+      .ball { font-size: clamp(13px, 4vw, 17px); box-shadow: inset 0 -4px 0 rgba(0,0,0,.12), inset 0 3px 5px rgba(255,255,255,.28), 0 5px 9px rgba(24,49,83,.12); }
+      .intro { margin-bottom: 22px; }
+      .machine { padding: 24px 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="ticket" aria-labelledby="title">
+      <span class="sparkle one" aria-hidden="true">✦</span>
+      <span class="sparkle two" aria-hidden="true">✦</span>
+      <div class="clover" aria-hidden="true">♣</div>
+      <p class="eyebrow">오늘의 행운 번호</p>
+      <h1 id="title">로또 번호 추첨기</h1>
+      <p class="intro">버튼을 누르면 1부터 45까지의 숫자 중<br />중복 없는 여섯 개씩, 다섯 조합을 골라드려요.</p>
+
+      <div class="machine">
+        <div class="sets" id="sets" aria-live="polite" aria-label="추천 번호 5개 조합"></div>
+        <p class="status" id="status">행운의 버튼을 눌러보세요!</p>
+        <button class="draw-button" id="drawButton" type="button">🍀 번호 추천받기</button>
+      </div>
+
+      <p class="note">모든 번호는 무작위로 추천됩니다.<br />재미로 즐겨주세요. 당첨을 보장하지 않습니다.</p>
+    </section>
+  </main>
+
+  <script>
+    const sets = document.getElementById('sets');
+    const status = document.getElementById('status');
+    const drawButton = document.getElementById('drawButton');
+
+    const getSecureRandom = (max) => {
+      const limit = Math.floor(0x100000000 / max) * max;
+      const data = new Uint32Array(1);
+      do crypto.getRandomValues(data); while (data[0] >= limit);
+      return data[0] % max;
+    };
+
+    const pickNumbers = () => {
+      const pool = Array.from({ length: 45 }, (_, index) => index + 1);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = getSecureRandom(i + 1);
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      return pool.slice(0, 6).sort((a, b) => a - b);
+    };
+
+    const colorFor = (number) => {
+      if (number <= 10) return '#e8ad18';
+      if (number <= 20) return '#3b83c4';
+      if (number <= 30) return '#e35d52';
+      if (number <= 40) return '#68737c';
+      return '#42a96f';
+    };
+
+    const renderSets = (combinations, animated = true) => {
+      sets.replaceChildren();
+      combinations.forEach((numbers, setIndex) => {
+        const row = document.createElement('div');
+        row.className = 'number-set';
+
+        const label = document.createElement('span');
+        label.className = 'set-label';
+        label.textContent = `${setIndex + 1}조합`;
+        row.appendChild(label);
+
+        const ballGroup = document.createElement('div');
+        ballGroup.className = 'balls';
+        numbers.forEach((number, numberIndex) => {
+          const ball = document.createElement('span');
+          ball.className = `ball${number === '?' ? ' placeholder' : animated ? ' pop' : ''}`;
+          ball.textContent = number;
+          if (number !== '?') {
+            ball.style.backgroundColor = colorFor(number);
+            ball.style.animationDelay = `${setIndex * 70 + numberIndex * 35}ms`;
+            ball.setAttribute('aria-label', `${setIndex + 1}조합 ${number}번`);
+          }
+          ballGroup.appendChild(ball);
+        });
+        row.appendChild(ballGroup);
+        sets.appendChild(row);
+      });
+    };
+
+    const draw = () => {
+      drawButton.disabled = true;
+      status.textContent = '다섯 조합의 행운 숫자를 섞는 중...';
+      const combinations = Array.from({ length: 5 }, pickNumbers);
+      renderSets(combinations);
+
+      window.setTimeout(() => {
+        status.textContent = '추천 번호 5개 조합이 완성되었습니다!';
+        drawButton.textContent = '↻ 다시 추천받기';
+        drawButton.disabled = false;
+      }, 900);
+    };
+
+    renderSets(Array.from({ length: 5 }, () => Array(6).fill('?')), false);
+    drawButton.addEventListener('click', draw);
+  </script>
+</body>
+</html>

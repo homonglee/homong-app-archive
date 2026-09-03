@@ -141,6 +141,11 @@
       "permanent": false
     },
     {
+      "source": "/lotto-number-picker",
+      "destination": "/lotto-number-picker/",
+      "permanent": false
+    },
+    {
       "source": "/newsletter",
       "destination": "/newsletter/",
       "permanent": false
@@ -314,6 +319,10 @@
     {
       "source": "/gemini-notebook-video-style-picker/",
       "destination": "/app-shell.html?slug=gemini-notebook-video-style-picker"
+    },
+    {
+      "source": "/lotto-number-picker/",
+      "destination": "/app-shell.html?slug=lotto-number-picker"
     }
   ]
 }

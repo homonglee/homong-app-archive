@@ -27,6 +27,8 @@ class CampingChecklistRegistrationTests(unittest.TestCase):
         self.assertEqual(rewrites[f"/{SLUG}/"], f"/app-shell.html?slug={SLUG}")
         manual = (ROOT / "manuals" / f"{SLUG}.html").read_text(encoding="utf-8")
         self.assertIn("맞춤 캠핑 준비목록", manual)
+        self.assertIn("PDF", manual)
+        self.assertIn("XLSX", manual)
         self.assertIn(f'href="/{SLUG}"', manual)
 
 

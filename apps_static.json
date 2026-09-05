@@ -3,7 +3,7 @@
     {
       "slug": "camping-checklist",
       "name": "Camping Checklist — 맞춤 캠핑 준비목록",
-      "description": "캠핑 유형과 기간, 인원수를 선택하면 180개 Master 품목에서 상황에 맞는 준비물을 추천하고 수량 계산·체크·메모·개인 항목 추가·로컬 저장을 지원하는 모바일 체크리스트.",
+      "description": "캠핑 유형과 기간, 인원수를 선택하면 180개 Master 품목에서 상황에 맞는 준비물을 추천하고 체크·메모·개인 항목 추가·로컬 저장과 체크 완료 항목 PDF·XLSX 내보내기를 지원하는 모바일 체크리스트.",
       "category": "여행/캠핑",
       "icon": "🏕️",
       "url": "https://homong-app.com/camping-checklist",

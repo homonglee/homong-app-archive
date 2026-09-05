@@ -251,6 +251,7 @@
     "github": "https://github.com/homonglee/camping-checklist",
     "icon": "🏕️",
     "category": "여행/캠핑",
-    "deploymentUrl": "https://camping-checklist-three.vercel.app"
+    "deploymentUrl": "https://camping-checklist-three.vercel.app",
+    "shareShell": "camping-checklist-shell.html"
   }
 }

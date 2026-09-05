@@ -32,9 +32,10 @@ class ArchiveRouteTests(unittest.TestCase):
                 self.assertEqual(redirects[f"/{slug}"]["destination"], f"/{slug}/")
                 self.assertIn(f"/{slug}/", rewrites)
 
+                share_shell = app.get("shareShell", "app-shell.html")
                 self.assertEqual(
                     rewrites[f"/{slug}/"]["destination"],
-                    f"/app-shell.html?slug={slug}",
+                    f"/{share_shell}?slug={slug}",
                 )
 
                 self.assertNotIn(f"/{slug}/:path*", rewrites)
@@ -139,9 +140,10 @@ class ArchiveRouteTests(unittest.TestCase):
         rewrites = {item["source"]: item["destination"] for item in config["rewrites"]}
         shell = (ROOT / "app-shell.html").read_text(encoding="utf-8")
 
-        for slug in registry:
+        for slug, app in registry.items():
             with self.subTest(slug=slug):
-                self.assertEqual(rewrites[f"/{slug}/"], f"/app-shell.html?slug={slug}")
+                share_shell = app.get("shareShell", "app-shell.html")
+                self.assertEqual(rewrites[f"/{slug}/"], f"/{share_shell}?slug={slug}")
         self.assertIn('id="manualLink"', shell)
         self.assertIn('/manuals/${encodeURIComponent(slug)}.html', shell)
         self.assertIn('📖 사용설명서', shell)

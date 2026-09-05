@@ -24,7 +24,7 @@ class CampingChecklistRegistrationTests(unittest.TestCase):
         self.assertNotIn("deploymentUrl", static_apps[0])
         self.assertEqual(targets[SLUG], "https://camping-checklist-three.vercel.app/")
         self.assertEqual(redirects[f"/{SLUG}"], f"/{SLUG}/")
-        self.assertEqual(rewrites[f"/{SLUG}/"], f"/app-shell.html?slug={SLUG}")
+        self.assertEqual(rewrites[f"/{SLUG}/"], f"/{SLUG}-shell.html?slug={SLUG}")
         manual = (ROOT / "manuals" / f"{SLUG}.html").read_text(encoding="utf-8")
         self.assertIn("맞춤 캠핑 준비목록", manual)
         self.assertIn("PDF", manual)
@@ -34,6 +34,20 @@ class CampingChecklistRegistrationTests(unittest.TestCase):
         self.assertIn("각 카테고리", manual)
         self.assertIn("준비물 추가", manual)
         self.assertIn(f'href="/{SLUG}"', manual)
+
+    def test_camping_share_shell_uses_camping_social_preview(self):
+        shell_path = ROOT / f"{SLUG}-shell.html"
+        shell = shell_path.read_text(encoding="utf-8")
+        image_url = "https://homong-app.com/assets/camping-checklist-social-preview-v1.jpg"
+
+        self.assertIn('<meta property="og:title" content="Camping Checklist — 맞춤 캠핑 준비목록"', shell)
+        self.assertIn(f'<meta property="og:image" content="{image_url}"', shell)
+        self.assertIn(f'<meta property="og:image:secure_url" content="{image_url}"', shell)
+        self.assertIn('<meta property="og:image:type" content="image/jpeg"', shell)
+        self.assertIn('<meta property="og:image:width" content="1200"', shell)
+        self.assertIn('<meta property="og:image:height" content="630"', shell)
+        self.assertIn(f'<meta name="twitter:image" content="{image_url}"', shell)
+        self.assertTrue((ROOT / "assets" / "camping-checklist-social-preview-v1.jpg").is_file())
 
 
 if __name__ == "__main__":

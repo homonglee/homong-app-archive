@@ -49,10 +49,10 @@ def build_config(registry: dict) -> dict:
             "permanent": False,
         })
 
-        deployment = app.get("deploymentUrl", "").rstrip("/")
+        share_shell = app.get("shareShell", "app-shell.html")
         rewrites.append({
             "source": f"/{slug}/",
-            "destination": f"/app-shell.html?slug={slug}",
+            "destination": f"/{share_shell}?slug={slug}",
         })
 
     redirects.extend(EXTRA_REDIRECTS)

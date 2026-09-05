@@ -331,7 +331,7 @@
     },
     {
       "source": "/camping-checklist/",
-      "destination": "/app-shell.html?slug=camping-checklist"
+      "destination": "/camping-checklist-shell.html?slug=camping-checklist"
     }
   ]
 }

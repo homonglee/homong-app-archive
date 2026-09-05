@@ -27,5 +27,6 @@
   "newsletter-webzine": "https://newsletter-webzine.vercel.app/",
   "memory-companion": "https://memory-companion-three.vercel.app/",
   "gemini-notebook-video-style-picker": "https://gemini-notebook-video-style-picker.vercel.app/",
-  "lotto-number-picker": "/apps/lotto-number-picker/index.html"
+  "lotto-number-picker": "/apps/lotto-number-picker/index.html",
+  "camping-checklist": "https://camping-checklist-three.vercel.app/"
 }

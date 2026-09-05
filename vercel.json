@@ -146,6 +146,11 @@
       "permanent": false
     },
     {
+      "source": "/camping-checklist",
+      "destination": "/camping-checklist/",
+      "permanent": false
+    },
+    {
       "source": "/newsletter",
       "destination": "/newsletter/",
       "permanent": false
@@ -323,6 +328,10 @@
     {
       "source": "/lotto-number-picker/",
       "destination": "/app-shell.html?slug=lotto-number-picker"
+    },
+    {
+      "source": "/camping-checklist/",
+      "destination": "/app-shell.html?slug=camping-checklist"
     }
   ]
 }

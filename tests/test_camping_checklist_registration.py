@@ -31,6 +31,8 @@ class CampingChecklistRegistrationTests(unittest.TestCase):
         self.assertIn("XLSX", manual)
         self.assertIn("기본 선택", manual)
         self.assertIn("체크를 해제", manual)
+        self.assertIn("각 카테고리", manual)
+        self.assertIn("준비물 추가", manual)
         self.assertIn(f'href="/{SLUG}"', manual)
 
 

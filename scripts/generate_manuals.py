@@ -6,6 +6,12 @@ ROOT = Path(__file__).resolve().parents[1]
 APPS = {a['slug']: a for a in json.loads((ROOT / 'apps_static.json').read_text(encoding='utf-8'))['apps']}
 
 MANUALS = {
+'formbridge-excel': {
+ 'purpose':'신청서 PDF의 글자와 스캔 내용을 읽어 선택한 엑셀 시트에 입력하고, 검수·저장·보고서 작성까지 이어서 처리합니다.',
+ 'steps':['입력할 .xlsx 양식을 선택하고 스캔 정보를 입력할 시트를 고릅니다. 여러 시트 중 하나를 선택하며 다른 시트는 원본대로 보존됩니다.','PDF·ZIP 선택 또는 폴더 선택으로 신청서 PDF를 추가합니다. ZIP과 하위 폴더 안의 PDF를 합산해 최대 3,000개를 등록할 수 있습니다.','양식 연결하기를 누르고 항목별 입력 열·셀과 표형 또는 고정 셀 배치를 확인합니다.','정보 추출 시작을 누릅니다. 스캔 페이지는 한국어·영어 OCR로 인식하므로 처리하는 동안 탭을 열어 둡니다.','근거 보기로 원본과 추출값을 비교하고 누락·충돌 항목을 해결한 뒤 검수 완료를 기록합니다.','결과 엑셀을 내려받고 작업 보고서를 생성합니다. 작업 저장으로 이 브라우저에서 이어하거나 백업 파일을 내려받아 다른 주소·기기의 불러오기로 복원합니다.'],
+ 'output':'선택한 시트에 입력한 엑셀 파일, 누락·충돌 검수 결과, 작업 보고서와 복원 가능한 .formbridge 백업 파일',
+ 'cautions':['PDF 최대 3,000개·총 30,000쪽이며 개별 PDF는 100 MB·500쪽, 엑셀은 25 MB까지 지원합니다. 처리 속도와 저장 용량은 기기 및 브라우저에 따라 달라집니다.','파일과 작업은 현재 브라우저에 저장되며 다른 주소·기기와 자동으로 공유되지 않습니다. 아카이브 안에서 이전 작업이 보이지 않거나 저장에 문제가 있으면 앱 직접 열기를 사용하세요. 다른 주소로 옮길 때는 백업 파일과 불러오기를 사용합니다.','OCR 결과는 원본과 대조하세요. 보호된 입력 시트는 선택할 수 없고 수식 셀은 덮어쓰지 않습니다.','소스 저장소는 비공개이며 이 아카이브에서는 실행 앱과 사용설명서를 제공합니다.'],
+ 'fullGuideUrl':'https://formbridge-excel.vercel.app/manual.html'},
 'camping-checklist': {
  'purpose':'캠핑 유형, 숙박 기간과 인원수에 맞는 준비물을 자동 추천받아 빠뜨림 없이 출발을 준비합니다.',
  'steps':['백패킹·오토캠핑·차박캠핑·카라반·모터홈 중 이번 캠핑 유형을 선택합니다.','숙박 수와 함께 준비물을 사용할 전체 인원수를 설정합니다.','다음을 누르고 필요한 준비 카테고리를 켜거나 전체 선택을 사용합니다.','맞춤 체크리스트 만들기를 누르면 추천 품목이 모두 기본 선택된 상태로 생성됩니다.','필요 없는 물품의 체크를 해제하고, 빠진 물품은 각 카테고리 목록 아래의 준비물 추가 버튼으로 바로 보충합니다. 품목을 누르면 수량·중요도·메모도 수정할 수 있습니다.','선택한 항목만 PDF 저장 또는 XLSX 저장으로 내려받고, 체크리스트 저장으로 현재 기기에 보관합니다.'],
@@ -169,9 +175,10 @@ def page(slug, app, manual):
     purpose = html.escape(manual['purpose'])
     output = html.escape(manual['output'])
     app_url = f'/{slug}'
+    full_guide = (f'<a class="btn" href="{html.escape(manual["fullGuideUrl"], quote=True)}" target="_blank" rel="noopener">최신 전체 사용설명서 ↗</a>' if manual.get('fullGuideUrl') else '')
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{name} 사용설명서 | Homong's App Archive</title><meta name="description" content="{name} 사용 방법과 결과물, 주의사항을 안내합니다."><link rel="stylesheet" href="/assets/manual.css"></head>
-<body><header class="nav"><div class="wrap"><a class="brand" href="/">⌘ Homong's App Archive</a><a class="back" href="/#apps">← 앱 목록</a></div></header><main class="wrap"><section class="hero"><div class="eyebrow">APP USER GUIDE · {html.escape(slug)}</div><h1>{html.escape(app.get('icon','✨'))} {name}<br>사용설명서</h1><p class="lead">{purpose}</p></section><section class="panel"><h2>사용 순서</h2><ol class="steps">{steps}</ol></section><section class="panel"><h2>만들어지는 결과</h2><p class="result">{output}</p></section><section class="panel"><h2>사용 전 확인</h2><ul class="cautions">{cautions}</ul></section><div class="actions"><a class="btn primary" href="{app_url}" target="_blank" rel="noopener">{name} 실행 ↗</a><a class="btn" href="/#apps">다른 앱 보기</a></div></main><footer class="wrap">© Homong's App Archive · 화면과 기능은 업데이트에 따라 달라질 수 있습니다.</footer></body></html>'''
+<body><header class="nav"><div class="wrap"><a class="brand" href="/">⌘ Homong's App Archive</a><a class="back" href="/#apps">← 앱 목록</a></div></header><main class="wrap"><section class="hero"><div class="eyebrow">APP USER GUIDE · {html.escape(slug)}</div><h1>{html.escape(app.get('icon','✨'))} {name}<br>사용설명서</h1><p class="lead">{purpose}</p></section><section class="panel"><h2>사용 순서</h2><ol class="steps">{steps}</ol></section><section class="panel"><h2>만들어지는 결과</h2><p class="result">{output}</p></section><section class="panel"><h2>사용 전 확인</h2><ul class="cautions">{cautions}</ul></section><div class="actions"><a class="btn primary" href="{app_url}" target="_blank" rel="noopener">{name} 실행 ↗</a>{full_guide}<a class="btn" href="/#apps">다른 앱 보기</a></div></main><footer class="wrap">© Homong's App Archive · 화면과 기능은 업데이트에 따라 달라질 수 있습니다.</footer></body></html>'''
 
 missing = sorted(set(APPS) - set(MANUALS))
 extra = sorted(set(MANUALS) - set(APPS))

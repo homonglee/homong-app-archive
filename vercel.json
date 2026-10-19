@@ -151,6 +151,11 @@
       "permanent": false
     },
     {
+      "source": "/formbridge-excel",
+      "destination": "/formbridge-excel/",
+      "permanent": false
+    },
+    {
       "source": "/newsletter",
       "destination": "/newsletter/",
       "permanent": false
@@ -332,6 +337,10 @@
     {
       "source": "/camping-checklist/",
       "destination": "/camping-checklist-shell.html?slug=camping-checklist"
+    },
+    {
+      "source": "/formbridge-excel/",
+      "destination": "/formbridge-excel-shell.html?slug=formbridge-excel"
     }
   ]
 }

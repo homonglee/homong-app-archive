@@ -1,6 +1,17 @@
 {
   "apps": [
     {
+      "slug": "formbridge-excel",
+      "name": "폼브릿지 — 신청서 엑셀 자동입력",
+      "description": "PDF·ZIP·폴더로 신청서 최대 3,000개를 등록하고, 스캔 내용을 선택한 엑셀 시트에 입력하며 검수·작업 저장·보고서를 지원하는 브라우저 앱.",
+      "url": "https://homong-app.com/formbridge-excel",
+      "icon": "📋",
+      "category": "업무/생산성",
+      "mtime": 1792368000,
+      "hasLocalIndex": false,
+      "source": "manual-registry"
+    },
+    {
       "slug": "camping-checklist",
       "name": "Camping Checklist — 맞춤 캠핑 준비목록",
       "description": "맞춤 준비물을 모두 기본 선택하고 필요 없는 물품만 해제하며, 각 카테고리 아래에서 빠진 준비물을 바로 추가해 PDF·XLSX로 저장하는 모바일 체크리스트.",

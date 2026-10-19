@@ -253,5 +253,14 @@
     "category": "여행/캠핑",
     "deploymentUrl": "https://camping-checklist-three.vercel.app",
     "shareShell": "camping-checklist-shell.html"
+  },
+  "formbridge-excel": {
+    "name": "폼브릿지 — 신청서 엑셀 자동입력",
+    "description": "PDF·ZIP·폴더로 신청서 최대 3,000개를 등록하고, 스캔 내용을 선택한 엑셀 시트에 입력하며 검수·작업 저장·보고서를 지원하는 브라우저 앱.",
+    "url": "https://homong-app.com/formbridge-excel",
+    "icon": "📋",
+    "category": "업무/생산성",
+    "deploymentUrl": "https://formbridge-excel.vercel.app",
+    "shareShell": "formbridge-excel-shell.html"
   }
 }

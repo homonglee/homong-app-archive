@@ -1,4 +1,12 @@
 {
+  "taiji-in-flow": {
+    "name": "태극의 길 — TAIJI, in flow",
+    "description": "태극권의 철학·수련 원리·여섯 문파와 역사를 탐색하고, 영상 검색·책갈피 저장·지식 검색·1분 호흡 타이머를 이용하는 인터랙티브 지식 공간.",
+    "url": "https://homong-app.com/taiji-in-flow",
+    "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/taiji-in-flow",
+    "icon": "☯️",
+    "category": "건강/수련"
+  },
   "url-qr-shortener-onepage": {
     "name": "Linkly One — URL 단축 & QR 생성기",
     "url": "https://homong-app.com/url-qr-shortener-onepage",

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173e38">
+  <meta name="description" content="느림 속에서 발견하는 균형. 태극권의 움직임과 철학, 여섯 문파와 영상자료를 탐색하는 현대적인 태극권 지식 공간.">
+  <meta property="og:title" content="태극의 길 — TAIJI, in flow">
+  <meta property="og:description" content="움직임은 부드럽게, 중심은 단단하게. 태극권을 만나는 새로운 시선.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://homong-app.com/taiji-in-flow/">
+  <title>태극의 길 — TAIJI, in flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fog.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="videos.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <header class="header" id="header">
+    <a class="brand" href="#home" aria-label="태극의 길 홈"><span class="brand-symbol" aria-hidden="true">☯</span><span>태극의 길<small>TAIJI, IN FLOW</small></span></a>
+    <nav class="nav" aria-label="주 메뉴" id="nav">
+      <a href="#about">태극의 이해</a><a href="#practice">수련 원리</a><a href="#schools">문파 탐색</a><a href="#videos">영상자료 <span class="nav-dot"></span></a><a href="#history">역사와 문화</a>
+    </nav>
+    <div class="header-actions"><button class="icon-button search-open" aria-label="태극권 지식 검색"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button class="menu-toggle icon-button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span></button></div>
+    <div class="reading-progress" aria-hidden="true"></div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="운무가 흐르는 황산의 깊은 산봉우리"></div>
+      <div class="hero-fog" aria-hidden="true"><span class="fog-layer fog-distant"></span><span class="fog-layer fog-middle"></span><span class="fog-layer fog-near"></span></div>
+      <div class="hero-shade"></div>
+      <div class="hero-lines" aria-hidden="true"><svg viewBox="0 0 800 800"><circle cx="400" cy="400" r="320"/><circle cx="400" cy="400" r="245"/><path d="M400 80C840 300-40 500 400 720"/></svg></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow light hero-enter">THE ART OF MOVING SLOWLY</p>
+        <h1 id="hero-title" class="hero-enter">움직임은 부드럽게,<br>중심은 <span>단단하게.</span></h1>
+        <p class="hero-description hero-enter">나를 향한 가장 고요한 움직임.<br>오랜 지혜를 오늘의 감각으로 만나는 태극권.</p>
+        <div class="hero-buttons hero-enter"><a class="button button-light" href="#about">태극의 길 시작하기 <span>↗</span></a><a class="hero-video-link" href="#videos"><span class="play-small">▶</span> 움직임으로 만나기</a></div>
+      </div>
+      <div class="hero-bottom wrap"><a href="#about" class="scroll-cue"><span class="scroll-line"></span>SCROLL TO EXPLORE</a><div class="hero-caption"><span>太極之道</span><small>BALANCE IS A WAY OF BEING.</small></div><button class="motion-toggle" id="motion-toggle" aria-pressed="false"><span aria-hidden="true">Ⅱ</span> 모션 멈춤</button></div>
+    </section>
+    <section class="intro section-space wrap" id="about" aria-labelledby="intro-title">
+      <div class="section-heading reveal"><p class="eyebrow">01 / THE PHILOSOPHY</p><h2 id="intro-title">더 빠르게가 아닌,<br><span class="soft">더 깊이 움직이는 법.</span></h2></div>
+      <div class="intro-copy reveal"><p class="lead">태극권은 몸의 움직임과 마음의 주의를<br class="desktop-break"> 하나의 흐름으로 이어가는 전통 무예입니다.</p><p>밀고 당김, 비움과 채움, 멈춤과 움직임. 서로 다른 힘이 만나는 순간, 균형은 고정된 자세가 아닌 계속되는 조율이 됩니다.</p><p>처음이라면 원리를 이해하는 것부터 시작해 보세요.<br>익숙하다면 문파와 영상을 오가며 새로운 관점을 찾아보세요.</p><a href="#practice" class="text-link">몸으로 이해하는 세 가지 원리 <span>↗</span></a></div>
+      <div class="topic-grid" id="topic-grid"></div>
+    </section>
+    <section class="practice section-space" id="practice" aria-labelledby="practice-title">
+      <div class="wrap"><div class="section-top reveal"><div><p class="eyebrow">02 / BODY & BALANCE</p><h2 id="practice-title">생각을 잠시 내려놓고,<br>움직임에 집중해 보세요.</h2></div><p class="section-aside">수련의 시작은 거창하지 않습니다.<br>몸의 작은 변화를 알아차리는 것부터.</p></div>
+      <div class="practice-layout"><div class="practice-visual reveal"><div class="orbital orbit-one"></div><div class="orbital orbit-two"></div><div class="orbit-label orbit-label-a">鬆 <span>RELEASE</span></div><div class="orbit-label orbit-label-b">靜 <span>STILLNESS</span></div><div class="taiji-disc" aria-hidden="true"><span class="taiji-dot light-dot"></span><span class="taiji-dot dark-dot"></span></div><p class="visual-caption">부드러움 안에 중심이 있습니다.</p></div>
+      <div class="principles" role="tablist" aria-label="수련 원리" aria-orientation="vertical">
+        <button class="principle active" role="tab" aria-selected="true" aria-controls="principle-panel" id="principle-0" data-principle="0"><span class="principle-number">01</span><span><small>ALIGNMENT & RELEASE</small><strong>바르게 서고, 긴장을 놓다</strong><span class="principle-copy">머리와 척추를 편안하게 정렬하고, 어깨와 팔꿈치의 불필요한 힘을 풀어봅니다.</span></span><span class="principle-arrow">↗</span></button>
+        <button class="principle" role="tab" aria-selected="false" aria-controls="principle-panel" id="principle-1" data-principle="1" tabindex="-1"><span class="principle-number">02</span><span><small>BREATH & ATTENTION</small><strong>호흡을 느끼고, 지금에 머물다</strong><span class="principle-copy">숨을 억지로 바꾸지 않고, 자연스러운 호흡과 움직임에 주의를 기울입니다.</span></span><span class="principle-arrow">↗</span></button>
+        <button class="principle" role="tab" aria-selected="false" aria-controls="principle-panel" id="principle-2" data-principle="2" tabindex="-1"><span class="principle-number">03</span><span><small>WEIGHT & CONNECTION</small><strong>중심을 옮기고, 흐름을 잇다</strong><span class="principle-copy">발의 지지를 느끼며 체중을 천천히 옮기고, 몸통과 손의 움직임을 연결합니다.</span></span><span class="principle-arrow">↗</span></button>
+      </div></div>
+      <div class="practice-note" id="principle-panel" role="tabpanel" aria-labelledby="principle-0" tabindex="0"><span>작은 수련 노트</span><p id="principle-note">머리 위를 가볍게 끌어올린다고 상상하세요. 턱을 당겨 긴장시키기보다, 목과 어깨가 편안한 위치를 찾아봅니다.</p></div>
+      <div class="pause-session reveal"><div><p class="eyebrow">A MINUTE FOR YOURSELF</p><h3>1분, 나의 중심으로 돌아오는 시간</h3><p id="session-instruction">편안하게 앉거나 서서, 어깨를 풀고 자연스럽게 호흡해 보세요.</p></div><div class="session-controls"><span class="session-time" id="session-time" aria-label="남은 시간 60초">01:00</span><button class="button button-green" id="session-start">1분 시작 <span>↗</span></button><button class="session-reset icon-button" id="session-reset" aria-label="1분 타이머 초기화" hidden>↺</button></div><div class="session-progress" id="session-progress"></div><span class="sr-only" id="session-status" role="status"></span></div>
+      </div>
+    </section>
+    <section class="schools section-space wrap" id="schools" aria-labelledby="schools-title"><div class="section-top reveal"><div><p class="eyebrow">03 / ONE ROOT, MANY EXPRESSIONS</p><h2 id="schools-title">같은 뿌리,<br>다채로운 움직임.</h2></div><p class="section-aside">문파마다 다른 속도와 보폭, 힘의 표현.<br>이름을 선택해 각 문파의 특징을 만나보세요.</p></div><div class="school-tabs" id="school-tabs" role="tablist" aria-label="태극권 문파"></div><div class="school-panel" id="school-panel" role="tabpanel" tabindex="0"></div><p class="school-footnote">문파 안에서도 전승 계열과 지도자에 따라 동작과 수련 방식이 달라집니다.</p></section>
+    <section class="video-section section-space" id="videos" aria-labelledby="videos-title"><div class="wrap"><div class="section-top reveal"><div><p class="eyebrow">04 / THE MOVEMENT LIBRARY</p><h2 id="videos-title">글을 넘어,<br><span class="soft">움직임으로 이해하기.</span></h2></div><p class="section-aside">처음 만나는 태극권부터 문파별 시연까지.<br>직접 고른 유튜브 영상으로 시선을 넓혀보세요.</p></div><div class="video-toolbar"><div class="video-filters" role="group" aria-label="영상 분류"><button class="filter-button active" data-filter="all" aria-pressed="true">전체</button><button class="filter-button" data-filter="입문" aria-pressed="false">입문 가이드</button><button class="filter-button" data-filter="시연" aria-pressed="false">문파별 시연</button><button class="filter-button" data-filter="문화" aria-pressed="false">역사 · 문화</button><button class="filter-button" data-filter="saved" aria-pressed="false">저장한 영상 <span id="saved-count">0</span></button></div><label class="video-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="video-search" type="search" placeholder="영상 또는 채널 검색" aria-label="영상 또는 채널 검색"></label></div><p class="sr-only" id="video-results-status" role="status"></p><div class="video-grid" id="video-grid"></div><p class="video-disclaimer">영상은 원 제작자의 YouTube에서 제공됩니다. 재생이 제한되는 경우 ‘YouTube에서 보기’를 이용하세요.<br>저장한 영상은 이 브라우저에 보관됩니다.</p></div></section>
+    <section class="history section-space wrap" id="history" aria-labelledby="history-title"><div class="history-intro reveal"><p class="eyebrow">05 / A LIVING HERITAGE</p><h2 id="history-title">오래된 지혜는<br>오늘도 움직입니다.</h2><p>마을의 전승에서 세계의 수련으로.<br>태극권은 시대와 사람을 만나며<br>지금도 새로운 이야기를 이어갑니다.</p><a class="text-link" href="https://ich.unesco.org/en/RL/tai-chi-and-taiji-quan-00424" target="_blank" rel="noopener noreferrer">UNESCO 등재 자료 보기 ↗</a><div class="heritage-seal"><span>太極</span><small>INTANGIBLE<br>CULTURAL HERITAGE<br>2020</small></div></div><div class="timeline" id="timeline"></div></section>
+    <section class="closing"><div class="wrap closing-inner"><p class="eyebrow light">THE JOURNEY CONTINUES</p><h2>오늘의 한 걸음이,<br>내일의 균형이 되도록.</h2><a class="button button-light" href="#videos">나의 첫 영상 찾아보기 <span>↗</span></a><span class="closing-character" aria-hidden="true">道</span></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><div class="footer-top"><a class="brand" href="#home"><span class="brand-symbol" aria-hidden="true">☯</span><span>태극의 길<small>TAIJI, IN FLOW</small></span></a><p>전통의 깊이, 오늘의 감각.<br>태극권을 만나는 열린 지식 공간.</p><a href="#home" class="back-top">처음으로 ↑</a></div><div class="footer-bottom"><small>© 2026 태극의 길. 학습과 탐색을 위한 공간.</small><button class="quiet-button" id="credits-open">자료 출처 · 이미지 크레딧 ↗</button></div></div></footer>
+  <dialog class="video-dialog" id="video-dialog" aria-labelledby="video-dialog-title"><div class="dialog-top"><div><p class="eyebrow">MOVEMENT LIBRARY</p><h2 id="video-dialog-title"></h2></div><button class="icon-button dialog-close" aria-label="영상 닫기">✕</button></div><div class="video-frame" id="video-frame"></div><div class="video-dialog-bottom"><p id="video-dialog-description"></p><a id="youtube-link" class="text-link" target="_blank" rel="noopener noreferrer">YouTube에서 보기 ↗</a></div></dialog>
+  <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-top"><div><p class="eyebrow">KNOWLEDGE LIBRARY</p><h2 id="search-title">태극권 지식 검색</h2></div><button class="icon-button dialog-close" aria-label="검색 닫기">✕</button></div><input class="knowledge-query" id="knowledge-query" type="search" placeholder="문파, 전사경, 유네스코…" aria-label="태극권 지식 검색어"><div class="search-suggestions"><button data-query="문파">문파</button><button data-query="호흡">호흡</button><button data-query="역사">역사</button><button data-query="전사경">전사경</button></div><p id="knowledge-count" role="status"></p><div class="knowledge-results" id="knowledge-results"></div></dialog>
+  <dialog class="info-dialog" id="info-dialog" aria-labelledby="info-title"><div class="dialog-top"><div><p class="eyebrow">TAIJI KNOWLEDGE</p><h2 id="info-title"></h2></div><button class="icon-button dialog-close" aria-label="자료 닫기">✕</button></div><div id="info-body"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

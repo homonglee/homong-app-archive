@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/taiji-in-flow",
+      "destination": "/taiji-in-flow/",
+      "permanent": false
+    },
+    {
       "source": "/url-qr-shortener-onepage",
       "destination": "/url-qr-shortener-onepage/",
       "permanent": false
@@ -162,6 +167,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/taiji-in-flow/",
+      "destination": "/app-shell.html?slug=taiji-in-flow"
+    },
     {
       "source": "/newsletter/s/:id",
       "destination": "https://newsletter-webzine.vercel.app/api/reader?id=:id"

@@ -1,0 +1,61 @@
+/* The texture stays static; only composited layers move and fade. */
+.hero-fog {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  animation: fog-tide 5s ease-in-out infinite;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 94%, #000b);
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 94%, #000b);
+}
+.fog-layer {
+  position: absolute;
+  display: block;
+  width: 150%;
+  height: 110%;
+  left: -25%;
+  background: url('assets/fog-clouds.svg') center / 100% 100% no-repeat;
+  will-change: transform;
+}
+.fog-distant {
+  top: -25%;
+  opacity: .82;
+  animation: fog-drift-distant 38s ease-in-out infinite alternate;
+}
+.fog-middle {
+  top: 3%;
+  opacity: .95;
+  animation: fog-drift-middle 31s ease-in-out infinite alternate;
+}
+.fog-near {
+  bottom: -32%;
+  height: 100%;
+  opacity: .94;
+  animation: fog-drift-near 43s ease-in-out infinite alternate;
+}
+@keyframes fog-tide {
+  0%, 12%, 100% { opacity: 0; }
+  52%, 68% { opacity: 1; }
+}
+@keyframes fog-drift-distant {
+  from { transform: translate3d(9%, 2%, 0) scale(1.05); }
+  to { transform: translate3d(-9%, -3%, 0) scale(1.12); }
+}
+@keyframes fog-drift-middle {
+  from { transform: translate3d(-8%, 7%, 0) scale(1.08); }
+  to { transform: translate3d(10%, -6%, 0) scale(1.14); }
+}
+@keyframes fog-drift-near {
+  from { transform: translate3d(10%, 4%, 0) scale(1.1); }
+  to { transform: translate3d(-8%, -8%, 0) scale(1.18); }
+}
+@media (max-width: 600px) {
+  .fog-layer { width: 140%; left: -20%; }
+  .fog-distant { opacity: .7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-fog { animation: none; opacity: 0; }
+  .fog-layer { animation: none; will-change: auto; }
+}
+@media print { .hero-fog { display: none; } }

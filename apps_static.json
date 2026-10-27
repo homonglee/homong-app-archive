@@ -1,6 +1,18 @@
 {
   "apps": [
     {
+      "slug": "sky-racer-3d",
+      "name": "SKY RACER 3D",
+      "description": "키보드·마우스·휴대폰 터치로 7개의 링에 도전하는 3D 드론 레이싱 게임. 시작·일시정지·초기화와 사용설명서를 제공합니다.",
+      "url": "https://homong-app.com/sky-racer-3d",
+      "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/sky-racer-3d",
+      "icon": "🚁",
+      "category": "게임/레이싱",
+      "mtime": 1793109240,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "slide-3d",
       "name": "슬라이드 랩 · 경사면 실험실",
       "description": "경사각·질량·마찰계수를 조절하고 3D 경사면 운동, 힘 벡터, 속도 그래프를 관찰하는 물리 실험실. 마찰 유무 비교와 예측 퀴즈를 제공합니다.",

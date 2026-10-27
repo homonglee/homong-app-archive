@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/sky-racer-3d",
+      "destination": "/sky-racer-3d/",
+      "permanent": false
+    },
+    {
       "source": "/slide-3d",
       "destination": "/slide-3d/",
       "permanent": false
@@ -172,6 +177,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/sky-racer-3d/",
+      "destination": "/apps/sky-racer-3d/index.html?slug=sky-racer-3d"
+    },
     {
       "source": "/newsletter/s/:id",
       "destination": "https://newsletter-webzine.vercel.app/api/reader?id=:id"

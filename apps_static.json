@@ -1,6 +1,18 @@
 {
   "apps": [
     {
+      "slug": "slide-3d",
+      "name": "슬라이드 랩 · 경사면 실험실",
+      "description": "경사각·질량·마찰계수를 조절하고 3D 경사면 운동, 힘 벡터, 속도 그래프를 관찰하는 물리 실험실. 마찰 유무 비교와 예측 퀴즈를 제공합니다.",
+      "url": "https://homong-app.com/slide-3d",
+      "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/slide-3d",
+      "icon": "📐",
+      "category": "교육/과학",
+      "mtime": 1793095200,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "taiji-in-flow",
       "name": "태극의 길 — TAIJI, in flow",
       "description": "태극권의 철학·수련 원리·여섯 문파와 역사를 탐색하고, 영상 검색·책갈피 저장·지식 검색·1분 호흡 타이머를 이용하는 인터랙티브 지식 공간.",

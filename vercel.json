@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/slide-3d",
+      "destination": "/slide-3d/",
+      "permanent": false
+    },
+    {
       "source": "/taiji-in-flow",
       "destination": "/taiji-in-flow/",
       "permanent": false
@@ -168,10 +173,6 @@
   ],
   "rewrites": [
     {
-      "source": "/taiji-in-flow/",
-      "destination": "/app-shell.html?slug=taiji-in-flow"
-    },
-    {
       "source": "/newsletter/s/:id",
       "destination": "https://newsletter-webzine.vercel.app/api/reader?id=:id"
     },
@@ -226,6 +227,14 @@
     {
       "source": "/api/share-link",
       "destination": "https://schedule-share-link-generator.vercel.app/api/share-link"
+    },
+    {
+      "source": "/slide-3d/",
+      "destination": "/app-shell.html?slug=slide-3d"
+    },
+    {
+      "source": "/taiji-in-flow/",
+      "destination": "/app-shell.html?slug=taiji-in-flow"
     },
     {
       "source": "/url-qr-shortener-onepage/",

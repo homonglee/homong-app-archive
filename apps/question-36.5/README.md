@@ -25,3 +25,9 @@
 
 Vercel 프로젝트 `question-36.5`의 Root Directory는 `apps/question-36.5`입니다. Framework는 Other, Build/Install/Output 설정은 기본값입니다.
 메인 아카이브에서는 `vercel.json`의 페이지 및 assets 재작성 경로로 동일 파일을 제공합니다.
+
+## 공유 이미지와 아이콘
+
+- OG/Twitter 이미지: `assets/question-36-5-og-v1.jpg`, 1200×630. 책 제목·저자명과 q. 브랜드 마크 포함.
+- favicon: SVG, ICO(16/32/48/64), PNG(16/32/180/192/512), Apple Touch Icon. 기존 q. 마크를 확장했습니다.
+- OG 원본은 이미지 생성으로 제작하고 표준 공유 크기로 내보냈습니다.

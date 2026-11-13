@@ -32,5 +32,6 @@
   "gemini-notebook-video-style-picker": "https://gemini-notebook-video-style-picker.vercel.app/",
   "lotto-number-picker": "/apps/lotto-number-picker/index.html",
   "camping-checklist": "https://camping-checklist-three.vercel.app/",
-  "formbridge-excel": "https://formbridge-excel.vercel.app/"
+  "formbridge-excel": "https://formbridge-excel.vercel.app/",
+  "question-36.5": "/apps/question-36.5/index.html"
 }

@@ -16,6 +16,7 @@ EXTRA_REDIRECTS = [
 ]
 
 PREFIX_REWRITES = [
+    {"source": "/question-36.5/assets/:path*", "destination": "/apps/question-36.5/assets/:path*"},
     {"source": "/newsletter/s/:id", "destination": "https://newsletter-webzine.vercel.app/api/reader?id=:id"},
     {"source": "/newsletter/og/:id", "destination": "https://newsletter-webzine.vercel.app/api/image?id=:id"},
     {"source": "/newsletter/api/:path*", "destination": "https://newsletter-webzine.vercel.app/api/:path*"},

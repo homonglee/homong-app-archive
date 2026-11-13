@@ -1,6 +1,18 @@
 {
   "apps": [
     {
+      "slug": "question-36.5",
+      "name": "질문의 온도 36.5도 · question-36.5",
+      "description": "이용호(호몽)의 장편소설을 18초 모션 필름과 질문 온도 체험으로 만나는 인터랙티브 북 사이트. 책·저자 소개와 네 서점 구매 링크를 제공합니다.",
+      "url": "https://homong-app.com/question-36.5",
+      "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/question-36.5",
+      "icon": "📖",
+      "category": "문화/도서",
+      "mtime": 1794568652,
+      "hasLocalIndex": true,
+      "source": "manual-registry"
+    },
+    {
       "slug": "sky-racer-3d",
       "name": "SKY RACER 3D",
       "description": "키보드·마우스·휴대폰 터치로 7개의 링에 도전하는 3D 드론 레이싱 게임. 시작·일시정지·초기화와 사용설명서를 제공합니다.",

@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/question-36.5",
+      "destination": "/question-36.5/",
+      "permanent": false
+    },
+    {
       "source": "/sky-racer-3d",
       "destination": "/sky-racer-3d/",
       "permanent": false
@@ -177,6 +182,14 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/question-36.5/",
+      "destination": "/apps/question-36.5/index.html?slug=question-36.5"
+    },
+    {
+      "source": "/question-36.5/assets/:path*",
+      "destination": "/apps/question-36.5/assets/:path*"
+    },
     {
       "source": "/sky-racer-3d/",
       "destination": "/apps/sky-racer-3d/index.html?slug=sky-racer-3d"

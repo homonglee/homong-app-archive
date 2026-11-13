@@ -1,4 +1,13 @@
 {
+  "question-36.5": {
+    "shareShell": "apps/question-36.5/index.html",
+    "name": "질문의 온도 36.5도 · question-36.5",
+    "description": "이용호(호몽)의 장편소설을 18초 모션 필름과 질문 온도 체험으로 만나는 인터랙티브 북 사이트. 책·저자 소개와 네 서점 구매 링크를 제공합니다.",
+    "url": "https://homong-app.com/question-36.5",
+    "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/question-36.5",
+    "icon": "📖",
+    "category": "문화/도서"
+  },
   "sky-racer-3d": {
     "shareShell": "apps/sky-racer-3d/index.html",
     "name": "SKY RACER 3D",

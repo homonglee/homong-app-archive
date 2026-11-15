@@ -12,10 +12,15 @@ VERCEL_PATH = ROOT / "vercel.json"
 # Preserve the branded newsletter reader routes alongside registry-generated
 # app-shell routes. These aliases are public links and must survive regeneration.
 EXTRA_REDIRECTS = [
+    {"source": "/용담바둑", "destination": "/용담바둑/", "permanent": False},
+    {"source": "/yongdam-baduk", "destination": "/용담바둑/", "permanent": False},
+    {"source": "/yongdam-baduk/", "destination": "/용담바둑/", "permanent": False},
     {"source": "/newsletter", "destination": "/newsletter/", "permanent": False},
 ]
 
 PREFIX_REWRITES = [
+    {"source": "/용담바둑/", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"},
+    {"source": "/용담바둑/:path*", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/:path*"},
     {"source": "/question-36.5/assets/:path*", "destination": "/apps/question-36.5/assets/:path*"},
     {"source": "/newsletter/s/:id", "destination": "https://newsletter-webzine.vercel.app/api/reader?id=:id"},
     {"source": "/newsletter/og/:id", "destination": "https://newsletter-webzine.vercel.app/api/image?id=:id"},
@@ -44,6 +49,8 @@ def build_config(registry: dict) -> dict:
     rewrites = list(PREFIX_REWRITES) + list(ROOT_REWRITES)
 
     for slug, app in registry.items():
+        if slug == "yongdam-baduk":
+            continue  # Served directly at the Korean path, including worker/model assets.
         redirects.append({
             "source": f"/{slug}",
             "destination": f"/{slug}/",

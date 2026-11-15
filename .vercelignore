@@ -2,5 +2,5 @@
 apps_registry.json
 server.py
 tests/
-scripts/
+/scripts/
 README.md

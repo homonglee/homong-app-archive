@@ -1,6 +1,18 @@
 {
   "apps": [
     {
+      "slug": "yongdam-baduk",
+      "name": "용담바둑",
+      "description": "18급~1급·초단~9단 사람 기풍 연습, 오프라인 대국, AI 복기와 실수 연습. 큰 글씨가 기본인 월넛 갈색 바둑 앱.",
+      "url": "https://homong-app.com/용담바둑/",
+      "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/yongdam-baduk",
+      "icon": "⚫",
+      "category": "게임/바둑",
+      "mtime": 1794737621,
+      "hasLocalIndex": false,
+      "source": "manual-registry"
+    },
+    {
       "slug": "question-36.5",
       "name": "질문의 온도 36.5도 · question-36.5",
       "description": "이용호(호몽)의 장편소설을 18초 모션 필름과 질문 온도 체험으로 만나는 인터랙티브 북 사이트. 책·저자 소개와 네 서점 구매 링크를 제공합니다.",

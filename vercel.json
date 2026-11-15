@@ -1,6 +1,21 @@
 {
   "redirects": [
     {
+      "source": "/용담바둑",
+      "destination": "/용담바둑/",
+      "permanent": false
+    },
+    {
+      "source": "/yongdam-baduk",
+      "destination": "/용담바둑/",
+      "permanent": false
+    },
+    {
+      "source": "/yongdam-baduk/",
+      "destination": "/용담바둑/",
+      "permanent": false
+    },
+    {
       "source": "/question-36.5",
       "destination": "/question-36.5/",
       "permanent": false
@@ -182,6 +197,14 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/용담바둑/",
+      "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"
+    },
+    {
+      "source": "/용담바둑/:path*",
+      "destination": "https://yongdam-baduk-homongs-projects.vercel.app/:path*"
+    },
     {
       "source": "/question-36.5/",
       "destination": "/apps/question-36.5/index.html?slug=question-36.5"

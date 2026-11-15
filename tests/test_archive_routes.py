@@ -18,7 +18,7 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertTrue(registry)
         for slug, app in registry.items():
             with self.subTest(slug=slug):
-                self.assertEqual(app["url"], f"{PUBLIC_ORIGIN}/{slug}")
+                self.assertEqual(app["url"], f"{PUBLIC_ORIGIN}/용담바둑/" if slug == "yongdam-baduk" else f"{PUBLIC_ORIGIN}/{slug}")
                 self.assertNotIn(".vercel.app", app["url"])
 
     def test_every_registered_app_has_a_same_domain_route(self):
@@ -29,6 +29,11 @@ class ArchiveRouteTests(unittest.TestCase):
 
         for slug, app in registry.items():
             with self.subTest(slug=slug):
+                if slug == "yongdam-baduk":
+                    self.assertEqual(redirects[f"/{slug}"]["destination"], "/용담바둑/")
+                    self.assertEqual(rewrites["/용담바둑/"]["destination"], "https://yongdam-baduk-homongs-projects.vercel.app/")
+                    self.assertEqual(rewrites["/용담바둑/:path*"]["destination"], "https://yongdam-baduk-homongs-projects.vercel.app/:path*")
+                    continue
                 self.assertEqual(redirects[f"/{slug}"]["destination"], f"/{slug}/")
                 self.assertIn(f"/{slug}/", rewrites)
 
@@ -65,7 +70,7 @@ class ArchiveRouteTests(unittest.TestCase):
         self.assertNotIn(".vercel.app", raw)
         for app in apps:
             with self.subTest(slug=app["slug"]):
-                self.assertEqual(app["url"], f"{PUBLIC_ORIGIN}/{app['slug']}")
+                self.assertEqual(app["url"], f"{PUBLIC_ORIGIN}/용담바둑/" if app["slug"] == "yongdam-baduk" else f"{PUBLIC_ORIGIN}/{app['slug']}")
                 self.assertNotIn("deploymentUrl", app)
                 self.assertNotIn("localUrl", app)
 
@@ -142,6 +147,10 @@ class ArchiveRouteTests(unittest.TestCase):
 
         for slug, app in registry.items():
             with self.subTest(slug=slug):
+                if slug == "yongdam-baduk":
+                    native = (ROOT / "apps/yongdam-baduk/dist/index.html").read_text(encoding="utf-8")
+                    self.assertIn('href="./manual.html"', native)
+                    continue
                 share_shell = app.get("shareShell", "app-shell.html")
                 self.assertEqual(rewrites[f"/{slug}/"], f"/{share_shell}?slug={slug}")
         self.assertIn('id="manualLink"', shell)

@@ -12,6 +12,7 @@ VERCEL_PATH = ROOT / "vercel.json"
 # Preserve the branded newsletter reader routes alongside registry-generated
 # app-shell routes. These aliases are public links and must survive regeneration.
 EXTRA_REDIRECTS = [
+    {"source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91", "destination": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/", "permanent": False},
     {"source": "/용담바둑", "destination": "/용담바둑/", "permanent": False},
     {"source": "/yongdam-baduk", "destination": "/용담바둑/", "permanent": False},
     {"source": "/yongdam-baduk/", "destination": "/용담바둑/", "permanent": False},
@@ -19,6 +20,8 @@ EXTRA_REDIRECTS = [
 ]
 
 PREFIX_REWRITES = [
+    {"source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"},
+    {"source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/:path*", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/:path*"},
     {"source": "/용담바둑/", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"},
     {"source": "/용담바둑/:path*", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/:path*"},
     {"source": "/question-36.5/assets/:path*", "destination": "/apps/question-36.5/assets/:path*"},

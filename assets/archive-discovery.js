@@ -1,5 +1,5 @@
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.ArchiveDiscovery=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
-  const categories=[['work','업무 자동화'],['documents','문서·회의·기록'],['content','콘텐츠·발표'],['schedule','일정·협업'],['life-finance','생활·재무'],['learning','학습·읽을거리'],['games','게임·놀이']];
+  const categories=[['work','업무 자동화'],['documents','문서·회의·기록'],['content','콘텐츠·발표'],['schedule','일정·협업'],['life-finance','생활·재무'],['learning','학습·읽을거리'],['games','게임·놀이'],['websites','제작홈페이지']];
   const label=id=>categories.find(c=>c[0]===id)?.[1]||'분류 확인 중';
   function normalize(apps){
     const seen=new Set();
@@ -19,6 +19,7 @@
     if(a.availability==='demo')return '데모';
     if(a.quality==='draft-output')return '검토가 필요한 초안';
     if(a.quality==='basic-checked')return '기본 동작 확인';
+    if(a.verification?.checkedAt&&a.verification?.level==='identity')return '화면·내용 확인';
     return '기능 미검증';
   }
   return {categories,label,normalize,matches,featured,status};

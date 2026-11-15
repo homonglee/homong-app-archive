@@ -292,6 +292,7 @@
     const { safeReadOrder, safeWriteOrder, safeRemoveOrder, mergeVisibleOrder, moveBeforeOrAfter, moveToEdge } = ArchiveOrder;
     const $ = sel => document.querySelector(sel);
     const grid = $('#appGrid'), empty = $('#empty');
+    const sortTime = a => Date.parse(a.registeredAt || '') / 1000 || a.mtime || 0;
     const fmtDate = ts => ts ? new Intl.DateTimeFormat('ko-KR', {month:'short', day:'numeric'}).format(new Date(ts*1000)) : '등록됨';
     function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
     function safeText(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
@@ -313,7 +314,7 @@
       }
       $('#refreshBtn').disabled=false;
       state.sort = savedOrder().length ? 'custom' : 'latest';
-      state.apps = applySavedOrder(apps.sort((a,b)=>(b.mtime||0)-(a.mtime||0)));
+      state.apps = applySavedOrder(apps.sort((a,b)=>sortTime(b)-sortTime(a)));
       hydrateCategories(); updateSortLabel(); applyFilters();
     }
     function savedOrder(){ return safeReadOrder(storage(), ORDER_KEY); }
@@ -329,7 +330,7 @@
       document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===state.category)));
     }
     function hydrateCategories(){
-      const icons={work:'🧰',documents:'📝',content:'🎬',schedule:'🗓️','life-finance':'🌿',learning:'📚',games:'🎮'};
+      const icons={work:'🧰',documents:'📝',content:'🎬',schedule:'🗓️','life-finance':'🌿',learning:'📚',games:'🎮',websites:'🌐'};
       $('#categoryButtons').innerHTML='<button class="category-button" data-category="all" aria-pressed="false"><span>전체 앱</span><small>'+state.apps.length+'</small></button>'+categories.map(([id,name])=>'<button class="category-button" data-category="'+id+'" aria-pressed="false"><span aria-hidden="true">'+icons[id]+'</span><span>'+name+'</span><small>'+state.apps.filter(a=>a.primaryCategory===id).length+'</small></button>').join('');
       selectCategoryButtons();
     }
@@ -339,7 +340,7 @@
     }
     function applyFilters(){
       state.filtered = state.apps.filter(a=>matches(a,state));
-      if(state.sort==='latest') state.filtered.sort((a,b)=>(b.mtime||0)-(a.mtime||0));
+      if(state.sort==='latest') state.filtered.sort((a,b)=>sortTime(b)-sortTime(a));
       if(state.sort==='name') state.filtered.sort((a,b)=>(a.name||'').localeCompare(b.name||'', 'ko'));
       renderApps();
     }
@@ -354,7 +355,7 @@
           <div class="order-controls" aria-label="${safeText(a.name)} 순서 이동"><button class="mini order-step" data-move="first" aria-label="${safeText(a.name)} 맨 위로 이동" ${index===0?'disabled':''}>⇈ 맨 위로</button><button class="mini order-step" data-move="up" aria-label="${safeText(a.name)} 위로 이동" ${index===0?'disabled':''}>↑ 위로</button><button class="mini order-step" data-move="down" aria-label="${safeText(a.name)} 아래로 이동" ${index===state.filtered.length-1?'disabled':''}>↓ 아래로</button><button class="mini order-step" data-move="last" aria-label="${safeText(a.name)} 맨 아래로 이동" ${index===state.filtered.length-1?'disabled':''}>⇊ 맨 아래로</button></div>
           <div class="topline"><a class="icon-link" href="${safeText(url)}" target="_blank" rel="noopener" title="${safeText(a.name)} 실행">${safeText(a.icon||'✨')}</a><a class="manual-link" href="/manuals/${encodeURIComponent(a.slug)}.html" aria-label="${safeText(a.name)} 사용설명서 열기">📖 사용설명서</a></div>
           <div><h3>${safeText(a.name)}</h3><p>${safeText(a.description)}</p><div class="meta"><span class="chip">${safeText(categoryLabel(a.primaryCategory))}</span><span class="status-badge ${a.quality==='basic-checked'?'checked':a.availability==='requires-setup'||a.quality==='draft-output'?'caution':''}">${safeText(appStatus(a))}</span></div><a class="archive-url" href="${safeText(url)}" target="_blank" rel="noopener" aria-label="${safeText(a.name)} 대표 URL">${safeText(brandedUrl)}</a>${verificationHtml(a)}</div>
-          <div class="actions"><a class="mini launch" href="${safeText(url)}" target="_blank" rel="noopener">앱 실행 ↗</a>${a.github?`<a class="mini" href="${safeText(a.github)}" target="_blank" rel="noopener">GitHub</a>`:''}${a.downloadUrl?`<a class="mini skill-download" href="${safeText(a.downloadUrl)}" download>Skill ZIP ↓</a>`:''}<button class="mini copy-app" data-url="${safeText(brandedUrl)}">링크 복사</button></div>
+          <div class="actions"><a class="mini launch" href="${safeText(url)}" target="_blank" rel="noopener">${a.launchMode==='external'?'사이트 열기 ↗':'앱 실행 ↗'}</a>${a.github?`<a class="mini" href="${safeText(a.github)}" target="_blank" rel="noopener">GitHub</a>`:''}${a.downloadUrl?`<a class="mini skill-download" href="${safeText(a.downloadUrl)}" download>Skill ZIP ↓</a>`:''}<button class="mini copy-app" data-url="${safeText(brandedUrl)}">링크 복사</button></div>
         </article>`
       }).join('');
     }
@@ -384,7 +385,7 @@
     $('#resetOrderBtn').hidden=!savedOrder().length;
     $('#resetOrderBtn').addEventListener('click', ()=>{
       if(!safeRemoveOrder(storage(),ORDER_KEY)){ toast('저장된 순서를 초기화하지 못했습니다'); return; }
-      state.sort='latest'; state.apps.sort((a,b)=>b.mtime-a.mtime); $('#resetOrderBtn').hidden=true; updateSortLabel(); applyFilters(); toast('기본 최신순으로 초기화했습니다');
+      state.sort='latest'; state.apps.sort((a,b)=>sortTime(b)-sortTime(a)); $('#resetOrderBtn').hidden=true; updateSortLabel(); applyFilters(); toast('기본 최신순으로 초기화했습니다');
     });
     function moveApp(slug,targetSlug){
       if(!slug||!targetSlug||slug===targetSlug) return;

@@ -60,6 +60,14 @@ def build_config(registry: dict) -> dict:
             "permanent": False,
         })
 
+        if app.get("launchMode") == "external":
+            # These reviewed sites open at their own origin rather than in an iframe.
+            destination = app.get("deploymentUrl", "")
+            if not destination.startswith("https://"):
+                raise ValueError(f"External site needs an HTTPS destination: {slug}")
+            redirects.append({"source": f"/{slug}/", "destination": destination, "permanent": False})
+            continue
+
         share_shell = app.get("shareShell", "app-shell.html")
         rewrites.append({
             "source": f"/{slug}/",
@@ -82,3 +90,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

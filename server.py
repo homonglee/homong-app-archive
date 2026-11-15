@@ -176,7 +176,7 @@ def manual_registry_entry(slug: str, overrides: dict) -> dict:
         'mtime': mtime,
         'hasLocalIndex': has_local,
         'source': 'manual-registry',
-        **{key: overrides[key] for key in ('primaryCategory', 'tags', 'collections', 'featuredRank', 'featuredReason', 'availability', 'quality', 'limitations', 'verification', 'contentUpdatedAt') if key in overrides},
+        **{key: overrides[key] for key in ('primaryCategory', 'tags', 'collections', 'featuredRank', 'featuredReason', 'availability', 'quality', 'limitations', 'verification', 'contentUpdatedAt', 'launchMode', 'registeredAt') if key in overrides},
     }
 
 

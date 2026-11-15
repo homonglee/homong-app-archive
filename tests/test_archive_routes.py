@@ -35,6 +35,10 @@ class ArchiveRouteTests(unittest.TestCase):
                     self.assertEqual(rewrites["/용담바둑/:path*"]["destination"], "https://yongdam-baduk-homongs-projects.vercel.app/:path*")
                     continue
                 self.assertEqual(redirects[f"/{slug}"]["destination"], f"/{slug}/")
+                if app.get("launchMode") == "external":
+                    self.assertEqual(redirects[f"/{slug}/"]["destination"], app["deploymentUrl"])
+                    self.assertNotIn(f"/{slug}/", rewrites)
+                    continue
                 self.assertIn(f"/{slug}/", rewrites)
 
                 share_shell = app.get("shareShell", "app-shell.html")
@@ -151,6 +155,8 @@ class ArchiveRouteTests(unittest.TestCase):
                     native = (ROOT / "apps/yongdam-baduk/dist/index.html").read_text(encoding="utf-8")
                     self.assertIn('href="./manual.html"', native)
                     continue
+                if app.get("launchMode") == "external":
+                    continue
                 share_shell = app.get("shareShell", "app-shell.html")
                 self.assertEqual(rewrites[f"/{slug}/"], f"/{share_shell}?slug={slug}")
         self.assertIn('id="manualLink"', shell)
@@ -192,3 +198,4 @@ class ArchiveRouteTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

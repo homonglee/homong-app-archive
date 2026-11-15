@@ -1035,5 +1035,387 @@
       "issueRefs": []
     },
     "contentUpdatedAt": "2026-11-15"
+  },
+  "rea": {
+    "name": "REA Case Atlas — 역설계 사례 아카이브",
+    "description": "공개 출처로 확인된 REA 역설계 사례를 분야별로 검색하고 원문과 함께 살펴보는 한국어 아카이브.",
+    "url": "https://homong-app.com/rea",
+    "deploymentUrl": "https://rea.homong-app.com/",
+    "launchMode": "external",
+    "icon": "🔎",
+    "category": "개발/역설계",
+    "primaryCategory": "learning",
+    "tags": [
+      "개발/역설계",
+      "REA",
+      "역설계",
+      "사례",
+      "개발"
+    ],
+    "collections": [
+      "resources"
+    ],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "iktype": {
+    "name": "IKTYPE — 이익재 하이브리드 트레이닝",
+    "description": "근력·지구력·가동성을 하나의 계획으로 연결하는 이익재 코치의 하이브리드 트레이닝 브랜드 홈페이지.",
+    "url": "https://homong-app.com/iktype",
+    "deploymentUrl": "https://iktype.com/",
+    "launchMode": "external",
+    "icon": "🏋️",
+    "category": "제작홈페이지/트레이닝",
+    "primaryCategory": "websites",
+    "tags": [
+      "제작홈페이지/트레이닝",
+      "이익재",
+      "운동",
+      "코칭",
+      "브랜드"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "prompt-golden-key": {
+    "name": "프롬프트 엔지니어링 황금키",
+    "description": "7가지 황금키 원칙으로 요청을 점검하고 바로 활용할 프롬프트로 다듬는 인터랙티브 도구.",
+    "url": "https://homong-app.com/prompt-golden-key",
+    "deploymentUrl": "https://prompt-golden-key.homong-lee.chatgpt.site/",
+    "launchMode": "external",
+    "icon": "🔑",
+    "category": "AI/프롬프트",
+    "primaryCategory": "work",
+    "tags": [
+      "AI/프롬프트",
+      "프롬프트",
+      "SSPECOS",
+      "황금키",
+      "PM Skills",
+      "Spec Kit"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "krcompany": {
+    "name": "KR컴퍼니 — 나광열",
+    "description": "사진·영상·라이브·교육으로 브랜드와 지역, 사람의 이야기를 연결하는 KR컴퍼니의 작업과 서비스를 소개합니다.",
+    "url": "https://homong-app.com/krcompany",
+    "deploymentUrl": "https://krcompany.vercel.app/",
+    "launchMode": "external",
+    "icon": "📷",
+    "category": "기업/미디어",
+    "primaryCategory": "websites",
+    "tags": [
+      "기업/미디어",
+      "나광열",
+      "사진",
+      "영상",
+      "콘텐츠",
+      "기업 홈페이지",
+      "제작홈페이지"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "kojibio": {
+    "name": "KOJI BIO — 코지바이오",
+    "description": "코지바이오의 회사·제품·발효기술과 관련 자료를 소개하는 홈페이지.",
+    "url": "https://homong-app.com/kojibio",
+    "deploymentUrl": "https://kojibio.com/",
+    "launchMode": "external",
+    "icon": "🌱",
+    "category": "제작홈페이지/기업",
+    "primaryCategory": "websites",
+    "tags": [
+      "제작홈페이지/기업",
+      "코지바이오",
+      "발효",
+      "바이오",
+      "기업"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "kabbu": {
+    "name": "KABBU — 성필원",
+    "description": "성필원의 저술과 활동, 공개 채널을 출처와 함께 살펴보는 소개 홈페이지.",
+    "url": "https://homong-app.com/kabbu",
+    "deploymentUrl": "https://kabbu-homongs-projects.vercel.app/",
+    "launchMode": "external",
+    "icon": "📚",
+    "category": "제작홈페이지/인물",
+    "primaryCategory": "websites",
+    "tags": [
+      "제작홈페이지/인물",
+      "성필원",
+      "KABBU",
+      "저술",
+      "인문",
+      "인물"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "hovision-ax-diagnosis": {
+    "name": "호연지재 AX 역량 진단",
+    "description": "직급과 경력을 선택하고 조직의 AI·AX 활용 역량을 5개 영역, 25개 문항으로 점검하는 진단 도구.",
+    "url": "https://homong-app.com/hovision-ax-diagnosis",
+    "deploymentUrl": "https://hovision-ax-diagnosis.vercel.app/",
+    "launchMode": "external",
+    "icon": "📊",
+    "category": "기업/AX진단",
+    "primaryCategory": "work",
+    "tags": [
+      "기업/AX진단",
+      "호연지재",
+      "AX",
+      "AI",
+      "기업",
+      "역량 진단"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "pm-skills-guide": {
+    "name": "PM Skills Guide",
+    "description": "Claude에서 공유된 PM Skills 안내 아티팩트입니다. 원본 공유 페이지에서 내용을 확인할 수 있습니다.",
+    "url": "https://homong-app.com/pm-skills-guide",
+    "deploymentUrl": "https://claude.ai/artifact/5PdHceQC1WUKmpQZgPd9Un",
+    "launchMode": "external",
+    "icon": "🧩",
+    "category": "AI/활용가이드",
+    "primaryCategory": "learning",
+    "tags": [
+      "AI/활용가이드",
+      "Claude",
+      "PM Skills",
+      "아티팩트",
+      "가이드"
+    ],
+    "collections": [
+      "resources"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "공유 페이지의 제목만 확인했습니다. 아티팩트 내부 동작은 미검증입니다."
+    ],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "render",
+      "passed": [
+        "공유 페이지 HTTP 200·PM Skills Guide 제목 확인"
+      ],
+      "notTested": [
+        "아티팩트 내부 기능",
+        "로그인 필요 여부"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "sangdojinsoo": {
+    "name": "상도 이진수 — 사진과 일상 기록",
+    "description": "상도(常道) 이진수가 남긴 자연 풍경과 일상의 사진·글, 온라인 기록을 소개하는 홈페이지.",
+    "url": "https://homong-app.com/sangdojinsoo",
+    "deploymentUrl": "https://sangdojinsoo-homongs-projects.vercel.app/",
+    "launchMode": "external",
+    "icon": "🏞️",
+    "category": "제작홈페이지/인물",
+    "primaryCategory": "websites",
+    "tags": [
+      "제작홈페이지/인물",
+      "상도",
+      "이진수",
+      "사진",
+      "풍경",
+      "sangdojinsoo"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
+  },
+  "kim-hyuk": {
+    "name": "김혁 — 테마파크 기획자",
+    "description": "김혁의 테마파크·관광 공간 기획 경험과 프로젝트, 경력·저술을 소개하는 포트폴리오 홈페이지.",
+    "url": "https://homong-app.com/kim-hyuk",
+    "deploymentUrl": "https://kim-hyuk-story-2026.homong-lee.chatgpt.site/",
+    "launchMode": "external",
+    "icon": "🎡",
+    "category": "제작홈페이지/인물",
+    "primaryCategory": "websites",
+    "tags": [
+      "제작홈페이지/인물",
+      "김혁",
+      "테마파크",
+      "관광",
+      "포트폴리오",
+      "kim-hyuk"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-16",
+      "level": "identity",
+      "passed": [
+        "페이지 열림·제목·소개 내용 확인"
+      ],
+      "notTested": [
+        "개별 기능",
+        "문의·외부 전송",
+        "계정 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-16",
+    "registeredAt": "2026-11-15T15:13:27.492Z"
   }
 }

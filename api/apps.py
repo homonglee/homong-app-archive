@@ -9,7 +9,7 @@ PUBLIC_FIELDS = {
     'slug', 'name', 'description', 'category', 'icon', 'url', 'github',
     'mtime', 'hasLocalIndex', 'source', 'downloadUrl',
     'primaryCategory', 'tags', 'collections', 'featuredRank', 'featuredReason', 'availability',
-    'quality', 'limitations', 'verification', 'contentUpdatedAt',
+    'quality', 'limitations', 'verification', 'contentUpdatedAt', 'launchMode', 'registeredAt',
 }
 
 

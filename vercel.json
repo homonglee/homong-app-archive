@@ -171,6 +171,106 @@
       "permanent": false
     },
     {
+      "source": "/rea",
+      "destination": "/rea/",
+      "permanent": false
+    },
+    {
+      "source": "/rea/",
+      "destination": "https://rea.homong-app.com/",
+      "permanent": false
+    },
+    {
+      "source": "/iktype",
+      "destination": "/iktype/",
+      "permanent": false
+    },
+    {
+      "source": "/iktype/",
+      "destination": "https://iktype.com/",
+      "permanent": false
+    },
+    {
+      "source": "/prompt-golden-key",
+      "destination": "/prompt-golden-key/",
+      "permanent": false
+    },
+    {
+      "source": "/prompt-golden-key/",
+      "destination": "https://prompt-golden-key.homong-lee.chatgpt.site/",
+      "permanent": false
+    },
+    {
+      "source": "/krcompany",
+      "destination": "/krcompany/",
+      "permanent": false
+    },
+    {
+      "source": "/krcompany/",
+      "destination": "https://krcompany.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/kojibio",
+      "destination": "/kojibio/",
+      "permanent": false
+    },
+    {
+      "source": "/kojibio/",
+      "destination": "https://kojibio.com/",
+      "permanent": false
+    },
+    {
+      "source": "/kabbu",
+      "destination": "/kabbu/",
+      "permanent": false
+    },
+    {
+      "source": "/kabbu/",
+      "destination": "https://kabbu-homongs-projects.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/hovision-ax-diagnosis",
+      "destination": "/hovision-ax-diagnosis/",
+      "permanent": false
+    },
+    {
+      "source": "/hovision-ax-diagnosis/",
+      "destination": "https://hovision-ax-diagnosis.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/pm-skills-guide",
+      "destination": "/pm-skills-guide/",
+      "permanent": false
+    },
+    {
+      "source": "/pm-skills-guide/",
+      "destination": "https://claude.ai/artifact/5PdHceQC1WUKmpQZgPd9Un",
+      "permanent": false
+    },
+    {
+      "source": "/sangdojinsoo",
+      "destination": "/sangdojinsoo/",
+      "permanent": false
+    },
+    {
+      "source": "/sangdojinsoo/",
+      "destination": "https://sangdojinsoo-homongs-projects.vercel.app/",
+      "permanent": false
+    },
+    {
+      "source": "/kim-hyuk",
+      "destination": "/kim-hyuk/",
+      "permanent": false
+    },
+    {
+      "source": "/kim-hyuk/",
+      "destination": "https://kim-hyuk-story-2026.homong-lee.chatgpt.site/",
+      "permanent": false
+    },
+    {
       "source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91",
       "destination": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/",
       "permanent": false

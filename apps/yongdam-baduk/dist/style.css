@@ -37,3 +37,7 @@ body{background:radial-gradient(ellipse at 50% 0,#faf6ed 0,#eee7dc 48%,#e5dbce 1
  .board-toolbar .new-game,html[data-reading="large"] .board-toolbar .new-game{font-size:16px;padding:8px 10px;min-height:44px;gap:5px}
  html[data-reading="large"] .board-toolbar .icon-button{min-width:40px;min-height:44px;font-size:16px}
 }
+
+/* Rounded, polished stones with a soft key light from the upper left. */
+.player-stone.black{background:radial-gradient(ellipse at 29% 20%,#829093 0,#39464b 22%,#141b21 54%,#05090d 78%,#303b41 100%);box-shadow:inset 0 1px 1px #c1d5df55,inset -2px -3px 4px #0009,1px 4px 4px #23140966,0 1px 1px #0008;border:1px solid #182126}
+.player-stone.white,.avatar-stone{background:radial-gradient(ellipse at 29% 20%,#fff 0,#fffefb 30%,#e9eae3 59%,#bbc3bc 85%,#929e96 100%);box-shadow:inset 0 1px 2px #fff,inset -2px -3px 4px #7c898449,1px 4px 5px #23140955,0 1px 1px #0004;border:1px solid #d4dad3}

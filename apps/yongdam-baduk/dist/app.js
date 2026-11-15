@@ -86,3 +86,5 @@ $('analyze-position').onclick=()=>analyzeStudy();$('scan-mistakes').onclick=()=>
 
 
 archive=safeRead(ARCHIVE,[]);if(!Array.isArray(archive))archive=[];archive=archive.filter(r=>r?.settings&&Array.isArray(r.moves)&&r.id);const saved=safeRead(KEY,null);try{if(!saved)throw new Error();const rebuilt=rebuild(saved);settings=rebuilt.settings;state=rebuilt.state;states=rebuilt.states;gameId=saved.id;createdAt=saved.date;result=saved.result;dead=new Set(saved.dead||[]);render();queueAI()}catch{reset(defaults)}showTab(['play','archive','guide'].includes(location.hash.slice(1))?location.hash.slice(1):'play');prepareOffline();
+
+$('sgf-viewers').onclick=()=>$('sgf-viewers-dialog').showModal();

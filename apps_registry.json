@@ -6,7 +6,36 @@
     "url": "https://homong-app.com/용담바둑/",
     "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/yongdam-baduk",
     "icon": "⚫",
-    "category": "게임/바둑"
+    "category": "게임/바둑",
+    "primaryCategory": "games",
+    "tags": [
+      "게임/바둑"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "requires-setup",
+    "quality": "unreviewed",
+    "limitations": [
+      "이번 점검 환경에서 첫 착수 후 강화 엔진 준비 오류가 발생했습니다. 엔진 준비와 컴퓨터 응수 확인이 필요합니다.",
+      "오프라인·급단수별 기력·AI 복기 품질은 미검증입니다."
+    ],
+    "verification": {
+      "checkedAt": "2026-11-15",
+      "level": "interaction",
+      "passed": [
+        "바둑판 표시·키보드 첫 착수"
+      ],
+      "notTested": [
+        "오프라인",
+        "급단수별 기력",
+        "AI 복기"
+      ],
+      "issueRefs": [],
+      "failed": [
+        "이번 점검 환경에서 컴퓨터 응수 시 강화 엔진 준비 오류"
+      ]
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "question-36.5": {
     "shareShell": "apps/question-36.5/index.html",
@@ -15,7 +44,28 @@
     "url": "https://homong-app.com/question-36.5",
     "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/question-36.5",
     "icon": "📖",
-    "category": "문화/도서"
+    "category": "문화/도서",
+    "primaryCategory": "learning",
+    "tags": [
+      "문화/도서"
+    ],
+    "collections": [
+      "resources"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "sky-racer-3d": {
     "shareShell": "apps/sky-racer-3d/index.html",
@@ -24,7 +74,26 @@
     "url": "https://homong-app.com/sky-racer-3d",
     "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/sky-racer-3d",
     "icon": "🚁",
-    "category": "게임/레이싱"
+    "category": "게임/레이싱",
+    "primaryCategory": "games",
+    "tags": [
+      "게임/레이싱"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "slide-3d": {
     "name": "슬라이드 랩 · 경사면 실험실",
@@ -32,7 +101,28 @@
     "url": "https://homong-app.com/slide-3d",
     "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/slide-3d",
     "icon": "📐",
-    "category": "교육/과학"
+    "category": "교육/과학",
+    "primaryCategory": "learning",
+    "tags": [
+      "교육/과학"
+    ],
+    "collections": [
+      "lab"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "taiji-in-flow": {
     "name": "태극의 길 — TAIJI, in flow",
@@ -40,7 +130,28 @@
     "url": "https://homong-app.com/taiji-in-flow",
     "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/taiji-in-flow",
     "icon": "☯️",
-    "category": "건강/수련"
+    "category": "건강/수련",
+    "primaryCategory": "learning",
+    "tags": [
+      "건강/수련"
+    ],
+    "collections": [
+      "resources"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "url-qr-shortener-onepage": {
     "name": "Linkly One — URL 단축 & QR 생성기",
@@ -48,7 +159,26 @@
     "github": "https://github.com/homonglee/linkly-one-url-qr",
     "icon": "🔗",
     "category": "마케팅/유틸",
-    "deploymentUrl": "https://url-qr-shortener-onepage.vercel.app"
+    "deploymentUrl": "https://url-qr-shortener-onepage.vercel.app",
+    "primaryCategory": "work",
+    "tags": [
+      "마케팅/유틸"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "markdown-lite-editor": {
     "name": "Live Markdown Studio",
@@ -56,7 +186,30 @@
     "github": "https://github.com/homonglee/markdown-lite-editor",
     "icon": "✍️",
     "category": "글쓰기/생산성",
-    "deploymentUrl": "https://markdown-lite-editor.vercel.app"
+    "deploymentUrl": "https://markdown-lite-editor.vercel.app",
+    "primaryCategory": "documents",
+    "tags": [
+      "글쓰기/생산성"
+    ],
+    "collections": [],
+    "featuredRank": 2,
+    "availability": "available",
+    "quality": "basic-checked",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-15",
+      "level": "interaction",
+      "passed": [
+        "문장 입력·제목과 본문 미리보기 반영"
+      ],
+      "notTested": [
+        "HTML·PDF 결과물",
+        "장기 저장"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15",
+    "featuredReason": "마크다운을 쓰면서 완성된 문서를 바로 확인하세요."
   },
   "voice-memo-mindmap": {
     "name": "보이스 메모 마인드맵",
@@ -64,7 +217,26 @@
     "github": "https://github.com/homonglee/voice-memo-mindmap",
     "icon": "🎙️",
     "category": "음성/아이디어",
-    "deploymentUrl": "https://voice-memo-mindmap.vercel.app"
+    "deploymentUrl": "https://voice-memo-mindmap.vercel.app",
+    "primaryCategory": "documents",
+    "tags": [
+      "음성/아이디어"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "subscription-dashboard": {
     "name": "정기 구독 서비스 매니저",
@@ -72,7 +244,30 @@
     "github": "https://github.com/homonglee/subscription-dashboard",
     "icon": "💳",
     "category": "재무/대시보드",
-    "deploymentUrl": "https://subscription-dashboard-rho.vercel.app"
+    "deploymentUrl": "https://subscription-dashboard-rho.vercel.app",
+    "primaryCategory": "life-finance",
+    "tags": [
+      "재무/대시보드"
+    ],
+    "collections": [
+      "lab"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "예시 결제일과 실제 결제일을 구분하세요. 금융 계정에 자동 연결되는지는 확인하지 않았습니다."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "micro-mood-journal": {
     "name": "3줄 마이크로 일기장",
@@ -80,13 +275,51 @@
     "github": "https://github.com/homonglee/micro-mood-journal",
     "icon": "🌙",
     "category": "저널/감정",
-    "deploymentUrl": "https://micro-mood-journal-alpha.vercel.app"
+    "deploymentUrl": "https://micro-mood-journal-alpha.vercel.app",
+    "primaryCategory": "life-finance",
+    "tags": [
+      "저널/감정"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "lunch-roulette": {
     "name": "오늘 점심 뭐 먹지? 투표 룰렛",
     "url": "https://homong-app.com/lunch-roulette",
     "icon": "🍜",
-    "category": "팀/결정"
+    "category": "팀/결정",
+    "primaryCategory": "schedule",
+    "tags": [
+      "팀/결정"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "ocr-translator-app": {
     "name": "스크린샷 OCR 번역기",
@@ -94,15 +327,26 @@
     "github": "https://github.com/homonglee/ocr-translator-app",
     "icon": "📸",
     "category": "OCR/번역",
-    "deploymentUrl": "https://ocr-translator-app-eight.vercel.app"
-  },
-  "mastermind-page": {
-    "name": "마스터마인드 인터랙티브 페이지",
-    "url": "https://homong-app.com/mastermind-page",
-    "github": "https://github.com/homonglee/mastermind-page",
-    "icon": "🧠",
-    "category": "학습/콘텐츠",
-    "deploymentUrl": "https://mastermind-page.vercel.app"
+    "deploymentUrl": "https://ocr-translator-app-eight.vercel.app",
+    "primaryCategory": "work",
+    "tags": [
+      "OCR/번역"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "mood-playlist-linker": {
     "name": "무드별 플레이리스트 링커",
@@ -111,7 +355,26 @@
     "github": "https://github.com/homonglee/mood-playlist-linker",
     "icon": "🎧",
     "category": "음악/무드",
-    "deploymentUrl": "https://mood-playlist-linker.vercel.app"
+    "deploymentUrl": "https://mood-playlist-linker.vercel.app",
+    "primaryCategory": "life-finance",
+    "tags": [
+      "음악/무드"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "meeting-secretary-app": {
     "name": "원클릭 회의록 정리 비서",
@@ -120,7 +383,30 @@
     "github": "https://github.com/homonglee/meeting-secretary-app",
     "icon": "📝",
     "category": "회의/생산성",
-    "deploymentUrl": "https://meeting-secretary-app.vercel.app"
+    "deploymentUrl": "https://meeting-secretary-app.vercel.app",
+    "primaryCategory": "documents",
+    "tags": [
+      "회의/생산성"
+    ],
+    "collections": [
+      "lab"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "draft-output",
+    "limitations": [
+      "자동 정리 결과는 검토가 필요한 초안입니다. 결정 여부·담당자·날짜를 원문과 대조하세요."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "receipt-expense-scanner": {
     "name": "지출결의서 영수증 스캐너",
@@ -129,28 +415,114 @@
     "github": "https://github.com/homonglee/receipt-expense-scanner",
     "icon": "🧾",
     "category": "회계/지출",
-    "deploymentUrl": "https://receipt-expense-scanner.vercel.app"
+    "deploymentUrl": "https://receipt-expense-scanner.vercel.app",
+    "primaryCategory": "life-finance",
+    "tags": [
+      "회계/지출"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "추출된 금액·일자·가맹점명과 저장 결과를 원본 영수증에 대조하세요."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "namecard-memo-indexer": {
     "name": "명함 메모 인덱서 — 촬영·편집·삭제 가능한 인맥 관리 앱",
     "description": "명함 사진 촬영, 연락처 추출, 만남 메모 저장, 편집/삭제가 가능한 1페이지 인터랙티브 프로토타입",
     "url": "https://homong-app.com/namecard-memo-indexer",
     "icon": "🪪",
-    "category": "인맥/CRM"
+    "category": "인맥/CRM",
+    "primaryCategory": "documents",
+    "tags": [
+      "인맥/CRM"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "eisenhower-prioritizer": {
     "name": "아이젠하워 매트릭스 우선순위 정렬기",
     "description": "할 일을 긴급도와 중요도 기준으로 분류해 우선순위를 정리하는 매트릭스 앱.",
     "url": "https://homong-app.com/eisenhower-prioritizer",
     "icon": "🧭",
-    "category": "우선순위/생산성"
+    "category": "우선순위/생산성",
+    "primaryCategory": "work",
+    "tags": [
+      "우선순위/생산성"
+    ],
+    "collections": [],
+    "featuredRank": 3,
+    "availability": "available",
+    "quality": "basic-checked",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-15",
+      "level": "interaction",
+      "passed": [
+        "합성 할 일 3개 입력·분류·실행 순서 생성"
+      ],
+      "notTested": [
+        "분류 정확도 평가",
+        "장기 저장"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15",
+    "featuredReason": "여러 할 일을 긴급도와 중요도로 나누어 살펴보세요."
   },
   "hermes-agent-interactive-page": {
     "name": "Hermes Agent 소개 — Interactive One Page",
     "description": "터미널, 데스크톱, 메신저, IDE에서 실제 작업을 수행하는 오픈소스 AI 에이전트 Hermes Agent 소개 페이지",
     "url": "https://homong-app.com/hermes-agent-interactive-page",
     "icon": "🤖",
-    "category": "AI/소개"
+    "category": "AI/소개",
+    "primaryCategory": "learning",
+    "tags": [
+      "AI/소개"
+    ],
+    "collections": [
+      "resources"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "에이전트 소개 자료입니다. 이 페이지 자체가 작업을 수행하는 에이전트는 아닙니다."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "messenger-summary-tool": {
     "name": "메신저 내용 정리",
@@ -159,7 +531,26 @@
     "github": "https://github.com/homonglee/messenger-summary-tool",
     "icon": "💬",
     "category": "문서/정리",
-    "deploymentUrl": "https://messenger-summary-tool.vercel.app"
+    "deploymentUrl": "https://messenger-summary-tool.vercel.app",
+    "primaryCategory": "documents",
+    "tags": [
+      "문서/정리"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "batch-renamer-dropzone": {
     "name": "파일명 일괄 변경기",
@@ -168,7 +559,28 @@
     "github": "https://github.com/homonglee/batch-renamer-dropzone",
     "icon": "🗂️",
     "category": "파일/생산성",
-    "deploymentUrl": "https://batch-renamer-dropzone.vercel.app"
+    "deploymentUrl": "https://batch-renamer-dropzone.vercel.app",
+    "primaryCategory": "work",
+    "tags": [
+      "파일/생산성"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "이름 변경 계획과 실제 파일명 변경을 구분하세요."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "clipboard-pin-board": {
     "name": "클립보드 고정 보드",
@@ -177,7 +589,26 @@
     "github": "https://github.com/homonglee/clipboard-pin-board",
     "icon": "📌",
     "category": "업무/생산성",
-    "deploymentUrl": "https://clipboard-pin-board.vercel.app"
+    "deploymentUrl": "https://clipboard-pin-board.vercel.app",
+    "primaryCategory": "work",
+    "tags": [
+      "업무/생산성"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "60sec-speech-timer": {
     "name": "60초 스피치 타이머 & 피치 제너레이터",
@@ -186,7 +617,30 @@
     "github": "https://github.com/homonglee/60sec-speech-timer",
     "icon": "⏱️",
     "category": "발표/생산성",
-    "deploymentUrl": "https://60sec-speech-timer.vercel.app"
+    "deploymentUrl": "https://60sec-speech-timer.vercel.app",
+    "primaryCategory": "content",
+    "tags": [
+      "발표/생산성"
+    ],
+    "collections": [],
+    "featuredRank": 4,
+    "availability": "available",
+    "quality": "basic-checked",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-15",
+      "level": "interaction",
+      "passed": [
+        "샘플 스크립트 생성·타이머 시작·일시정지·초기화"
+      ],
+      "notTested": [
+        "복사 권한",
+        "장기 저장"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15",
+    "featuredReason": "발표 초안을 만들고 60초 타이머로 연습하세요."
   },
   "coffee-chat-icebreaker": {
     "name": "커피챗 아이스브레이킹 추천기",
@@ -195,7 +649,26 @@
     "github": "https://github.com/homonglee/coffee-chat-icebreaker",
     "icon": "☕",
     "category": "커뮤니케이션/네트워킹",
-    "deploymentUrl": "https://coffee-chat-icebreaker.vercel.app"
+    "deploymentUrl": "https://coffee-chat-icebreaker.vercel.app",
+    "primaryCategory": "schedule",
+    "tags": [
+      "커뮤니케이션/네트워킹"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "schedule-share-link-generator": {
     "name": "스케줄 공유 링크 생성기",
@@ -204,7 +677,30 @@
     "github": "https://github.com/homonglee/schedule-share-link-generator",
     "icon": "🗓️",
     "category": "일정/생산성",
-    "deploymentUrl": "https://schedule-share-link-generator.vercel.app"
+    "deploymentUrl": "https://schedule-share-link-generator.vercel.app",
+    "primaryCategory": "schedule",
+    "tags": [
+      "일정/생산성"
+    ],
+    "collections": [
+      "lab"
+    ],
+    "featuredRank": null,
+    "availability": "requires-setup",
+    "quality": "unreviewed",
+    "limitations": [
+      "실제 캘린더 연동에는 별도 설정이 필요합니다. 설정 전에는 데모 범위를 확인하세요."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "got-interactive-light": {
     "name": "왕좌의 게임 인터랙티브 관계도",
@@ -213,7 +709,28 @@
     "github": "https://github.com/homonglee/got-interactive-guide",
     "icon": "👑",
     "category": "드라마/콘텐츠",
-    "deploymentUrl": "https://got-interactive-light.vercel.app"
+    "deploymentUrl": "https://got-interactive-light.vercel.app",
+    "primaryCategory": "learning",
+    "tags": [
+      "드라마/콘텐츠"
+    ],
+    "collections": [
+      "resources"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "youtube-timeline-summarizer": {
     "name": "유튜브 타임라인 요약기",
@@ -222,7 +739,26 @@
     "github": "https://github.com/homonglee/youtube-timeline-summarizer",
     "icon": "▶️",
     "category": "영상/요약",
-    "deploymentUrl": "https://youtube-timeline-summarizer.vercel.app"
+    "deploymentUrl": "https://youtube-timeline-summarizer.vercel.app",
+    "primaryCategory": "content",
+    "tags": [
+      "영상/요약"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "font-preview-board": {
     "name": "글자보기 — 무료 한글 폰트 비교 보드",
@@ -231,7 +767,32 @@
     "github": "https://github.com/homonglee/font-preview-board",
     "icon": "가",
     "category": "디자인/폰트",
-    "deploymentUrl": "https://font-preview-board.vercel.app"
+    "deploymentUrl": "https://font-preview-board.vercel.app",
+    "primaryCategory": "content",
+    "tags": [
+      "디자인/폰트"
+    ],
+    "collections": [],
+    "featuredRank": 5,
+    "availability": "available",
+    "quality": "basic-checked",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-15",
+      "level": "interaction",
+      "passed": [
+        "문장 변경·24개 폰트 미리보기·크기 34→48px 변경"
+      ],
+      "notTested": [
+        "모든 글꼴 실제 로딩",
+        "CSS 복사",
+        "즐겨찾기 지속성",
+        "라이선스 검토"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15",
+    "featuredReason": "같은 문장을 여러 한글 폰트와 크기로 비교하세요."
   },
   "moa-ai-bookmark-manager": {
     "name": "모아 — AI 북마크 지식 보관소",
@@ -240,7 +801,26 @@
     "github": "https://github.com/homonglee/moa-ai-bookmark-manager",
     "icon": "🔖",
     "category": "AI/지식관리",
-    "deploymentUrl": "https://moa-ai-bookmark-manager.vercel.app"
+    "deploymentUrl": "https://moa-ai-bookmark-manager.vercel.app",
+    "primaryCategory": "documents",
+    "tags": [
+      "AI/지식관리"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "downdoc": {
     "name": "DownDoc — 다운로드 폴더 클리닉",
@@ -249,7 +829,26 @@
     "github": "https://github.com/homonglee/downdoc",
     "icon": "🩺",
     "category": "파일/생산성",
-    "deploymentUrl": "https://downdoc.vercel.app"
+    "deploymentUrl": "https://downdoc.vercel.app",
+    "primaryCategory": "work",
+    "tags": [
+      "파일/생산성"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "newsletter-webzine": {
     "name": "Letterly — 자동 뉴스레터 스튜디오",
@@ -258,7 +857,28 @@
     "github": "https://github.com/homonglee/newsletter-webzine",
     "icon": "📰",
     "category": "글쓰기/생산성",
-    "deploymentUrl": "https://newsletter-webzine.vercel.app"
+    "deploymentUrl": "https://newsletter-webzine.vercel.app",
+    "primaryCategory": "content",
+    "tags": [
+      "글쓰기/생산성"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "편집·미리보기와 실제 발행·공유의 확인 범위는 다릅니다."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "memory-companion": {
     "name": "Memory Companion — 놓친 약속까지 기억하는 AI",
@@ -268,7 +888,30 @@
     "icon": "🧠",
     "category": "AI/생산성",
     "deploymentUrl": "https://memory-companion-three.vercel.app",
-    "downloadUrl": "https://homong-app.com/assets/downloads/memory-companion-skill.zip"
+    "downloadUrl": "https://homong-app.com/assets/downloads/memory-companion-skill.zip",
+    "primaryCategory": "documents",
+    "tags": [
+      "AI/생산성"
+    ],
+    "collections": [
+      "lab"
+    ],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "예시 날짜와 실제 약속을 구분하세요. 외부 서비스 연동과 장기 기억은 별도 확인이 필요합니다."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "gemini-notebook-video-style-picker": {
     "name": "제미나이 노트북 동영상 스타일 고르기",
@@ -277,7 +920,28 @@
     "github": "https://github.com/homonglee/gemini-notebook-video-style-picker",
     "icon": "🎬",
     "category": "영상/프롬프트",
-    "deploymentUrl": "https://gemini-notebook-video-style-picker.vercel.app"
+    "deploymentUrl": "https://gemini-notebook-video-style-picker.vercel.app",
+    "primaryCategory": "content",
+    "tags": [
+      "영상/프롬프트"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "스타일과 프롬프트를 선택하는 도구입니다. 실제 영상 생성은 별도 서비스에서 진행합니다."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "lotto-number-picker": {
     "name": "행운 한 스푼 — 로또 번호 추첨기",
@@ -285,7 +949,28 @@
     "url": "https://homong-app.com/lotto-number-picker",
     "github": "https://github.com/homonglee/homong-app-archive",
     "icon": "🍀",
-    "category": "게임/유틸"
+    "category": "게임/유틸",
+    "primaryCategory": "games",
+    "tags": [
+      "게임/유틸"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "무작위 번호 생성 도구입니다. 당첨 확률을 높여주지 않습니다."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   },
   "camping-checklist": {
     "name": "Camping Checklist — 맞춤 캠핑 준비목록",
@@ -295,7 +980,31 @@
     "icon": "🏕️",
     "category": "여행/캠핑",
     "deploymentUrl": "https://camping-checklist-three.vercel.app",
-    "shareShell": "camping-checklist-shell.html"
+    "shareShell": "camping-checklist-shell.html",
+    "primaryCategory": "life-finance",
+    "tags": [
+      "여행/캠핑"
+    ],
+    "collections": [],
+    "featuredRank": 1,
+    "availability": "available",
+    "quality": "basic-checked",
+    "limitations": [],
+    "verification": {
+      "checkedAt": "2026-11-15",
+      "level": "interaction",
+      "passed": [
+        "캠핑 조건 선택·목록 생성·체크 해제"
+      ],
+      "notTested": [
+        "품목 추가 저장",
+        "PDF·XLSX 결과물",
+        "장기 저장"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15",
+    "featuredReason": "캠핑 유형과 일정에 맞춰 준비물을 빠르게 정리하세요."
   },
   "formbridge-excel": {
     "name": "폼브릿지 — 신청서 엑셀 자동입력",
@@ -304,6 +1013,27 @@
     "icon": "📋",
     "category": "업무/생산성",
     "deploymentUrl": "https://formbridge-excel.vercel.app",
-    "shareShell": "formbridge-excel-shell.html"
+    "shareShell": "formbridge-excel-shell.html",
+    "primaryCategory": "work",
+    "tags": [
+      "업무/생산성"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "unknown",
+    "quality": "unreviewed",
+    "limitations": [
+      "대량 신청서 처리·OCR 정확도·실제 엑셀 결과물은 별도 확인이 필요합니다."
+    ],
+    "verification": {
+      "checkedAt": null,
+      "level": null,
+      "passed": [],
+      "notTested": [
+        "주요 기능·저장·내보내기·외부 연동"
+      ],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-15"
   }
 }

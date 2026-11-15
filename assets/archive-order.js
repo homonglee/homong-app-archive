@@ -32,11 +32,11 @@
 
   function applySavedOrder(apps, order){
     const knownSlugs = new Set(apps.map(app => app.slug));
-    const savedSlugs = order.filter(slug => knownSlugs.has(slug));
+    const savedSlugs = [...new Set(order.filter(slug => knownSlugs.has(slug)))];
     const savedSet = new Set(savedSlugs);
     const newApps = apps.filter(app => !savedSet.has(app.slug));
     const appsBySlug = new Map(apps.map(app => [app.slug, app]));
-    return [...newApps, ...savedSlugs.map(slug => appsBySlug.get(slug))];
+    return [...savedSlugs.map(slug => appsBySlug.get(slug)), ...newApps];
   }
 
   function mergeVisibleOrder(allApps, visibleApps){
@@ -68,3 +68,4 @@
 
   return { safeReadOrder, safeWriteOrder, safeRemoveOrder, applySavedOrder, mergeVisibleOrder, moveBeforeOrAfter, moveToEdge };
 });
+

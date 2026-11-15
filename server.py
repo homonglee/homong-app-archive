@@ -28,14 +28,14 @@ EXCLUDE = {
 EMOJI_BY_SLUG = {
     'url-qr-shortener-onepage':'🔗','markdown-lite-editor':'✍️','voice-memo-mindmap':'🎙️',
     'subscription-dashboard':'💳','micro-mood-journal':'🌙','lunch-roulette':'🍜',
-    'ocr-translator-app':'📸','mastermind-page':'🧠','namecard-memo-indexer':'🪪',
+    'ocr-translator-app':'📸','namecard-memo-indexer':'🪪',
     'eisenhower-prioritizer':'🧭','hermes-agent-interactive-page':'🤖'
 }
 CATEGORY_BY_SLUG = {
     'url-qr-shortener-onepage':'마케팅/유틸','markdown-lite-editor':'글쓰기/생산성',
     'voice-memo-mindmap':'음성/아이디어','subscription-dashboard':'재무/대시보드',
     'micro-mood-journal':'저널/감정','lunch-roulette':'팀/결정',
-    'ocr-translator-app':'OCR/번역','mastermind-page':'학습/콘텐츠',
+    'ocr-translator-app':'OCR/번역',
     'namecard-memo-indexer':'인맥/CRM','eisenhower-prioritizer':'우선순위/생산성',
     'hermes-agent-interactive-page':'AI/소개'
 }
@@ -47,7 +47,6 @@ FALLBACK_DESC = {
     'micro-mood-journal':'하루를 3문장으로 기록하고 감정 점수와 무드 아이콘을 저장하는 미니 저널.',
     'lunch-roulette':'팀원의 선호/제외 메뉴를 반영해 주변 맛집 후보를 룰렛으로 추천하는 점심 결정 앱.',
     'ocr-translator-app':'스크린샷을 업로드해 OCR로 텍스트를 추출하고 원하는 언어로 번역하는 앱.',
-    'mastermind-page':'나폴레온 힐의 마스터마인드 원리를 인터랙티브하게 소개하고 그룹을 설계하는 페이지.',
     'namecard-memo-indexer':'명함 촬영, 연락처 추출, 만남 메모 저장/편집/삭제를 지원하는 인맥 관리 앱.',
     'eisenhower-prioritizer':'할 일을 긴급도와 중요도 기준으로 분류해 우선순위를 정리하는 매트릭스 앱.',
     'hermes-agent-interactive-page':'Hermes Agent를 인터랙티브하게 소개하는 원페이지 웹페이지.'
@@ -177,6 +176,7 @@ def manual_registry_entry(slug: str, overrides: dict) -> dict:
         'mtime': mtime,
         'hasLocalIndex': has_local,
         'source': 'manual-registry',
+        **{key: overrides[key] for key in ('primaryCategory', 'tags', 'collections', 'featuredRank', 'featuredReason', 'availability', 'quality', 'limitations', 'verification', 'contentUpdatedAt') if key in overrides},
     }
 
 
@@ -188,7 +188,7 @@ def scan_apps() -> list[dict]:
 
 
 def safe_app_path(slug: str) -> Path | None:
-    if '/' in slug or '\\' in slug or slug.startswith('.'):
+    if slug not in load_registry() or '/' in slug or '\\' in slug or slug.startswith('.'):
         return None
     p = (HOME / slug).resolve()
     try:
@@ -258,3 +258,4 @@ if __name__ == '__main__':
     server = ThreadingHTTPServer(('127.0.0.1', port), Handler)
     print(f'APP_ARCHIVE_SERVING http://127.0.0.1:{port}', flush=True)
     server.serve_forever()
+

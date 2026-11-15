@@ -150,6 +150,7 @@
     .contact-dialog{width:min(820px,calc(100% - 28px));max-height:calc(100vh - 28px);padding:0;border:1px solid rgba(255,255,255,.2);border-radius:28px;background:#f8fafc;color:#172033;box-shadow:0 35px 100px rgba(0,0,0,.7)}.contact-dialog::backdrop{background:rgba(2,4,12,.82);backdrop-filter:blur(9px)}.contact-shell{position:relative;padding:30px}.contact-close{position:absolute;right:18px;top:18px;width:42px;height:42px;border:1px solid #d9dfeb;border-radius:50%;background:#fff;color:#344054;font-size:20px;cursor:pointer}.contact-head{padding-right:52px;margin-bottom:24px}.contact-head h2{margin:0 0 8px;font-size:30px;letter-spacing:-.04em}.contact-head p{margin:0;color:#667085;line-height:1.6}.contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}.contact-field{display:grid;gap:8px}.contact-field.full{grid-column:1/-1}.contact-field label{font-size:14px;font-weight:850}.contact-field label span{color:#e34863}.contact-field input,.contact-field select,.contact-field textarea{width:100%;border:1px solid #cfd6e3;border-radius:13px;background:#fff;color:#172033;padding:13px 14px;font:inherit;outline:none}.contact-field textarea{min-height:150px;resize:vertical;line-height:1.6}.contact-field input:focus,.contact-field select:focus,.contact-field textarea:focus{border-color:#20bfdc;box-shadow:0 0 0 3px rgba(34,211,238,.18)}.contact-actions{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;align-items:end;gap:14px;margin-top:4px}.contact-note{margin:0;color:#667085;font-size:12px;line-height:1.5}.contact-buttons{display:flex;gap:9px}.contact-reset,.contact-submit{border-radius:999px;padding:13px 20px;font:inherit;font-weight:900;cursor:pointer;white-space:nowrap}.contact-reset{border:1px solid #cbd3e1;background:#fff;color:#344054}.contact-submit{border:0;background:linear-gradient(135deg,#8058e9,#20bfdc);color:#fff}.contact-reset:hover{background:#eef2f7}.contact-submit:hover{filter:brightness(1.05);transform:translateY(-1px)}.contact-submit:disabled,.contact-reset:disabled{cursor:wait;opacity:.62;transform:none}.contact-status{grid-column:1/-1;min-height:22px;margin:0;font-size:13px;font-weight:800}.contact-status[data-state="success"]{color:#08785c}.contact-status[data-state="error"]{color:#c52d4d}.contact-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
     @media(max-width:1050px){.nav-actions .pill{display:none}}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.list .app-card{grid-template-columns:1fr}.list .actions{justify-content:start}.profile-card{grid-template-columns:220px 1fr;gap:26px;padding:26px}}@media(max-width:620px){.grid{grid-template-columns:1fr}.nav-inner{flex-wrap:wrap;gap:10px;padding:10px 0}.brand{width:100%}.nav-actions .pill,.nav-launch{display:none}.nav-actions{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.nav-actions .btn{width:100%;padding:10px 8px;font-size:13px;text-align:center}.toolbar{top:120px}.brand-title{font-size:21px;max-width:160px;display:block}.hero-banner{padding:22px 0 18px}.stats{grid-template-columns:1fr 1fr}.stat b{font-size:24px}.section-head{align-items:flex-start;flex-direction:column}.order-actions{width:100%;justify-content:stretch}.order-actions .btn{flex:1;padding-inline:10px}.profile-card{grid-template-columns:1fr;padding:20px}.profile-photo-wrap{max-width:230px}.profile-copy h2{font-size:38px}.profile-role{font-size:16px}.profile-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;padding:2px 0 10px}.profile-tab{width:100%;padding:11px 6px;font-size:12px;white-space:nowrap}.profile-panel{min-height:0}.profile-panel ul,.profile-panel ol{grid-template-columns:1fr}.book-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.book-meta{padding:10px}.book-title{font-size:12px}.profile-tab:last-child{grid-column:1/-1}.contact-shell{padding:24px 18px 20px}.contact-head h2{font-size:25px}.contact-form{grid-template-columns:1fr;gap:15px}.contact-field.full,.contact-actions,.contact-status{grid-column:1}.contact-actions{grid-template-columns:1fr}.contact-buttons{display:grid;grid-template-columns:1fr 1fr}.contact-reset,.contact-submit{width:100%;padding-inline:10px}}
   </style>
+  <link rel="stylesheet" href="/assets/archive-discovery.css">
 </head>
 <body>
   <header class="nav">
@@ -161,10 +162,31 @@
 
   <main id="top" class="wrap">
     <section class="hero-banner" aria-label="Homong's App Archive 소개">
+      <div class="hero-copy"><div class="eyebrow">IDEAS INTO EVERYDAY TOOLS</div><h1>업무와 일상에 바로 쓰는<br><span class="grad">호몽의 앱 모음</span></h1><p>기록부터 업무 자동화, 배움과 놀이까지.<br>하고 싶은 일로 찾고, 확인된 범위를 살펴본 뒤 실행하세요.</p><div class="hero-links"><a class="btn primary" href="#apps">전체 앱 찾아보기 ↓</a><a class="pill" href="#profile">만든 사람 소개</a></div></div>
       <img src="/assets/homong-app-social-preview-v2.jpg" alt="아이디어를 앱으로, 한곳에서 바로 실행 — Homong's App Archive 소개 배너" width="1280" height="427" fetchpriority="high">
     </section>
 
-    <section id="profile" class="profile-section" aria-labelledby="profile-title">
+    <section class="stats" aria-live="polite">
+      <div class="stat"><b id="statTotal">0</b><span>등록된 앱</span></div>
+      <div class="stat"><b id="statDeploy">0</b><span>동일 도메인 실행</span></div>
+      <div class="stat"><b id="statLocal">0</b><span>내부 정적 앱</span></div>
+      <div class="stat"><b id="statCats">0</b><span>카테고리</span></div>
+    </section>
+
+    <section id="featured" class="featured-section" aria-labelledby="featured-title" hidden><div class="discovery-heading"><div><h2 id="featured-title">먼저 써보세요</h2><p>기본 동작을 확인한 앱입니다. 자세한 확인 범위는 각 카드에서 볼 수 있습니다.</p></div><a class="feature-link" href="#apps">전체 앱 ↓</a></div><div id="featuredGrid" class="featured-grid"></div></section>
+    <div id="loadNotice" class="load-notice" role="status" hidden></div>
+    <section id="apps" class="toolbar" aria-label="앱 검색 및 필터">
+      <label class="search"><span>⌕</span><input id="searchInput" aria-label="앱 검색" placeholder="앱 이름·하고 싶은 일·태그로 검색" autocomplete="off" /></label>
+      <select id="categorySelect" class="select" aria-label="카테고리 선택"><option value="all">전체 목적</option></select>
+      <div class="toggle" aria-label="보기 방식"><button id="gridBtn" class="active">그리드</button><button id="listBtn">리스트</button></div>
+    </section>
+
+    <div class="collection-tabs" role="group" aria-label="앱 모음 선택"><button class="pill" data-collection="all" aria-pressed="true">전체 앱</button><button class="pill" data-collection="lab" aria-pressed="false">실험실</button><button class="pill" data-collection="resources" aria-pressed="false">자료실</button></div><p id="collectionNote" class="collection-note">실험실은 데모·초안·학습 실험, 자료실은 읽고 살펴보는 콘텐츠를 모았습니다. 같은 앱은 전체 목록에도 있습니다.</p>
+    <div class="section-head"><div><h2>앱 디렉토리</h2><p id="resultLabel" role="status">목록을 불러오는 중...</p></div><div class="order-actions"><button id="sortBtn" class="btn">최신순</button><button id="reorderBtn" class="btn" aria-pressed="false">↕ 순서 편집</button><button id="resetOrderBtn" class="btn" hidden>순서 초기화</button></div></div>
+    <section id="appGrid" class="grid" aria-live="polite" aria-label="앱 순서 편집"></section>
+    <div id="empty" class="empty">검색 결과가 없습니다. 다른 키워드나 목적을 선택해보세요.<button class="btn" id="clearFilters">검색·필터 초기화</button></div>
+
+    <details id="profile" class="profile-section profile-disclosure"><summary><img src="/profile-lee-yongho.jpg" alt="" width="52" height="60" loading="lazy"><span><strong>이용호(호몽) · 만든 사람 소개</strong><small>강사소개 · 강의분야 · 주요강의기관 · 저서 · 연락처·회사</small></span></summary>
       <div class="profile-card">
         <figure class="profile-photo-wrap">
           <img class="profile-photo" src="/profile-lee-yongho.jpg" alt="이용호(호몽) 프로필 사진" width="1023" height="1280" decoding="async">
@@ -245,25 +267,8 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="stats" aria-live="polite">
-      <div class="stat"><b id="statTotal">0</b><span>등록된 앱</span></div>
-      <div class="stat"><b id="statDeploy">0</b><span>동일 도메인 실행</span></div>
-      <div class="stat"><b id="statLocal">0</b><span>내부 정적 앱</span></div>
-      <div class="stat"><b id="statCats">0</b><span>카테고리</span></div>
-    </section>
-
-    <section id="apps" class="toolbar" aria-label="앱 검색 및 필터">
-      <label class="search"><span>⌕</span><input id="searchInput" placeholder="앱 이름, 설명, 카테고리, 폴더명으로 검색" autocomplete="off" /></label>
-      <select id="categorySelect" class="select" aria-label="카테고리 선택"><option value="all">전체 카테고리</option></select>
-      <div class="toggle" aria-label="보기 방식"><button id="gridBtn" class="active">그리드</button><button id="listBtn">리스트</button></div>
-    </section>
-
-    <div class="section-head"><div><h2>앱 디렉토리</h2><p id="resultLabel">스캔 중...</p></div><div class="order-actions"><button id="sortBtn" class="btn">최신순</button><button id="reorderBtn" class="btn" aria-pressed="false">↕ 순서 편집</button><button id="resetOrderBtn" class="btn" hidden>순서 초기화</button></div></div>
-    <section id="appGrid" class="grid" aria-live="polite" aria-label="앱 순서 편집"></section>
-    <div id="empty" class="empty">검색 결과가 없습니다. 다른 키워드나 카테고리를 선택해보세요.</div>
-
+    </details>
+    <footer class="site-footer"><span>Homong's App Archive · 아이디어를 일상의 도구로</span><span>확인 범위는 앱별 안내를 참고하세요.</span></footer>
   </main>
   <dialog id="bookDialog" class="book-dialog" aria-label="책 표지 크게 보기">
     <div class="book-dialog-inner"><button class="book-dialog-close" type="button" aria-label="닫기">×</button><img id="bookDialogImage" src="" alt=""></div>
@@ -288,9 +293,10 @@
   <div id="toast" class="toast">복사했습니다</div>
 
   <script src="/assets/archive-order.js"></script>
+  <script src="/assets/archive-discovery.js"></script>
   <script>
     const ORDER_KEY = 'homong-app-card-order-v1';
-    const state = { apps: [], filtered: [], category: 'all', query: '', list: false, sort: 'latest', reordering: false, draggedSlug: '' };
+    const state = { apps: [], filtered: [], category: 'all', collection: 'all', query: '', list: false, sort: 'latest', reordering: false, draggedSlug: '' };
     const { safeReadOrder, safeWriteOrder, safeRemoveOrder, mergeVisibleOrder, moveBeforeOrAfter, moveToEdge } = ArchiveOrder;
     const $ = sel => document.querySelector(sel);
     const grid = $('#appGrid'), empty = $('#empty');
@@ -298,29 +304,49 @@
     function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1600); }
     function safeText(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
     function appUrl(app){ return app.url || '#'; }
+    const {categories, label:categoryLabel, normalize, matches, featured, status:appStatus} = ArchiveDiscovery;
+    function storage(){try{return window.localStorage;}catch{return null;}}
+    async function fetchList(url){
+      const controller=new AbortController(), timeout=setTimeout(()=>controller.abort(),10000);
+      try{const res=await fetch(url,{cache:'no-store',signal:controller.signal});if(!res.ok)throw Error('목록 응답 오류');const data=await res.json();if(!Array.isArray(data.apps)||!data.apps.length)throw Error('목록이 비어 있습니다');const apps=normalize(data.apps);if(!apps.length)throw Error('유효한 앱이 없습니다');return apps;}finally{clearTimeout(timeout);}
+    }
     async function loadApps(){
       $('#resultLabel').textContent = '등록된 앱 목록을 불러오는 중...';
-      const res = await fetch('/api/apps', {cache:'no-store'});
-      const data = await res.json();
+      $('#refreshBtn').disabled=true;$('#loadNotice').hidden=true;
+      let apps;
+      try{apps=await fetchList('/api/apps');}
+      catch(error){
+        try{apps=await fetchList('/apps_static.json');$('#loadNotice').hidden=false;$('#loadNotice').textContent='실시간 목록을 가져오지 못해 저장된 목록을 표시합니다. 목록 새로고침으로 다시 시도할 수 있습니다.';}
+        catch{ $('#resultLabel').textContent='앱 목록을 불러오지 못했습니다. 상단의 목록 새로고침으로 다시 시도해주세요.';$('#refreshBtn').disabled=false;return; }
+      }
+      $('#refreshBtn').disabled=false;
       state.sort = savedOrder().length ? 'custom' : 'latest';
-      state.apps = applySavedOrder(data.apps || []);
-      hydrateCategories(); renderStats(); updateSortLabel(); applyFilters();
+      state.apps = applySavedOrder(apps.sort((a,b)=>(b.mtime||0)-(a.mtime||0)));
+      hydrateCategories(); renderStats(); renderFeatured(); updateSortLabel(); applyFilters();
     }
-    function savedOrder(){ return safeReadOrder(localStorage, ORDER_KEY); }
+    function savedOrder(){ return safeReadOrder(storage(), ORDER_KEY); }
     function applySavedOrder(apps){ return ArchiveOrder.applySavedOrder(apps, savedOrder()); }
     function saveOrder(){
-      const saved=safeWriteOrder(localStorage, ORDER_KEY, state.apps.map(app=>app.slug));
+      const saved=safeWriteOrder(storage(), ORDER_KEY, state.apps.map(app=>app.slug));
       $('#resetOrderBtn').hidden=!(saved||savedOrder().length);
       if(!saved) toast('순서는 변경됐지만 브라우저에 저장하지 못했습니다');
       return saved;
     }
     function updateSortLabel(){ $('#sortBtn').textContent=state.sort==='custom'?'사용자순':state.sort==='latest'?'최신순':'이름순'; }
     function hydrateCategories(){
-      const cats = [...new Set(state.apps.map(a=>a.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ko'));
-      $('#categorySelect').innerHTML = '<option value="all">전체 카테고리</option>' + cats.map(c=>`<option value="${safeText(c)}">${safeText(c)}</option>`).join('');
+      $('#categorySelect').innerHTML='<option value="all">전체 목적</option>'+categories.map(([id,name])=>'<option value="'+id+'">'+name+' · '+state.apps.filter(a=>a.primaryCategory===id).length+'</option>').join('');
+      $('#categorySelect').value=state.category;
+    }
+    function verificationHtml(a){
+      const v=a.verification||{},passed=Array.isArray(v.passed)?v.passed:[],pending=Array.isArray(v.notTested)?v.notTested:[],notes=Array.isArray(a.limitations)?a.limitations:[],failed=Array.isArray(v.failed)?v.failed:[];
+      return '<details class="verification"><summary>확인 범위 · 이용 안내</summary>'+(v.checkedAt?'<p class="verification-date">확인일 '+safeText(v.checkedAt)+' · '+safeText(({render:'화면 표시',identity:'화면·내용 일치',interaction:'기본 조작',workflow:'주요 흐름'})[v.level]||'확인 범위 참고')+'</p>':'<p>주요 기능은 아직 검증하지 않았습니다.</p>')+(passed.length?'<p>확인: '+passed.map(safeText).join(' · ')+'</p>':'')+(failed.length?'<p>확인 중 문제: '+failed.map(safeText).join(' · ')+'</p>':'')+(pending.length?'<p>미검증: '+pending.map(safeText).join(' · ')+'</p>':'')+(notes.length?'<ul>'+notes.map(n=>'<li>'+safeText(n)+'</li>').join('')+'</ul>':'')+'</details>';
+    }
+    function renderFeatured(){
+      const apps=featured(state.apps);$('#featured').hidden=!apps.length;
+      $('#featuredGrid').innerHTML=apps.map(a=>'<article class="feature-card"><div class="feature-top"><span class="feature-icon">'+safeText(a.icon)+'</span><span class="feature-rank">PICK '+String(a.featuredRank).padStart(2,'0')+'</span></div><h3>'+safeText(a.name)+'</h3><p>'+safeText(a.featuredReason||a.description)+'</p><a class="feature-link" href="'+safeText(appUrl(a))+'" target="_blank" rel="noopener">앱 실행 ↗</a><div class="feature-scope">'+safeText(a.verification.passed[0])+' · '+safeText(a.verification.checkedAt)+'</div></article>').join('');
     }
     function renderStats(){
-      const cats = new Set(state.apps.map(a=>a.category).filter(Boolean));
+      const cats = new Set(state.apps.map(a=>a.primaryCategory).filter(Boolean));
       $('#statTotal').textContent = state.apps.length;
       $('#statDeploy').textContent = state.apps.filter(a=>{
         try { return new URL(a.url).host === location.host; } catch { return false; }
@@ -329,13 +355,8 @@
       $('#statCats').textContent = cats.size;
     }
     function applyFilters(){
-      const q = state.query.trim().toLowerCase();
-      state.filtered = state.apps.filter(a=>{
-        const hay = [a.name,a.description,a.category,a.slug].join(' ').toLowerCase();
-        const catOk = state.category === 'all' || a.category === state.category;
-        return catOk && (!q || hay.includes(q));
-      });
-      if(state.sort==='latest') state.filtered.sort((a,b)=>b.mtime-a.mtime);
+      state.filtered = state.apps.filter(a=>matches(a,state));
+      if(state.sort==='latest') state.filtered.sort((a,b)=>(b.mtime||0)-(a.mtime||0));
       if(state.sort==='name') state.filtered.sort((a,b)=>(a.name||'').localeCompare(b.name||'', 'ko'));
       renderApps();
     }
@@ -349,11 +370,16 @@
         return `<article class="app-card" data-slug="${safeText(a.slug)}" draggable="${state.reordering}">
           <div class="order-controls" aria-label="${safeText(a.name)} 순서 이동"><button class="mini order-step" data-move="first" aria-label="${safeText(a.name)} 맨 위로 이동" ${index===0?'disabled':''}>⇈ 맨 위로</button><button class="mini order-step" data-move="up" aria-label="${safeText(a.name)} 위로 이동" ${index===0?'disabled':''}>↑ 위로</button><button class="mini order-step" data-move="down" aria-label="${safeText(a.name)} 아래로 이동" ${index===state.filtered.length-1?'disabled':''}>↓ 아래로</button><button class="mini order-step" data-move="last" aria-label="${safeText(a.name)} 맨 아래로 이동" ${index===state.filtered.length-1?'disabled':''}>⇊ 맨 아래로</button></div>
           <div class="topline"><a class="icon-link" href="${safeText(url)}" target="_blank" rel="noopener" title="${safeText(a.name)} 실행">${safeText(a.icon||'✨')}</a><a class="manual-link" href="/manuals/${encodeURIComponent(a.slug)}.html" aria-label="${safeText(a.name)} 사용설명서 열기">📖 사용설명서</a></div>
-          <div><h3>${safeText(a.name)}</h3><p>${safeText(a.description)}</p><div class="meta"><span class="chip">${safeText(a.category)}</span><span class="chip">${safeText(a.slug)}</span><span class="chip">${fmtDate(a.mtime)}</span></div><a class="archive-url" href="${safeText(url)}" target="_blank" rel="noopener" aria-label="${safeText(a.name)} 대표 URL">${safeText(brandedUrl)}</a></div>
+          <div><h3>${safeText(a.name)}</h3><p>${safeText(a.description)}</p><div class="meta"><span class="chip">${safeText(categoryLabel(a.primaryCategory))}</span><span class="status-badge ${a.quality==='basic-checked'?'checked':a.availability==='requires-setup'||a.quality==='draft-output'?'caution':''}">${safeText(appStatus(a))}</span></div><a class="archive-url" href="${safeText(url)}" target="_blank" rel="noopener" aria-label="${safeText(a.name)} 대표 URL">${safeText(brandedUrl)}</a>${verificationHtml(a)}</div>
           <div class="actions"><a class="mini launch" href="${safeText(url)}" target="_blank" rel="noopener">앱 실행 ↗</a>${a.github?`<a class="mini" href="${safeText(a.github)}" target="_blank" rel="noopener">GitHub</a>`:''}${a.downloadUrl?`<a class="mini skill-download" href="${safeText(a.downloadUrl)}" download>Skill ZIP ↓</a>`:''}<button class="mini copy-app" data-url="${safeText(brandedUrl)}">링크 복사</button></div>
         </article>`
       }).join('');
     }
+    document.querySelectorAll('[data-collection]').forEach(button=>button.addEventListener('click',()=>{state.collection=button.dataset.collection;document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));applyFilters();}));
+    $('#clearFilters').addEventListener('click',()=>{state.query='';state.category='all';state.collection='all';$('#searchInput').value='';$('#categorySelect').value='all';document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.collection==='all')));applyFilters();$('#searchInput').focus();});
+    function openProfile(){if(location.hash==='#profile')$('#profile').open=true;}
+    document.querySelectorAll('a[href="#profile"]').forEach(a=>a.addEventListener('click',()=>{$('#profile').open=true;}));
+    window.addEventListener('hashchange',openProfile);openProfile();
     $('#searchInput').addEventListener('input', e=>{ state.query=e.target.value; applyFilters(); });
     $('#categorySelect').addEventListener('change', e=>{ state.category=e.target.value; applyFilters(); });
     $('#gridBtn').addEventListener('click', ()=>{ state.list=false; $('#gridBtn').classList.add('active'); $('#listBtn').classList.remove('active'); renderApps(); });
@@ -374,7 +400,7 @@
     });
     $('#resetOrderBtn').hidden=!savedOrder().length;
     $('#resetOrderBtn').addEventListener('click', ()=>{
-      if(!safeRemoveOrder(localStorage,ORDER_KEY)){ toast('저장된 순서를 초기화하지 못했습니다'); return; }
+      if(!safeRemoveOrder(storage(),ORDER_KEY)){ toast('저장된 순서를 초기화하지 못했습니다'); return; }
       state.sort='latest'; state.apps.sort((a,b)=>b.mtime-a.mtime); $('#resetOrderBtn').hidden=true; updateSortLabel(); applyFilters(); toast('기본 최신순으로 초기화했습니다');
     });
     function moveApp(slug,targetSlug){
@@ -391,8 +417,8 @@
     grid.addEventListener('dragover',event=>{ if(!state.reordering) return; const card=event.target.closest('.app-card'); if(!card||card.dataset.slug===state.draggedSlug) return; event.preventDefault(); grid.querySelectorAll('.drag-over').forEach(item=>item.classList.remove('drag-over')); card.classList.add('drag-over'); });
     grid.addEventListener('drop',event=>{ const card=event.target.closest('.app-card'); if(!card) return; event.preventDefault(); moveApp(state.draggedSlug,card.dataset.slug); });
     grid.addEventListener('dragend',()=>{ state.draggedSlug=''; grid.querySelectorAll('.dragging,.drag-over').forEach(item=>item.classList.remove('dragging','drag-over')); });
-    grid.addEventListener('click',event=>{ const button=event.target.closest('.order-step'); if(!button) return; const card=button.closest('.app-card'), direction=button.dataset.move; if(direction==='first'||direction==='last'){ moveAppToEdge(card.dataset.slug,direction); return; } const cards=[...grid.querySelectorAll('.app-card')], index=cards.indexOf(card), offset=direction==='up'?-1:1, target=cards[index+offset]; if(target) moveApp(card.dataset.slug,target.dataset.slug); });
-    $('#refreshBtn').addEventListener('click', ()=>loadApps().then(()=>toast('등록된 앱 목록을 새로고침했습니다')));
+    grid.addEventListener('click',event=>{const button=event.target.closest('.order-step');if(!button)return;const card=button.closest('.app-card'),slug=card.dataset.slug,direction=button.dataset.move;if(direction==='first'||direction==='last')moveAppToEdge(slug,direction);else{const cards=[...grid.querySelectorAll('.app-card')],index=cards.indexOf(card),target=cards[index+(direction==='up'?-1:1)];if(target)moveApp(slug,target.dataset.slug);}const moved=[...grid.querySelectorAll('.app-card')].find(c=>c.dataset.slug===slug);const next=[...moved.querySelectorAll('.order-step')].find(b=>b.dataset.move===direction&&!b.disabled)||moved.querySelector('.order-step:not(:disabled)');next?.focus();});
+    $('#refreshBtn').addEventListener('click', ()=>loadApps());
 
     const contactDialog = $('#contactDialog'), contactForm = $('#contactForm'), contactStatus = $('#contactStatus');
     function setContactStatus(message = '', state = ''){
@@ -473,8 +499,9 @@
     }));
     $('.book-dialog-close').addEventListener('click', ()=>bookDialog.close());
     bookDialog.addEventListener('click', event=>{ if(event.target === bookDialog) bookDialog.close(); });
-    document.addEventListener('click', e=>{ const b=e.target.closest('.copy-app'); if(b){ navigator.clipboard.writeText(b.dataset.url).then(()=>toast('앱 링크를 복사했습니다')); }});
-    loadApps().catch(err=>{ console.error(err); $('#resultLabel').textContent='앱 목록을 불러오지 못했습니다'; grid.innerHTML='<article class="app-card"><h3>스캔 오류</h3><p>서버 로그를 확인해주세요.</p></article>'; });
+    document.addEventListener('click', e=>{ const b=e.target.closest('.copy-app'); if(b){ navigator.clipboard.writeText(b.dataset.url).then(()=>toast('앱 링크를 복사했습니다')).catch(()=>toast('복사 권한을 확인하거나 카드의 주소를 복사해주세요')); }});
+    loadApps().catch(()=>{ $('#refreshBtn').disabled=false; $('#resultLabel').textContent='목록을 불러오지 못했습니다. 목록 새로고침으로 다시 시도해주세요.'; });
   </script>
 </body>
 </html>
+

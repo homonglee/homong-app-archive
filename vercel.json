@@ -1,26 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91",
-      "destination": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/",
-      "permanent": false
-    },
-    {
-      "source": "/용담바둑",
-      "destination": "/용담바둑/",
-      "permanent": false
-    },
-    {
-      "source": "/yongdam-baduk",
-      "destination": "/용담바둑/",
-      "permanent": false
-    },
-    {
-      "source": "/yongdam-baduk/",
-      "destination": "/용담바둑/",
-      "permanent": false
-    },
-    {
       "source": "/question-36.5",
       "destination": "/question-36.5/",
       "permanent": false
@@ -73,11 +53,6 @@
     {
       "source": "/ocr-translator-app",
       "destination": "/ocr-translator-app/",
-      "permanent": false
-    },
-    {
-      "source": "/mastermind-page",
-      "destination": "/mastermind-page/",
       "permanent": false
     },
     {
@@ -196,6 +171,26 @@
       "permanent": false
     },
     {
+      "source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91",
+      "destination": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/",
+      "permanent": false
+    },
+    {
+      "source": "/용담바둑",
+      "destination": "/용담바둑/",
+      "permanent": false
+    },
+    {
+      "source": "/yongdam-baduk",
+      "destination": "/용담바둑/",
+      "permanent": false
+    },
+    {
+      "source": "/yongdam-baduk/",
+      "destination": "/용담바둑/",
+      "permanent": false
+    },
+    {
       "source": "/newsletter",
       "destination": "/newsletter/",
       "permanent": false
@@ -219,16 +214,8 @@
       "destination": "https://yongdam-baduk-homongs-projects.vercel.app/:path*"
     },
     {
-      "source": "/question-36.5/",
-      "destination": "/apps/question-36.5/index.html?slug=question-36.5"
-    },
-    {
       "source": "/question-36.5/assets/:path*",
       "destination": "/apps/question-36.5/assets/:path*"
-    },
-    {
-      "source": "/sky-racer-3d/",
-      "destination": "/apps/sky-racer-3d/index.html?slug=sky-racer-3d"
     },
     {
       "source": "/newsletter/s/:id",
@@ -287,6 +274,14 @@
       "destination": "https://schedule-share-link-generator.vercel.app/api/share-link"
     },
     {
+      "source": "/question-36.5/",
+      "destination": "/apps/question-36.5/index.html?slug=question-36.5"
+    },
+    {
+      "source": "/sky-racer-3d/",
+      "destination": "/apps/sky-racer-3d/index.html?slug=sky-racer-3d"
+    },
+    {
       "source": "/slide-3d/",
       "destination": "/app-shell.html?slug=slide-3d"
     },
@@ -321,10 +316,6 @@
     {
       "source": "/ocr-translator-app/",
       "destination": "/app-shell.html?slug=ocr-translator-app"
-    },
-    {
-      "source": "/mastermind-page/",
-      "destination": "/app-shell.html?slug=mastermind-page"
     },
     {
       "source": "/mood-playlist-linker/",

@@ -8,6 +8,8 @@ STATIC = ROOT / 'apps_static.json'
 PUBLIC_FIELDS = {
     'slug', 'name', 'description', 'category', 'icon', 'url', 'github',
     'mtime', 'hasLocalIndex', 'source', 'downloadUrl',
+    'primaryCategory', 'tags', 'collections', 'featuredRank', 'featuredReason', 'availability',
+    'quality', 'limitations', 'verification', 'contentUpdatedAt',
 }
 
 
@@ -30,3 +32,4 @@ class handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+

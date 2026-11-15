@@ -10,7 +10,36 @@
       "category": "게임/바둑",
       "mtime": 1794737621,
       "hasLocalIndex": false,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "games",
+      "tags": [
+        "게임/바둑"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "requires-setup",
+      "quality": "unreviewed",
+      "limitations": [
+        "이번 점검 환경에서 첫 착수 후 강화 엔진 준비 오류가 발생했습니다. 엔진 준비와 컴퓨터 응수 확인이 필요합니다.",
+        "오프라인·급단수별 기력·AI 복기 품질은 미검증입니다."
+      ],
+      "verification": {
+        "checkedAt": "2026-11-15",
+        "level": "interaction",
+        "passed": [
+          "바둑판 표시·키보드 첫 착수"
+        ],
+        "notTested": [
+          "오프라인",
+          "급단수별 기력",
+          "AI 복기"
+        ],
+        "issueRefs": [],
+        "failed": [
+          "이번 점검 환경에서 컴퓨터 응수 시 강화 엔진 준비 오류"
+        ]
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "question-36.5",
@@ -22,7 +51,28 @@
       "category": "문화/도서",
       "mtime": 1794568652,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "learning",
+      "tags": [
+        "문화/도서"
+      ],
+      "collections": [
+        "resources"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "sky-racer-3d",
@@ -34,7 +84,26 @@
       "category": "게임/레이싱",
       "mtime": 1793109240,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "games",
+      "tags": [
+        "게임/레이싱"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "slide-3d",
@@ -46,7 +115,28 @@
       "category": "교육/과학",
       "mtime": 1793095200,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "learning",
+      "tags": [
+        "교육/과학"
+      ],
+      "collections": [
+        "lab"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "taiji-in-flow",
@@ -58,7 +148,28 @@
       "category": "건강/수련",
       "mtime": 1792666800,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "learning",
+      "tags": [
+        "건강/수련"
+      ],
+      "collections": [
+        "resources"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "formbridge-excel",
@@ -69,7 +180,28 @@
       "category": "업무/생산성",
       "mtime": 1792368000,
       "hasLocalIndex": false,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "work",
+      "tags": [
+        "업무/생산성"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "대량 신청서 처리·OCR 정확도·실제 엑셀 결과물은 별도 확인이 필요합니다."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "camping-checklist",
@@ -81,7 +213,31 @@
       "github": "https://github.com/homonglee/camping-checklist",
       "mtime": 1788594904,
       "hasLocalIndex": false,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "life-finance",
+      "tags": [
+        "여행/캠핑"
+      ],
+      "collections": [],
+      "featuredRank": 1,
+      "availability": "available",
+      "quality": "basic-checked",
+      "limitations": [],
+      "verification": {
+        "checkedAt": "2026-11-15",
+        "level": "interaction",
+        "passed": [
+          "캠핑 조건 선택·목록 생성·체크 해제"
+        ],
+        "notTested": [
+          "품목 추가 저장",
+          "PDF·XLSX 결과물",
+          "장기 저장"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15",
+      "featuredReason": "캠핑 유형과 일정에 맞춰 준비물을 빠르게 정리하세요."
     },
     {
       "slug": "lotto-number-picker",
@@ -93,7 +249,28 @@
       "github": "https://github.com/homonglee/homong-app-archive",
       "mtime": 1788470851.2973828,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "games",
+      "tags": [
+        "게임/유틸"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "무작위 번호 생성 도구입니다. 당첨 확률을 높여주지 않습니다."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "gemini-notebook-video-style-picker",
@@ -103,9 +280,30 @@
       "icon": "🎬",
       "url": "https://homong-app.com/gemini-notebook-video-style-picker",
       "github": "https://github.com/homonglee/gemini-notebook-video-style-picker",
-      "mtime": 1787981154.0,
+      "mtime": 1787981154,
       "hasLocalIndex": false,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "content",
+      "tags": [
+        "영상/프롬프트"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "스타일과 프롬프트를 선택하는 도구입니다. 실제 영상 생성은 별도 서비스에서 진행합니다."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "memory-companion",
@@ -116,9 +314,32 @@
       "url": "https://homong-app.com/memory-companion",
       "github": "https://github.com/homonglee/memory-companion",
       "downloadUrl": "https://homong-app.com/assets/downloads/memory-companion-skill.zip",
-      "mtime": 1786776541.0,
+      "mtime": 1786776541,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "documents",
+      "tags": [
+        "AI/생산성"
+      ],
+      "collections": [
+        "lab"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "예시 날짜와 실제 약속을 구분하세요. 외부 서비스 연동과 장기 기억은 별도 확인이 필요합니다."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "newsletter-webzine",
@@ -130,7 +351,28 @@
       "github": "https://github.com/homonglee/newsletter-webzine",
       "mtime": 1786666660.6803455,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "content",
+      "tags": [
+        "글쓰기/생산성"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "편집·미리보기와 실제 발행·공유의 확인 범위는 다릅니다."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "youtube-timeline-summarizer",
@@ -142,7 +384,26 @@
       "github": "https://github.com/homonglee/youtube-timeline-summarizer",
       "mtime": 1783975558.608597,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "content",
+      "tags": [
+        "영상/요약"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "got-interactive-light",
@@ -154,7 +415,28 @@
       "github": "https://github.com/homonglee/got-interactive-guide",
       "mtime": 1783771637.7345507,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "learning",
+      "tags": [
+        "드라마/콘텐츠"
+      ],
+      "collections": [
+        "resources"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "schedule-share-link-generator",
@@ -166,7 +448,30 @@
       "github": "https://github.com/homonglee/schedule-share-link-generator",
       "mtime": 1783766047.073567,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "schedule",
+      "tags": [
+        "일정/생산성"
+      ],
+      "collections": [
+        "lab"
+      ],
+      "featuredRank": null,
+      "availability": "requires-setup",
+      "quality": "unreviewed",
+      "limitations": [
+        "실제 캘린더 연동에는 별도 설정이 필요합니다. 설정 전에는 데모 범위를 확인하세요."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "coffee-chat-icebreaker",
@@ -178,7 +483,26 @@
       "github": "https://github.com/homonglee/coffee-chat-icebreaker",
       "mtime": 1783756664.3125238,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "schedule",
+      "tags": [
+        "커뮤니케이션/네트워킹"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "60sec-speech-timer",
@@ -190,7 +514,30 @@
       "github": "https://github.com/homonglee/60sec-speech-timer",
       "mtime": 1783746203.5354693,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "content",
+      "tags": [
+        "발표/생산성"
+      ],
+      "collections": [],
+      "featuredRank": 4,
+      "availability": "available",
+      "quality": "basic-checked",
+      "limitations": [],
+      "verification": {
+        "checkedAt": "2026-11-15",
+        "level": "interaction",
+        "passed": [
+          "샘플 스크립트 생성·타이머 시작·일시정지·초기화"
+        ],
+        "notTested": [
+          "복사 권한",
+          "장기 저장"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15",
+      "featuredReason": "발표 초안을 만들고 60초 타이머로 연습하세요."
     },
     {
       "slug": "clipboard-pin-board",
@@ -202,7 +549,26 @@
       "github": "https://github.com/homonglee/clipboard-pin-board",
       "mtime": 1783724663.4143465,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "work",
+      "tags": [
+        "업무/생산성"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "batch-renamer-dropzone",
@@ -214,7 +580,28 @@
       "github": "https://github.com/homonglee/batch-renamer-dropzone",
       "mtime": 1783714679.5571456,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "work",
+      "tags": [
+        "파일/생산성"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "이름 변경 계획과 실제 파일명 변경을 구분하세요."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "ocr-translator-app",
@@ -226,7 +613,26 @@
       "github": "https://github.com/homonglee/ocr-translator-app",
       "mtime": 1783562134.5004418,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "work",
+      "tags": [
+        "OCR/번역"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "messenger-summary-tool",
@@ -238,7 +644,26 @@
       "github": "https://github.com/homonglee/messenger-summary-tool",
       "mtime": 1783545675.3639505,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "documents",
+      "tags": [
+        "문서/정리"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "receipt-expense-scanner",
@@ -250,7 +675,28 @@
       "github": "https://github.com/homonglee/receipt-expense-scanner",
       "mtime": 1783543301.2652338,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "life-finance",
+      "tags": [
+        "회계/지출"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "추출된 금액·일자·가맹점명과 저장 결과를 원본 영수증에 대조하세요."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "meeting-secretary-app",
@@ -262,7 +708,30 @@
       "github": "https://github.com/homonglee/meeting-secretary-app",
       "mtime": 1783520754.4340136,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "documents",
+      "tags": [
+        "회의/생산성"
+      ],
+      "collections": [
+        "lab"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "draft-output",
+      "limitations": [
+        "자동 정리 결과는 검토가 필요한 초안입니다. 결정 여부·담당자·날짜를 원문과 대조하세요."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "mood-playlist-linker",
@@ -274,7 +743,26 @@
       "github": "https://github.com/homonglee/mood-playlist-linker",
       "mtime": 1783460926.9062192,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "life-finance",
+      "tags": [
+        "음악/무드"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "url-qr-shortener-onepage",
@@ -286,7 +774,26 @@
       "github": "https://github.com/homonglee/linkly-one-url-qr",
       "mtime": 1783458078.6536965,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "work",
+      "tags": [
+        "마케팅/유틸"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "markdown-lite-editor",
@@ -298,7 +805,30 @@
       "github": "https://github.com/homonglee/markdown-lite-editor",
       "mtime": 1783438380.0708084,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "documents",
+      "tags": [
+        "글쓰기/생산성"
+      ],
+      "collections": [],
+      "featuredRank": 2,
+      "availability": "available",
+      "quality": "basic-checked",
+      "limitations": [],
+      "verification": {
+        "checkedAt": "2026-11-15",
+        "level": "interaction",
+        "passed": [
+          "문장 입력·제목과 본문 미리보기 반영"
+        ],
+        "notTested": [
+          "HTML·PDF 결과물",
+          "장기 저장"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15",
+      "featuredReason": "마크다운을 쓰면서 완성된 문서를 바로 확인하세요."
     },
     {
       "slug": "voice-memo-mindmap",
@@ -310,7 +840,26 @@
       "github": "https://github.com/homonglee/voice-memo-mindmap",
       "mtime": 1783434849.5263782,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "documents",
+      "tags": [
+        "음성/아이디어"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "subscription-dashboard",
@@ -322,7 +871,30 @@
       "github": "https://github.com/homonglee/subscription-dashboard",
       "mtime": 1783425520.3674626,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "life-finance",
+      "tags": [
+        "재무/대시보드"
+      ],
+      "collections": [
+        "lab"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "예시 결제일과 실제 결제일을 구분하세요. 금융 계정에 자동 연결되는지는 확인하지 않았습니다."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "micro-mood-journal",
@@ -334,7 +906,26 @@
       "github": "https://github.com/homonglee/micro-mood-journal",
       "mtime": 1783422474.7816103,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "life-finance",
+      "tags": [
+        "저널/감정"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "lunch-roulette",
@@ -346,19 +937,26 @@
       "github": "",
       "mtime": 1783376853.205225,
       "hasLocalIndex": true,
-      "source": "manual-registry"
-    },
-    {
-      "slug": "mastermind-page",
-      "name": "마스터마인드 인터랙티브 페이지",
-      "description": "나폴레온 힐의 마스터마인드 원리를 체험형 인터랙션으로 이해하고, 나에게 맞는 마스터마인드 그룹을 설계해보세요.",
-      "category": "학습/콘텐츠",
-      "icon": "🧠",
-      "url": "https://homong-app.com/mastermind-page",
-      "github": "https://github.com/homonglee/mastermind-page",
-      "mtime": 1783375187.0294108,
-      "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "schedule",
+      "tags": [
+        "팀/결정"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "namecard-memo-indexer",
@@ -370,7 +968,26 @@
       "github": "",
       "mtime": 1783372658.614792,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "documents",
+      "tags": [
+        "인맥/CRM"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "eisenhower-prioritizer",
@@ -382,7 +999,30 @@
       "github": "",
       "mtime": 1783349143.6975791,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "work",
+      "tags": [
+        "우선순위/생산성"
+      ],
+      "collections": [],
+      "featuredRank": 3,
+      "availability": "available",
+      "quality": "basic-checked",
+      "limitations": [],
+      "verification": {
+        "checkedAt": "2026-11-15",
+        "level": "interaction",
+        "passed": [
+          "합성 할 일 3개 입력·분류·실행 순서 생성"
+        ],
+        "notTested": [
+          "분류 정확도 평가",
+          "장기 저장"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15",
+      "featuredReason": "여러 할 일을 긴급도와 중요도로 나누어 살펴보세요."
     },
     {
       "slug": "hermes-agent-interactive-page",
@@ -394,7 +1034,30 @@
       "github": "",
       "mtime": 1783318401.8034267,
       "hasLocalIndex": true,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "learning",
+      "tags": [
+        "AI/소개"
+      ],
+      "collections": [
+        "resources"
+      ],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [
+        "에이전트 소개 자료입니다. 이 페이지 자체가 작업을 수행하는 에이전트는 아닙니다."
+      ],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "font-preview-board",
@@ -406,7 +1069,32 @@
       "github": "https://github.com/homonglee/font-preview-board",
       "mtime": 0,
       "hasLocalIndex": false,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "content",
+      "tags": [
+        "디자인/폰트"
+      ],
+      "collections": [],
+      "featuredRank": 5,
+      "availability": "available",
+      "quality": "basic-checked",
+      "limitations": [],
+      "verification": {
+        "checkedAt": "2026-11-15",
+        "level": "interaction",
+        "passed": [
+          "문장 변경·24개 폰트 미리보기·크기 34→48px 변경"
+        ],
+        "notTested": [
+          "모든 글꼴 실제 로딩",
+          "CSS 복사",
+          "즐겨찾기 지속성",
+          "라이선스 검토"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15",
+      "featuredReason": "같은 문장을 여러 한글 폰트와 크기로 비교하세요."
     },
     {
       "slug": "moa-ai-bookmark-manager",
@@ -418,7 +1106,26 @@
       "github": "https://github.com/homonglee/moa-ai-bookmark-manager",
       "mtime": 0,
       "hasLocalIndex": false,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "documents",
+      "tags": [
+        "AI/지식관리"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     },
     {
       "slug": "downdoc",
@@ -430,7 +1137,26 @@
       "github": "https://github.com/homonglee/downdoc",
       "mtime": 0,
       "hasLocalIndex": false,
-      "source": "manual-registry"
+      "source": "manual-registry",
+      "primaryCategory": "work",
+      "tags": [
+        "파일/생산성"
+      ],
+      "collections": [],
+      "featuredRank": null,
+      "availability": "unknown",
+      "quality": "unreviewed",
+      "limitations": [],
+      "verification": {
+        "checkedAt": null,
+        "level": null,
+        "passed": [],
+        "notTested": [
+          "주요 기능·저장·내보내기·외부 연동"
+        ],
+        "issueRefs": []
+      },
+      "contentUpdatedAt": "2026-11-15"
     }
   ]
 }

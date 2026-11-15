@@ -1,0 +1,51 @@
+용담바둑 neural engine — local/offline implementation notes
+
+1. Browser inference and MCTS implementation
+Upstream: https://github.com/Sir-Teo/web-katrain
+Pinned commit: a6a67d645048a996d606a410c4e4c4b1051ffd43
+License: MIT, see LICENSE.web-katrain.txt.
+Vendored source closure: src/neural/. Browser entry: src/neural/engine/katago/worker.ts.
+Local changes: asset URL resolution relative to bundled worker; explicit one-thread
+WASM baseline; Chinese rules adjusted to this app's area scoring, positional
+superko, no suicide, and no additional handicap compensation beyond user komi.
+Built by: npm ci && npm run build:neural
+This is a TypeScript implementation of KataGo neural architecture + PUCT/MCTS,
+not the original compiled native KataGo executable. Model strength is not a
+certified rank and search speed varies by device.
+
+2. Neural models
+Upstream: https://github.com/lightvector/KataGo/tree/master/cpp/tests/models
+License: MIT, see LICENSE.KataGo.txt (weights are original repository content).
+katago-b6.bin.gz = g170-b6c96-s175395328-d26788732.bin.gz
+katago-b10.bin.gz = g170e-b10c128-s1141046784-d204142634.bin.gz
+Model SHA-256 and byte size are in models.json.
+These are actual pretrained networks, not random/test-initialized parameters.
+
+3. TensorFlow.js 4.22.0 and WASM backend
+https://github.com/tensorflow/tfjs/tree/tfjs-v4.22.0
+Copyright Google LLC; Apache License 2.0. See LICENSE.TensorFlow.txt.
+Additional dependency copyright and license notices from the bundled JS are
+preserved in worker.js.LEGAL.txt (including pako/zlib components).
+WASM, SIMD WASM, and threaded SIMD WASM artifacts are copied unmodified from
+@tensorflow/tfjs-backend-wasm 4.22.0. Browser without cross-origin isolation uses
+single-thread SIMD when supported, otherwise ordinary single-thread WASM.
+
+4. pako 2.1.0
+https://github.com/nodeca/pako/tree/2.1.0
+MIT and zlib license, see LICENSE.pako.txt and bundled legal notices.
+
+5. Integration
+strong-engine.js retains a model worker between normal moves. Levels 4 and 5
+use b6; level 6 uses b10. Default limits: 32 / 96 / 256 MCTS visits, and
+2.2 / 5.5 / 12 seconds of search respectively. Root inference and first model
+warmup add overhead. The callback reports actual completed visits and backend.
+Only local static files are used; no remote inference or API key. Every selected
+move is rechecked by the application's own Go rules before use. Engine failures
+are reported, never silently replaced with the old heuristic engine.
+
+5. Human rank profiles
+KataGo b18c384nbt-humanv0.bin.gz from official v1.15.0 release.
+https://github.com/lightvector/KataGo/releases/tag/v1.15.0
+Official pretrained human model; attribution and upstream release retained. Browser code MIT.
+Sharded unchanged gzip bytes for static asset limits; SHA-256 in human-model.json.
+rank_18k through rank_9d predict human amateur play, not Korean server rating certification.

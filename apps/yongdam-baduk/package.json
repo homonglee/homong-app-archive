@@ -1,0 +1,22 @@
+{
+  "name": "yongdam-baduk",
+  "private": true,
+  "type": "module",
+  "version": "2.2.2",
+  "scripts": {
+    "build:neural": "node scripts/build-neural.mjs",
+    "test": "node --test tests/engine.test.mjs tests/offline.test.mjs tests/neural-adapter.test.mjs tests/strength-regression.mjs tests/review.test.mjs tests/human-ranks.test.mjs",
+    "build": "npm run build:neural && node scripts/build-shell.mjs && node scripts/check-release.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "build:archive": "node scripts/restore-assets.mjs && npm run build"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "4.22.0",
+    "@tensorflow/tfjs-backend-wasm": "4.22.0",
+    "@tensorflow/tfjs-backend-webgpu": "4.22.0",
+    "pako": "2.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.4"
+  }
+}

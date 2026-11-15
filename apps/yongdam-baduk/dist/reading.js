@@ -1,0 +1,3 @@
+const KEY='yongdam-reading-mode';
+function setMode(mode){const junior=mode==='junior';document.documentElement.dataset.reading=junior?'junior':'large';const button=document.getElementById('reading-mode');if(button){button.textContent=junior?'주니어 ⇄':'큰 글씨 ⇄';button.setAttribute('aria-pressed',String(!junior))}try{localStorage.setItem(KEY,JSON.stringify(junior?'junior':'large'))}catch{}}
+let mode='large';try{mode=JSON.parse(localStorage.getItem(KEY))||'large'}catch{}setMode(mode);document.getElementById('reading-mode')?.addEventListener('click',()=>setMode(document.documentElement.dataset.reading==='junior'?'large':'junior'));

@@ -1,0 +1,18 @@
+[
+  {
+    "file": "katago-b6.bin.gz",
+    "original_name": "g170-b6c96-s175395328-d26788732.bin.gz",
+    "source": "https://raw.githubusercontent.com/lightvector/KataGo/master/cpp/tests/models/g170-b6c96-s175395328-d26788732.bin.gz",
+    "sha256": "f5d32604e3675c480c7c8f6aa579a1ea857135628a0afccc8fa56330fbacd38d",
+    "bytes": 3827339,
+    "license": "MIT"
+  },
+  {
+    "file": "katago-b10.bin.gz",
+    "original_name": "g170e-b10c128-s1141046784-d204142634.bin.gz",
+    "source": "https://raw.githubusercontent.com/lightvector/KataGo/master/cpp/tests/models/g170e-b10c128-s1141046784-d204142634.bin.gz",
+    "sha256": "1a8e05a4ea3fca20dab79410cbb566c760767fcdd2fa0b701cfe259a84cc8b04",
+    "bytes": 11138361,
+    "license": "MIT"
+  }
+]

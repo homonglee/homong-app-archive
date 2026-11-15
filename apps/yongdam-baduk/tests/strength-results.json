@@ -1,0 +1,50 @@
+{
+  "summary": [
+    {
+      "neuralColor": 1,
+      "moves": 91,
+      "finished": true,
+      "elapsedMs": 24228,
+      "meanNeuralMs": 523,
+      "meanVisits": 24,
+      "score": {
+        "black": 73,
+        "white": 11.5,
+        "winner": 1,
+        "margin": 61.5
+      }
+    },
+    {
+      "neuralColor": 2,
+      "moves": 107,
+      "finished": true,
+      "elapsedMs": 26022,
+      "meanNeuralMs": 488,
+      "meanVisits": 24,
+      "score": {
+        "black": 7,
+        "white": 61.5,
+        "winner": 2,
+        "margin": 54.5
+      }
+    }
+  ],
+  "wins": 2,
+  "completed": 2,
+  "note": "Two 9x9 games only; not a rank calibration.",
+  "model": "g170-b10c128-s1141046784-d204142634",
+  "backend": "wasm",
+  "boardSize": 9,
+  "komi": 6.5,
+  "neuralVisitCap": 24,
+  "neuralTimeCapMs": 1000,
+  "opponent": "Original chooseMove(state,6) local heuristic",
+  "referenceCommit": "0d984088fd76d8e9e87aafe2520d3a987c164d26",
+  "date": "2026-11-15",
+  "caveats": [
+    "Only two games; not an Elo or kyu calibration.",
+    "The old heuristic keeps its random tie breaks.",
+    "Area scoring follows the app; no external adjudicator or manual dead-stone edits.",
+    "Wall-clock measurements are for this host, not a phone performance guarantee."
+  ]
+}

@@ -1,0 +1,18 @@
+import {createHash} from 'node:crypto';
+import {readFile,writeFile,readdir,stat} from 'node:fs/promises';
+import path from 'node:path';
+const pkg=JSON.parse(await readFile('package.json','utf8')),v=pkg.version;
+if(!/^\d+\.\d+\.\d+$/.test(v))throw new Error('Invalid release version');
+const replaceImports=s=>s.replace(/const APP_VERSION='[^']+';/,`const APP_VERSION='${v}';`).replaceAll("'./engine.js'",`'./engine-v${v}.js'`).replaceAll("'./strong-engine.js'",`'./strong-engine-v${v}.js'`).replaceAll("'./review-engine.js'",`'./review-engine-v${v}.js'`).replaceAll("'./ranks.js'",`'./ranks-v${v}.js'`);
+for(const f of ['engine','app','strong-engine','review-engine','ranks'])await writeFile(`dist/${f}-v${v}.js`,replaceImports(await readFile(`dist/${f}.js`,'utf8')));
+await writeFile(`dist/style-v${v}.css`,await readFile('dist/style.css'));
+let html=await readFile('dist/index.html','utf8');
+html=html.replace(/src="\.\/app(?:-v[\d.]+)?\.js"/,`src="./app-v${v}.js"`).replace(/href="\.\/style(?:-v[\d.]+)?\.css"/,`href="./style-v${v}.css"`).replace(/(<span id="app-version"[^>]*>)[^<]+/,`$1v${v}`).replace(/(<meta name="app-version" content=")[^"]+/,`$1${v}`).replace(/용담바둑 · v[\d.]+/g,`용담바둑 · v${v}`).replace(/용담바둑 v[\d.]+/g,`용담바둑 v${v}`).replace(/강화판 · v[\d.]+/g,`강화판 · v${v}`).replace(/강화판 v[\d.]+/g,`강화판 v${v}`);
+await writeFile('dist/index.html',html);
+let manual=await readFile('dist/manual.html','utf8');
+if(!manual.includes(`v${v}`)||!manual.includes(`content="${v}"`))throw new Error('Update the manual and release notes before building');
+const files=['./'];async function walk(dir){for(const name of (await readdir(dir)).sort()){const file=path.join(dir,name);if((await stat(file)).isDirectory())await walk(file);else if(name!=='sw.js')files.push('./'+path.relative('dist',file))}}await walk('dist');
+const hash=createHash('sha256');for(const f of files){if(f!=='./')hash.update(await readFile('dist/'+f.slice(2)))}const build=hash.digest('hex').slice(0,16);
+let sw=await readFile('dist/sw.js','utf8');sw=sw.replace(/const BUILD = '[^']*';\n?/,'');sw=sw.replace("const PREFIX =",`const BUILD = '${build}';\nconst PREFIX =`);sw=sw.replace(/const VERSION = '[^']+';/,`const VERSION = 'v${v}';`).replace(/const FILES = \[[\s\S]*?\];/,`const FILES = ${JSON.stringify(files,null,2)};`);await writeFile('dist/sw.js',sw);
+const required=['dist/favicon.ico','dist/favicon-32.png','dist/og-yongdam-walnut.png','dist/neural/NOTICE.txt'];for(const f of required)await stat(f);
+console.log(`Release ${v}: versioned shell and ${files.length} offline assets generated. Manual version matches.`);

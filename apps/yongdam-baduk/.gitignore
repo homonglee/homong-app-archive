@@ -1,0 +1,13 @@
+node_modules
+node_modules/
+.openai/*.local.*
+*.tar.gz
+dist/neural/*.gz
+dist/neural/*.part
+dist/neural/worker.js
+dist/neural/worker.js.LEGAL.txt
+dist/neural/tfjs/
+dist/*-v*.js
+dist/*-v*.css
+dist/*.png
+dist/*.ico

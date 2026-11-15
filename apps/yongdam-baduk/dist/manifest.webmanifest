@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "용담바둑",
+  "short_name": "용담바둑",
+  "description": "언제 어디서나, 나만의 바둑 한 판. 인터넷 없이 즐기는 컴퓨터 대국과 기보 복기.",
+  "lang": "ko-KR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eee7dc",
+  "theme_color": "#38271e",
+  "orientation": "any",
+  "categories": ["games", "education"],
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

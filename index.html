@@ -342,6 +342,10 @@
       state.filtered = state.apps.filter(a=>matches(a,state));
       if(state.sort==='latest') state.filtered.sort((a,b)=>sortTime(b)-sortTime(a));
       if(state.sort==='name') state.filtered.sort((a,b)=>(a.name||'').localeCompare(b.name||'', 'ko'));
+      if(state.category==='websites'){
+        const kojiIndex=state.filtered.findIndex(a=>a.slug==='kojibio');
+        if(kojiIndex>0) state.filtered.unshift(...state.filtered.splice(kojiIndex,1));
+      }
       renderApps();
     }
     function renderApps(){

@@ -41,3 +41,6 @@
 
 ## GitHub / Vercel 아카이브 배포
 이 복사본의 운영 주소는 https://homong-app.com/용담바둑 입니다. homong-app-archive 저장소의 apps/yongdam-baduk을 루트로 사용하는 Vercel yongdam-baduk 프로젝트에 배포합니다. Sites 원본의 project_id는 이 복사본에 추가하지 않습니다. 원본 배포와 이 복사본 배포의 버전 및 주소를 구분합니다. 모델·이미지는 npm run build:archive로 복원하고 출처 및 SHA256 검증을 유지합니다.
+
+## 대국실 표시 — 2026-11-15 사용자 변경 요청
+대국실에는 버전 번호와 엔진 출처 링크를 표시하지 않습니다. 버전은 package.json·메타데이터·서비스 워커·설명서에서 업데이트와 캐시 관리용으로 계속 유지합니다. 새 대국 시작 버튼은 바둑판 위 도구 모음에 배치하며 플레이어 이름은 ‘나’로 표시합니다.

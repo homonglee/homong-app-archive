@@ -2,7 +2,7 @@
   "name": "yongdam-baduk",
   "private": true,
   "type": "module",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "scripts": {
     "build:neural": "node scripts/build-neural.mjs",
     "test": "node --test tests/engine.test.mjs tests/offline.test.mjs tests/neural-adapter.test.mjs tests/strength-regression.mjs tests/review.test.mjs tests/human-ranks.test.mjs",

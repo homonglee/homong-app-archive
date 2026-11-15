@@ -1,15 +1,15 @@
 /* 용담바둑: every playing asset stays on this device after installation. */
-const VERSION = 'v2.3.1';
-const BUILD = '5d5211985fe8c31c';
+const VERSION = 'v2.3.2';
+const BUILD = '89ea7340bf4dc5a8';
 const PREFIX = 'yongdam-baduk-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
 const FILES = [
   "./",
   "./ai-worker.js",
-  "./app-v2.3.1.js",
+  "./app-v2.3.2.js",
   "./app.js",
-  "./engine-v2.3.1.js",
+  "./engine-v2.3.2.js",
   "./engine.js",
   "./favicon-32.png",
   "./favicon.ico",
@@ -40,14 +40,14 @@ const FILES = [
   "./neural/worker.js",
   "./neural/worker.js.LEGAL.txt",
   "./og-yongdam-walnut.png",
-  "./ranks-v2.3.1.js",
+  "./ranks-v2.3.2.js",
   "./ranks.js",
   "./reading.js",
-  "./review-engine-v2.3.1.js",
+  "./review-engine-v2.3.2.js",
   "./review-engine.js",
-  "./strong-engine-v2.3.1.js",
+  "./strong-engine-v2.3.2.js",
   "./strong-engine.js",
-  "./style-v2.3.1.css",
+  "./style-v2.3.2.css",
   "./style.css"
 ];
 const URLS = FILES.map(file => new URL(file, ROOT).href);

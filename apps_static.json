@@ -391,7 +391,7 @@
     {
       "slug": "youtube-timeline-summarizer",
       "name": "유튜브 타임라인 요약기",
-      "description": "유튜브 링크를 입력하면 영상 내용을 몇 줄로 요약하고, 핵심 주제별 타임스탬프와 챕터를 자동 생성해 복사·Markdown 내보내기까지 지원하는 1페이지 요약 도구.",
+      "description": "YouTube 자막을 발췌 요약하고 타임라인·Markdown을 만듭니다. 자동 자막이 차단되면 자막 붙여넣기·SRT/VTT/TXT 입력을 지원합니다.",
       "category": "영상/요약",
       "icon": "▶️",
       "url": "https://homong-app.com/youtube-timeline-summarizer",
@@ -405,20 +405,26 @@
       ],
       "collections": [],
       "featuredRank": null,
-      "availability": "unknown",
-      "quality": "unreviewed",
-      "limitations": [],
+      "availability": "requires-setup",
+      "quality": "draft-output",
+      "limitations": [
+        "배포 서버의 자동 자막 요청은 YouTube에서 차단됩니다. 자막 직접 입력·파일 요약은 사용 가능합니다.",
+        "결과는 원문 발췌 방식의 검토용 초안입니다. 시간 없는 원문에는 타임스탬프를 만들지 않습니다."
+      ],
       "verification": {
-        "checkedAt": null,
-        "level": null,
-        "passed": [],
-        "notTested": [
-          "주요 기능·저장·내보내기·외부 연동"
+        "checkedAt": "2026-11-16",
+        "level": "api-and-unit",
+        "passed": [
+          "배포 API에서 자막 직접 입력 후 실제 요약 응답 200 확인",
+          "SRT·VTT·복사 자막·시간 없는 원문 자동 검사",
+          "자동 자막 차단 시 503 안내 확인, 무관한 샘플 결과 대체 제거"
         ],
-        "issueRefs": []
+        "notTested": [
+          "영상 URL만으로 자동 자막 가져오기 성공"
+        ]
       },
-      "contentUpdatedAt": "2026-11-15",
-      "inputOutput": "영상 정보나 내용을 넣어 시간대별 요약을 정리합니다."
+      "contentUpdatedAt": "2026-11-16",
+      "inputOutput": "YouTube 링크와 자막을 넣으면 자막 발췌 요약·타임라인·Markdown을 만듭니다."
     },
     {
       "slug": "got-interactive-light",
@@ -792,8 +798,8 @@
     },
     {
       "slug": "url-qr-shortener-onepage",
-      "name": "Linkly One — URL 단축 & QR 생성기",
-      "description": "긴 URL을 즉시 짧은 링크와 다운로드 가능한 QR코드로 변환하는 1페이지 인터랙티브 앱",
+      "name": "Linkly One — 원본 링크 & QR 생성기",
+      "description": "입력한 원본 주소로 직접 연결되는 링크와 PNG·SVG QR을 만듭니다. UTM은 선택하여 추가할 수 있습니다.",
       "category": "마케팅/유틸",
       "icon": "🔗",
       "url": "https://homong-app.com/url-qr-shortener-onepage",
@@ -807,25 +813,31 @@
       ],
       "collections": [],
       "featuredRank": null,
-      "availability": "unknown",
-      "quality": "unreviewed",
-      "limitations": [],
+      "availability": "available",
+      "quality": "basic-checked",
+      "limitations": [
+        "기존 TinyURL 링크·QR은 바뀌지 않습니다. 새로 만들어 교체해야 합니다.",
+        "실제 휴대전화 스캔은 별도 확인이 필요합니다."
+      ],
       "verification": {
-        "checkedAt": null,
-        "level": null,
-        "passed": [],
-        "notTested": [
-          "주요 기능·저장·내보내기·외부 연동"
+        "checkedAt": "2026-11-16",
+        "level": "api-and-unit",
+        "passed": [
+          "배포 API에 실제 YouTube 주소를 입력해 원본 링크 반환 확인",
+          "열기·복사·QR 미리보기·PNG·SVG가 동일한 원본 주소를 사용하는 자동 검사",
+          "UTM 선택 적용 자동 검사"
         ],
-        "issueRefs": []
+        "notTested": [
+          "실제 휴대전화로 QR 스캔"
+        ]
       },
-      "contentUpdatedAt": "2026-11-15",
-      "inputOutput": "긴 인터넷 주소를 넣어 단축 주소와 QR 코드 만들기를 시도합니다."
+      "contentUpdatedAt": "2026-11-16",
+      "inputOutput": "웹 주소를 넣으면 중간 단축 사이트 없이 열리는 링크와 QR을 만듭니다."
     },
     {
       "slug": "markdown-lite-editor",
       "name": "Live Markdown Studio",
-      "description": "마크다운을 입력하면 우측에 실시간 웹 미리보기를 보여주고 HTML/PDF로 내보내는 초경량 에디터.",
+      "description": "Markdown 파일을 불러오고 실시간 미리보기와 함께 편집하며 MD 원문·HTML·PDF로 저장하는 에디터.",
       "category": "글쓰기/생산성",
       "icon": "✍️",
       "url": "https://homong-app.com/markdown-lite-editor",
@@ -846,22 +858,24 @@
         "checkedAt": "2026-11-15",
         "level": "interaction",
         "passed": [
-          "문장 입력·제목과 본문 미리보기 반영"
+          "문장 입력·제목과 본문 미리보기 반영",
+          "파일 불러오기·MD 원문 저장·한글 보존·취소·키보드 단축키 자동 검사"
         ],
         "notTested": [
           "HTML·PDF 결과물",
-          "장기 저장"
+          "장기 저장",
+          "파일 선택창을 통한 실제 불러오기·저장 재개방은 브라우저 자동화 연결 문제로 미완료"
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15",
+      "contentUpdatedAt": "2026-11-16",
       "featuredReason": "마크다운을 쓰면서 완성된 문서를 바로 확인하세요.",
-      "inputOutput": "마크다운을 입력하면 제목·목록·표가 반영된 문서를 바로 봅니다."
+      "inputOutput": "Markdown·텍스트 파일을 불러와 편집하고 MD 원문·HTML·PDF로 저장합니다."
     },
     {
       "slug": "voice-memo-mindmap",
       "name": "보이스 메모 마인드맵",
-      "description": "음성 아이디어를 텍스트로 정리하고 핵심어를 마인드맵으로 시각화하는 앱.",
+      "description": "마이크 녹음·재생·오디오 저장과 브라우저 음성 인식을 지원하고, 텍스트에서 핵심어와 마인드맵을 만듭니다. 실제 발화 전사 검증은 미완료입니다.",
       "category": "음성/아이디어",
       "icon": "🎙️",
       "url": "https://homong-app.com/voice-memo-mindmap",
@@ -877,18 +891,25 @@
       "featuredRank": null,
       "availability": "unknown",
       "quality": "unreviewed",
-      "limitations": [],
+      "limitations": [
+        "실제 마이크 녹음·발화 전사 정확도 검증은 브라우저 자동화 연결 문제로 미완료입니다.",
+        "전사는 브라우저 음성 서비스 연결이 필요합니다. 전사 실패 시 오디오는 별도로 녹음합니다.",
+        "녹음 파일은 새로고침 전에 저장해야 합니다. 샘플 텍스트는 실제 음성 시험이 아닙니다."
+      ],
       "verification": {
-        "checkedAt": null,
-        "level": null,
-        "passed": [],
-        "notTested": [
-          "주요 기능·저장·내보내기·외부 연동"
+        "checkedAt": "2026-11-16",
+        "level": "partial",
+        "passed": [
+          "기존 배포 화면에서 샘플 텍스트로 핵심어 14개·마인드맵 생성 확인",
+          "녹음·정지·파일 저장·권한 거부·전사 오류·연결 시간 초과 처리 자동 검사(음성 이벤트 모의)"
         ],
-        "issueRefs": []
+        "notTested": [
+          "실제 마이크 입력의 오디오 재생",
+          "실제 발화의 전사 정확도"
+        ]
       },
-      "contentUpdatedAt": "2026-11-15",
-      "inputOutput": "음성 메모를 입력해 내용을 마인드맵으로 정리합니다."
+      "contentUpdatedAt": "2026-11-16",
+      "inputOutput": "음성·텍스트 메모를 입력해 녹음 파일과 핵심어 마인드맵을 만듭니다."
     },
     {
       "slug": "subscription-dashboard",

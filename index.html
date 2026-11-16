@@ -1,8 +1,10 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <script src="/assets/archive-theme.js"></script>
   <link rel="icon" href="/assets/hoyeon-jijae-logo-flat.png" type="image/png" />
   <title>Homong's App Archive — 인터랙티브 앱 디렉토리</title>
   <meta name="description" content="그동안 만든 Homong의 원페이지 앱들을 검수 후 수동 등록해 아이콘, 이름, 설명, 실행 링크로 정리하는 인터랙티브 앱 아카이브." />
@@ -150,12 +152,13 @@
     @media(max-width:1050px){.nav-actions .pill{display:none}}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.toolbar{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.list .app-card{grid-template-columns:1fr}.list .actions{justify-content:start}.profile-card{grid-template-columns:220px 1fr;gap:26px;padding:26px}}@media(max-width:620px){.grid{grid-template-columns:1fr}.nav-inner{flex-wrap:wrap;gap:10px;padding:10px 0}.brand{width:100%}.nav-actions .pill,.nav-launch{display:none}.nav-actions{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.nav-actions .btn{width:100%;padding:10px 8px;font-size:13px;text-align:center}.toolbar{top:120px}.brand-title{font-size:21px;max-width:160px;display:block}.hero-banner{padding:22px 0 18px}.stats{grid-template-columns:1fr 1fr}.stat b{font-size:24px}.section-head{align-items:flex-start;flex-direction:column}.order-actions{width:100%;justify-content:stretch}.order-actions .btn{flex:1;padding-inline:10px}.profile-card{grid-template-columns:1fr;padding:20px}.profile-photo-wrap{max-width:230px}.profile-copy h2{font-size:38px}.profile-role{font-size:16px}.profile-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;padding:2px 0 10px}.profile-tab{width:100%;padding:11px 6px;font-size:12px;white-space:nowrap}.profile-panel{min-height:0}.profile-panel ul,.profile-panel ol{grid-template-columns:1fr}.book-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.book-meta{padding:10px}.book-title{font-size:12px}.profile-tab:last-child{grid-column:1/-1}.contact-shell{padding:24px 18px 20px}.contact-head h2{font-size:25px}.contact-form{grid-template-columns:1fr;gap:15px}.contact-field.full,.contact-actions,.contact-status{grid-column:1}.contact-actions{grid-template-columns:1fr}.contact-buttons{display:grid;grid-template-columns:1fr 1fr}.contact-reset,.contact-submit{width:100%;padding-inline:10px}}
   </style>
   <link rel="stylesheet" href="/assets/archive-discovery.css">
+  <link rel="stylesheet" href="/assets/archive-theme.css">
 </head>
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top"><img class="brand-logo" src="/assets/hoyeon-jijae-logo-flat.png" alt="호연지재 로고" width="40" height="40"><span class="brand-title">Homong's App Archive</span></a>
-      <div class="nav-actions"><a class="pill" href="#profile">이용호(호몽) 소개</a><button id="refreshBtn" class="pill">↻ 목록 새로고침</button><a class="btn nav-hovision" href="https://hovision.co.kr" target="_blank" rel="noopener noreferrer" aria-label="호연지재 홈페이지 새 창에서 열기">호연지재 홈페이지 ↗</a><button class="btn nav-inquiry contact-trigger" type="button">문의하기</button><a class="btn primary nav-launch" href="#apps">앱 실행하기</a></div>
+      <a class="brand" href="#top"><img class="brand-logo" src="/assets/hoyeon-jijae-logo-flat.png" alt="호연지재 로고" width="40" height="40"><span class="brand-title">Homong's App Archive</span><span id="siteVersion" class="version-badge" aria-label="사이트 버전 5.01">v5.01</span></a>
+      <div class="nav-actions"><a class="pill" href="#profile">이용호(호몽) 소개</a><button id="refreshBtn" class="pill">↻ 목록 새로고침</button><a class="btn nav-hovision" href="https://hovision.co.kr" target="_blank" rel="noopener noreferrer" aria-label="호연지재 홈페이지 새 창에서 열기">호연지재 홈페이지 ↗</a><button class="btn nav-inquiry contact-trigger" type="button">문의하기</button><a class="btn primary nav-launch" href="#apps">앱 실행하기</a><button id="themeToggle" class="theme-toggle" type="button" aria-label="라이트 모드로 전환" aria-pressed="false" title="라이트 모드로 전환"><span class="theme-dark"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.7 12.1A7 7 0 0 1 7.9 3.3a7 7 0 1 0 8.8 8.8Z"/></svg>Dark</span><span class="theme-light"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2"/><path d="M10 1v2m0 14v2M1 10h2m14 0h2M3.6 3.6 5 5m10 10 1.4 1.4M3.6 16.4 5 15M15 5l1.4-1.4"/></svg>Light</span></button><span id="themeStatus" class="sr-only" role="status" aria-live="polite"></span></div>
     </div>
   </header>
 

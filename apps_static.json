@@ -16,30 +16,33 @@
         "게임/바둑"
       ],
       "collections": [],
-      "featuredRank": null,
-      "availability": "requires-setup",
-      "quality": "unreviewed",
+      "featuredRank": 6,
+      "availability": "available",
+      "quality": "basic-checked",
       "limitations": [
-        "이번 점검 환경에서 첫 착수 후 강화 엔진 준비 오류가 발생했습니다. 엔진 준비와 컴퓨터 응수 확인이 필요합니다.",
-        "오프라인·급단수별 기력·AI 복기 품질은 미검증입니다."
+        "첫 실행에는 모델 준비와 컴퓨터 응수까지 시간이 걸릴 수 있습니다. 이번 시험의 첫 응수 수읽기 표시는 약 22초였습니다.",
+        "급단수별 기력·AI 복기 품질·실제 오프라인 대국은 별도 검증이 필요합니다."
       ],
       "verification": {
-        "checkedAt": "2026-11-15",
+        "checkedAt": "2026-11-16",
         "level": "interaction",
         "passed": [
-          "바둑판 표시·키보드 첫 착수"
+          "키보드 사용자 착수",
+          "컴퓨터 응수(2수 표시)",
+          "무르기(0수 복원)",
+          "도움 한 수(C4 힌트 표시)"
         ],
         "notTested": [
-          "오프라인",
           "급단수별 기력",
-          "AI 복기"
+          "AI 복기 품질",
+          "실제 네트워크 차단 후 대국"
         ],
-        "issueRefs": [],
-        "failed": [
-          "이번 점검 환경에서 컴퓨터 응수 시 강화 엔진 준비 오류"
-        ]
+        "failed": [],
+        "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-16",
+      "inputOutput": "바둑판에 한 수를 두면 컴퓨터가 응수하고, 무르기로 다시 연습합니다.",
+      "featuredReason": "한 수를 두고 컴퓨터 응수를 기다리며 바둑을 연습하세요."
     },
     {
       "slug": "question-36.5",
@@ -72,7 +75,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "책을 고르면 소설 소개와 모션 필름, 서점 구매 링크를 살펴봅니다."
     },
     {
       "slug": "sky-racer-3d",
@@ -103,7 +107,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "키보드와 마우스로 드론을 조종하며 3D 레이스 코스를 탐험합니다."
     },
     {
       "slug": "slide-3d",
@@ -136,7 +141,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "경사각·질량·마찰을 바꾸면 물체의 움직임을 3D로 관찰합니다."
     },
     {
       "slug": "taiji-in-flow",
@@ -169,7 +175,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "관심 주제를 고르면 태극권의 원리·문파·영상 자료를 찾아봅니다."
     },
     {
       "slug": "formbridge-excel",
@@ -201,7 +208,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "신청서 PDF를 넣어 내용을 검토하고 엑셀 양식 채우기를 진행합니다."
     },
     {
       "slug": "camping-checklist",
@@ -237,7 +245,8 @@
         "issueRefs": []
       },
       "contentUpdatedAt": "2026-11-15",
-      "featuredReason": "캠핑 유형과 일정에 맞춰 준비물을 빠르게 정리하세요."
+      "featuredReason": "캠핑 유형과 일정에 맞춰 준비물을 빠르게 정리하세요.",
+      "inputOutput": "인원·숙박 조건을 고르면 맞춤 준비물 목록을 만들고 체크합니다."
     },
     {
       "slug": "lotto-number-picker",
@@ -270,7 +279,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "추첨을 누르면 무작위 로또 번호 조합을 얻습니다."
     },
     {
       "slug": "gemini-notebook-video-style-picker",
@@ -303,7 +313,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "원하는 영상 스타일을 고르면 생성에 쓸 프롬프트를 얻습니다."
     },
     {
       "slug": "memory-companion",
@@ -328,6 +339,7 @@
       "availability": "unknown",
       "quality": "unreviewed",
       "limitations": [
+        "샘플 날짜가 포함되어 있습니다. 화면의 ‘오늘’·약속 날짜를 실제 일정과 대조하세요.",
         "예시 날짜와 실제 약속을 구분하세요. 외부 서비스 연동과 장기 기억은 별도 확인이 필요합니다."
       ],
       "verification": {
@@ -339,7 +351,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "메모와 약속을 입력해 기억할 내용과 일정을 정리합니다."
     },
     {
       "slug": "newsletter-webzine",
@@ -372,7 +385,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "소식과 글을 넣어 뉴스레터를 편집하고 미리 봅니다."
     },
     {
       "slug": "youtube-timeline-summarizer",
@@ -403,7 +417,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "영상 정보나 내용을 넣어 시간대별 요약을 정리합니다."
     },
     {
       "slug": "got-interactive-light",
@@ -436,7 +451,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "등장인물을 고르면 왕좌의 게임 인물 관계를 살펴봅니다."
     },
     {
       "slug": "schedule-share-link-generator",
@@ -457,10 +473,10 @@
         "lab"
       ],
       "featuredRank": null,
-      "availability": "requires-setup",
+      "availability": "demo",
       "quality": "unreviewed",
       "limitations": [
-        "실제 캘린더 연동에는 별도 설정이 필요합니다. 설정 전에는 데모 범위를 확인하세요."
+        "데모 일정으로 공유 화면을 살펴보는 앱입니다. 실제 Google 캘린더 연결은 별도 설정·복구가 필요합니다."
       ],
       "verification": {
         "checkedAt": null,
@@ -471,7 +487,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "데모 일정을 고르면 일정 공유 화면을 살펴봅니다."
     },
     {
       "slug": "coffee-chat-icebreaker",
@@ -502,7 +519,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "대화 상황을 고르면 커피챗에 쓸 질문을 추천받습니다."
     },
     {
       "slug": "60sec-speech-timer",
@@ -537,7 +555,8 @@
         "issueRefs": []
       },
       "contentUpdatedAt": "2026-11-15",
-      "featuredReason": "발표 초안을 만들고 60초 타이머로 연습하세요."
+      "featuredReason": "발표 초안을 만들고 60초 타이머로 연습하세요.",
+      "inputOutput": "발표 주제를 넣어 초안을 만들고 60초 타이머로 연습합니다."
     },
     {
       "slug": "clipboard-pin-board",
@@ -568,7 +587,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "자주 쓰는 문구를 저장해 필요할 때 찾아 복사합니다."
     },
     {
       "slug": "batch-renamer-dropzone",
@@ -601,7 +621,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "파일을 넣고 이름 규칙을 지정해 일괄 변경할 이름을 살펴봅니다."
     },
     {
       "slug": "ocr-translator-app",
@@ -632,7 +653,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "글자가 있는 화면 이미지를 넣어 텍스트 추출과 번역을 시도합니다."
     },
     {
       "slug": "messenger-summary-tool",
@@ -663,7 +685,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "메신저 대화 내용을 넣어 핵심 내용과 할 일을 정리합니다."
     },
     {
       "slug": "receipt-expense-scanner",
@@ -696,7 +719,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "영수증 이미지를 넣어 금액·일자 등 지출 정보를 정리합니다."
     },
     {
       "slug": "meeting-secretary-app",
@@ -731,7 +755,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "회의 내용을 넣으면 결정·할 일·담당자를 검토용 초안으로 정리합니다."
     },
     {
       "slug": "mood-playlist-linker",
@@ -762,7 +787,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "기분을 고르면 어울리는 플레이리스트 링크를 찾아봅니다."
     },
     {
       "slug": "url-qr-shortener-onepage",
@@ -793,7 +819,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "긴 인터넷 주소를 넣어 단축 주소와 QR 코드 만들기를 시도합니다."
     },
     {
       "slug": "markdown-lite-editor",
@@ -828,7 +855,8 @@
         "issueRefs": []
       },
       "contentUpdatedAt": "2026-11-15",
-      "featuredReason": "마크다운을 쓰면서 완성된 문서를 바로 확인하세요."
+      "featuredReason": "마크다운을 쓰면서 완성된 문서를 바로 확인하세요.",
+      "inputOutput": "마크다운을 입력하면 제목·목록·표가 반영된 문서를 바로 봅니다."
     },
     {
       "slug": "voice-memo-mindmap",
@@ -859,7 +887,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "음성 메모를 입력해 내용을 마인드맵으로 정리합니다."
     },
     {
       "slug": "subscription-dashboard",
@@ -883,6 +912,7 @@
       "availability": "unknown",
       "quality": "unreviewed",
       "limitations": [
+        "샘플 날짜가 포함되어 있습니다. 화면의 ‘오늘’·결제일을 실제 날짜와 대조하고 본인 정보로 바꿔 사용하세요.",
         "예시 결제일과 실제 결제일을 구분하세요. 금융 계정에 자동 연결되는지는 확인하지 않았습니다."
       ],
       "verification": {
@@ -894,7 +924,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "구독료와 결제일을 입력해 정기 지출과 결제 일정을 모아봅니다."
     },
     {
       "slug": "micro-mood-journal",
@@ -925,7 +956,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "기분과 하루 세 줄을 남겨 짧은 일상 기록을 쌓습니다."
     },
     {
       "slug": "lunch-roulette",
@@ -956,7 +988,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "점심 후보와 투표를 넣어 함께 먹을 메뉴를 고릅니다."
     },
     {
       "slug": "namecard-memo-indexer",
@@ -987,7 +1020,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "명함 사진과 메모를 넣어 연락처를 찾고 편집합니다."
     },
     {
       "slug": "eisenhower-prioritizer",
@@ -1022,7 +1056,8 @@
         "issueRefs": []
       },
       "contentUpdatedAt": "2026-11-15",
-      "featuredReason": "여러 할 일을 긴급도와 중요도로 나누어 살펴보세요."
+      "featuredReason": "여러 할 일을 긴급도와 중요도로 나누어 살펴보세요.",
+      "inputOutput": "할 일을 넣으면 긴급도와 중요도에 따라 우선순위를 나눕니다."
     },
     {
       "slug": "hermes-agent-interactive-page",
@@ -1057,7 +1092,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "소개 항목을 고르면 Hermes Agent의 개념과 활용법을 읽습니다."
     },
     {
       "slug": "font-preview-board",
@@ -1094,7 +1130,8 @@
         "issueRefs": []
       },
       "contentUpdatedAt": "2026-11-15",
-      "featuredReason": "같은 문장을 여러 한글 폰트와 크기로 비교하세요."
+      "featuredReason": "같은 문장을 여러 한글 폰트와 크기로 비교하세요.",
+      "inputOutput": "예시 문구를 넣으면 여러 한글 글꼴을 비교하고 즐겨찾습니다."
     },
     {
       "slug": "moa-ai-bookmark-manager",
@@ -1125,7 +1162,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "링크와 메모를 저장해 북마크 지식을 모아 찾습니다."
     },
     {
       "slug": "downdoc",
@@ -1156,7 +1194,8 @@
         ],
         "issueRefs": []
       },
-      "contentUpdatedAt": "2026-11-15"
+      "contentUpdatedAt": "2026-11-15",
+      "inputOutput": "다운로드 파일 목록을 넣어 폴더를 정리할 계획을 살펴봅니다."
     },
     {
       "slug": "rea",
@@ -1198,7 +1237,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "역설계 사례를 검색해 설명과 원본 출처를 살펴봅니다."
     },
     {
       "slug": "iktype",
@@ -1210,15 +1250,18 @@
       "url": "https://homong-app.com/iktype",
       "icon": "🏋️",
       "category": "제작홈페이지/트레이닝",
-      "primaryCategory": "websites",
+      "primaryCategory": "content",
       "tags": [
         "제작홈페이지/트레이닝",
         "이익재",
         "운동",
         "코칭",
-        "브랜드"
+        "브랜드",
+        "제작홈페이지"
       ],
-      "collections": [],
+      "collections": [
+        "websites"
+      ],
       "featuredRank": null,
       "availability": "available",
       "quality": "unreviewed",
@@ -1238,7 +1281,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "운동 분야를 고르면 이익재 코치의 프로그램과 활동을 살펴봅니다."
     },
     {
       "slug": "prompt-golden-key",
@@ -1279,7 +1323,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "프롬프트 주제를 고르면 작성 원리와 활용 자료를 읽습니다."
     },
     {
       "slug": "krcompany",
@@ -1291,7 +1336,7 @@
       "url": "https://homong-app.com/krcompany",
       "icon": "📷",
       "category": "기업/미디어",
-      "primaryCategory": "websites",
+      "primaryCategory": "content",
       "tags": [
         "기업/미디어",
         "나광열",
@@ -1301,7 +1346,9 @@
         "기업 홈페이지",
         "제작홈페이지"
       ],
-      "collections": [],
+      "collections": [
+        "websites"
+      ],
       "featuredRank": null,
       "availability": "available",
       "quality": "unreviewed",
@@ -1321,7 +1368,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "사진·영상·교육 항목을 고르면 KR컴퍼니의 제작 서비스를 살펴봅니다."
     },
     {
       "slug": "kojibio",
@@ -1333,15 +1381,18 @@
       "url": "https://homong-app.com/kojibio",
       "icon": "🌱",
       "category": "제작홈페이지/기업",
-      "primaryCategory": "websites",
+      "primaryCategory": "content",
       "tags": [
         "제작홈페이지/기업",
         "코지바이오",
         "발효",
         "바이오",
-        "기업"
+        "기업",
+        "제작홈페이지"
       ],
-      "collections": [],
+      "collections": [
+        "websites"
+      ],
       "featuredRank": null,
       "availability": "available",
       "quality": "unreviewed",
@@ -1361,7 +1412,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "제품과 발효 주제를 고르면 코지바이오의 기술과 제품을 살펴봅니다."
     },
     {
       "slug": "kabbu",
@@ -1373,16 +1425,19 @@
       "url": "https://homong-app.com/kabbu",
       "icon": "📚",
       "category": "제작홈페이지/인물",
-      "primaryCategory": "websites",
+      "primaryCategory": "content",
       "tags": [
         "제작홈페이지/인물",
         "성필원",
         "KABBU",
         "저술",
         "인문",
-        "인물"
+        "인물",
+        "제작홈페이지"
       ],
-      "collections": [],
+      "collections": [
+        "websites"
+      ],
       "featuredRank": null,
       "availability": "available",
       "quality": "unreviewed",
@@ -1402,7 +1457,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "활동 주제를 고르면 성필원의 저술과 공개 채널을 살펴봅니다."
     },
     {
       "slug": "hovision-ax-diagnosis",
@@ -1443,7 +1499,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "진단 질문에 답하며 회사의 AX 역량과 개선 방향을 살펴봅니다."
     },
     {
       "slug": "pm-skills-guide",
@@ -1486,7 +1543,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "공유 자료를 열어 PM 관련 스킬 안내를 살펴봅니다."
     },
     {
       "slug": "sangdojinsoo",
@@ -1498,16 +1556,19 @@
       "url": "https://homong-app.com/sangdojinsoo",
       "icon": "🏞️",
       "category": "제작홈페이지/인물",
-      "primaryCategory": "websites",
+      "primaryCategory": "content",
       "tags": [
         "제작홈페이지/인물",
         "상도",
         "이진수",
         "사진",
         "풍경",
-        "sangdojinsoo"
+        "sangdojinsoo",
+        "제작홈페이지"
       ],
-      "collections": [],
+      "collections": [
+        "websites"
+      ],
       "featuredRank": null,
       "availability": "available",
       "quality": "unreviewed",
@@ -1527,7 +1588,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "기록 항목을 고르면 이진수의 사진과 일상 이야기를 살펴봅니다."
     },
     {
       "slug": "kim-hyuk",
@@ -1539,16 +1601,19 @@
       "url": "https://homong-app.com/kim-hyuk",
       "icon": "🎡",
       "category": "제작홈페이지/인물",
-      "primaryCategory": "websites",
+      "primaryCategory": "content",
       "tags": [
         "제작홈페이지/인물",
         "김혁",
         "테마파크",
         "관광",
         "포트폴리오",
-        "kim-hyuk"
+        "kim-hyuk",
+        "제작홈페이지"
       ],
-      "collections": [],
+      "collections": [
+        "websites"
+      ],
       "featuredRank": null,
       "availability": "available",
       "quality": "unreviewed",
@@ -1568,7 +1633,8 @@
       },
       "contentUpdatedAt": "2026-11-16",
       "launchMode": "external",
-      "registeredAt": "2026-11-15T15:13:27.492Z"
+      "registeredAt": "2026-11-15T15:13:27.492Z",
+      "inputOutput": "경력과 프로젝트를 고르면 김혁의 테마파크 기획 활동을 살펴봅니다."
     }
   ]
 }

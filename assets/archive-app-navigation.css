@@ -1,0 +1,13 @@
+#shellToolbar{gap:8px;flex-wrap:wrap;min-height:56px;flex-basis:auto}
+#archiveHomeLink{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;gap:6px;min-height:40px;padding:0 14px;margin-right:auto;border:1px solid rgba(167,199,225,.4);border-radius:999px;background:rgba(255,255,255,.08);color:#edf6ff;text-decoration:none;font:750 13px/1.2 system-ui,-apple-system,'Malgun Gothic',sans-serif;white-space:nowrap;cursor:pointer;box-sizing:border-box}
+#archiveHomeLink:hover{background:rgba(255,255,255,.16)}
+#archiveHomeLink:focus-visible{outline:3px solid #55c5dd;outline-offset:3px}
+#usageNotice{order:3;flex:1 1 100%;margin:0 0 4px!important}
+[data-theme=light] #shellToolbar{background:#f8fbff;border-color:#d4dfec}
+[data-theme=light] #archiveHomeLink{background:#edf3fa;color:#344e70;border-color:#cbd9e9}
+[data-theme=light] #archiveHomeLink:hover{background:#e1ebf6}
+[data-theme=light] #usageNotice{color:#805818}
+.archive-return-native#archiveHomeLink{min-height:34px;margin:0;padding:8px 11px;background:#f2f6fb;color:#3c5d7e;border-color:#cbd9e9;font-size:12px}
+.sky-archive-home#archiveHomeLink{background:#142c42;color:#cffafe;border-color:#67e8f966;pointer-events:auto;min-height:34px;padding:8px;font-size:11px}
+@media(max-width:600px){#shellToolbar{padding-top:max(8px,env(safe-area-inset-top));padding-bottom:8px}#archiveHomeLink{min-height:36px;padding:0 10px;font-size:12px}#manualLink,#openAppLink{min-height:36px;padding-left:8px;padding-right:8px;font-size:11px}.header .header-inner{flex-wrap:wrap;gap:10px}.book-archive-home#archiveHomeLink{order:3;margin-left:auto}.sky-archive-home#archiveHomeLink{font-size:10px;padding:6px;min-height:32px}}
+@media print{#archiveHomeLink{display:none!important}}

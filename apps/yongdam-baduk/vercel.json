@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:archive",
+  "buildCommand": "npm run build:archive && npm test",
   "outputDirectory": "dist",
   "framework": null,
   "headers": [

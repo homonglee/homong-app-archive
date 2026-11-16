@@ -4,7 +4,8 @@ const reg=JSON.parse(fs.readFileSync(path.join(root,'apps_registry.json'),'utf8'
 const expected={rea:'https://rea.homong-app.com/',iktype:'https://iktype.com/','prompt-golden-key':'https://prompt-golden-key.homong-lee.chatgpt.site/',krcompany:'https://krcompany.vercel.app/',kojibio:'https://kojibio.com/',kabbu:'https://kabbu-homongs-projects.vercel.app/','hovision-ax-diagnosis':'https://hovision-ax-diagnosis.vercel.app/','pm-skills-guide':'https://claude.ai/artifact/5PdHceQC1WUKmpQZgPd9Un',sangdojinsoo:'https://sangdojinsoo-homongs-projects.vercel.app/','kim-hyuk':'https://kim-hyuk-story-2026.homong-lee.chatgpt.site/'};
 for(const [slug,url] of Object.entries(expected)){
   assert.equal(reg[slug].deploymentUrl,url);assert.equal(reg[slug].launchMode,'external');
-  assert.ok(config.redirects.some(r=>r.source==='/'+slug+'/'&&r.destination===url));
+  assert.ok(config.rewrites.some(r=>r.source==='/'+slug+'/'&&r.destination==='/external-app-shell.html?slug='+slug));
+  assert.ok(!config.redirects.some(r=>r.source==='/'+slug+'/'));
   assert.ok(fs.existsSync(path.join(root,'manuals',slug+'.html')));
 }
 const websites=Object.keys(reg).filter(s=>reg[s].collections.includes('websites'));

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <script src="/assets/archive-theme.js"></script>
   <link rel="icon" href="/assets/hoyeon-jijae-logo-flat.png" type="image/png" />
   <meta name="robots" content="noindex, follow, max-image-preview:large" />
   <title>Homong App — AI 시대를 위한 앱 아카이브</title>
@@ -54,9 +55,11 @@
     #manualLink{flex-shrink:0}
     @media(max-width:600px){#shellToolbar{align-items:flex-start;flex-wrap:wrap;gap:8px}#usageNotice{flex:1 1 100%;font-size:12px}}
   </style>
+  <link rel="stylesheet" href="/assets/archive-app-navigation.css">
 </head>
 <body>
   <header id="shellToolbar" aria-label="앱 도구 모음">
+    <a id="archiveHomeLink" href="https://homong-app.com/" target="_top" aria-label="아카이브 홈으로 돌아가기">← 아카이브 홈</a>
     <p id="usageNotice" role="note" hidden></p>
     <a id="manualLink" href="#" aria-label="현재 앱 사용설명서 열기">📖 사용설명서</a>
   </header>

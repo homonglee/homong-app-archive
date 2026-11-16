@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <script src="/assets/archive-theme.js"></script>
   <link rel="icon" href="https://formbridge-excel.vercel.app/favicon.ico" />
   <meta name="robots" content="noindex, follow, max-image-preview:large" />
   <title>폼브릿지 — 신청서 엑셀 자동입력</title>
@@ -51,9 +52,11 @@
     }
     @media print { #shellToolbar { display: none; } }
   </style>
+  <link rel="stylesheet" href="/assets/archive-app-navigation.css">
 </head>
 <body>
   <header id="shellToolbar" aria-label="앱 도구 모음">
+    <a id="archiveHomeLink" href="https://homong-app.com/" target="_top" aria-label="아카이브 홈으로 돌아가기">← 아카이브 홈</a>
     <a id="openAppLink" href="https://formbridge-excel.vercel.app/" target="_blank" rel="noopener">앱 직접 열기 ↗</a>
     <a id="manualLink" href="https://formbridge-excel.vercel.app/manual.html" target="_blank" rel="noopener" aria-label="현재 앱 사용설명서 열기">📖 사용설명서</a>
   </header>

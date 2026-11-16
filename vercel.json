@@ -176,18 +176,8 @@
       "permanent": false
     },
     {
-      "source": "/rea/",
-      "destination": "https://rea.homong-app.com/",
-      "permanent": false
-    },
-    {
       "source": "/iktype",
       "destination": "/iktype/",
-      "permanent": false
-    },
-    {
-      "source": "/iktype/",
-      "destination": "https://iktype.com/",
       "permanent": false
     },
     {
@@ -196,18 +186,8 @@
       "permanent": false
     },
     {
-      "source": "/prompt-golden-key/",
-      "destination": "https://prompt-golden-key.homong-lee.chatgpt.site/",
-      "permanent": false
-    },
-    {
       "source": "/krcompany",
       "destination": "/krcompany/",
-      "permanent": false
-    },
-    {
-      "source": "/krcompany/",
-      "destination": "https://krcompany.vercel.app/",
       "permanent": false
     },
     {
@@ -216,18 +196,8 @@
       "permanent": false
     },
     {
-      "source": "/kojibio/",
-      "destination": "https://kojibio.com/",
-      "permanent": false
-    },
-    {
       "source": "/kabbu",
       "destination": "/kabbu/",
-      "permanent": false
-    },
-    {
-      "source": "/kabbu/",
-      "destination": "https://kabbu-homongs-projects.vercel.app/",
       "permanent": false
     },
     {
@@ -236,18 +206,8 @@
       "permanent": false
     },
     {
-      "source": "/hovision-ax-diagnosis/",
-      "destination": "https://hovision-ax-diagnosis.vercel.app/",
-      "permanent": false
-    },
-    {
       "source": "/pm-skills-guide",
       "destination": "/pm-skills-guide/",
-      "permanent": false
-    },
-    {
-      "source": "/pm-skills-guide/",
-      "destination": "https://claude.ai/artifact/5PdHceQC1WUKmpQZgPd9Un",
       "permanent": false
     },
     {
@@ -256,18 +216,8 @@
       "permanent": false
     },
     {
-      "source": "/sangdojinsoo/",
-      "destination": "https://sangdojinsoo-homongs-projects.vercel.app/",
-      "permanent": false
-    },
-    {
       "source": "/kim-hyuk",
       "destination": "/kim-hyuk/",
-      "permanent": false
-    },
-    {
-      "source": "/kim-hyuk/",
-      "destination": "https://kim-hyuk-story-2026.homong-lee.chatgpt.site/",
       "permanent": false
     },
     {
@@ -508,6 +458,46 @@
     {
       "source": "/formbridge-excel/",
       "destination": "/formbridge-excel-shell.html?slug=formbridge-excel"
+    },
+    {
+      "source": "/rea/",
+      "destination": "/external-app-shell.html?slug=rea"
+    },
+    {
+      "source": "/iktype/",
+      "destination": "/external-app-shell.html?slug=iktype"
+    },
+    {
+      "source": "/prompt-golden-key/",
+      "destination": "/external-app-shell.html?slug=prompt-golden-key"
+    },
+    {
+      "source": "/krcompany/",
+      "destination": "/external-app-shell.html?slug=krcompany"
+    },
+    {
+      "source": "/kojibio/",
+      "destination": "/external-app-shell.html?slug=kojibio"
+    },
+    {
+      "source": "/kabbu/",
+      "destination": "/external-app-shell.html?slug=kabbu"
+    },
+    {
+      "source": "/hovision-ax-diagnosis/",
+      "destination": "/external-app-shell.html?slug=hovision-ax-diagnosis"
+    },
+    {
+      "source": "/pm-skills-guide/",
+      "destination": "/external-app-shell.html?slug=pm-skills-guide"
+    },
+    {
+      "source": "/sangdojinsoo/",
+      "destination": "/external-app-shell.html?slug=sangdojinsoo"
+    },
+    {
+      "source": "/kim-hyuk/",
+      "destination": "/external-app-shell.html?slug=kim-hyuk"
     }
   ]
 }

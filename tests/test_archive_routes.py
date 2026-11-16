@@ -36,8 +36,8 @@ class ArchiveRouteTests(unittest.TestCase):
                     continue
                 self.assertEqual(redirects[f"/{slug}"]["destination"], f"/{slug}/")
                 if app.get("launchMode") == "external":
-                    self.assertEqual(redirects[f"/{slug}/"]["destination"], app["deploymentUrl"])
-                    self.assertNotIn(f"/{slug}/", rewrites)
+                    self.assertNotIn(f"/{slug}/", redirects)
+                    self.assertEqual(rewrites[f"/{slug}/"]["destination"], f"/external-app-shell.html?slug={slug}")
                     continue
                 self.assertIn(f"/{slug}/", rewrites)
 

@@ -126,7 +126,7 @@ footer{bottom:max(12px,env(safe-area-inset-bottom))!important;padding-left:max(1
 @media(max-height:500px) and (orientation:landscape){header{grid-template-columns:1fr auto!important;gap:4px!important;padding:6px!important}header>div:first-child{min-height:48px;width:auto;padding:6px 110px 6px 8px!important}header>div:first-child p,header #status-badge{display:none!important}header>div:nth-child(2){grid-column:2;width:auto;margin:0 115px 0 0;padding:4px 10px!important;gap:12px!important}header>div:nth-child(3){grid-column:1/-1;width:auto;justify-self:center;padding:4px!important}header h1{font-size:13px!important}.help-button{top:9px!important;right:max(10px,env(safe-area-inset-right))!important}header button{min-height:40px;padding:8px!important}#customizer-panel{top:116px!important;width:215px!important}#customizer-body{max-height:calc(100dvh - 190px)}aside:not(#customizer-panel){display:none}#mouse-controls{max-width:100%;align-items:flex-end}footer>div:last-child{display:none}.touch-btn{min-height:44px;min-width:48px;height:44px!important}#mouse-controls>div{padding:5px;gap:4px}#help-dialog{max-height:90dvh;padding:16px}}
 #btn-toggle-customizer{flex-shrink:0;white-space:nowrap;min-width:48px;min-height:44px}
 </style>
-</head>
+<link rel="stylesheet" href="/assets/archive-app-navigation.css"></head>
 <body class="text-white relative">
 <dialog id="help-dialog" aria-labelledby="help-title">
  <div class="help-top"><h2 id="help-title">SKY RACER 3D 사용설명서</h2><button id="help-close" aria-label="사용설명서 닫기">✕</button></div>
@@ -186,7 +186,7 @@ footer{bottom:max(12px,env(safe-area-inset-bottom))!important;padding-left:max(1
             </div>
             <div>
                 <div class="flex items-center gap-2">
-                    <h1 class="font-extrabold text-sm md:text-base tracking-tight text-white">SKY RACER 3D <span id="app-version" class="version">v1.0.4</span></h1>
+                    <h1 class="font-extrabold text-sm md:text-base tracking-tight text-white">SKY RACER 3D <span id="app-version" class="version">v1.0.4</span></h1><a id="archiveHomeLink" class="archive-return-native sky-archive-home" href="https://homong-app.com/" target="_top" aria-label="아카이브 홈으로 돌아가기">← 아카이브 홈</a>
                     <span id="status-badge" class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40">대기 및 360° 관찰</span>
                 </div>
                 <p class="text-[11px] text-slate-300 hidden sm:block">Start로 출발 · 화면 드래그로 조종 · 버튼을 누르고 있으면 가속/감속</p>

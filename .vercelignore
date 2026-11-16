@@ -1,6 +1,6 @@
 # Internal archive metadata and development-only files
 apps_registry.json
 server.py
-tests/
+/tests/
 /scripts/
 README.md

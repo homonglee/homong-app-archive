@@ -7,7 +7,7 @@
   }
   function matches(a,{query='',category='all',collection='all'}={}){
     const text=[a.name,a.description,a.inputOutput,a.slug,a.category,label(a.primaryCategory),...(a.tags||[])].join(' ').toLocaleLowerCase('ko');
-    return (category==='all'||a.primaryCategory===category)&&(collection==='all'||(a.collections||[]).includes(collection))&&text.includes(query.trim().toLocaleLowerCase('ko'));
+    return (category==='all'||(category==='websites'?(a.collections||[]).includes('websites'):a.primaryCategory===category))&&(collection==='all'||(a.collections||[]).includes(collection))&&text.includes(query.trim().toLocaleLowerCase('ko'));
   }
   function featured(apps){
     return apps.filter(a=>Number.isInteger(a.featuredRank)&&a.featuredRank>=1&&a.featuredRank<=6&&a.availability==='available'&&a.quality==='basic-checked'&&a.verification?.checkedAt&&a.verification?.passed?.length).sort((a,b)=>a.featuredRank-b.featuredRank).slice(0,6);

@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="/assets/hoyeon-jijae-logo-flat.png" type="image/png" />
-  <title>호몽의 앱 모음 — 지금 하고 싶은 일로 찾기</title>
-  <meta name="description" content="업무 자동화부터 문서·발표·일상·배움과 놀이까지. 바로 써볼 앱 6개와 7개 목적별 분류로 찾는 호몽의 앱 모음." />
+  <title>Homong's App Archive — 인터랙티브 앱 디렉토리</title>
+  <meta name="description" content="그동안 만든 Homong의 원페이지 앱들을 검수 후 수동 등록해 아이콘, 이름, 설명, 실행 링크로 정리하는 인터랙티브 앱 아카이브." />
   <link rel="canonical" href="https://homong-app.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ko_KR" />
@@ -160,37 +160,6 @@
   </header>
 
 
-  <main id="top" class="wrap">
-    <section class="hero-banner" aria-label="Homong's App Archive 소개">
-      <div class="hero-copy"><div class="eyebrow">IDEAS INTO EVERYDAY TOOLS</div><h1>지금, 어떤 일을<br><span class="grad">하고 싶으세요?</span></h1><p>할 일을 정리하고, 글을 쓰고, 잠깐 쉬어가세요.<br>호몽이 만든 도구를 목적에 맞게 골라 바로 시작하세요.</p></div>
-      <img src="/assets/homong-app-social-preview-v2.jpg" alt="아이디어를 앱으로, 한곳에서 바로 실행 — Homong's App Archive 소개 배너" width="1280" height="427" fetchpriority="high">
-    </section>
-
-    <section id="featured" class="featured-section" aria-labelledby="featuredTitle" hidden>
-      <div class="discovery-heading"><div><span class="eyebrow">HOMONG'S PICKS</span><h2 id="featuredTitle">바로 써볼 만한 앱 6개</h2><p>편집자가 고른 추천입니다. 확인 범위와 이용 안내를 함께 살펴보세요.</p></div><a class="feature-link" href="#apps">전체 앱 찾기 ↓</a></div>
-      <div id="featuredGrid" class="featured-grid"></div>
-    </section>
-    <div id="loadNotice" class="load-notice" role="status" hidden></div>
-    <section id="apps" class="toolbar discovery-controls" aria-label="앱 검색 및 분류"><div class="search-row">
-      <label class="search"><span>⌕</span><input id="searchInput" aria-label="앱 검색" placeholder="앱 이름·하고 싶은 일·태그로 검색" autocomplete="off" /></label>
-      <div class="toggle" aria-label="보기 방식"><button id="gridBtn" class="active" aria-pressed="true">그리드</button><button id="listBtn" aria-pressed="false">리스트</button></div></div>
-      <div class="category-heading">7가지 목적별로 찾아보세요</div><div id="categoryButtons" class="category-buttons" role="group" aria-label="목적별 카테고리"></div>
-      <div id="activeCollection" class="active-collection" hidden><span></span><button class="mini" data-collection="all" aria-pressed="true">전체 앱으로 돌아가기</button></div>
-    </section>
-
-
-    <div class="section-head"><div><h2 id="catalogTitle">전체 앱</h2><p id="resultLabel" role="status">목록을 불러오는 중...</p><p class="order-note">추천 앱의 순서는 고정됩니다. 내 순서는 이 브라우저에만 저장됩니다.</p></div><div class="order-actions"><label class="sort-label" for="sortSelect">목록 순서<select id="sortSelect" class="select"><option value="recommended">편집자 추천순</option><option value="latest">최신순</option><option value="name">이름순</option><option value="custom">내 저장 순서</option></select></label><button id="reorderBtn" class="btn" aria-pressed="false">↕ 내 순서 편집</button><button id="resetOrderBtn" class="btn" hidden>내 순서 초기화</button></div></div>
-    <section id="appGrid" class="grid" aria-live="polite" aria-label="앱 순서 편집"></section>
-    <div id="empty" class="empty">검색 결과가 없습니다. 다른 키워드나 목적을 선택해보세요.<button class="btn" id="clearFilters">검색·필터 초기화</button></div>
-
-    <section id="collections" class="collections-section" aria-labelledby="collectionsTitle">
-      <div class="discovery-heading"><div><h2 id="collectionsTitle">실험실·자료실</h2><p>데모와 학습 실험, 읽을거리, 제작한 홈페이지도 따로 모았습니다.</p></div></div>
-      <div class="collection-cards" role="group" aria-label="앱 모음 선택">
-        <button class="collection-card" data-collection="lab" aria-pressed="false"><span aria-hidden="true">🧪</span><strong>실험실</strong><small>데모·검토용 초안·학습 실험</small><b data-count="lab"></b></button>
-        <button class="collection-card" data-collection="resources" aria-pressed="false"><span aria-hidden="true">📚</span><strong>자료실</strong><small>소개·참고 자료와 읽을거리</small><b data-count="resources"></b></button>
-        <button class="collection-card" data-collection="websites" aria-pressed="false"><span aria-hidden="true">🌐</span><strong>제작홈페이지</strong><small>코지바이오부터 다양한 제작 사례</small><b data-count="websites"></b></button>
-      </div><p class="collection-note">각 모음의 항목은 전체 목록에도 포함됩니다.</p>
-    </section>
   <section id="books-showcase" class="books-showcase" aria-label="이용호 저서 슬라이드" aria-roledescription="캐러셀">
     <div class="wrap books-layout"><div class="books-heading"><span class="books-eyebrow">BOOKS BY LEE YONGHO</span><h2>이용호의 저서</h2><p>생각을 넓히는 네 권의 이야기</p></div>
     <div class="books-viewport"><div class="books-track"><article class="book-slide" role="group" aria-roledescription="슬라이드" aria-label="1 / 4">
@@ -208,6 +177,25 @@
                 </article></div></div>
     <div class="books-controls"><div class="books-arrows"><button id="bookPrev" aria-label="이전 저서">←</button><button id="bookPause" aria-label="자동 슬라이드 일시정지" aria-pressed="false">Ⅱ</button><button id="bookNext" aria-label="다음 저서">→</button></div><div class="book-dots" aria-label="저서 선택"><button data-book-slide="0" aria-label="질문의 온도 36.5도 보기" aria-current="true"></button><button data-book-slide="1" aria-label="프롬프트 엔지니어링 황금키 보기" aria-current="false"></button><button data-book-slide="2" aria-label="손에 잡히는 인공지능 보기" aria-current="false"></button><button data-book-slide="3" aria-label="나는 시니어 인플루언서다 보기" aria-current="false"></button></div><span id="bookSlideCount" class="book-slide-count" aria-live="off">01 / 04</span></div></div>
   </section>
+  <main id="top" class="wrap">
+    <section class="hero-banner" aria-label="Homong's App Archive 소개">
+      <div class="hero-copy"><div class="eyebrow">IDEAS INTO EVERYDAY TOOLS</div><h1>업무와 일상에 바로 쓰는<br><span class="grad">호몽의 앱 모음</span></h1><p>기록부터 업무 자동화, 배움과 놀이까지.<br>하고 싶은 일로 찾고, 확인된 범위를 살펴본 뒤 실행하세요.</p></div>
+      <img src="/assets/homong-app-social-preview-v2.jpg" alt="아이디어를 앱으로, 한곳에서 바로 실행 — Homong's App Archive 소개 배너" width="1280" height="427" fetchpriority="high">
+    </section>
+
+    <div id="loadNotice" class="load-notice" role="status" hidden></div>
+    <section id="apps" class="toolbar discovery-controls" aria-label="앱 검색 및 분류"><div class="search-row">
+      <label class="search"><span>⌕</span><input id="searchInput" aria-label="앱 검색" placeholder="앱 이름·하고 싶은 일·태그로 검색" autocomplete="off" /></label>
+      <div class="toggle" aria-label="보기 방식"><button id="gridBtn" class="active" aria-pressed="true">그리드</button><button id="listBtn" aria-pressed="false">리스트</button></div></div>
+      <div class="category-heading">어떤 일을 하고 싶으세요?</div><div id="categoryButtons" class="category-buttons" role="group" aria-label="목적별 카테고리"></div>
+    <div class="collection-tabs" role="group" aria-label="앱 모음 선택"><button class="pill" data-collection="all" aria-pressed="true">전체 앱</button><button class="pill" data-collection="lab" aria-pressed="false">실험실</button><button class="pill" data-collection="resources" aria-pressed="false">자료실</button></div><p id="collectionNote" class="collection-note">실험실은 데모·초안·학습 실험, 자료실은 읽고 살펴보는 콘텐츠를 모았습니다. 같은 앱은 전체 목록에도 있습니다.</p>
+    </section>
+
+
+    <div class="section-head"><div><h2>앱 디렉토리</h2><p id="resultLabel" role="status">목록을 불러오는 중...</p></div><div class="order-actions"><button id="sortBtn" class="btn">최신순</button><button id="reorderBtn" class="btn" aria-pressed="false">↕ 순서 편집</button><button id="resetOrderBtn" class="btn" hidden>순서 초기화</button></div></div>
+    <section id="appGrid" class="grid" aria-live="polite" aria-label="앱 순서 편집"></section>
+    <div id="empty" class="empty">검색 결과가 없습니다. 다른 키워드나 목적을 선택해보세요.<button class="btn" id="clearFilters">검색·필터 초기화</button></div>
+
     <details id="profile" class="profile-section profile-disclosure"><summary><img src="/profile-lee-yongho.jpg" alt="" width="52" height="60" loading="lazy"><span><strong>이용호(호몽) · 만든 사람 소개</strong><small>강사소개 · 강의분야 · 주요강의기관 · 저서 · 연락처·회사</small></span></summary>
       <div class="profile-card">
         <figure class="profile-photo-wrap">
@@ -300,7 +288,7 @@
   <script src="/assets/archive-discovery.js"></script>
   <script>
     const ORDER_KEY = 'homong-app-card-order-v1';
-    const state = { apps: [], filtered: [], category: 'all', collection: 'all', query: '', list: false, sort: 'recommended', reordering: false, draggedSlug: '' };
+    const state = { apps: [], filtered: [], category: 'all', collection: 'all', query: '', list: false, sort: 'latest', reordering: false, draggedSlug: '' };
     const { safeReadOrder, safeWriteOrder, safeRemoveOrder, mergeVisibleOrder, moveBeforeOrAfter, moveToEdge } = ArchiveOrder;
     const $ = sel => document.querySelector(sel);
     const grid = $('#appGrid'), empty = $('#empty');
@@ -325,9 +313,9 @@
         catch{ $('#resultLabel').textContent='앱 목록을 불러오지 못했습니다. 상단의 목록 새로고침으로 다시 시도해주세요.';$('#refreshBtn').disabled=false;return; }
       }
       $('#refreshBtn').disabled=false;
-      state.sort = savedOrder().length ? 'custom' : 'recommended';
+      state.sort = savedOrder().length ? 'custom' : 'latest';
       state.apps = applySavedOrder(apps.sort((a,b)=>sortTime(b)-sortTime(a)));
-      hydrateCategories(); renderFeatured(); updateSortLabel(); applyFilters();
+      hydrateCategories(); updateSortLabel(); applyFilters();
     }
     function savedOrder(){ return safeReadOrder(storage(), ORDER_KEY); }
     function applySavedOrder(apps){ return ArchiveOrder.applySavedOrder(apps, savedOrder()); }
@@ -337,43 +325,27 @@
       if(!saved) toast('순서는 변경됐지만 브라우저에 저장하지 못했습니다');
       return saved;
     }
-    function updateSortLabel(){ $('#sortSelect').value=state.sort; $('#sortSelect option[value="custom"]').disabled=!savedOrder().length&&!state.reordering; }
+    function updateSortLabel(){ $('#sortBtn').textContent=state.sort==='custom'?'사용자순':state.sort==='latest'?'최신순':'이름순'; }
     function selectCategoryButtons(){
       document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===state.category)));
     }
     function hydrateCategories(){
       const icons={work:'🧰',documents:'📝',content:'🎬',schedule:'🗓️','life-finance':'🌿',learning:'📚',games:'🎮',websites:'🌐'};
-      $('#categoryButtons').innerHTML='<button class="category-button" data-category="all" aria-pressed="false"><span>전체 앱</span><small>'+state.apps.length+'</small></button>'+categories.map(([id,name])=>'<button class="category-button" data-category="'+id+'" aria-pressed="false"><span aria-hidden="true">'+icons[id]+'</span><span>'+name+'</span><small>'+state.apps.filter(a=>a.primaryCategory===id).length+'</small></button>').join('');
+      $('#categoryButtons').innerHTML='<button class="category-button" data-category="all" aria-pressed="false"><span>전체 앱</span><small>'+state.apps.length+'</small></button>'+categories.concat([['websites','제작홈페이지']]).map(([id,name])=>'<button class="category-button" data-category="'+id+'" aria-pressed="false"><span aria-hidden="true">'+icons[id]+'</span><span>'+name+'</span><small>'+state.apps.filter(a=>id==='websites'?(a.collections||[]).includes('websites'):a.primaryCategory===id).length+'</small></button>').join('');
       selectCategoryButtons();
-    }
-    function noticeHtml(a){
-      return ['schedule-share-link-generator','meeting-secretary-app','subscription-dashboard','memory-companion'].includes(a.slug)&&a.limitations?.length?'<p class="app-notice">'+safeText(a.limitations[0])+'</p>':'';
-    }
-    function renderFeatured(){
-      const picks=ArchiveDiscovery.featured(state.apps);
-      const names={'camping-checklist':'캠핑 체크리스트','markdown-lite-editor':'마크다운 편집기','eisenhower-prioritizer':'업무 우선순위 정리','60sec-speech-timer':'60초 발표 타이머','font-preview-board':'글꼴 미리보기','yongdam-baduk':'용담바둑'};
-      $('#featured').hidden=!picks.length;
-      $('#featuredTitle').textContent='바로 써볼 만한 앱 '+picks.length+'개';
-      $('#featuredGrid').innerHTML=picks.map(a=>'<article class="feature-card" data-slug="'+safeText(a.slug)+'"><div class="feature-top"><span class="feature-icon" aria-hidden="true">'+safeText(a.icon)+'</span><span class="feature-rank">PICK '+String(a.featuredRank).padStart(2,'0')+'</span></div><h3><a href="'+safeText(appUrl(a))+'" target="_blank" rel="noopener">'+safeText(names[a.slug]||a.name)+'</a></h3><p>'+safeText(a.inputOutput||a.featuredReason)+'</p><span class="status-badge checked">'+safeText(appStatus(a))+'</span><div class="feature-scope">확인: '+a.verification.passed.map(safeText).join(' · ')+(a.slug==='yongdam-baduk'?'<br>첫 실행은 모델 준비에 시간이 걸릴 수 있습니다.':'')+'</div><a class="feature-link" href="'+safeText(appUrl(a))+'" target="_blank" rel="noopener">'+safeText(names[a.slug]||a.name)+' 열기 ↗</a>'+verificationHtml(a)+'</article>').join('');
-      document.querySelectorAll('[data-count]').forEach(el=>{el.textContent=state.apps.filter(a=>(a.collections||[]).includes(el.dataset.count)).length+'개 →';});
     }
     function verificationHtml(a){
       const v=a.verification||{},passed=Array.isArray(v.passed)?v.passed:[],pending=Array.isArray(v.notTested)?v.notTested:[],notes=Array.isArray(a.limitations)?a.limitations:[],failed=Array.isArray(v.failed)?v.failed:[];
-      return '<details class="verification"><summary>설명 · 확인 범위 · 이용 안내</summary><p>'+safeText(a.description)+'</p>'+(v.checkedAt?'<p class="verification-date">확인일 '+safeText(v.checkedAt)+' · '+safeText(({render:'화면 표시',identity:'화면·내용 일치',interaction:'기본 조작',workflow:'주요 흐름'})[v.level]||'확인 범위 참고')+'</p>':'<p>주요 기능은 아직 검증하지 않았습니다.</p>')+(passed.length?'<p>확인: '+passed.map(safeText).join(' · ')+'</p>':'')+(failed.length?'<p>확인 중 문제: '+failed.map(safeText).join(' · ')+'</p>':'')+(pending.length?'<p>미검증: '+pending.map(safeText).join(' · ')+'</p>':'')+(notes.length?'<ul>'+notes.map(n=>'<li>'+safeText(n)+'</li>').join('')+'</ul>':'')+'</details>';
+      return '<details class="verification"><summary>확인 범위 · 이용 안내</summary>'+(v.checkedAt?'<p class="verification-date">확인일 '+safeText(v.checkedAt)+' · '+safeText(({render:'화면 표시',identity:'화면·내용 일치',interaction:'기본 조작',workflow:'주요 흐름'})[v.level]||'확인 범위 참고')+'</p>':'<p>주요 기능은 아직 검증하지 않았습니다.</p>')+(passed.length?'<p>확인: '+passed.map(safeText).join(' · ')+'</p>':'')+(failed.length?'<p>확인 중 문제: '+failed.map(safeText).join(' · ')+'</p>':'')+(pending.length?'<p>미검증: '+pending.map(safeText).join(' · ')+'</p>':'')+(notes.length?'<ul>'+notes.map(n=>'<li>'+safeText(n)+'</li>').join('')+'</ul>':'')+'</details>';
     }
     function applyFilters(){
       state.filtered = state.apps.filter(a=>matches(a,state));
-      if(state.sort==='recommended') state.filtered.sort((a,b)=>(a.featuredRank||999)-(b.featuredRank||999)||sortTime(b)-sortTime(a));
       if(state.sort==='latest') state.filtered.sort((a,b)=>sortTime(b)-sortTime(a));
       if(state.sort==='name') state.filtered.sort((a,b)=>(a.name||'').localeCompare(b.name||'', 'ko'));
-      if(state.collection==='websites'){
+      if(state.category==='websites'){
         const kojiIndex=state.filtered.findIndex(a=>a.slug==='kojibio');
         if(kojiIndex>0) state.filtered.unshift(...state.filtered.splice(kojiIndex,1));
       }
-      const collectionNames={lab:'실험실',resources:'자료실',websites:'제작홈페이지'};
-      $('#activeCollection').hidden=state.collection==='all';
-      $('#activeCollection span').textContent=(collectionNames[state.collection]||'')+' 모음';
-      $('#catalogTitle').textContent=collectionNames[state.collection]||(state.category==='all'?'전체 앱':categoryLabel(state.category));
       renderApps();
     }
     function renderApps(){
@@ -386,21 +358,21 @@
         return `<article class="app-card" data-slug="${safeText(a.slug)}" draggable="${state.reordering}">
           <div class="order-controls" aria-label="${safeText(a.name)} 순서 이동"><button class="mini order-step" data-move="first" aria-label="${safeText(a.name)} 맨 위로 이동" ${index===0?'disabled':''}>⇈ 맨 위로</button><button class="mini order-step" data-move="up" aria-label="${safeText(a.name)} 위로 이동" ${index===0?'disabled':''}>↑ 위로</button><button class="mini order-step" data-move="down" aria-label="${safeText(a.name)} 아래로 이동" ${index===state.filtered.length-1?'disabled':''}>↓ 아래로</button><button class="mini order-step" data-move="last" aria-label="${safeText(a.name)} 맨 아래로 이동" ${index===state.filtered.length-1?'disabled':''}>⇊ 맨 아래로</button></div>
           <div class="topline"><a class="icon-link" href="${safeText(url)}" target="_blank" rel="noopener" title="${safeText(a.name)} 실행">${safeText(a.icon||'✨')}</a><a class="manual-link" href="/manuals/${encodeURIComponent(a.slug)}.html" aria-label="${safeText(a.name)} 사용설명서 열기">📖 사용설명서</a></div>
-          <div><h3>${safeText(a.name)}</h3><p>${safeText(a.inputOutput||a.description)}</p>${noticeHtml(a)}<div class="meta"><span class="chip">${safeText(categoryLabel(a.primaryCategory))}</span><span class="status-badge ${a.quality==='basic-checked'?'checked':a.availability==='requires-setup'||a.availability==='demo'||a.quality==='draft-output'?'caution':''}">${safeText(appStatus(a))}</span></div><a class="archive-url" href="${safeText(url)}" target="_blank" rel="noopener" aria-label="${safeText(a.name)} 대표 URL">${safeText(brandedUrl)}</a>${verificationHtml(a)}</div>
+          <div><h3>${safeText(a.name)}</h3><p>${safeText(a.description)}</p><div class="meta"><span class="chip">${safeText(categoryLabel(a.primaryCategory))}</span><span class="status-badge ${a.quality==='basic-checked'?'checked':a.availability==='requires-setup'||a.quality==='draft-output'?'caution':''}">${safeText(appStatus(a))}</span></div><a class="archive-url" href="${safeText(url)}" target="_blank" rel="noopener" aria-label="${safeText(a.name)} 대표 URL">${safeText(brandedUrl)}</a>${verificationHtml(a)}</div>
           <div class="actions"><a class="mini launch" href="${safeText(url)}" target="_blank" rel="noopener">${a.launchMode==='external'?'사이트 열기 ↗':'앱 실행 ↗'}</a>${a.github?`<a class="mini" href="${safeText(a.github)}" target="_blank" rel="noopener">GitHub</a>`:''}${a.downloadUrl?`<a class="mini skill-download" href="${safeText(a.downloadUrl)}" download>Skill ZIP ↓</a>`:''}<button class="mini copy-app" data-url="${safeText(brandedUrl)}">링크 복사</button></div>
         </article>`
       }).join('');
     }
-    document.querySelectorAll('[data-collection]').forEach(button=>button.addEventListener('click',()=>{state.collection=button.dataset.collection;state.category='all';state.query='';$('#searchInput').value='';selectCategoryButtons();document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.collection===state.collection)));applyFilters();$('#apps').scrollIntoView({block:'start'});}));
+    document.querySelectorAll('[data-collection]').forEach(button=>button.addEventListener('click',()=>{state.collection=button.dataset.collection;document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));applyFilters();}));
     $('#clearFilters').addEventListener('click',()=>{state.query='';state.category='all';state.collection='all';$('#searchInput').value='';selectCategoryButtons();document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.collection==='all')));applyFilters();$('#searchInput').focus();});
     function openProfile(){if(location.hash==='#profile')$('#profile').open=true;}
     document.querySelectorAll('a[href="#profile"]').forEach(a=>a.addEventListener('click',()=>{$('#profile').open=true;}));
     window.addEventListener('hashchange',openProfile);openProfile();
     $('#searchInput').addEventListener('input', e=>{ state.query=e.target.value; applyFilters(); });
-    $('#categoryButtons').addEventListener('click', e=>{const button=e.target.closest('[data-category]');if(!button)return;state.category=button.dataset.category;state.collection='all';selectCategoryButtons();document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.collection==='all')));applyFilters();});
+    $('#categoryButtons').addEventListener('click', e=>{const button=e.target.closest('[data-category]');if(!button)return;state.category=button.dataset.category;selectCategoryButtons();applyFilters();});
     $('#gridBtn').addEventListener('click', ()=>{ state.list=false; $('#gridBtn').classList.add('active'); $('#listBtn').classList.remove('active');$('#gridBtn').setAttribute('aria-pressed','true');$('#listBtn').setAttribute('aria-pressed','false'); renderApps(); });
     $('#listBtn').addEventListener('click', ()=>{ state.list=true; $('#listBtn').classList.add('active'); $('#gridBtn').classList.remove('active');$('#listBtn').setAttribute('aria-pressed','true');$('#gridBtn').setAttribute('aria-pressed','false'); renderApps(); });
-    $('#sortSelect').addEventListener('change', e=>{state.sort=e.target.value;if(state.sort==='custom')state.apps=applySavedOrder(state.apps);updateSortLabel();applyFilters();});
+    $('#sortBtn').addEventListener('click', ()=>{ state.sort=state.sort==='latest'?'name':'latest'; updateSortLabel(); applyFilters(); });
     $('#reorderBtn').addEventListener('click', ()=>{
       if(!state.reordering){
         state.apps=mergeVisibleOrder(state.apps,state.filtered);
@@ -408,8 +380,8 @@
       }
       state.reordering=!state.reordering;
       $('#reorderBtn').setAttribute('aria-pressed',String(state.reordering));
-      $('#reorderBtn').textContent=state.reordering?'✓ 편집 완료':'↕ 내 순서 편집';
-      $('#sortSelect').disabled=state.reordering;
+      $('#reorderBtn').textContent=state.reordering?'✓ 편집 완료':'↕ 순서 편집';
+      $('#sortBtn').disabled=state.reordering;
       updateSortLabel(); applyFilters();
       if(state.reordering) toast('카드를 끌거나 화살표로 순서를 바꾸세요');
       else if(saveOrder()) toast('변경한 순서를 이 브라우저에 저장했습니다');
@@ -417,7 +389,7 @@
     $('#resetOrderBtn').hidden=!savedOrder().length;
     $('#resetOrderBtn').addEventListener('click', ()=>{
       if(!safeRemoveOrder(storage(),ORDER_KEY)){ toast('저장된 순서를 초기화하지 못했습니다'); return; }
-      state.sort='recommended'; state.apps.sort((a,b)=>sortTime(b)-sortTime(a)); $('#resetOrderBtn').hidden=true; updateSortLabel(); applyFilters(); toast('내 저장 순서를 지우고 편집자 추천순으로 돌아왔습니다');
+      state.sort='latest'; state.apps.sort((a,b)=>sortTime(b)-sortTime(a)); $('#resetOrderBtn').hidden=true; updateSortLabel(); applyFilters(); toast('기본 최신순으로 초기화했습니다');
     });
     function moveApp(slug,targetSlug){
       if(!slug||!targetSlug||slug===targetSlug) return;
@@ -533,5 +505,4 @@
   </script>
 </body>
 </html>
-
 

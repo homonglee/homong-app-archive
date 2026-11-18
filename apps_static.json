@@ -328,7 +328,7 @@
       "mtime": 1786776541,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "documents",
+      "primaryCategory": "schedule",
       "tags": [
         "AI/생산성"
       ],
@@ -705,7 +705,7 @@
       "mtime": 1783543301.2652338,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "life-finance",
+      "primaryCategory": "work",
       "tags": [
         "회계/지출"
       ],
@@ -1271,7 +1271,7 @@
       "url": "https://homong-app.com/iktype",
       "icon": "🏋️",
       "category": "제작홈페이지/트레이닝",
-      "primaryCategory": "content",
+      "primaryCategory": "websites",
       "tags": [
         "제작홈페이지/트레이닝",
         "이익재",
@@ -1315,7 +1315,7 @@
       "url": "https://homong-app.com/prompt-golden-key",
       "icon": "🔑",
       "category": "AI/프롬프트",
-      "primaryCategory": "work",
+      "primaryCategory": "learning",
       "tags": [
         "AI/프롬프트",
         "프롬프트",
@@ -1324,7 +1324,9 @@
         "PM Skills",
         "Spec Kit"
       ],
-      "collections": [],
+      "collections": [
+        "resources"
+      ],
       "featuredRank": null,
       "availability": "available",
       "quality": "unreviewed",
@@ -1357,7 +1359,7 @@
       "url": "https://homong-app.com/krcompany",
       "icon": "📷",
       "category": "기업/미디어",
-      "primaryCategory": "content",
+      "primaryCategory": "websites",
       "tags": [
         "기업/미디어",
         "나광열",
@@ -1402,7 +1404,7 @@
       "url": "https://homong-app.com/kojibio",
       "icon": "🌱",
       "category": "제작홈페이지/기업",
-      "primaryCategory": "content",
+      "primaryCategory": "websites",
       "tags": [
         "제작홈페이지/기업",
         "코지바이오",
@@ -1446,7 +1448,7 @@
       "url": "https://homong-app.com/kabbu",
       "icon": "📚",
       "category": "제작홈페이지/인물",
-      "primaryCategory": "content",
+      "primaryCategory": "websites",
       "tags": [
         "제작홈페이지/인물",
         "성필원",
@@ -1577,7 +1579,7 @@
       "url": "https://homong-app.com/sangdojinsoo",
       "icon": "🏞️",
       "category": "제작홈페이지/인물",
-      "primaryCategory": "content",
+      "primaryCategory": "websites",
       "tags": [
         "제작홈페이지/인물",
         "상도",
@@ -1622,7 +1624,7 @@
       "url": "https://homong-app.com/kim-hyuk",
       "icon": "🎡",
       "category": "제작홈페이지/인물",
-      "primaryCategory": "content",
+      "primaryCategory": "websites",
       "tags": [
         "제작홈페이지/인물",
         "김혁",

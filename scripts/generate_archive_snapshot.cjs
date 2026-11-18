@@ -3,7 +3,7 @@ const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const reg=JSON.parse(fs.readFileSync(path.join(root,'apps_registry.json'),'utf8'));
 const old=JSON.parse(fs.readFileSync(path.join(root,'apps_static.json'),'utf8'));
-const categoryIds=new Set(['work','documents','content','schedule','life-finance','learning','games']);
+const categoryIds=new Set(['work','documents','content','schedule','life-finance','learning','games','websites']);
 const availability=new Set(['unknown','available','requires-setup','demo','blocked']);
 const quality=new Set(['unreviewed','basic-checked','draft-output','identity-mismatch']);
 const ranks=new Set();

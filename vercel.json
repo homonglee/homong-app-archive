@@ -221,6 +221,11 @@
       "permanent": false
     },
     {
+      "source": "/agent-atlas",
+      "destination": "/agent-atlas/",
+      "permanent": false
+    },
+    {
       "source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91",
       "destination": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/",
       "permanent": false
@@ -247,6 +252,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/agent-atlas/assets/:path*",
+      "destination": "/apps/agent-atlas/assets/:path*"
+    },
     {
       "source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/",
       "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"
@@ -498,6 +507,10 @@
     {
       "source": "/kim-hyuk/",
       "destination": "/external-app-shell.html?slug=kim-hyuk"
+    },
+    {
+      "source": "/agent-atlas/",
+      "destination": "/apps/agent-atlas/index.html?slug=agent-atlas"
     }
   ]
 }

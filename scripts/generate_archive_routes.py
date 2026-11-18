@@ -20,6 +20,7 @@ EXTRA_REDIRECTS = [
 ]
 
 PREFIX_REWRITES = [
+    {"source": "/agent-atlas/assets/:path*", "destination": "/apps/agent-atlas/assets/:path*"},
     {"source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"},
     {"source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/:path*", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/:path*"},
     {"source": "/용담바둑/", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"},

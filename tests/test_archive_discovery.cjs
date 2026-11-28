@@ -2,12 +2,12 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const D=require('../assets/archive-discovery.js'),O=require('../assets/archive-order.js');
 const root=path.join(__dirname,'..');const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const reg=JSON.parse(read('apps_registry.json')),snapshot=JSON.parse(read('apps_static.json')).apps,targets=JSON.parse(read('app_targets.json')),config=JSON.parse(read('vercel.json'));
-assert.equal(Object.keys(reg).length,46);assert.equal(snapshot.length,46);assert.equal(new Set(snapshot.map(a=>a.slug)).size,46);
+assert.equal(Object.keys(reg).length,47);assert.equal(snapshot.length,47);assert.equal(new Set(snapshot.map(a=>a.slug)).size,47);
 assert.deepEqual(new Set(Object.keys(reg)),new Set(Object.keys(targets)));
 assert.ok(!reg['mastermind-page']);assert.ok(!targets['mastermind-page']);assert.ok(!JSON.stringify(config).includes('mastermind-page'));
 const metadata=['primaryCategory','tags','collections','featuredRank','featuredReason','availability','quality','limitations','verification','contentUpdatedAt','inputOutput'];
 for(const a of snapshot){assert.ok(D.categories.some(c=>c[0]===a.primaryCategory));assert.ok(a.tags.includes(a.category));for(const k of metadata)assert.deepEqual(a[k],reg[a.slug][k],a.slug+' '+k);assert.equal(D.matches(a,{query:a.category}),true);}
-const sum=D.categories.reduce((n,[id])=>n+snapshot.filter(a=>a.primaryCategory===id).length,0);assert.equal(sum,46);
+const sum=D.categories.reduce((n,[id])=>n+snapshot.filter(a=>a.primaryCategory===id).length,0);assert.equal(sum,47);
 assert.equal(D.categories.length,8);
 const prompt = snapshot.find(a=>a.slug==='prompt-golden-key');
 for (const query of ['프롬프트엔지니어링황금키','황금키 프롬프트','엔지니어링 황금키']) {

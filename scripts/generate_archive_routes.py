@@ -20,6 +20,15 @@ EXTRA_REDIRECTS = [
 ]
 
 PREFIX_REWRITES = [
+    {"source": "/gostop-pwa/assets/:path*", "destination": "/apps/gostop-pwa/assets/:path*"},
+    {"source": "/gostop-pwa/cards/:path*", "destination": "/apps/gostop-pwa/cards/:path*"},
+    {"source": "/gostop-pwa/favicon.svg", "destination": "/apps/gostop-pwa/favicon.svg"},
+    {"source": "/gostop-pwa/og-image.png", "destination": "/apps/gostop-pwa/og-image.png"},
+    {"source": "/gostop-pwa/icon-192.png", "destination": "/apps/gostop-pwa/icon-192.png"},
+    {"source": "/gostop-pwa/icon-512.png", "destination": "/apps/gostop-pwa/icon-512.png"},
+    {"source": "/gostop-pwa/manifest.webmanifest", "destination": "/apps/gostop-pwa/manifest.webmanifest"},
+    {"source": "/gostop-pwa/sw.js", "destination": "/apps/gostop-pwa/sw.js"},
+    {"source": "/gostop-pwa/workbox-:file", "destination": "/apps/gostop-pwa/workbox-:file"},
     {"source": "/agent-atlas/assets/:path*", "destination": "/apps/agent-atlas/assets/:path*"},
     {"source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/"},
     {"source": "/%EC%9A%A9%EB%8B%B4%EB%B0%94%EB%91%91/:path*", "destination": "https://yongdam-baduk-homongs-projects.vercel.app/:path*"},

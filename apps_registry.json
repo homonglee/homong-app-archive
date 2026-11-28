@@ -1,4 +1,40 @@
 {
+  "gostop-pwa": {
+    "shareShell": "apps/gostop-pwa/index.html",
+    "name": "용담 고스톱",
+    "description": "51장 전통 화투와 원화 등급·등급 보험, 뻑·따닥·폭탄·흔들기·9월 국준 선택을 지원하는 오프라인 2·3인 정통 고스톱 PWA.",
+    "url": "https://homong-app.com/gostop-pwa",
+    "github": "https://github.com/homonglee/gostop-pwa",
+    "icon": "🎴",
+    "category": "게임/화투",
+    "primaryCategory": "games",
+    "tags": [
+      "게임/화투"
+    ],
+    "collections": [],
+    "featuredRank": null,
+    "availability": "available",
+    "quality": "basic-checked",
+    "limitations": [
+      "보유 머니·등급·보험·봉사 기록·전적은 현재 브라우저의 로컬 저장소에 보관됩니다."
+    ],
+    "verification": {
+      "checkedAt": "2026-11-29",
+      "level": "interaction",
+      "passed": [
+        "51장 전통 화투패 도감 및 9월 국준 열끗/쌍피 선택",
+        "뻑·따닥·폭탄·흔들기·총통·허당·독박·나가리 룰 단위 테스트",
+        "원화 등급·자동 등급 보험·봉사하기 미션 및 사용설명서 모달"
+      ],
+      "notTested": [
+        "오프라인 환경에서의 실제 PWA 설치"
+      ],
+      "failed": [],
+      "issueRefs": []
+    },
+    "contentUpdatedAt": "2026-11-29",
+    "inputOutput": "2·3인 정통 고스톱 한 판을 치고 원화 머니와 등급 보험·봉사 기록을 쌓습니다."
+  },
   "yongdam-baduk": {
     "name": "용담바둑",
     "deploymentUrl": "https://yongdam-baduk-homongs-projects.vercel.app/",

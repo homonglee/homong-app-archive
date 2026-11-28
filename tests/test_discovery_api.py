@@ -12,7 +12,7 @@ class DiscoveryApiTests(unittest.TestCase):
         spec.loader.exec_module(module)
         snapshot = json.loads((ROOT / 'apps_static.json').read_text(encoding='utf-8'))
         published = module.public_payload(snapshot)['apps']
-        self.assertEqual(len(published), 46)
+        self.assertEqual(len(published), 47)
         self.assertNotIn('mastermind-page', {a['slug'] for a in published})
         for a, original in zip(published, snapshot['apps']):
             for key in ('primaryCategory','tags','collections','featuredRank','availability','quality','limitations','verification'):

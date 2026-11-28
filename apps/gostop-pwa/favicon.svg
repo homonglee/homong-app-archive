@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 둥근 화투패 외곽 그림자 및 붉은 테두리 -->
+  <rect x="10" y="3" width="44" height="58" rx="6" fill="#D91E18" stroke="#7F1D1D" stroke-width="1.5" />
+  <!-- 안쪽 8월 공산 붉은 하늘 -->
+  <rect x="15" y="8" width="34" height="48" rx="2.5" fill="#E11D48" />
+  <!-- 하얀 보름달 -->
+  <circle cx="32" cy="24" r="10.5" fill="#FFFFFF" />
+  <!-- 검은 공산 언덕 -->
+  <path d="M 15 43 Q 32 30 49 43 V 56 H 15 Z" fill="#141414" />
+  <!-- 광 인장 -->
+  <circle cx="22.5" cy="49.5" r="4.2" fill="#D91E18" stroke="#FFFFFF" stroke-width="0.8" />
+  <text x="22.5" y="51.4" font-size="5.5" font-weight="900" fill="#FFFFFF" text-anchor="middle" font-family="serif">光</text>
+</svg>

@@ -235,6 +235,22 @@ MANUALS = {
 
 MANUALS["slide-3d"] = {'purpose': '경사각, 질량, 마찰계수를 바꾸며 물체의 운동과 힘의 관계를 탐구합니다.', 'steps': ['경사각, 물체 질량, 마찰계수 슬라이더로 실험 조건을 설정합니다.', '시작을 누르고 실시간 측정값과 시간에 따른 속도 그래프를 관찰합니다.', '일시정지와 계속으로 실험을 조절하고 초기화로 다시 시작합니다.', '마찰 없음 / 있음 나란히 비교를 켜 두 조건의 운동을 비교합니다.', '드래그로 시점을 회전하고 휠로 확대합니다. 정면·측면·위에서 버튼도 사용할 수 있습니다.', '힘 벡터를 켜 중력, 마찰력, 수직항력을 살펴보고 예측 질문의 답을 선택해 확인합니다.'], 'output': '3D 운동 장면, 속도 그래프, 가속도·속도·거리·시간·힘 측정값과 예측 질문 해설', 'cautions': ['조건을 바꾸면 실험과 그래프가 초기화됩니다. 결과는 새로고침 후 보관되지 않습니다.', '정지 마찰계수와 운동 마찰계수를 같다고 가정하며, 공기저항과 물체 회전은 무시합니다.']}
 
+MANUALS["gostop-pwa"] = {
+ 'purpose':'51장 전통 화투와 원화 등급·등급 보험, 뻑·따닥·폭탄·흔들기·9월 국준 선택을 지원하는 오프라인 2·3인 정통 고스톱 앱입니다.',
+ 'steps':[
+  '처음 접속하면 게임에서 사용할 본인 닉네임을 입력하고 시작합니다.',
+  '상단에서 2인 새판(목표 7점) 또는 3인 새판(목표 3점)과 점당 판돈(1천원~500만원)을 선택합니다.',
+  '내 턴에 노란 테두리로 강조된 손패를 클릭해 바닥 패와 맞추고 덱에서 1장을 뒤집습니다.',
+  '바닥 패 2장 선택, 고/스톱, 흔들기, 9월 국준(열끗/쌍피) 선택 시 클릭이나 키보드 [1], [2] 키를 사용합니다.',
+  '폭탄으로 생긴 뒤집기 패는 내 턴에 클릭하거나 스페이스바로 뒤집습니다.',
+  '보유 보험 없이 머니가 1만원 미만일 때는 봉사하기 미션을 완료·기록한 뒤 오링 무료충전을 받아 이어서 플레이합니다.'
+ ],
+ 'output':'라운드 점수·머니(원)·내공·등급·적립 등급 보험과 날짜별 봉사 기록이 현재 브라우저에 저장됩니다.',
+ 'cautions':[
+  '보유 머니·등급·보험·봉사 기록·전적은 현재 브라우저의 로컬 저장소에 보관되며 다른 기기와 자동 동기화되지 않습니다.',
+  '상단의 사용설명서, 족보/점수표, 등급/보험표, 패 도감 버튼에서 전체 룰과 51장 패를 언제든 확인할 수 있습니다.'
+ ]}
+
 STYLE = '''
 :root{--bg:#070914;--panel:#111629;--line:rgba(255,255,255,.15);--text:#f7f8ff;--muted:#aab0c7;--brand:#8b5cf6;--brand2:#22d3ee}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,rgba(139,92,246,.35),transparent 34rem),linear-gradient(180deg,#070914,#0d1020);color:var(--text);font-family:Inter,system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.7;min-height:100vh}.wrap{width:min(860px,calc(100% - 32px));margin:auto}.nav{border-bottom:1px solid var(--line);background:rgba(7,9,20,.82);position:sticky;top:0;backdrop-filter:blur(14px);z-index:10}.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}.brand{font-weight:900;color:#fff;text-decoration:none}.back{color:#a5f3fc;text-decoration:none;font-weight:800}.hero{padding:54px 0 28px}.eyebrow{color:#67e8f9;font-weight:900;letter-spacing:.1em;font-size:12px}.hero h1{font-size:clamp(32px,7vw,55px);line-height:1.12;letter-spacing:-.05em;margin:8px 0 14px}.lead{color:var(--muted);font-size:18px;margin:0}.panel{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:26px;padding:clamp(20px,5vw,34px);margin:18px 0}.panel h2{margin:0 0 16px;font-size:23px}.steps{list-style:none;padding:0;margin:0;counter-reset:step;display:grid;gap:12px}.steps li{counter-increment:step;position:relative;padding:15px 16px 15px 54px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);border-radius:16px}.steps li:before{content:counter(step);position:absolute;left:15px;top:15px;width:25px;height:25px;display:grid;place-items:center;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand2));font-weight:900}.result{color:#dbeafe}.cautions{margin:0;padding-left:22px;color:#fef3c7}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 54px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:900;border:1px solid var(--line);color:#fff}.btn.primary{border:0;background:linear-gradient(135deg,var(--brand),var(--brand2))}footer{color:var(--muted);font-size:12px;padding:20px 0 40px}@media(max-width:520px){.nav .wrap{align-items:flex-start}.hero{padding-top:36px}.panel{border-radius:20px}.actions{display:grid}.btn{justify-content:center}}
 '''.strip()

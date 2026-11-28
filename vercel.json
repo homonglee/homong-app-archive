@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/gostop-pwa",
+      "destination": "/gostop-pwa/",
+      "permanent": false
+    },
+    {
       "source": "/question-36.5",
       "destination": "/question-36.5/",
       "permanent": false
@@ -253,6 +258,42 @@
   ],
   "rewrites": [
     {
+      "source": "/gostop-pwa/assets/:path*",
+      "destination": "/apps/gostop-pwa/assets/:path*"
+    },
+    {
+      "source": "/gostop-pwa/cards/:path*",
+      "destination": "/apps/gostop-pwa/cards/:path*"
+    },
+    {
+      "source": "/gostop-pwa/favicon.svg",
+      "destination": "/apps/gostop-pwa/favicon.svg"
+    },
+    {
+      "source": "/gostop-pwa/og-image.png",
+      "destination": "/apps/gostop-pwa/og-image.png"
+    },
+    {
+      "source": "/gostop-pwa/icon-192.png",
+      "destination": "/apps/gostop-pwa/icon-192.png"
+    },
+    {
+      "source": "/gostop-pwa/icon-512.png",
+      "destination": "/apps/gostop-pwa/icon-512.png"
+    },
+    {
+      "source": "/gostop-pwa/manifest.webmanifest",
+      "destination": "/apps/gostop-pwa/manifest.webmanifest"
+    },
+    {
+      "source": "/gostop-pwa/sw.js",
+      "destination": "/apps/gostop-pwa/sw.js"
+    },
+    {
+      "source": "/gostop-pwa/workbox-:file",
+      "destination": "/apps/gostop-pwa/workbox-:file"
+    },
+    {
       "source": "/agent-atlas/assets/:path*",
       "destination": "/apps/agent-atlas/assets/:path*"
     },
@@ -331,6 +372,10 @@
     {
       "source": "/api/share-link",
       "destination": "https://schedule-share-link-generator.vercel.app/api/share-link"
+    },
+    {
+      "source": "/gostop-pwa/",
+      "destination": "/apps/gostop-pwa/index.html?slug=gostop-pwa"
     },
     {
       "source": "/question-36.5/",

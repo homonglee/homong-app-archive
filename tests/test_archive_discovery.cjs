@@ -8,12 +8,21 @@ assert.ok(!reg['mastermind-page']);assert.ok(!targets['mastermind-page']);assert
 const metadata=['primaryCategory','tags','collections','featuredRank','featuredReason','availability','quality','limitations','verification','contentUpdatedAt','inputOutput'];
 for(const a of snapshot){assert.ok(D.categories.some(c=>c[0]===a.primaryCategory));assert.ok(a.tags.includes(a.category));for(const k of metadata)assert.deepEqual(a[k],reg[a.slug][k],a.slug+' '+k);assert.equal(D.matches(a,{query:a.category}),true);}
 const sum=D.categories.reduce((n,[id])=>n+snapshot.filter(a=>a.primaryCategory===id).length,0);assert.equal(sum,47);
-assert.equal(D.categories.length,8);
+assert.equal(D.categories.length,9);
 const prompt = snapshot.find(a=>a.slug==='prompt-golden-key');
 for (const query of ['프롬프트엔지니어링황금키','황금키 프롬프트','엔지니어링 황금키']) {
-  assert.deepEqual(snapshot.filter(a=>D.matches(a,{query,category:'learning',collection:'resources'})),[prompt]);
+  assert.deepEqual(snapshot.filter(a=>D.matches(a,{query,category:'ai',collection:'resources'})),[prompt]);
   assert.equal(D.matches(prompt,{query,category:'work'}),false);
 }
+const expectedGroups={
+  ai:['agent-atlas','hermes-agent-interactive-page','hovision-ax-diagnosis','pm-skills-guide','prompt-golden-key'],
+  documents:['markdown-lite-editor','meeting-secretary-app','messenger-summary-tool','moa-ai-bookmark-manager','ocr-translator-app','voice-memo-mindmap','youtube-timeline-summarizer'],
+  schedule:['coffee-chat-icebreaker','eisenhower-prioritizer','memory-companion','namecard-memo-indexer','schedule-share-link-generator'],
+  'life-finance':['camping-checklist','lunch-roulette','micro-mood-journal','mood-playlist-linker','receipt-expense-scanner','subscription-dashboard'],
+  learning:['got-interactive-light','question-36.5','rea','slide-3d','taiji-in-flow'],
+};
+for(const [category,slugs] of Object.entries(expectedGroups))assert.deepEqual(snapshot.filter(a=>D.matches(a,{category})).map(a=>a.slug).sort(),slugs);
+for(const [slug,query] of [['youtube-timeline-summarizer','콘텐츠·발표'],['lunch-roulette','일정·협업'],['receipt-expense-scanner','업무 자동화']])assert.ok(D.matches(snapshot.find(a=>a.slug===slug),{query}));
 const rec=D.featured(snapshot);assert.deepEqual(rec.map(a=>a.slug),['camping-checklist','markdown-lite-editor','eisenhower-prioritizer','60sec-speech-timer','font-preview-board','yongdam-baduk']);
 assert.ok(snapshot.every(a=>typeof a.inputOutput==='string'&&a.inputOutput.length>10));
 for(const availability of ['unknown','blocked','requires-setup','demo'])assert.equal(D.featured([{...rec[0],availability}]).length,0);
@@ -28,4 +37,4 @@ const apps=['a','b','c','d','new'].map(slug=>({slug}));
 assert.deepEqual(O.applySavedOrder(apps,['c','a','c','mastermind-page','b','d']).map(a=>a.slug),['c','a','b','d','new']);
 assert.deepEqual(O.mergeVisibleOrder(apps,[apps[2],apps[0]]).map(a=>a.slug),['c','b','a','d','new']);
 for(const block of read('index.html').matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(block[0].includes('application/ld+json'))JSON.parse(block[1]);else new vm.Script(block[1]);}
-console.log('Archive discovery: 46 apps, eight categories, six verified picks, exclusions, legacy search, metadata contract and script syntax passed');
+console.log('Archive discovery: 47 apps, nine categories, six verified picks, exclusions, legacy search, metadata contract and script syntax passed');

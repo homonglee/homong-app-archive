@@ -399,9 +399,11 @@
       "mtime": 1783975558.608597,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "content",
+      "primaryCategory": "documents",
       "tags": [
-        "영상/요약"
+        "영상/요약",
+        "영상 요약",
+        "콘텐츠·발표"
       ],
       "collections": [],
       "featuredRank": null,
@@ -641,9 +643,11 @@
       "mtime": 1783562134.5004418,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "work",
+      "primaryCategory": "documents",
       "tags": [
-        "OCR/번역"
+        "OCR/번역",
+        "텍스트 추출",
+        "업무 자동화"
       ],
       "collections": [],
       "featuredRank": null,
@@ -705,9 +709,11 @@
       "mtime": 1783543301.2652338,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "work",
+      "primaryCategory": "life-finance",
       "tags": [
-        "회계/지출"
+        "회계/지출",
+        "영수증",
+        "업무 자동화"
       ],
       "collections": [],
       "featuredRank": null,
@@ -991,9 +997,11 @@
       "mtime": 1783376853.205225,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "schedule",
+      "primaryCategory": "life-finance",
       "tags": [
-        "팀/결정"
+        "팀/결정",
+        "함께 결정",
+        "일정·협업"
       ],
       "collections": [],
       "featuredRank": null,
@@ -1023,9 +1031,11 @@
       "mtime": 1783372658.614792,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "documents",
+      "primaryCategory": "schedule",
       "tags": [
-        "인맥/CRM"
+        "인맥/CRM",
+        "연락처",
+        "문서·회의·기록"
       ],
       "collections": [],
       "featuredRank": null,
@@ -1055,9 +1065,11 @@
       "mtime": 1783349143.6975791,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "work",
+      "primaryCategory": "schedule",
       "tags": [
-        "우선순위/생산성"
+        "우선순위/생산성",
+        "할 일",
+        "업무 자동화"
       ],
       "collections": [],
       "featuredRank": 3,
@@ -1091,9 +1103,10 @@
       "mtime": 1783318401.8034267,
       "hasLocalIndex": true,
       "source": "manual-registry",
-      "primaryCategory": "learning",
+      "primaryCategory": "ai",
       "tags": [
-        "AI/소개"
+        "AI/소개",
+        "학습·읽을거리"
       ],
       "collections": [
         "resources"
@@ -1315,14 +1328,15 @@
       "url": "https://homong-app.com/prompt-golden-key",
       "icon": "🔑",
       "category": "AI/프롬프트",
-      "primaryCategory": "learning",
+      "primaryCategory": "ai",
       "tags": [
         "AI/프롬프트",
         "프롬프트",
         "SSPECOS",
         "황금키",
         "PM Skills",
-        "Spec Kit"
+        "Spec Kit",
+        "학습·읽을거리"
       ],
       "collections": [
         "resources"
@@ -1493,14 +1507,15 @@
       "url": "https://homong-app.com/hovision-ax-diagnosis",
       "icon": "📊",
       "category": "기업/AX진단",
-      "primaryCategory": "work",
+      "primaryCategory": "ai",
       "tags": [
         "기업/AX진단",
         "호연지재",
         "AX",
         "AI",
         "기업",
-        "역량 진단"
+        "역량 진단",
+        "기업 진단"
       ],
       "collections": [],
       "featuredRank": null,
@@ -1535,13 +1550,15 @@
       "url": "https://homong-app.com/pm-skills-guide",
       "icon": "🧩",
       "category": "AI/활용가이드",
-      "primaryCategory": "learning",
+      "primaryCategory": "ai",
       "tags": [
         "AI/활용가이드",
         "Claude",
         "PM Skills",
         "아티팩트",
-        "가이드"
+        "가이드",
+        "프로젝트 관리",
+        "학습·읽을거리"
       ],
       "collections": [
         "resources"
@@ -1671,11 +1688,13 @@
       "github": "https://github.com/homonglee/homong-app-archive/tree/main/apps/agent-atlas",
       "icon": "🪐",
       "category": "AI 활용",
-      "primaryCategory": "learning",
+      "primaryCategory": "ai",
       "tags": [
         "AI 활용",
         "에이전트",
-        "강의"
+        "강의",
+        "활용 사례",
+        "학습·읽을거리"
       ],
       "collections": [
         "resources"

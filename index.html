@@ -157,7 +157,7 @@
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top"><img class="brand-logo" src="/assets/hoyeon-jijae-logo-flat.png" alt="호연지재 로고" width="40" height="40"><span class="brand-title">Homong's App Archive</span><span id="siteVersion" class="version-badge" aria-label="사이트 버전 5.10">v5.10</span></a>
+      <a class="brand" href="#top"><img class="brand-logo" src="/assets/hoyeon-jijae-logo-flat.png" alt="호연지재 로고" width="40" height="40"><span class="brand-title">Homong's App Archive</span><span id="siteVersion" class="version-badge" aria-label="사이트 버전 5.11">v5.11</span></a>
       <div class="nav-actions"><a class="pill" href="#profile">이용호(호몽) 소개</a><button id="refreshBtn" class="pill">↻ 목록 새로고침</button><a class="btn nav-hovision" href="https://hovision.co.kr" target="_blank" rel="noopener noreferrer" aria-label="호연지재 홈페이지 새 창에서 열기">호연지재 홈페이지 ↗</a><button class="btn nav-inquiry contact-trigger" type="button">문의하기</button><a class="btn primary nav-launch" href="#apps">앱 실행하기</a><button id="themeToggle" class="theme-toggle" type="button" aria-label="라이트 모드로 전환" aria-pressed="false" title="라이트 모드로 전환"><span class="theme-dark"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.7 12.1A7 7 0 0 1 7.9 3.3a7 7 0 1 0 8.8 8.8Z"/></svg>Dark</span><span class="theme-light"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2"/><path d="M10 1v2m0 14v2M1 10h2m14 0h2M3.6 3.6 5 5m10 10 1.4 1.4M3.6 16.4 5 15M15 5l1.4-1.4"/></svg>Light</span></button><span id="themeStatus" class="sr-only" role="status" aria-live="polite"></span></div>
     </div>
   </header>
@@ -191,7 +191,7 @@
       <label class="search"><span>⌕</span><input id="searchInput" aria-label="앱 검색" placeholder="앱 이름·하고 싶은 일·태그로 검색" autocomplete="off" /></label>
       <div class="toggle" aria-label="보기 방식"><button id="gridBtn" class="active" aria-pressed="true">그리드</button><button id="listBtn" aria-pressed="false">리스트</button></div></div>
       <div class="category-heading">어떤 일을 하고 싶으세요?</div><div id="categoryButtons" class="category-buttons" role="group" aria-label="목적별 카테고리"></div>
-    <div class="collection-tabs" role="group" aria-label="앱 모음 선택"><button class="pill" data-collection="all" aria-pressed="true">전체 앱</button><button class="pill" data-collection="lab" aria-pressed="false">실험실</button><button class="pill" data-collection="resources" aria-pressed="false">자료실</button></div><p id="collectionNote" class="collection-note">실험실은 데모·초안·학습 실험, 자료실은 읽고 살펴보는 콘텐츠를 모았습니다. 같은 앱은 전체 목록에도 있습니다.</p>
+    <div class="collection-tabs" role="group" aria-label="앱 모음 선택"><button class="pill" data-collection="all" aria-pressed="true">전체 앱</button><button class="pill" data-collection="lab" aria-pressed="false">실험실</button><button class="pill" data-collection="resources" aria-pressed="false">자료실</button></div><p id="collectionNote" class="collection-note">위 카테고리는 앱의 주된 용도입니다. 실험실·자료실은 별도 모음이며, 같은 앱은 전체 목록에서도 찾을 수 있습니다.</p>
     </section>
 
 
@@ -288,7 +288,7 @@
   <div id="toast" class="toast">복사했습니다</div>
 
   <script src="/assets/archive-order.js"></script>
-  <script src="/assets/archive-discovery.js?v=5.06"></script>
+  <script src="/assets/archive-discovery.js?v=5.11"></script>
   <script>
     const ORDER_KEY = 'homong-app-card-order-v1';
     const state = { apps: [], filtered: [], category: 'all', collection: 'all', query: '', list: false, sort: 'latest', reordering: false, draggedSlug: '' };
@@ -333,8 +333,9 @@
       document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===state.category)));
     }
     function hydrateCategories(){
-      const icons={work:'🧰',documents:'📝',content:'🎬',schedule:'🗓️','life-finance':'🌿',learning:'📚',games:'🎮',websites:'🌐'};
-      $('#categoryButtons').innerHTML='<button class="category-button" data-category="all" aria-pressed="false"><span>전체 앱</span><small>'+state.apps.length+'</small></button>'+categories.map(([id,name])=>'<button class="category-button" data-category="'+id+'" aria-pressed="false"><span aria-hidden="true">'+icons[id]+'</span><span>'+name+'</span><small>'+state.apps.filter(a=>a.primaryCategory===id).length+'</small></button>').join('');
+      const icons={ai:'💡',work:'🧰',documents:'📝',content:'🎬',schedule:'🗓️','life-finance':'🌿',learning:'📚',games:'🎮',websites:'🌐'};
+      const collectionApps=state.apps.filter(a=>matches(a,{collection:state.collection}));
+      $('#categoryButtons').innerHTML='<button class="category-button" data-category="all" aria-pressed="false"><span>모든 분류</span><small>'+collectionApps.length+'</small></button>'+categories.map(([id,name])=>'<button class="category-button" data-category="'+id+'" aria-pressed="false"><span aria-hidden="true">'+icons[id]+'</span><span>'+name+'</span><small>'+collectionApps.filter(a=>a.primaryCategory===id).length+'</small></button>').join('');
       selectCategoryButtons();
     }
     function verificationHtml(a){
@@ -366,8 +367,8 @@
         </article>`
       }).join('');
     }
-    document.querySelectorAll('[data-collection]').forEach(button=>button.addEventListener('click',()=>{state.collection=button.dataset.collection;document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));applyFilters();}));
-    $('#clearFilters').addEventListener('click',()=>{state.query='';state.category='all';state.collection='all';$('#searchInput').value='';selectCategoryButtons();document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.collection==='all')));applyFilters();$('#searchInput').focus();});
+    document.querySelectorAll('[data-collection]').forEach(button=>button.addEventListener('click',()=>{state.collection=button.dataset.collection;state.category='all';hydrateCategories();document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));applyFilters();}));
+    $('#clearFilters').addEventListener('click',()=>{state.query='';state.category='all';state.collection='all';$('#searchInput').value='';hydrateCategories();document.querySelectorAll('[data-collection]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.collection==='all')));applyFilters();$('#searchInput').focus();});
     function openProfile(){if(location.hash==='#profile')$('#profile').open=true;}
     document.querySelectorAll('a[href="#profile"]').forEach(a=>a.addEventListener('click',()=>{$('#profile').open=true;}));
     window.addEventListener('hashchange',openProfile);openProfile();

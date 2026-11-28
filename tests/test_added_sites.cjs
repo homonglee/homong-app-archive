@@ -10,7 +10,7 @@ for(const [slug,url] of Object.entries(expected)){
 }
 const websites=Object.keys(reg).filter(s=>reg[s].collections.includes('websites'));
 assert.deepEqual(websites.sort(),['iktype','kojibio','kabbu','sangdojinsoo','kim-hyuk','krcompany'].sort());
-assert.equal(D.categories.length,8);assert.ok(websites.every(slug=>reg[slug].primaryCategory==='websites'));
+assert.equal(D.categories.length,9);assert.ok(websites.every(slug=>reg[slug].primaryCategory==='websites'));
 assert.ok(D.matches({...reg.sangdojinsoo,slug:'sangdojinsoo'},{collection:'websites',query:'이진수'}));
 assert.ok(D.matches({...reg.sangdojinsoo,slug:'sang도jinsoo'},{query:'제작홈페이지'}));
 assert.equal(D.matches({...reg.rea,slug:'rea'},{collection:'websites'}),false);
